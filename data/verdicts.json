@@ -1,0 +1,1841 @@
+{
+  "schema_version": 1,
+  "verdicts": [
+    {
+      "claim_id": "C007",
+      "claim_key": "products_coagulants_polymers",
+      "statement": "Kemira's products include coagulants (iron- and aluminium-based), polymers/flocculants and process chemicals (and related digital technologies)",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S04",
+        "file": "text.md",
+        "quote": "Kemira’s water treatment product portfolio mainly consists of coagulants and polymers which play a critical role in enabling resource-efficient operations at our customers’ sites."
+      },
+      "conflicting_evidence": null,
+      "reason": "Kemira states its water portfolio mainly consists of coagulants and polymers.",
+      "see_also": [
+        "S17 p.12: iron sulphate coagulant acquisition and aluminium chlorohydrate expansion (iron- and aluminium-based coagulants)",
+        "S09: full range of organic and inorganic coagulants and polymers"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K01_perplexity_p1#07",
+        "K01_perplexity_p2#09",
+        "K01_gemini_p1#08",
+        "K02_perplexity_p1#10",
+        "K02_perplexity_p2#05",
+        "K02_chatgpt_p1#06",
+        "K02_chatgpt_p2#10",
+        "K04_perplexity_p1#02",
+        "K04_perplexity_p2#04",
+        "K04_chatgpt_p1#04",
+        "K04_chatgpt_p2#02",
+        "K04_gemini_p1#03",
+        "K04_gemini_p2#02",
+        "K05_perplexity_p1#01",
+        "K05_perplexity_p2#01",
+        "K05_chatgpt_p1#02",
+        "K05_chatgpt_p2#03",
+        "K05_gemini_p1#02",
+        "K05_gemini_p2#02",
+        "O01_perplexity_p1#02",
+        "O01_perplexity_p2#04",
+        "O01_chatgpt_p1#03",
+        "O01_chatgpt_p2#03",
+        "O01_gemini_p1#04",
+        "O01_gemini_p2#03",
+        "O02_perplexity_p1#02",
+        "O02_perplexity_p2#01",
+        "O02_chatgpt_p1#03",
+        "O02_chatgpt_p2#02",
+        "O02_gemini_p1#02",
+        "O02_gemini_p2#03",
+        "O03_perplexity_p1#03",
+        "O03_perplexity_p2#04",
+        "O03_gemini_p1#04",
+        "O03_gemini_p2#04"
+      ]
+    },
+    {
+      "claim_id": "C003",
+      "claim_key": "serves_water_treatment",
+      "statement": "Kemira serves municipal and industrial water treatment (drinking water and wastewater)",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S01",
+        "file": "text.md",
+        "quote": "We operate globally and serve a wide range of customers including municipal and industrial water treatment companies and the fiber industry."
+      },
+      "conflicting_evidence": null,
+      "reason": "Kemira names municipal and industrial water treatment companies as customers.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K01_perplexity_p1#03",
+        "K01_perplexity_p2#05",
+        "K01_chatgpt_p1#03",
+        "K01_chatgpt_p2#03",
+        "K01_gemini_p1#05",
+        "K01_gemini_p2#05",
+        "K02_perplexity_p1#03",
+        "K02_perplexity_p2#04",
+        "K02_chatgpt_p1#07",
+        "K02_chatgpt_p2#09",
+        "K02_gemini_p1#05",
+        "K02_gemini_p2#05",
+        "K03_perplexity_p2#12",
+        "K03_chatgpt_p1#06",
+        "K03_chatgpt_p2#07",
+        "K04_perplexity_p1#01",
+        "K04_perplexity_p2#01",
+        "K04_chatgpt_p1#03",
+        "K04_chatgpt_p2#01",
+        "K04_gemini_p1#01",
+        "K04_gemini_p2#01",
+        "K05_perplexity_p1#02",
+        "K05_gemini_p1#01",
+        "K05_gemini_p2#01",
+        "K07_chatgpt_p1#02",
+        "K07_gemini_p1#05",
+        "K07_gemini_p2#02",
+        "O01_gemini_p1#03",
+        "O03_gemini_p2#03"
+      ]
+    },
+    {
+      "claim_id": "C001",
+      "claim_key": "global_chemicals_company",
+      "statement": "Kemira is a global (international) chemicals company",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S01",
+        "file": "text.md",
+        "quote": "Kemira is a global leader in sustainable chemistry for water-intensive industries. We operate globally and serve a wide range of customers including municipal and industrial water treatment companies and the fiber industry."
+      },
+      "conflicting_evidence": null,
+      "reason": "Kemira describes itself as a chemistry company that operates globally.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K01_perplexity_p1#01",
+        "K01_perplexity_p2#01",
+        "K01_chatgpt_p1#01",
+        "K01_chatgpt_p2#02",
+        "K01_gemini_p1#01",
+        "K01_gemini_p2#01",
+        "K02_perplexity_p1#01",
+        "K02_perplexity_p2#01",
+        "K02_chatgpt_p1#01",
+        "K02_chatgpt_p2#01",
+        "K02_gemini_p1#01",
+        "K02_gemini_p2#01",
+        "K03_perplexity_p1#01",
+        "K03_perplexity_p2#01",
+        "K03_chatgpt_p1#01",
+        "K03_chatgpt_p2#01",
+        "K04_chatgpt_p1#01",
+        "K07_chatgpt_p1#01"
+      ]
+    },
+    {
+      "claim_id": "C037",
+      "claim_key": "sludge_dewatering",
+      "statement": "Kemira's polymers and chemicals dewater sludge to higher dry-solids content, reducing sludge volume and transport and disposal costs",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S06",
+        "file": "text.md",
+        "quote": "Sludge from wastewater treatment must be dewatered to the highest possible dry solids content to make transport, utilization and disposal more economical. But sludge is never easy to handle due to its varying composition. We can help separate solids from liquids in all sludge types and using any dewatering equipment, ensuring the best possible water quality and recovery rates."
+      },
+      "conflicting_evidence": null,
+      "reason": "Kemira describes dewatering sludge to the highest dry-solids content to cut transport and disposal costs.",
+      "see_also": [
+        "S09: sludge volumes kept at a minimum with a high dry-solids content to reduce disposal costs"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K04_perplexity_p1#09",
+        "K04_perplexity_p2#02",
+        "K04_chatgpt_p1#07",
+        "K04_chatgpt_p2#05",
+        "K04_gemini_p1#09",
+        "K04_gemini_p2#06",
+        "K05_perplexity_p1#04",
+        "K05_perplexity_p2#06",
+        "K05_chatgpt_p1#04",
+        "K05_chatgpt_p2#05",
+        "K05_gemini_p1#06",
+        "K05_gemini_p2#06",
+        "O02_perplexity_p2#03",
+        "O03_perplexity_p2#06",
+        "O03_chatgpt_p1#02",
+        "O03_chatgpt_p2#02",
+        "O03_gemini_p1#05"
+      ]
+    },
+    {
+      "claim_id": "C051",
+      "claim_key": "finnish_company",
+      "statement": "Kemira is a Finnish company, based in Finland",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S21",
+        "file": "text.md",
+        "quote": "Kemira has production sites, research centers and sales offices all over the world. Our company headquarters is located in Helsinki, Finland."
+      },
+      "conflicting_evidence": null,
+      "reason": "Headquartered in Finland.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K05_chatgpt_p2#02",
+        "K06_chatgpt_p1#01",
+        "K06_chatgpt_p2#01",
+        "K07_chatgpt_p2#01",
+        "K07_gemini_p1#01",
+        "K07_gemini_p2#01",
+        "O01_chatgpt_p1#01",
+        "O01_chatgpt_p2#01",
+        "O01_gemini_p1#01",
+        "O01_gemini_p2#01",
+        "O02_perplexity_p1#01",
+        "O02_chatgpt_p1#02",
+        "O02_chatgpt_p2#01",
+        "O02_gemini_p2#01",
+        "O03_gemini_p1#01",
+        "O03_gemini_p2#02"
+      ]
+    },
+    {
+      "claim_id": "C002",
+      "claim_key": "water_intensive_positioning",
+      "statement": "Kemira specialises in (sustainable) chemistry for water-intensive industries",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S01",
+        "file": "text.md",
+        "quote": "Kemira is a global leader in sustainable chemistry for water-intensive industries."
+      },
+      "conflicting_evidence": null,
+      "reason": "Matches Kemira's own positioning statement.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K01_perplexity_p1#02",
+        "K01_perplexity_p2#02",
+        "K01_gemini_p1#04",
+        "K01_gemini_p2#03",
+        "K02_perplexity_p1#02",
+        "K02_perplexity_p2#02",
+        "K02_chatgpt_p1#02",
+        "K02_gemini_p1#03",
+        "K02_gemini_p2#03",
+        "K03_perplexity_p2#10",
+        "K03_chatgpt_p1#05",
+        "K03_chatgpt_p2#06",
+        "K04_chatgpt_p1#02",
+        "K07_chatgpt_p2#02",
+        "O03_gemini_p1#03"
+      ]
+    },
+    {
+      "claim_id": "C004",
+      "claim_key": "hq_helsinki",
+      "statement": "Kemira is headquartered in Helsinki, Finland",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S21",
+        "file": "text.md",
+        "quote": "Kemira has production sites, research centers and sales offices all over the world. Our company headquarters is located in Helsinki, Finland."
+      },
+      "conflicting_evidence": null,
+      "reason": "Headquarters in Helsinki.",
+      "see_also": [
+        "S17 p.110: Kemira's corporate headquarters in Helsinki, Finland"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K01_perplexity_p1#04",
+        "K01_perplexity_p2#03",
+        "K01_chatgpt_p1#02",
+        "K01_chatgpt_p2#01",
+        "K01_gemini_p1#02",
+        "K01_gemini_p2#02",
+        "K02_perplexity_p2#12",
+        "K02_chatgpt_p2#03",
+        "K02_gemini_p1#02",
+        "K02_gemini_p2#02",
+        "K03_perplexity_p1#05",
+        "K03_perplexity_p2#05",
+        "O01_perplexity_p1#01",
+        "O01_perplexity_p2#02",
+        "O02_perplexity_p2#06"
+      ]
+    },
+    {
+      "claim_id": "C036",
+      "claim_key": "kemconnect_digital",
+      "statement": "Kemira's KemConnect digital services monitor processes and optimise chemical dosing (e.g. KemConnect P for phosphorus, SD for sludge dewatering)",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S10",
+        "file": "text.md",
+        "quote": "KemConnect ® solutions enable data-driven chemistry management for the key areas of water treatment. Our solutions for real-time monitoring, advanced process control and optimization, and predictive analytics build transparency, provide a deeper understanding of your process, and enable proactive and timely action for your plant’s operations."
+      },
+      "conflicting_evidence": null,
+      "reason": "KemConnect provides real-time monitoring and process optimisation.",
+      "see_also": [
+        "S10: KemConnect SD for sludge dewatering and KemConnect P for phosphorus removal named on the same page"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K04_perplexity_p1#08",
+        "K04_perplexity_p2#08",
+        "K04_chatgpt_p1#11",
+        "K04_chatgpt_p2#09",
+        "K04_gemini_p1#10",
+        "K04_gemini_p2#07",
+        "K05_perplexity_p1#05",
+        "K05_perplexity_p2#03",
+        "K05_chatgpt_p1#05",
+        "K05_chatgpt_p2#06",
+        "K05_gemini_p1#08",
+        "K05_gemini_p2#08",
+        "O03_perplexity_p1#04",
+        "O03_perplexity_p2#02",
+        "O03_chatgpt_p2#04"
+      ]
+    },
+    {
+      "claim_id": "C031",
+      "claim_key": "phosphorus_removal",
+      "statement": "Kemira offers phosphorus removal by chemical precipitation (and support for nitrogen/nutrient removal)",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S07",
+        "file": "text.md",
+        "quote": "The dominating process for the removal of phosphorus is chemical precipitation. With chemically precipitated sludge, effective nutrient recycling is also possible, making phosphorus available to plants and crops. Typically, phosphorus removal is done with coagulants before the biological treatment but phosphorus can also be precipitated in the biological treatment process or as the final step of the treatment process."
+      },
+      "conflicting_evidence": null,
+      "reason": "Phosphorus removal by chemical precipitation with coagulants.",
+      "see_also": [
+        "S07: Kemira chemistries before biological treatment increase nitrification capacity (nitrogen support)"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K04_perplexity_p1#03",
+        "K04_perplexity_p2#10",
+        "K04_chatgpt_p1#10",
+        "K04_chatgpt_p2#04",
+        "K04_gemini_p1#07",
+        "K04_gemini_p2#04",
+        "K05_perplexity_p2#04",
+        "K05_chatgpt_p1#03",
+        "K05_chatgpt_p2#04",
+        "K05_gemini_p1#03",
+        "K05_gemini_p2#03",
+        "O02_chatgpt_p1#04",
+        "O02_gemini_p2#04",
+        "O03_gemini_p2#05"
+      ]
+    },
+    {
+      "claim_id": "C005",
+      "claim_key": "listing_nasdaq_helsinki",
+      "statement": "Kemira is listed on Nasdaq Helsinki under the ticker KEMIRA",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S20",
+        "file": "text.md",
+        "quote": "Shares are listed on Nasdaq Helsinki Ltd. The company has no knowledge of any shareholder agreements. Trading code: KEMIRA (OMX)"
+      },
+      "conflicting_evidence": null,
+      "reason": "Listed on Nasdaq Helsinki, trading code KEMIRA.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K01_perplexity_p1#05",
+        "K01_perplexity_p2#04",
+        "K01_chatgpt_p1#10",
+        "K01_chatgpt_p2#07",
+        "K02_perplexity_p2#13",
+        "K02_chatgpt_p1#15",
+        "K02_chatgpt_p2#04",
+        "K03_perplexity_p1#04",
+        "K03_perplexity_p2#04",
+        "K03_chatgpt_p1#04",
+        "K03_chatgpt_p2#04",
+        "K03_gemini_p1#03",
+        "K03_gemini_p2#03"
+      ]
+    },
+    {
+      "claim_id": "C006",
+      "claim_key": "serves_fiber_industries",
+      "statement": "Kemira serves the pulp, paper, packaging and hygiene industries",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S02",
+        "file": "text.md",
+        "quote": "With over 100 years of experience, we partner with municipal water utilities, pulp, paper, board and tissue producers to deliver visible improvements with our invisible enabler – the chemistry expertise of our 4,900 people."
+      },
+      "conflicting_evidence": null,
+      "reason": "Kemira names pulp, paper, board and tissue producers as partners.",
+      "see_also": [
+        "S17 p.5: Packaging & Hygiene Solutions business unit"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K01_perplexity_p1#06",
+        "K01_perplexity_p2#06",
+        "K01_chatgpt_p1#04",
+        "K01_chatgpt_p2#04",
+        "K01_gemini_p1#06",
+        "K01_gemini_p2#06",
+        "K02_perplexity_p1#05",
+        "K02_perplexity_p2#11",
+        "K02_gemini_p1#07",
+        "K02_gemini_p2#08",
+        "K03_perplexity_p2#11",
+        "K03_chatgpt_p1#07",
+        "K03_chatgpt_p2#08"
+      ]
+    },
+    {
+      "claim_id": "C010",
+      "claim_key": "revenue_2025",
+      "statement": "Kemira's 2025 revenue was about EUR 2.8 billion (EUR 2,754 million)",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 5,
+        "quote": "Revenue decreased to EUR 2,753.5 million, mainly due to lower volumes and unfavorable FX rates."
+      },
+      "conflicting_evidence": null,
+      "reason": "2025 revenue EUR 2,753.5 million (about EUR 2.8 billion).",
+      "see_also": [
+        "S01: In 2025, Kemira's revenue totaled EUR 2.8 billion"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K01_perplexity_p1#10",
+        "K01_perplexity_p2#12",
+        "K01_chatgpt_p1#09",
+        "K02_perplexity_p2#14",
+        "K02_chatgpt_p1#13",
+        "K02_chatgpt_p2#05",
+        "K03_perplexity_p1#02",
+        "K03_perplexity_p2#02",
+        "K03_chatgpt_p1#02",
+        "K03_chatgpt_p2#02",
+        "K03_gemini_p1#01",
+        "K03_gemini_p2#01"
+      ]
+    },
+    {
+      "claim_id": "C011",
+      "claim_key": "employees_4900",
+      "statement": "Kemira has about 4,900 employees (4,911 at year-end 2025)",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S01",
+        "file": "text.md",
+        "quote": "In 2025, Kemira’s revenue totaled EUR 2.8 billion, and we employed approximately 4,900 people."
+      },
+      "conflicting_evidence": null,
+      "reason": "About 4,900 employees in 2025.",
+      "see_also": [
+        "S17 p.7: total employees 4,911"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K01_perplexity_p1#11",
+        "K01_perplexity_p2#11",
+        "K01_chatgpt_p1#08",
+        "K02_perplexity_p2#15",
+        "K02_chatgpt_p1#14",
+        "K02_chatgpt_p2#06",
+        "K03_perplexity_p1#03",
+        "K03_perplexity_p2#03",
+        "K03_chatgpt_p1#03",
+        "K03_chatgpt_p2#03",
+        "K03_gemini_p1#02",
+        "K03_gemini_p2#02"
+      ]
+    },
+    {
+      "claim_id": "C070",
+      "claim_key": "sbti_validated",
+      "statement": "Kemira's climate targets are validated by the Science Based Targets initiative",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "Kemira has ambitious commitments such as being a frontrunner in the industry with approved Science-Based Targets in all scopes 1, 2 and 3, covering the full value chain of operations."
+      },
+      "conflicting_evidence": null,
+      "reason": "Kemira states its Science-Based Targets are approved for scopes 1, 2 and 3.",
+      "see_also": [
+        "S13: Scope 1 and 2 target approved by SBTi"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p1#19",
+        "K06_perplexity_p2#21",
+        "K06_chatgpt_p1#06",
+        "K06_chatgpt_p2#12",
+        "K06_gemini_p1#07",
+        "K06_gemini_p2#05",
+        "K07_perplexity_p1#04",
+        "K07_perplexity_p2#07",
+        "K07_chatgpt_p1#07",
+        "K07_chatgpt_p2#05",
+        "K07_gemini_p1#04",
+        "K07_gemini_p2#04"
+      ]
+    },
+    {
+      "claim_id": "C012",
+      "claim_key": "serves_other_industries",
+      "statement": "Kemira also serves industries such as food, energy and mining",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S02",
+        "file": "text.md",
+        "quote": "From food production to the energy industry or metals and mining, we help water intensive industries to improve their process and resource efficiency."
+      },
+      "conflicting_evidence": null,
+      "reason": "Food, energy, metals and mining named.",
+      "see_also": [
+        "S04: end markets include mining"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K01_perplexity_p2#07",
+        "K02_perplexity_p1#07",
+        "K02_perplexity_p2#08",
+        "K02_chatgpt_p1#11",
+        "K02_chatgpt_p2#14",
+        "K02_gemini_p1#08",
+        "K02_gemini_p2#06",
+        "K04_chatgpt_p1#09",
+        "K04_gemini_p1#02"
+      ]
+    },
+    {
+      "claim_id": "C008",
+      "claim_key": "segments_three",
+      "statement": "Kemira is organised into three segments, Water Solutions, Fiber Essentials and Packaging & Hygiene Solutions (since January 2025)",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 5,
+        "quote": "At the start of the year, we implemented our new operating model based on three business units: Water Solutions, Packaging & Hygiene Solutions and Fiber Essentials – supported by New Ventures, Research & Innovation, and a centralized Operations unit."
+      },
+      "conflicting_evidence": null,
+      "reason": "Three business units with these names, implemented at the start of 2025.",
+      "see_also": [
+        "S17 p.11: the same three named as 'customer-focused business segments'"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K01_perplexity_p1#08",
+        "K01_perplexity_p2#08",
+        "K01_chatgpt_p1#06",
+        "K01_gemini_p2#07",
+        "K02_chatgpt_p1#04",
+        "K02_chatgpt_p2#07",
+        "K02_gemini_p1#04",
+        "K02_gemini_p2#04"
+      ]
+    },
+    {
+      "claim_id": "C055",
+      "claim_key": "target_trif_2030",
+      "statement": "Safety target - reduce TRIF to 1.5 by end-2030",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "Reduce our Total Recordable Injury Frequency (TRIF) rate across our sites to 1.5 by the end of 2030."
+      },
+      "conflicting_evidence": null,
+      "reason": "TRIF 1.5 by end-2030.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p1#04",
+        "K06_perplexity_p2#05",
+        "K06_chatgpt_p1#08",
+        "K06_chatgpt_p2#10",
+        "K06_gemini_p1#13",
+        "K06_gemini_p2#11",
+        "K07_chatgpt_p1#18",
+        "K07_chatgpt_p2#16"
+      ]
+    },
+    {
+      "claim_id": "C032",
+      "claim_key": "water_chemical_portfolio",
+      "statement": "Kemira's water treatment portfolio includes antiscalants, dispersants, biocides, disinfection products and defoamers",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S08",
+        "file": "text.md",
+        "quote": "The coagulants, polymers and antiscalants in our portfolio are FDA compliant and NSF certified."
+      },
+      "conflicting_evidence": null,
+      "reason": "Partly addressed. Antiscalants are confirmed here and a performic-acid biocide/disinfectant elsewhere; the ground truth does not mention dispersants or defoamers, so the claim as stated cannot be settled.",
+      "see_also": [
+        "S17 p.13: DEX performic acid, a fast-acting biocide",
+        "S10: KemConnect DEX wastewater disinfection"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K04_perplexity_p1#04",
+        "K04_perplexity_p2#05",
+        "K04_chatgpt_p1#12",
+        "K04_chatgpt_p2#07",
+        "K04_gemini_p1#04",
+        "K04_gemini_p2#03",
+        "O01_chatgpt_p2#04"
+      ]
+    },
+    {
+      "claim_id": "C062",
+      "claim_key": "target_scope12_2030",
+      "statement": "Climate target - cut Scope 1 and 2 GHG emissions 52% by end-2030 from a 2018 baseline",
+      "verdict": "source_conflict",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S13",
+        "file": "text.md",
+        "quote": "We have set a target to reduce combined Scope 1 and Scope 2 Greenhouse gas (GHG) emissions by -52% across our manufacturing sites by the end of 2030 compared to a 2018 baseline. Our target has been approved by SBTi."
+      },
+      "conflicting_evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 23,
+        "quote": "Reduce GHG emissions from Scope 1 and 2 by 51.23% by the end of 2030, compared to base year 2018."
+      },
+      "reason": "The claim (52%) matches Kemira's climate page exactly and conflicts with the annual report (51.23%). Kemira's published material gives different figures for the same target, so the ground truth cannot settle it.",
+      "see_also": [
+        "S11: target text says 'by 50%' while its target column says -52%",
+        "S22 p.12-13: -51.23% / 51.2%",
+        "SF06"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p1#11",
+        "K06_perplexity_p2#12",
+        "K06_chatgpt_p1#13",
+        "K06_chatgpt_p2#06",
+        "K06_gemini_p1#08",
+        "K06_gemini_p2#06",
+        "K07_perplexity_p2#04"
+      ]
+    },
+    {
+      "claim_id": "C064",
+      "claim_key": "target_scope3_2033",
+      "statement": "Climate target - cut absolute Scope 3 GHG emissions 33% by 2033 from a 2021 baseline",
+      "verdict": "source_conflict",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "Reduce GHG emissions from scope 3 by 33% by the end of 2033 from a 2021 baseline"
+      },
+      "conflicting_evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 23,
+        "quote": "Reduce GHG emissions from Scope 3 by 32.5% by the end of 2033, compared to base year 2021."
+      },
+      "reason": "The claim (33%) matches Kemira's sustainability page and conflicts with the annual report (32.5%). The ground truth cannot settle it.",
+      "see_also": [
+        "S13: -33% by the end of 2033",
+        "S22 p.12-13: -32.5%",
+        "SF06"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p1#13",
+        "K06_perplexity_p2#14",
+        "K06_chatgpt_p1#15",
+        "K06_chatgpt_p2#07",
+        "K06_gemini_p1#09",
+        "K06_gemini_p2#07",
+        "K07_perplexity_p2#05"
+      ]
+    },
+    {
+      "claim_id": "C066",
+      "claim_key": "target_renewable_revenue_2030",
+      "statement": "Renewable solutions target - more than EUR 500 million revenue by end-2030",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "Derive more than EUR 500 million from renewable solutions by the end of 2030."
+      },
+      "conflicting_evidence": null,
+      "reason": "More than EUR 500 million by end-2030.",
+      "see_also": [
+        "S22 p.12: > EUR 500 million revenue by the end of 2030"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p1#15",
+        "K06_perplexity_p2#16",
+        "K06_chatgpt_p1#17",
+        "K06_chatgpt_p2#09",
+        "K06_gemini_p1#11",
+        "K06_gemini_p2#09",
+        "K07_chatgpt_p2#12"
+      ]
+    },
+    {
+      "claim_id": "C044",
+      "claim_key": "utility_compliance_costs",
+      "statement": "Kemira helps utilities meet tightening discharge and water-quality rules while reducing energy, labour and chemical costs",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S06",
+        "file": "text.md",
+        "quote": "Municipal water and wastewater treatment plants are forced to comply with tightening regulatory requirements, while tackling global megatrends, such as climate change, a growing population and scarcity of resources combined with rising costs and supply-chain insecurities. Kemira offers a range of innovative solutions to optimize all stages of the water treatment process, reduce expenses for energy, labor and chemicals, while safely achieving the targeted water quality."
+      },
+      "conflicting_evidence": null,
+      "reason": "Compliance with tightening regulation while reducing energy, labour and chemical expenses.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K05_perplexity_p1#03",
+        "K05_perplexity_p2#05",
+        "K05_chatgpt_p1#01",
+        "K05_chatgpt_p2#01",
+        "K05_gemini_p1#04",
+        "K05_gemini_p2#04"
+      ]
+    },
+    {
+      "claim_id": "C052",
+      "claim_key": "sustainability_core_strategy",
+      "statement": "Sustainability is integrated into Kemira's business strategy rather than a separate programme; its chemistry helps customers reduce water use, emissions, waste and fossil raw materials",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "Our strategic agenda is heavily focused on our sustainability transformation"
+      },
+      "conflicting_evidence": null,
+      "reason": "Sustainability is central to Kemira's strategic agenda.",
+      "see_also": [
+        "S11: 'Sustainable transformation will drive profitable growth'"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p1#01",
+        "K06_perplexity_p2#01",
+        "K06_chatgpt_p1#02",
+        "K06_chatgpt_p2#02",
+        "K06_gemini_p1#02",
+        "K06_gemini_p2#02"
+      ]
+    },
+    {
+      "claim_id": "C057",
+      "claim_key": "target_dei_2026",
+      "statement": "Diversity & inclusion target - reach the top 10% cross-industry norm by end-2026",
+      "verdict": "source_conflict",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S22",
+        "file": "text.md",
+        "page": 12,
+        "quote": "Kemira's target is to reach the top 10% for the cross industry benchmark for Diversity & Inclusion (DEI) by the end of 2026"
+      },
+      "conflicting_evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 56,
+        "quote": "Reach Glint top 10% cross industry norm for Diversity & Inclusion by the end of 2025"
+      },
+      "reason": "The claim (end-2026) matches the half-year report and the website and conflicts with the annual report (end-2025). The half-year report is the later document, but both remain published, so the ground truth cannot settle which date a reader should take.",
+      "see_also": [
+        "S11: top 10% by the end of 2026",
+        "S17 p.23: also end of 2025",
+        "SF07"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p1#06",
+        "K06_perplexity_p2#07",
+        "K06_chatgpt_p1#19",
+        "K06_chatgpt_p2#11",
+        "K06_gemini_p1#14",
+        "K06_gemini_p2#12"
+      ]
+    },
+    {
+      "claim_id": "C059",
+      "claim_key": "target_water_2030",
+      "statement": "Water target - enable an additional cumulative 3.5 billion m3 of water treated, reused or recycled through customers by 2030, versus a 2024 baseline",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "By, 2030, enabling the treatment, reuse and recycling of an additional cumulative 3.5 billion m³ of water through our customers’ operations, compared to a 2024 baseline."
+      },
+      "conflicting_evidence": null,
+      "reason": "Additional cumulative 3.5 billion m3 by 2030 vs a 2024 baseline.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p1#08",
+        "K06_perplexity_p2#09",
+        "K06_chatgpt_p1#11",
+        "K06_chatgpt_p2#08",
+        "K06_gemini_p1#12",
+        "K06_gemini_p2#10"
+      ]
+    },
+    {
+      "claim_id": "C014",
+      "claim_key": "resource_efficiency",
+      "statement": "Kemira helps customers use water, energy and raw materials more efficiently",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S02",
+        "file": "text.md",
+        "quote": "We are the chosen partners for water-intensive industries worldwide, helping our customers design for efficiency, reuse resources, and revitalize natural systems."
+      },
+      "conflicting_evidence": null,
+      "reason": "Kemira states it helps customers with efficiency and resource reuse.",
+      "see_also": [
+        "S11: 64% of the product portfolio improves resource efficiency"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K01_chatgpt_p1#11",
+        "K01_gemini_p1#07",
+        "K02_perplexity_p2#03",
+        "K02_chatgpt_p2#15",
+        "K03_chatgpt_p2#09"
+      ]
+    },
+    {
+      "claim_id": "C035",
+      "claim_key": "industrial_water_services",
+      "statement": "Kemira provides industrial water services and programmes for boilers, cooling towers, closed loops, pretreatment and wastewater (including testing, feed equipment and Legionella management)",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 10,
+        "quote": "Kemira has acquired Water Engineering, Inc., a U.S.-based water treatment services company, expanding its Water Solutions business into industrial services. The deal strengthened Kemira’s expertise in boiler, cooling, and wastewater treatment, creating a platform for growth in a fast-expanding market."
+      },
+      "conflicting_evidence": null,
+      "reason": "Industrial water services covering boiler, cooling and wastewater treatment. Detail items in some answers (Legionella management, feed equipment, testing) are not addressed in the ground truth.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K04_perplexity_p1#07",
+        "K04_perplexity_p2#03",
+        "K04_chatgpt_p1#08",
+        "K04_chatgpt_p2#06",
+        "K04_gemini_p1#08"
+      ]
+    },
+    {
+      "claim_id": "C045",
+      "claim_key": "biogas_resource_recovery",
+      "statement": "Kemira helps utilities increase biogas production from sludge and recover resources such as phosphorus",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S09",
+        "file": "text.md",
+        "quote": "Producing biogas from organic sludge is a viable way to reduce energy costs. We can help you in boosting your biogas production capability."
+      },
+      "conflicting_evidence": null,
+      "reason": "Kemira helps boost biogas production from sludge.",
+      "see_also": [
+        "S07: chemically precipitated sludge enables nutrient recycling, making phosphorus available to plants (the resource-recovery part)"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K05_perplexity_p1#07",
+        "K05_perplexity_p2#07",
+        "K05_chatgpt_p1#07",
+        "K05_gemini_p1#07",
+        "K05_gemini_p2#07"
+      ]
+    },
+    {
+      "claim_id": "C078",
+      "claim_key": "msci_aaa",
+      "statement": "Kemira has an MSCI ESG rating of AAA",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S12",
+        "file": "text.md",
+        "quote": "External parties like CDP, EcoVadis, MSCI and other investor platforms have recognized Kemira for bettering society and safeguarding the environment."
+      },
+      "conflicting_evidence": null,
+      "reason": "The ground truth names MSCI recognition but states no grade; AAA is not confirmed.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_chatgpt_p2#20",
+        "K07_perplexity_p2#02",
+        "K07_chatgpt_p1#11",
+        "K07_gemini_p1#03",
+        "K07_gemini_p2#06"
+      ]
+    },
+    {
+      "claim_id": "C071",
+      "claim_key": "csrd_double_materiality",
+      "statement": "Kemira conducts double-materiality assessments and reports under the EU CSRD/ESRS",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S12",
+        "file": "text.md",
+        "quote": "We regularly conduct a double-materiality assessment in compliance with the Corporate Sustainability Reporting Directive (CSRD)."
+      },
+      "conflicting_evidence": null,
+      "reason": "Double-materiality assessment under the CSRD.",
+      "see_also": [
+        "S17 p.73: Sustainability statement prepared under ESRS"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p2#02",
+        "K06_chatgpt_p2#18",
+        "K06_gemini_p1#06",
+        "K07_chatgpt_p2#06"
+      ]
+    },
+    {
+      "claim_id": "C034",
+      "claim_key": "odor_corrosion_control",
+      "statement": "Kemira offers odour, corrosion, scale and foam control for wastewater and sewer networks",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S07",
+        "file": "text.md",
+        "quote": "Several chemical interactions are continuously occurring in your process’ water phase. This can result in troublesome odor, corrosion, foam and scale problems. Based on our experience in troubleshooting hundreds of water treatment plants and industrial processes, we have the right chemistry to deal with any such problems."
+      },
+      "conflicting_evidence": null,
+      "reason": "Odour, corrosion, foam and scale control.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K04_perplexity_p1#06",
+        "K04_chatgpt_p1#06",
+        "K04_gemini_p2#05"
+      ]
+    },
+    {
+      "claim_id": "C019",
+      "claim_key": "leading_market_position",
+      "statement": "Kemira is one of the world's leading suppliers of water treatment and pulp and paper chemicals",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S04",
+        "file": "text.md",
+        "quote": "We are a leader globally in our niche areas of chemical solutions: #1-3 in water treatment and #2 in the pulp and paper business globally."
+      },
+      "conflicting_evidence": null,
+      "reason": "Kemira states a global",
+      "see_also": [
+        "S01: 'a global leader in sustainable chemistry for water-intensive industries'"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K01_gemini_p1#10",
+        "K01_gemini_p2#08",
+        "K03_perplexity_p2#09",
+        "K06_gemini_p1#01",
+        "K06_gemini_p2#01",
+        "O01_gemini_p1#02",
+        "O01_gemini_p2#02",
+        "O02_perplexity_p1#04",
+        "O02_gemini_p1#01",
+        "O02_gemini_p2#02",
+        "O03_gemini_p1#02",
+        "O03_gemini_p2#01"
+      ]
+    },
+    {
+      "claim_id": "C056",
+      "claim_key": "progress_trif_2025",
+      "statement": "TRIF was 2.7 in 2025",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "Improving safety Reduce our Total Recordable Injury Frequency (TRIF) rate across our sites to 1.5 by the end of 2030. 2.7 1.5"
+      },
+      "conflicting_evidence": null,
+      "reason": "The 2025 result column shows TRIF 2.7.",
+      "see_also": [
+        "S17 p.7: TRIF 2.7"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p1#05",
+        "K06_perplexity_p2#06",
+        "K06_chatgpt_p1#10",
+        "K06_chatgpt_p2#17",
+        "K07_perplexity_p2#15",
+        "K07_chatgpt_p1#17",
+        "K07_chatgpt_p2#14"
+      ]
+    },
+    {
+      "claim_id": "C026",
+      "claim_key": "plastic_replacement",
+      "statement": "Kemira develops solutions that help replace (single-use) plastic with fibre-based materials",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S04",
+        "file": "text.md",
+        "quote": "This business unit specializes in innovative and sustainable fiber-based solutions that support customers in transitioning to a circular economy by replacing plastics with fiber."
+      },
+      "conflicting_evidence": null,
+      "reason": "Fibre-based solutions replacing plastics.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K02_chatgpt_p1#09",
+        "K02_chatgpt_p2#12",
+        "K02_gemini_p1#06",
+        "K02_gemini_p2#07",
+        "K07_gemini_p1#06",
+        "K07_gemini_p2#03"
+      ]
+    },
+    {
+      "claim_id": "C060",
+      "claim_key": "progress_water_2025",
+      "statement": "About 21 billion m3 (21.1) of water was treated, reused or recycled with Kemira's chemistry in 2025",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 9,
+        "quote": "21 billion m3 of water treated, reused and recycled with the help of Kemira chemistry, which is comparable to the annual water consumption of approximately 372 million people"
+      },
+      "conflicting_evidence": null,
+      "reason": "21 billion m3 in 2025.",
+      "see_also": [
+        "S11: result 2025 '21 billion m3' against a '24.5 billion m3' target column"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p1#09",
+        "K06_perplexity_p2#10",
+        "K06_chatgpt_p1#12",
+        "K07_perplexity_p1#01",
+        "K07_chatgpt_p1#04",
+        "K07_chatgpt_p2#03"
+      ]
+    },
+    {
+      "claim_id": "C063",
+      "claim_key": "progress_scope12_2025",
+      "statement": "Scope 1 and 2 emissions were 43.1% below the 2018 baseline in 2025",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "Reduce GHG emissions from Scope 1 and 2 by 50% by the end of 2030, from a 2018 baseline. -43,1% -52%"
+      },
+      "conflicting_evidence": null,
+      "reason": "The 2025 result is -43.1% against the 2018 baseline. (The same row states the target as both 50% and -52%; see SF06.)",
+      "see_also": [
+        "S17 p.23: 43.1% result 2025"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p1#12",
+        "K06_perplexity_p2#13",
+        "K06_chatgpt_p1#14",
+        "K06_chatgpt_p2#14",
+        "K07_chatgpt_p1#05",
+        "K07_chatgpt_p2#07"
+      ]
+    },
+    {
+      "claim_id": "C065",
+      "claim_key": "progress_scope3_2025",
+      "statement": "Scope 3 emissions were 26% below the 2021 baseline in 2025",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "Reduce GHG emissions from scope 3 by 33% by the end of 2033 from a 2021 baseline -26% -33%"
+      },
+      "conflicting_evidence": null,
+      "reason": "The 2025 result is -26% against the 2021 baseline.",
+      "see_also": [
+        "S22 p.12: -26.0%"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p1#14",
+        "K06_perplexity_p2#15",
+        "K06_chatgpt_p1#16",
+        "K06_chatgpt_p2#15",
+        "K07_chatgpt_p1#06",
+        "K07_chatgpt_p2#09"
+      ]
+    },
+    {
+      "claim_id": "C069",
+      "claim_key": "carbon_neutral_2045",
+      "statement": "Kemira aims to be carbon neutral in Scope 1 and 2 emissions by 2045",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S13",
+        "file": "text.md",
+        "quote": "Our long-term ambition is to be carbon neutral by 2045 (Scopes 1 and 2)."
+      },
+      "conflicting_evidence": null,
+      "reason": "Carbon neutral in Scopes 1 and 2 by 2045.",
+      "see_also": [
+        "S17 p.94: carbon neutrality in Scope 1 and 2 emissions by 2045"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p1#18",
+        "K06_perplexity_p2#20",
+        "K06_chatgpt_p1#21",
+        "K06_chatgpt_p2#13",
+        "K07_perplexity_p1#07",
+        "K07_perplexity_p2#06"
+      ]
+    },
+    {
+      "claim_id": "C111",
+      "claim_key": "strong_in_nordics",
+      "statement": "Kemira is particularly strong in the Nordic countries (and in pulp and paper)",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": true,
+      "evidence": {
+        "source": "S17",
+        "file": "page.md",
+        "quote": "The project strengthens Kemira’s water treatment offering in the Nordics and supports activated carbon, used in the removal of micropollutants such as PFAS, as a key strategic growth area."
+      },
+      "conflicting_evidence": null,
+      "reason": "An evaluative claim ('particularly strong') with no truth condition a source passage could settle, distinct from a factual claim the material does not address. The ground truth mentions strengthening the Nordic water offering; its market-position data is for EMEA and North America.",
+      "see_also": [
+        "S04: market share ~25% in coagulants and polymers in EMEA"
+      ],
+      "status": "revised",
+      "instance_ids": [
+        "O01_perplexity_p1#03",
+        "O01_chatgpt_p1#04",
+        "O02_perplexity_p1#03",
+        "O02_perplexity_p2#04",
+        "O02_chatgpt_p1#05",
+        "O02_chatgpt_p2#03"
+      ]
+    },
+    {
+      "claim_id": "C067",
+      "claim_key": "progress_renewable_2025",
+      "statement": "Renewable solutions revenue was EUR 240 million in 2025",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "Derive more than EUR 500 million from renewable solutions by the end of 2030. EUR 240 million EUR 500 million"
+      },
+      "conflicting_evidence": null,
+      "reason": "The 2025 result is EUR 240 million.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p1#16",
+        "K06_perplexity_p2#17",
+        "K06_chatgpt_p1#18",
+        "K06_chatgpt_p2#16",
+        "K07_chatgpt_p2#13"
+      ]
+    },
+    {
+      "claim_id": "C114",
+      "claim_key": "superfloc_brand",
+      "statement": "Kemira sells flocculants under the Superfloc brand (cationic, anionic and non-ionic; powder and emulsion)",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": "outside_ground_truth",
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "The Superfloc brand does not appear anywhere in the ground truth set. Related material exists on a kemira.com product page that is not in sources.yaml (noted by the human from the live site, for the limitation record only; not used as evidence).",
+      "see_also": [],
+      "status": "revised",
+      "instance_ids": [
+        "O02_perplexity_p2#02",
+        "O03_perplexity_p1#02",
+        "O03_perplexity_p2#03",
+        "O03_chatgpt_p1#01",
+        "O03_chatgpt_p2#03"
+      ]
+    },
+    {
+      "claim_id": "C020",
+      "claim_key": "pulp_bleaching_chemicals",
+      "statement": "Kemira supplies pulp bleaching and processing chemicals, including sodium chlorate and hydrogen peroxide",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 59,
+        "quote": "has two main product groups: bleaching chemicals (around 70% of revenue), which includes sodium chlorate and hydrogen peroxide, and other base chemicals (around 30% of revenue), which includes caustic soda, for example."
+      },
+      "conflicting_evidence": null,
+      "reason": "Fiber Essentials' bleaching chemicals include sodium chlorate and hydrogen peroxide.",
+      "see_also": [
+        "S04: sodium chlorate is the largest Fiber Essentials business"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K02_perplexity_p1#04",
+        "K02_perplexity_p2#06",
+        "K02_chatgpt_p1#10",
+        "K02_chatgpt_p2#13"
+      ]
+    },
+    {
+      "claim_id": "C021",
+      "claim_key": "fiber_product_performance",
+      "statement": "Kemira's chemicals improve the strength, water resistance and recyclability of paper, board, tissue and packaging",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S04",
+        "file": "text.md",
+        "quote": "Through close collaboration with its customers, Kemira continuously develops new solutions that meet requirements for strength, stiffness, weight, and overall quality."
+      },
+      "conflicting_evidence": null,
+      "reason": "Solutions meeting strength and quality requirements for fibre-based products. Water resistance and recyclability, named in some answers, are incidental and not separately addressed.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K02_perplexity_p1#06",
+        "K02_perplexity_p2#07",
+        "K02_chatgpt_p1#08",
+        "K02_chatgpt_p2#11"
+      ]
+    },
+    {
+      "claim_id": "C027",
+      "claim_key": "footprint_100_countries",
+      "statement": "Kemira sells in more than 100 countries (with operations on six continents)",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 150,
+        "quote": "Kemira has operations in 37 countries and sells products to customers in over 100 countries, including several countries where the risk of corruption is significant."
+      },
+      "conflicting_evidence": null,
+      "reason": "Sales to customers in over 100 countries.",
+      "see_also": [
+        "S01: 4,900 employees on six continents; sales in over 100 countries"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K02_chatgpt_p1#12",
+        "K03_perplexity_p2#07",
+        "K03_chatgpt_p1#08",
+        "K03_chatgpt_p2#05"
+      ]
+    },
+    {
+      "claim_id": "C053",
+      "claim_key": "four_focus_areas",
+      "statement": "Kemira's sustainability work is organised in four focus areas, People, Water, Circularity and Climate & Nature",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "approach to sustainability is based on four focus areas and our sustainability program is built based on these pillars."
+      },
+      "conflicting_evidence": null,
+      "reason": "Four focus areas; the same page names them People, Water, Circularity and Climate & Nature.",
+      "see_also": [
+        "S11: section headings People, Water, Circularity, Climate & Nature"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p1#02",
+        "K06_perplexity_p2#03",
+        "K06_chatgpt_p1#04",
+        "K06_chatgpt_p2#04"
+      ]
+    },
+    {
+      "claim_id": "C054",
+      "claim_key": "sdgs_6_8_12_13",
+      "statement": "Kemira prioritises UN SDGs 6, 8, 12 and 13",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S22",
+        "file": "text.md",
+        "page": 12,
+        "quote": "The focus is on Clean Water and Sanitation (SDG 6), Decent Work and Economic Growth (SDG 8), Responsible Consumption and Production (SDG 12) and Climate Action (SDG 13)"
+      },
+      "conflicting_evidence": null,
+      "reason": "The four SDGs match.",
+      "see_also": [
+        "S17 p.23: the same four SDGs"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p1#03",
+        "K06_perplexity_p2#04",
+        "K06_chatgpt_p1#07",
+        "K06_chatgpt_p2#05"
+      ]
+    },
+    {
+      "claim_id": "C077",
+      "claim_key": "ecovadis_gold",
+      "statement": "Kemira has an EcoVadis Gold rating (score 83/100 where stated)",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S22",
+        "file": "text.md",
+        "page": 12,
+        "quote": "In June, Kemira retained a Gold-level rating by EcoVadis, the leading global sustainability assessment platform, with a score of 83/100."
+      },
+      "conflicting_evidence": null,
+      "reason": "EcoVadis Gold, score 83/100.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_chatgpt_p2#19",
+        "K07_perplexity_p1#02",
+        "K07_perplexity_p2#01",
+        "K07_chatgpt_p1#12"
+      ]
+    },
+    {
+      "claim_id": "C079",
+      "claim_key": "cdp_a_minus",
+      "statement": "Kemira has CDP ratings of A- for climate and water security",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 55,
+        "quote": "in January 2026, Kemira was awarded a Leadership-level A- score in both the Water Security and Climate Change categories of the recently released CDP (Carbon Disclosure Project) 2025 rankings."
+      },
+      "conflicting_evidence": null,
+      "reason": "CDP A- for water security and climate change.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_chatgpt_p2#21",
+        "K07_perplexity_p1#03",
+        "K07_perplexity_p2#03",
+        "K07_chatgpt_p1#10"
+      ]
+    },
+    {
+      "claim_id": "C009",
+      "claim_key": "founded_1920_fertilisers",
+      "statement": "Kemira was founded in 1920, originally to supply fertilisers to Finnish farmers",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S01",
+        "file": "text.md",
+        "quote": "Kemira was founded in 1920 and at the time its main focus was to provide fertilizers to Finnish farmers."
+      },
+      "conflicting_evidence": null,
+      "reason": "Founded in 1920 to supply fertilisers to Finnish farmers.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K01_perplexity_p1#09",
+        "K01_perplexity_p2#10",
+        "K01_chatgpt_p1#07"
+      ]
+    },
+    {
+      "claim_id": "C024",
+      "claim_key": "b2b_model",
+      "statement": "Kemira is a business-to-business supplier; it does not sell directly to consumers",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S01",
+        "file": "text.md",
+        "quote": "We operate globally and serve a wide range of customers including municipal and industrial water treatment companies and the fiber industry."
+      },
+      "conflicting_evidence": null,
+      "reason": "Supported as 'not consumer-facing': Kemira's stated customers are utilities and industrial companies. Overreach: the absolute 'does not sell directly to consumers' (strictly B2B) is a stronger claim than Kemira's material makes; the ground truth does not state it.",
+      "see_also": [],
+      "status": "revised",
+      "instance_ids": [
+        "K02_perplexity_p1#11",
+        "K02_chatgpt_p1#03",
+        "K02_chatgpt_p2#02"
+      ]
+    },
+    {
+      "claim_id": "C038",
+      "claim_key": "water_reuse_desalination",
+      "statement": "Kemira supports water reuse and desalination, including reverse-osmosis/membrane pretreatment",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S08",
+        "file": "text.md",
+        "quote": "In areas where natural groundwater or surface water cannot meet demand, seawater and brackish water are desalted and processed into drinking water and process water. To make this kind of water usable, the main salt components, sodium and chloride, must be removed by using a special membrane technology called Reverse Osmosis (RO). Membrane technology is also utilized in water reuse applications."
+      },
+      "conflicting_evidence": null,
+      "reason": "Kemira's raw water page covers desalination, reverse osmosis and water reuse under 'Desalination and water reuse'.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K04_perplexity_p1#10",
+        "K04_chatgpt_p1#05",
+        "K04_chatgpt_p2#03"
+      ]
+    },
+    {
+      "claim_id": "C048",
+      "claim_key": "technical_expertise_supply",
+      "statement": "Kemira provides utilities with technical expertise (process reviews, troubleshooting) and reliable chemical supply",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 12,
+        "quote": "Our NPS was well above industry benchmarks, reflecting high satisfaction with our sales, customer service and supply chain performance. Reliability of supply continued to receive top ratings and reinforce our position as a trusted partner."
+      },
+      "conflicting_evidence": null,
+      "reason": "Reliable supply is stated here; the technical-expertise part is stated in S07.",
+      "see_also": [
+        "S07: experience in troubleshooting hundreds of water treatment plants"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K05_perplexity_p2#02",
+        "K05_chatgpt_p1#06",
+        "K05_chatgpt_p2#07"
+      ]
+    },
+    {
+      "claim_id": "C058",
+      "claim_key": "progress_dei_2025",
+      "statement": "Kemira's diversity & inclusion measure stood at about 25% (25th percentile) in 2025",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "Fostering inclusivity Reach top 10% cross-industry norm for Diversity & Inclusion by the end of 2026. 25% 10%"
+      },
+      "conflicting_evidence": null,
+      "reason": "The 2025 result column shows 25%. The page does not label what the 25% measures; the annual report puts it as 'slightly outside the top 25%'. ChatGPT's 'above 25th percentile' wording is an interpretation, not Kemira's phrasing.",
+      "see_also": [
+        "S17 p.56: 'Slightly outside the top 25%'"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p1#07",
+        "K06_perplexity_p2#08",
+        "K06_chatgpt_p1#20"
+      ]
+    },
+    {
+      "claim_id": "C074",
+      "claim_key": "handprint_footprint",
+      "statement": "Kemira frames its approach as growing its handprint (positive impact of its products on customers) and reducing its footprint (own operations and supply chain)",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "Growing our handprint through our business impact - Reducing the footprint through, renewable and recycled materials, ambitious climate change mitigation and water stewardship"
+      },
+      "conflicting_evidence": null,
+      "reason": "Handprint and footprint framing.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_chatgpt_p1#05",
+        "K06_gemini_p1#04",
+        "K06_gemini_p2#03"
+      ]
+    },
+    {
+      "claim_id": "C087",
+      "claim_key": "disclosed_material_risks",
+      "statement": "Kemira's own reporting identifies material negative impacts and risks including energy-intensive manufacturing, high water consumption and wastewater discharges, spills and chemical releases, fossil raw-material dependence and substances of concern",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 85,
+        "quote": "Actual negative impacts and risks for Pollution of air, water and soil and potential negative impacts for Substances of concern or very high concern were identified as a result of the materiality assessment. Pollution through potential spills and accidental chemical releases as well as actual and potential environmental liabilities related to soil or closed activities was identified as material aspects."
+      },
+      "conflicting_evidence": null,
+      "reason": "Kemira's materiality assessment identifies spills, accidental releases and substances of concern; energy-intensive manufacturing and water impacts are identified on the same pages.",
+      "see_also": [
+        "S17 p.85: the most significant climate risk to own operations relates to energy-intensive manufacturing",
+        "S17 p.84: water among material topics"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_perplexity_p1#10",
+        "K07_perplexity_p2#09",
+        "K07_chatgpt_p1#19"
+      ]
+    },
+    {
+      "claim_id": "C101",
+      "claim_key": "raw_materials_55_renewable_recycled",
+      "statement": "About 55% (over half) of Kemira's raw materials are renewable or recycled",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "55% of our raw materials are renewable or recycled"
+      },
+      "conflicting_evidence": null,
+      "reason": "55% renewable or recycled.",
+      "see_also": [
+        "S17 p.9: 52% recycled and 3% renewable"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_chatgpt_p1#08",
+        "K07_gemini_p1#07",
+        "K07_gemini_p2#07"
+      ]
+    },
+    {
+      "claim_id": "C113",
+      "claim_key": "leading_european_supplier",
+      "statement": "Kemira is a leading supplier in the European water treatment chemicals market",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S04",
+        "file": "text.md",
+        "quote": "Kemira has a strong market presence in water treatment in Europe and in North America."
+      },
+      "conflicting_evidence": null,
+      "reason": "Strong market presence in European water treatment.",
+      "see_also": [
+        "S04: market share ~25% in coagulants and ~25% in polymers in EMEA"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "O01_perplexity_p2#03",
+        "O01_chatgpt_p1#02",
+        "O01_chatgpt_p2#02"
+      ]
+    },
+    {
+      "claim_id": "C117",
+      "claim_key": "strong_european_municipal_presence",
+      "statement": "Kemira has a strong European municipal footprint and pan-European supply",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S04",
+        "file": "text.md",
+        "quote": "Kemira has a strong market presence in water treatment in Europe and in North America."
+      },
+      "conflicting_evidence": null,
+      "reason": "Strong European water treatment presence; the same section names municipal and industrial customers.",
+      "see_also": [
+        "S04: customers include various cities, especially in Europe and North America"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "O03_perplexity_p1#01",
+        "O03_perplexity_p2#01",
+        "O03_chatgpt_p2#01"
+      ]
+    },
+    {
+      "claim_id": "C039",
+      "claim_key": "activated_carbon",
+      "statement": "Kemira's water treatment portfolio includes activated carbon",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "page.md",
+        "quote": "Kemira will invest in a new activated carbon reactivation plant at its Helsingborg, Sweden site. The project strengthens Kemira’s water treatment offering in the Nordics and supports activated carbon, used in the removal of micropollutants such as PFAS, as a key strategic growth area."
+      },
+      "conflicting_evidence": null,
+      "reason": "Activated carbon is part of Kemira's water treatment offering.",
+      "see_also": [
+        "S06: drinking water with activated carbon (Tarragona case)"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K04_perplexity_p2#06",
+        "K04_chatgpt_p2#08"
+      ]
+    },
+    {
+      "claim_id": "C073",
+      "claim_key": "megatrends",
+      "statement": "Kemira's strategy responds to climate change, water scarcity and the responsible use of limited resources",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "Global challenges shape our strategic agenda. - Climate change - Water scarcity - Responsible use of limited resources"
+      },
+      "conflicting_evidence": null,
+      "reason": "The three megatrends match.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_chatgpt_p1#03",
+        "K06_gemini_p1#03"
+      ]
+    },
+    {
+      "claim_id": "C083",
+      "claim_key": "target_scope12_51_2",
+      "statement": "Climate target - cut Scope 1 and 2 emissions 51.2% (51.23%) by 2030 from 2018",
+      "verdict": "source_conflict",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 23,
+        "quote": "Reduce GHG emissions from Scope 1 and 2 by 51.23% by the end of 2030, compared to base year 2018."
+      },
+      "conflicting_evidence": {
+        "source": "S13",
+        "file": "text.md",
+        "quote": "We have set a target to reduce combined Scope 1 and Scope 2 Greenhouse gas (GHG) emissions by -52% across our manufacturing sites by the end of 2030 compared to a 2018 baseline. Our target has been approved by SBTi."
+      },
+      "reason": "The claim (51.23%) matches the annual report and conflicts with the climate page (-52%). The mirror of target_scope12_2030.",
+      "see_also": [
+        "S22 p.13: 51.2%",
+        "S11: 'by 50%' and -52%",
+        "SF06"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_perplexity_p1#05",
+        "K07_chatgpt_p2#08"
+      ]
+    },
+    {
+      "claim_id": "C084",
+      "claim_key": "target_scope3_32_5",
+      "statement": "Climate target - cut Scope 3 emissions 32.5% by 2033 from 2021",
+      "verdict": "source_conflict",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 23,
+        "quote": "Reduce GHG emissions from Scope 3 by 32.5% by the end of 2033, compared to base year 2021."
+      },
+      "conflicting_evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "Reduce GHG emissions from scope 3 by 33% by the end of 2033 from a 2021 baseline"
+      },
+      "reason": "The claim (32.5%) matches the annual report and conflicts with the sustainability page (33%). The mirror of target_scope3_2033.",
+      "see_also": [
+        "S22 p.13: 32.5%",
+        "SF06"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_perplexity_p1#06",
+        "K07_chatgpt_p2#10"
+      ]
+    }
+  ]
+}

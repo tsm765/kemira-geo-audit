@@ -1,0 +1,575 @@
+# verdicts_input.yaml — S5 adjudication, one verdict per unique claim
+#
+# Built into data/verdicts.json by: python -m src.verdicts build
+# Review sheet (passage first, then verdict, then claim): python -m src.verdicts review
+#
+# Rules (CLAUDE.md):
+# - Retrieval, not grading: every verdict rests on one passage of ground truth,
+#   one to three sentences forming one coherent passage on one point, quoted
+#   verbatim from data/ground_truth/<source>/<file>. Never stacked snippets.
+# - verdict: supported | contradicted | unverified | source_conflict | not_adjudicated
+# - contradicted carries contradiction_type: assistant_wrong | source_unclear
+# - source_conflict: the claim matches some of Kemira's published material and
+#   conflicts with other parts, so the ground truth cannot settle it. The one
+#   case where two passages are cited: `evidence` (what the claim matches) and
+#   `conflicting_evidence` (what it conflicts with). The conflict is the evidence.
+# - A partly addressed claim is supported (with a note) only if the unaddressed
+#   part is incidental; if it is material to the claim, it is unverified.
+# - unverified where the ground truth genuinely does not settle the claim; it
+#   may carry the closest passage as evidence, with the reason stated.
+# - Other relevant sources go in `see_also` as pointers (source, page, what it
+#   says in a few words), never as additional quoted evidence.
+# - status: proposed (by Claude Code) -> confirmed / revised (by the human).
+#   Only confirmed and revised verdicts are written to verdicts.json.
+
+verdicts:
+
+  # ===== Batch 1: the 31 claims stated by all three assistants in both passes
+
+  products_coagulants_polymers:
+    verdict: supported
+    evidence: {source: S04, file: text.md, quote: "Kemira’s water treatment product portfolio mainly consists of coagulants and polymers which play a critical role in enabling resource-efficient operations at our customers’ sites."}
+    reason: Kemira states its water portfolio mainly consists of coagulants and polymers.
+    see_also: ["S17 p.12: iron sulphate coagulant acquisition and aluminium chlorohydrate expansion (iron- and aluminium-based coagulants)", "S09: full range of organic and inorganic coagulants and polymers"]
+    status: confirmed
+
+  serves_water_treatment:
+    verdict: supported
+    evidence: {source: S01, file: text.md, quote: "We operate globally and serve a wide range of customers including municipal and industrial water treatment companies and the fiber industry."}
+    reason: Kemira names municipal and industrial water treatment companies as customers.
+    status: confirmed
+
+  global_chemicals_company:
+    verdict: supported
+    evidence: {source: S01, file: text.md, quote: "Kemira is a global leader in sustainable chemistry for water-intensive industries. We operate globally and serve a wide range of customers including municipal and industrial water treatment companies and the fiber industry."}
+    reason: Kemira describes itself as a chemistry company that operates globally.
+    status: confirmed
+
+  sludge_dewatering:
+    verdict: supported
+    evidence: {source: S06, file: text.md, quote: "Sludge from wastewater treatment must be dewatered to the highest possible dry solids content to make transport, utilization and disposal more economical. But sludge is never easy to handle due to its varying composition. We can help separate solids from liquids in all sludge types and using any dewatering equipment, ensuring the best possible water quality and recovery rates."}
+    reason: Kemira describes dewatering sludge to the highest dry-solids content to cut transport and disposal costs.
+    see_also: ["S09: sludge volumes kept at a minimum with a high dry-solids content to reduce disposal costs"]
+    status: confirmed
+
+  finnish_company:
+    verdict: supported
+    evidence: {source: S21, file: text.md, quote: "Kemira has production sites, research centers and sales offices all over the world. Our company headquarters is located in Helsinki, Finland."}
+    reason: Headquartered in Finland.
+    status: confirmed
+
+  water_intensive_positioning:
+    verdict: supported
+    evidence: {source: S01, file: text.md, quote: "Kemira is a global leader in sustainable chemistry for water-intensive industries."}
+    reason: Matches Kemira's own positioning statement.
+    status: confirmed
+
+  hq_helsinki:
+    verdict: supported
+    evidence: {source: S21, file: text.md, quote: "Kemira has production sites, research centers and sales offices all over the world. Our company headquarters is located in Helsinki, Finland."}
+    reason: Headquarters in Helsinki.
+    see_also: ["S17 p.110: Kemira's corporate headquarters in Helsinki, Finland"]
+    status: confirmed
+
+  kemconnect_digital:
+    verdict: supported
+    evidence: {source: S10, file: text.md, quote: "KemConnect ® solutions enable data-driven chemistry management for the key areas of water treatment. Our solutions for real-time monitoring, advanced process control and optimization, and predictive analytics build transparency, provide a deeper understanding of your process, and enable proactive and timely action for your plant’s operations."}
+    reason: KemConnect provides real-time monitoring and process optimisation.
+    see_also: ["S10: KemConnect SD for sludge dewatering and KemConnect P for phosphorus removal named on the same page"]
+    status: confirmed
+
+  phosphorus_removal:
+    verdict: supported
+    evidence: {source: S07, file: text.md, quote: "The dominating process for the removal of phosphorus is chemical precipitation. With chemically precipitated sludge, effective nutrient recycling is also possible, making phosphorus available to plants and crops. Typically, phosphorus removal is done with coagulants before the biological treatment but phosphorus can also be precipitated in the biological treatment process or as the final step of the treatment process."}
+    reason: Phosphorus removal by chemical precipitation with coagulants.
+    see_also: ["S07: Kemira chemistries before biological treatment increase nitrification capacity (nitrogen support)"]
+    status: confirmed
+
+  listing_nasdaq_helsinki:
+    verdict: supported
+    evidence: {source: S20, file: text.md, quote: "Shares are listed on Nasdaq Helsinki Ltd. The company has no knowledge of any shareholder agreements. Trading code: KEMIRA (OMX)"}
+    reason: Listed on Nasdaq Helsinki, trading code KEMIRA.
+    status: confirmed
+
+  serves_fiber_industries:
+    verdict: supported
+    evidence: {source: S02, file: text.md, quote: "With over 100 years of experience, we partner with municipal water utilities, pulp, paper, board and tissue producers to deliver visible improvements with our invisible enabler – the chemistry expertise of our 4,900 people."}
+    reason: Kemira names pulp, paper, board and tissue producers as partners.
+    see_also: ["S17 p.5: Packaging & Hygiene Solutions business unit"]
+    status: confirmed
+
+  revenue_2025:
+    verdict: supported
+    evidence: {source: S17, file: text.md, page: 5, quote: "Revenue decreased to EUR 2,753.5 million, mainly due to lower volumes and unfavorable FX rates."}
+    reason: 2025 revenue EUR 2,753.5 million (about EUR 2.8 billion).
+    see_also: ["S01: In 2025, Kemira's revenue totaled EUR 2.8 billion"]
+    status: confirmed
+
+  employees_4900:
+    verdict: supported
+    evidence: {source: S01, file: text.md, quote: "In 2025, Kemira’s revenue totaled EUR 2.8 billion, and we employed approximately 4,900 people."}
+    reason: About 4,900 employees in 2025.
+    see_also: ["S17 p.7: total employees 4,911"]
+    status: confirmed
+
+  sbti_validated:
+    verdict: supported
+    evidence: {source: S11, file: text.md, quote: "Kemira has ambitious commitments such as being a frontrunner in the industry with approved Science-Based Targets in all scopes 1, 2 and 3, covering the full value chain of operations."}
+    reason: Kemira states its Science-Based Targets are approved for scopes 1, 2 and 3.
+    see_also: ["S13: Scope 1 and 2 target approved by SBTi"]
+    status: confirmed
+
+  serves_other_industries:
+    verdict: supported
+    evidence: {source: S02, file: text.md, quote: "From food production to the energy industry or metals and mining, we help water intensive industries to improve their process and resource efficiency."}
+    reason: Food, energy, metals and mining named.
+    see_also: ["S04: end markets include mining"]
+    status: confirmed
+
+  segments_three:
+    verdict: supported
+    evidence: {source: S17, file: text.md, page: 5, quote: "At the start of the year, we implemented our new operating model based on three business units: Water Solutions, Packaging & Hygiene Solutions and Fiber Essentials – supported by New Ventures, Research & Innovation, and a centralized Operations unit."}
+    reason: Three business units with these names, implemented at the start of 2025.
+    see_also: ["S17 p.11: the same three named as 'customer-focused business segments'"]
+    status: confirmed
+
+  target_trif_2030:
+    verdict: supported
+    evidence: {source: S11, file: text.md, quote: "Reduce our Total Recordable Injury Frequency (TRIF) rate across our sites to 1.5 by the end of 2030."}
+    reason: TRIF 1.5 by end-2030.
+    status: confirmed
+
+  water_chemical_portfolio:
+    verdict: unverified
+    evidence: {source: S08, file: text.md, quote: "The coagulants, polymers and antiscalants in our portfolio are FDA compliant and NSF certified."}
+    reason: Partly addressed. Antiscalants are confirmed here and a performic-acid biocide/disinfectant elsewhere; the ground truth does not mention dispersants or defoamers, so the claim as stated cannot be settled.
+    see_also: ["S17 p.13: DEX performic acid, a fast-acting biocide", "S10: KemConnect DEX wastewater disinfection"]
+    status: confirmed
+
+  target_scope12_2030:
+    verdict: source_conflict
+    evidence: {source: S13, file: text.md, quote: "We have set a target to reduce combined Scope 1 and Scope 2 Greenhouse gas (GHG) emissions by -52% across our manufacturing sites by the end of 2030 compared to a 2018 baseline. Our target has been approved by SBTi."}
+    conflicting_evidence: {source: S17, file: text.md, page: 23, quote: "Reduce GHG emissions from Scope 1 and 2 by 51.23% by the end of 2030, compared to base year 2018."}
+    reason: The claim (52%) matches Kemira's climate page exactly and conflicts with the annual report (51.23%). Kemira's published material gives different figures for the same target, so the ground truth cannot settle it.
+    see_also: ["S11: target text says 'by 50%' while its target column says -52%", "S22 p.12-13: -51.23% / 51.2%", "SF06"]
+    status: confirmed
+
+  target_scope3_2033:
+    verdict: source_conflict
+    evidence: {source: S11, file: text.md, quote: "Reduce GHG emissions from scope 3 by 33% by the end of 2033 from a 2021 baseline"}
+    conflicting_evidence: {source: S17, file: text.md, page: 23, quote: "Reduce GHG emissions from Scope 3 by 32.5% by the end of 2033, compared to base year 2021."}
+    reason: The claim (33%) matches Kemira's sustainability page and conflicts with the annual report (32.5%). The ground truth cannot settle it.
+    see_also: ["S13: -33% by the end of 2033", "S22 p.12-13: -32.5%", "SF06"]
+    status: confirmed
+
+  target_renewable_revenue_2030:
+    verdict: supported
+    evidence: {source: S11, file: text.md, quote: "Derive more than EUR 500 million from renewable solutions by the end of 2030."}
+    reason: More than EUR 500 million by end-2030.
+    see_also: ["S22 p.12: > EUR 500 million revenue by the end of 2030"]
+    status: confirmed
+
+  utility_compliance_costs:
+    verdict: supported
+    evidence: {source: S06, file: text.md, quote: "Municipal water and wastewater treatment plants are forced to comply with tightening regulatory requirements, while tackling global megatrends, such as climate change, a growing population and scarcity of resources combined with rising costs and supply-chain insecurities. Kemira offers a range of innovative solutions to optimize all stages of the water treatment process, reduce expenses for energy, labor and chemicals, while safely achieving the targeted water quality."}
+    reason: Compliance with tightening regulation while reducing energy, labour and chemical expenses.
+    status: confirmed
+
+  sustainability_core_strategy:
+    verdict: supported
+    evidence: {source: S11, file: text.md, quote: "Our strategic agenda is heavily focused on our sustainability transformation"}
+    reason: Sustainability is central to Kemira's strategic agenda.
+    see_also: ["S11: 'Sustainable transformation will drive profitable growth'"]
+    status: confirmed
+
+  target_dei_2026:
+    verdict: source_conflict
+    evidence: {source: S22, file: text.md, page: 12, quote: "Kemira's target is to reach the top 10% for the cross industry benchmark for Diversity & Inclusion (DEI) by the end of 2026"}
+    conflicting_evidence: {source: S17, file: text.md, page: 56, quote: "Reach Glint top 10% cross industry norm for Diversity & Inclusion by the end of 2025"}
+    reason: The claim (end-2026) matches the half-year report and the website and conflicts with the annual report (end-2025). The half-year report is the later document, but both remain published, so the ground truth cannot settle which date a reader should take.
+    see_also: ["S11: top 10% by the end of 2026", "S17 p.23: also end of 2025", "SF07"]
+    status: confirmed
+
+  target_water_2030:
+    verdict: supported
+    evidence: {source: S11, file: text.md, quote: "By, 2030, enabling the treatment, reuse and recycling of an additional cumulative 3.5 billion m³ of water through our customers’ operations, compared to a 2024 baseline."}
+    reason: Additional cumulative 3.5 billion m3 by 2030 vs a 2024 baseline.
+    status: confirmed
+
+  resource_efficiency:
+    verdict: supported
+    evidence: {source: S02, file: text.md, quote: "We are the chosen partners for water-intensive industries worldwide, helping our customers design for efficiency, reuse resources, and revitalize natural systems."}
+    reason: Kemira states it helps customers with efficiency and resource reuse.
+    see_also: ["S11: 64% of the product portfolio improves resource efficiency"]
+    status: confirmed
+
+  industrial_water_services:
+    verdict: supported
+    evidence: {source: S17, file: text.md, page: 10, quote: "Kemira has acquired Water Engineering, Inc., a U.S.-based water treatment services company, expanding its Water Solutions business into industrial services. The deal strengthened Kemira’s expertise in boiler, cooling, and wastewater treatment, creating a platform for growth in a fast-expanding market."}
+    reason: Industrial water services covering boiler, cooling and wastewater treatment. Detail items in some answers (Legionella management, feed equipment, testing) are not addressed in the ground truth.
+    status: confirmed
+
+  biogas_resource_recovery:
+    verdict: supported
+    evidence: {source: S09, file: text.md, quote: "Producing biogas from organic sludge is a viable way to reduce energy costs. We can help you in boosting your biogas production capability."}
+    reason: Kemira helps boost biogas production from sludge.
+    see_also: ["S07: chemically precipitated sludge enables nutrient recycling, making phosphorus available to plants (the resource-recovery part)"]
+    status: confirmed
+
+  msci_aaa:
+    verdict: unverified
+    evidence: {source: S12, file: text.md, quote: "External parties like CDP, EcoVadis, MSCI and other investor platforms have recognized Kemira for bettering society and safeguarding the environment."}
+    reason: The ground truth names MSCI recognition but states no grade; AAA is not confirmed.
+    status: confirmed
+
+  csrd_double_materiality:
+    verdict: supported
+    evidence: {source: S12, file: text.md, quote: "We regularly conduct a double-materiality assessment in compliance with the Corporate Sustainability Reporting Directive (CSRD)."}
+    reason: Double-materiality assessment under the CSRD.
+    see_also: ["S17 p.73: Sustainability statement prepared under ESRS"]
+    status: confirmed
+
+  odor_corrosion_control:
+    verdict: supported
+    evidence: {source: S07, file: text.md, quote: "Several chemical interactions are continuously occurring in your process’ water phase. This can result in troublesome odor, corrosion, foam and scale problems. Based on our experience in troubleshooting hundreds of water treatment plants and industrial processes, we have the right chemistry to deal with any such problems."}
+    reason: Odour, corrosion, foam and scale control.
+    status: confirmed
+
+  # ===== Batch 2: the 31 claims stated by two of the three assistants
+
+  leading_market_position:
+    verdict: supported
+    evidence: {source: S04, file: text.md, quote: "We are a leader globally in our niche areas of chemical solutions: #1-3 in water treatment and #2 in the pulp and paper business globally."}
+    reason: Kemira states a global #1-3 position in water treatment and #2 in pulp and paper.
+    see_also: ["S01: 'a global leader in sustainable chemistry for water-intensive industries'"]
+    status: confirmed
+
+  progress_trif_2025:
+    verdict: supported
+    evidence: {source: S11, file: text.md, quote: "Improving safety Reduce our Total Recordable Injury Frequency (TRIF) rate across our sites to 1.5 by the end of 2030. 2.7 1.5"}
+    reason: The 2025 result column shows TRIF 2.7.
+    see_also: ["S17 p.7: TRIF 2.7"]
+    status: confirmed
+
+  plastic_replacement:
+    verdict: supported
+    evidence: {source: S04, file: text.md, quote: "This business unit specializes in innovative and sustainable fiber-based solutions that support customers in transitioning to a circular economy by replacing plastics with fiber."}
+    reason: Fibre-based solutions replacing plastics.
+    status: confirmed
+
+  progress_water_2025:
+    verdict: supported
+    evidence: {source: S17, file: text.md, page: 9, quote: "21 billion m3 of water treated, reused and recycled with the help of Kemira chemistry, which is comparable to the annual water consumption of approximately 372 million people"}
+    reason: 21 billion m3 in 2025.
+    see_also: ["S11: result 2025 '21 billion m3' against a '24.5 billion m3' target column"]
+    status: confirmed
+
+  progress_scope12_2025:
+    verdict: supported
+    evidence: {source: S11, file: text.md, quote: "Reduce GHG emissions from Scope 1 and 2 by 50% by the end of 2030, from a 2018 baseline. -43,1% -52%"}
+    reason: The 2025 result is -43.1% against the 2018 baseline. (The same row states the target as both 50% and -52%; see SF06.)
+    see_also: ["S17 p.23: 43.1% result 2025"]
+    status: confirmed
+
+  progress_scope3_2025:
+    verdict: supported
+    evidence: {source: S11, file: text.md, quote: "Reduce GHG emissions from scope 3 by 33% by the end of 2033 from a 2021 baseline -26% -33%"}
+    reason: The 2025 result is -26% against the 2021 baseline.
+    see_also: ["S22 p.12: -26.0%"]
+    status: confirmed
+
+  carbon_neutral_2045:
+    verdict: supported
+    evidence: {source: S13, file: text.md, quote: "Our long-term ambition is to be carbon neutral by 2045 (Scopes 1 and 2)."}
+    reason: Carbon neutral in Scopes 1 and 2 by 2045.
+    see_also: ["S17 p.94: carbon neutrality in Scope 1 and 2 emissions by 2045"]
+    status: confirmed
+
+  strong_in_nordics:
+    verdict: unverified
+    evidence: {source: S17, file: page.md, quote: "The project strengthens Kemira’s water treatment offering in the Nordics and supports activated carbon, used in the removal of micropollutants such as PFAS, as a key strategic growth area."}
+    evaluative: true
+    reason: An evaluative claim ('particularly strong') with no truth condition a source passage could settle, distinct from a factual claim the material does not address. The ground truth mentions strengthening the Nordic water offering; its market-position data is for EMEA and North America.
+    see_also: ["S04: market share ~25% in coagulants and polymers in EMEA"]
+    status: revised
+
+  progress_renewable_2025:
+    verdict: supported
+    evidence: {source: S11, file: text.md, quote: "Derive more than EUR 500 million from renewable solutions by the end of 2030. EUR 240 million EUR 500 million"}
+    reason: The 2025 result is EUR 240 million.
+    status: confirmed
+
+  superfloc_brand:
+    verdict: unverified
+    unverified_reason: outside_ground_truth
+    reason: The Superfloc brand does not appear anywhere in the ground truth set. Related material exists on a kemira.com product page that is not in sources.yaml (noted by the human from the live site, for the limitation record only; not used as evidence).
+    status: revised
+
+  pulp_bleaching_chemicals:
+    verdict: supported
+    evidence: {source: S17, file: text.md, page: 59, quote: "has two main product groups: bleaching chemicals (around 70% of revenue), which includes sodium chlorate and hydrogen peroxide, and other base chemicals (around 30% of revenue), which includes caustic soda, for example."}
+    reason: Fiber Essentials' bleaching chemicals include sodium chlorate and hydrogen peroxide.
+    see_also: ["S04: sodium chlorate is the largest Fiber Essentials business"]
+    status: confirmed
+
+  fiber_product_performance:
+    verdict: supported
+    evidence: {source: S04, file: text.md, quote: "Through close collaboration with its customers, Kemira continuously develops new solutions that meet requirements for strength, stiffness, weight, and overall quality."}
+    reason: Solutions meeting strength and quality requirements for fibre-based products. Water resistance and recyclability, named in some answers, are incidental and not separately addressed.
+    status: confirmed
+
+  footprint_100_countries:
+    verdict: supported
+    evidence: {source: S17, file: text.md, page: 150, quote: "Kemira has operations in 37 countries and sells products to customers in over 100 countries, including several countries where the risk of corruption is significant."}
+    reason: Sales to customers in over 100 countries.
+    see_also: ["S01: 4,900 employees on six continents; sales in over 100 countries"]
+    status: confirmed
+
+  four_focus_areas:
+    verdict: supported
+    evidence: {source: S11, file: text.md, quote: "approach to sustainability is based on four focus areas and our sustainability program is built based on these pillars."}
+    reason: Four focus areas; the same page names them People, Water, Circularity and Climate & Nature.
+    see_also: ["S11: section headings People, Water, Circularity, Climate & Nature"]
+    status: confirmed
+
+  sdgs_6_8_12_13:
+    verdict: supported
+    evidence: {source: S22, file: text.md, page: 12, quote: "The focus is on Clean Water and Sanitation (SDG 6), Decent Work and Economic Growth (SDG 8), Responsible Consumption and Production (SDG 12) and Climate Action (SDG 13)"}
+    reason: The four SDGs match.
+    see_also: ["S17 p.23: the same four SDGs"]
+    status: confirmed
+
+  ecovadis_gold:
+    verdict: supported
+    evidence: {source: S22, file: text.md, page: 12, quote: "In June, Kemira retained a Gold-level rating by EcoVadis, the leading global sustainability assessment platform, with a score of 83/100."}
+    reason: EcoVadis Gold, score 83/100.
+    status: confirmed
+
+  cdp_a_minus:
+    verdict: supported
+    evidence: {source: S17, file: text.md, page: 55, quote: "in January 2026, Kemira was awarded a Leadership-level A- score in both the Water Security and Climate Change categories of the recently released CDP (Carbon Disclosure Project) 2025 rankings."}
+    reason: CDP A- for water security and climate change.
+    status: confirmed
+
+  founded_1920_fertilisers:
+    verdict: supported
+    evidence: {source: S01, file: text.md, quote: "Kemira was founded in 1920 and at the time its main focus was to provide fertilizers to Finnish farmers."}
+    reason: Founded in 1920 to supply fertilisers to Finnish farmers.
+    status: confirmed
+
+  b2b_model:
+    verdict: supported
+    evidence: {source: S01, file: text.md, quote: "We operate globally and serve a wide range of customers including municipal and industrial water treatment companies and the fiber industry."}
+    reason: "Supported as 'not consumer-facing': Kemira's stated customers are utilities and industrial companies. Overreach: the absolute 'does not sell directly to consumers' (strictly B2B) is a stronger claim than Kemira's material makes; the ground truth does not state it."
+    status: revised
+
+  water_reuse_desalination:
+    verdict: supported
+    evidence: {source: S08, file: text.md, quote: "In areas where natural groundwater or surface water cannot meet demand, seawater and brackish water are desalted and processed into drinking water and process water. To make this kind of water usable, the main salt components, sodium and chloride, must be removed by using a special membrane technology called Reverse Osmosis (RO). Membrane technology is also utilized in water reuse applications."}
+    reason: Kemira's raw water page covers desalination, reverse osmosis and water reuse under 'Desalination and water reuse'.
+    status: confirmed
+
+  technical_expertise_supply:
+    verdict: supported
+    evidence: {source: S17, file: text.md, page: 12, quote: "Our NPS was well above industry benchmarks, reflecting high satisfaction with our sales, customer service and supply chain performance. Reliability of supply continued to receive top ratings and reinforce our position as a trusted partner."}
+    reason: Reliable supply is stated here; the technical-expertise part is stated in S07.
+    see_also: ["S07: experience in troubleshooting hundreds of water treatment plants"]
+    status: confirmed
+
+  progress_dei_2025:
+    verdict: supported
+    evidence: {source: S11, file: text.md, quote: "Fostering inclusivity Reach top 10% cross-industry norm for Diversity & Inclusion by the end of 2026. 25% 10%"}
+    reason: The 2025 result column shows 25%. The page does not label what the 25% measures; the annual report puts it as 'slightly outside the top 25%'. ChatGPT's 'above 25th percentile' wording is an interpretation, not Kemira's phrasing.
+    see_also: ["S17 p.56: 'Slightly outside the top 25%'"]
+    status: confirmed
+
+  handprint_footprint:
+    verdict: supported
+    evidence: {source: S11, file: text.md, quote: "Growing our handprint through our business impact - Reducing the footprint through, renewable and recycled materials, ambitious climate change mitigation and water stewardship"}
+    reason: Handprint and footprint framing.
+    status: confirmed
+
+  disclosed_material_risks:
+    verdict: supported
+    evidence: {source: S17, file: text.md, page: 85, quote: "Actual negative impacts and risks for Pollution of air, water and soil and potential negative impacts for Substances of concern or very high concern were identified as a result of the materiality assessment. Pollution through potential spills and accidental chemical releases as well as actual and potential environmental liabilities related to soil or closed activities was identified as material aspects."}
+    reason: Kemira's materiality assessment identifies spills, accidental releases and substances of concern; energy-intensive manufacturing and water impacts are identified on the same pages.
+    see_also: ["S17 p.85: the most significant climate risk to own operations relates to energy-intensive manufacturing", "S17 p.84: water among material topics"]
+    status: confirmed
+
+  raw_materials_55_renewable_recycled:
+    verdict: supported
+    evidence: {source: S11, file: text.md, quote: "55% of our raw materials are renewable or recycled"}
+    reason: 55% renewable or recycled.
+    see_also: ["S17 p.9: 52% recycled and 3% renewable"]
+    status: confirmed
+
+  leading_european_supplier:
+    verdict: supported
+    evidence: {source: S04, file: text.md, quote: "Kemira has a strong market presence in water treatment in Europe and in North America."}
+    reason: Strong market presence in European water treatment.
+    see_also: ["S04: market share ~25% in coagulants and ~25% in polymers in EMEA"]
+    status: confirmed
+
+  strong_european_municipal_presence:
+    verdict: supported
+    evidence: {source: S04, file: text.md, quote: "Kemira has a strong market presence in water treatment in Europe and in North America."}
+    reason: Strong European water treatment presence; the same section names municipal and industrial customers.
+    see_also: ["S04: customers include various cities, especially in Europe and North America"]
+    status: confirmed
+
+  activated_carbon:
+    verdict: supported
+    evidence: {source: S17, file: page.md, quote: "Kemira will invest in a new activated carbon reactivation plant at its Helsingborg, Sweden site. The project strengthens Kemira’s water treatment offering in the Nordics and supports activated carbon, used in the removal of micropollutants such as PFAS, as a key strategic growth area."}
+    reason: Activated carbon is part of Kemira's water treatment offering.
+    see_also: ["S06: drinking water with activated carbon (Tarragona case)"]
+    status: confirmed
+
+  megatrends:
+    verdict: supported
+    evidence: {source: S11, file: text.md, quote: "Global challenges shape our strategic agenda. - Climate change - Water scarcity - Responsible use of limited resources"}
+    reason: The three megatrends match.
+    status: confirmed
+
+  target_scope12_51_2:
+    verdict: source_conflict
+    evidence: {source: S17, file: text.md, page: 23, quote: "Reduce GHG emissions from Scope 1 and 2 by 51.23% by the end of 2030, compared to base year 2018."}
+    conflicting_evidence: {source: S13, file: text.md, quote: "We have set a target to reduce combined Scope 1 and Scope 2 Greenhouse gas (GHG) emissions by -52% across our manufacturing sites by the end of 2030 compared to a 2018 baseline. Our target has been approved by SBTi."}
+    reason: The claim (51.23%) matches the annual report and conflicts with the climate page (-52%). The mirror of target_scope12_2030.
+    see_also: ["S22 p.13: 51.2%", "S11: 'by 50%' and -52%", "SF06"]
+    status: confirmed
+
+  target_scope3_32_5:
+    verdict: source_conflict
+    evidence: {source: S17, file: text.md, page: 23, quote: "Reduce GHG emissions from Scope 3 by 32.5% by the end of 2033, compared to base year 2021."}
+    conflicting_evidence: {source: S11, file: text.md, quote: "Reduce GHG emissions from scope 3 by 33% by the end of 2033 from a 2021 baseline"}
+    reason: The claim (32.5%) matches the annual report and conflicts with the sustainability page (33%). The mirror of target_scope3_2033.
+    see_also: ["S22 p.13: 32.5%", "SF06"]
+    status: confirmed
+
+  # ===== Batch 3: the 21 claims stated by one assistant more than once
+
+  kemconnect_dex_performic:
+    verdict: supported
+    evidence: {source: S17, file: text.md, page: 13, quote: "Kemira’s KemConnect® DEX is a chlorine-free, performic acid-based antimicrobial solution that combines sustainability and smart technology to deliver rapid, wastewater disinfection, earning recognition from the 2024 Paris Olympics and expanding to Europe and the U.S. for safe, efficient water treatment."}
+    reason: Chlorine-free, performic-acid-based wastewater disinfection.
+    status: proposed
+
+  chemical_pretreatment_energy:
+    verdict: supported
+    evidence: {source: S07, file: text.md, quote: "Chemicals can bring substantial energy-savings in the wastewater treatment process. Using coagulants in addition to or instead of biological methods can save up to 50% of aeration energy in organic (BOD) removal, and can double biogas production."}
+    reason: Chemical treatment alongside biological treatment saves aeration energy.
+    status: proposed
+
+  water_quality_quantity:
+    verdict: unverified
+    reason: The phrase 'water quality and quantity management' does not appear in the ground truth; Kemira's current positioning is 'sustainable chemistry for water-intensive industries'. Whether the phrase exists on pages outside the captured set cannot be told from the ground truth.
+    see_also: ["S01: 'a global leader in sustainable chemistry for water-intensive industries'"]
+    status: proposed
+
+  oulu_site:
+    verdict: unverified
+    reason: Oulu is not mentioned anywhere in the ground truth set.
+    status: proposed
+
+  customer_concentration:
+    verdict: unverified
+    reason: Customer count and concentration (top 10 / top 50 shares of revenue) are not stated in the ground truth set.
+    status: proposed
+
+  municipal_customer_cities:
+    verdict: unverified
+    evidence: {source: S17, file: text.md, page: 13, quote: "Berliner Wasserbetriebe, Germany’s largest water and wastewater utility, uses the solution to disinfect effluent before discharge into the River Spree."}
+    reason: Berlin is confirmed as a customer (and Paris appears through the 2024 Olympics DEX deployment), but New York and Hamburg are not mentioned. Half of the named examples is material to the claim, so it stays unverified.
+    see_also: ["S17 p.13: DEX used for the Seine during the 2024 Paris Olympics"]
+    status: proposed
+
+  segment_sales_split:
+    verdict: supported
+    evidence: {source: S17, file: text.md, page: 9, quote: "BUSINESS OPERATIONS WATER SOLUTIONS 45% PACKAGING & HYGIENE SOLUTIONS 35% FIBER ESSENTIALS 20%"}
+    reason: Split of 45% / 35% / 20%.
+    see_also: ["S04 and S17 p.57: Water Solutions roughly 45% of revenue"]
+    status: proposed
+
+  footprint_37_countries_58_sites:
+    verdict: supported
+    evidence: {source: S17, file: text.md, page: 7, quote: "58 manufacturing sites Operating in 37 countries Shipping to 113 countries"}
+    reason: 58 manufacturing sites, operations in 37 countries.
+    status: proposed
+
+  regional_revenue_split:
+    verdict: supported
+    evidence: {source: S17, file: text.md, page: 53, quote: "Geographically, the revenue split was as follows: EMEA (Europe, Middle East, Africa) 54% (52%), the Americas 37% (38%) and Asia Pacific 9% (10%)."}
+    reason: 54% / 37% / 9%.
+    see_also: ["S17 p.7: EMEA EUR 1,493.1 m, Americas EUR 1,013.1 m, APAC EUR 247.4 m"]
+    status: proposed
+
+  netfloc_process_water:
+    verdict: unverified
+    reason: NetFloc is not mentioned anywhere in the ground truth set.
+    status: proposed
+
+  case_joensuu_biogas:
+    verdict: unverified
+    reason: The Joensuu case is not in the ground truth set (Kemira's case-study stories are outside sources.yaml).
+    status: proposed
+
+  case_biofos_energy:
+    verdict: unverified
+    reason: The BIOFOS case is not in the ground truth set (Kemira's case-study stories are outside sources.yaml).
+    status: proposed
+
+  water_target_total_24_5:
+    verdict: supported
+    evidence: {source: S11, file: text.md, quote: "Growing positive water impact By, 2030, enabling the treatment, reuse and recycling of an additional cumulative 3.5 billion m³ of water through our customers’ operations, compared to a 2024 baseline. 21 billion m 3 24.5 billion m 3"}
+    reason: The target column shows 24.5 billion m3.
+    status: proposed
+
+  target_waste_2030:
+    verdict: supported
+    evidence: {source: S17, file: text.md, page: 23, quote: "Reduce disposed production waste intensity by 15% by the end of 2030, from a 2019 baseline (4.4)."}
+    reason: -15% by 2030 from a 2019 baseline.
+    status: proposed
+
+  strategy_three_priorities:
+    verdict: supported
+    evidence: {source: S11, file: text.md, quote: "Sustainable transformation will drive profitable growth. - Expand in water - Build leading renewable solutions portfolio - Unlock new growth platforms"}
+    reason: The three strategic priorities match.
+    status: proposed
+
+  carbon_neutrality_ambition_overall:
+    verdict: unverified
+    evidence: {source: S13, file: text.md, quote: "Our long-term ambition is to be carbon neutral by 2045 (Scopes 1 and 2)."}
+    reason: Kemira states carbon neutrality for Scopes 1 and 2 by 2045. The claim gives no scope or year; one instance says 'carbon neutrality overall', an overreach the quotable material does not make. A figure-only graphic in the annual report pairs 'Scope 1, 2 and 3' with 'carbon neutrality' but cannot be read as a statement.
+    see_also: ["S17 p.22: graphic fragment '-90% Carbon neutrality' with scope labels"]
+    status: proposed
+
+  input_mass_52_recycled:
+    verdict: supported
+    evidence: {source: S17, file: text.md, page: 9, quote: "Out of the total 2.57 million tons of used raw materials, 52% consists of recycled materials, while 3% is derived from renewable sources"}
+    reason: 52% recycled. The claim's 2.6% renewable is more precise than the ground truth's 3% and consistent with it after rounding.
+    status: proposed
+
+  portfolio_64_resource_efficiency:
+    verdict: supported
+    evidence: {source: S11, file: text.md, quote: "64% of our product portfolio improves resource efficiency"}
+    reason: 64%.
+    status: proposed
+
+  ecovadis_platinum:
+    verdict: contradicted
+    contradiction_type: assistant_wrong
+    evidence: {source: S22, file: text.md, page: 12, quote: "In June, Kemira retained a Gold-level rating by EcoVadis, the leading global sustainability assessment platform, with a score of 83/100."}
+    reason: Kemira's material states a Gold-level rating, clearly and consistently; Platinum is not stated anywhere.
+    see_also: ["S12: among the top 5% of companies evaluated by EcoVadis in the chemical industry (2024)"]
+    status: proposed
+
+  european_top_five:
+    verdict: unverified
+    evidence: {source: S04, file: text.md, quote: "We are a leader globally in our niche areas of chemical solutions: #1-3 in water treatment and #2 in the pulp and paper business globally."}
+    reason: The claim attributes a top-five European ranking to industry analyses; the ground truth is Kemira's own material and cannot confirm what third-party analyses say. Kemira's own ranking is consistent with it.
+    status: proposed
+
+  xd5000_dry_solids:
+    verdict: unverified
+    reason: The XD-5000 series is not mentioned anywhere in the ground truth set.
+    status: proposed

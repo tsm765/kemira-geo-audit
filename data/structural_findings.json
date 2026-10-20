@@ -166,6 +166,85 @@
         "O03"
       ],
       "page_gap": null
+    },
+    {
+      "id": "SF06",
+      "observed_at": "2026-10-20",
+      "observed_in": "ground_truth_capture",
+      "theme": "entity_consistency",
+      "category": "conflicting_figures",
+      "summary": "The captured pages give different figures for the same climate targets. The sustainability page states the Scope 1 and 2 target as 'by 50%' in its target text and as -52% in its target column; the climate page states -52%; the 2025 annual report and the January-June 2026 half-year report state -51.23%. Scope 3 is stated as -33% on both web pages and -32.5% in both reports.",
+      "implication": "The pages a model reads give different figures for the same target, which is why assistants differ: in this run each assistant's climate-target figure matched one of these published versions (see the source_conflict verdicts).",
+      "evidence": [
+        {
+          "source_id": "S11",
+          "url": "https://www.kemira.com/sustainability-initiatives/",
+          "detail": "Target text 'Reduce GHG emissions from Scope 1 and 2 by 50% by the end of 2030'; target column -52%; Scope 3 33% / -33%."
+        },
+        {
+          "source_id": "S13",
+          "url": "https://www.kemira.com/sustainability-initiatives/environment/climate-energy/",
+          "detail": "Scope 1 and 2 -52% by end-2030 vs 2018; Scope 3 -33% by end-2033."
+        },
+        {
+          "source_id": "S17",
+          "detail": "Annual report 2025 p.23: Scope 1 and 2 51.23% by end-2030; Scope 3 32.5% by end-2033."
+        },
+        {
+          "source_id": "S22",
+          "detail": "Half-year report Jan-Jun 2026 p.12-13: -51.23% / 51.2%; Scope 3 -32.5%."
+        }
+      ],
+      "scope_note": "An observation about what the captured pages contain, not about the accuracy of Kemira's reporting.",
+      "affects_sources": [
+        "S11",
+        "S13",
+        "S17",
+        "S22"
+      ],
+      "affects_questions": [
+        "K06",
+        "K07"
+      ],
+      "page_gap": {
+        "url": "https://www.kemira.com/sustainability-initiatives/",
+        "gap": "Climate targets stated with different figures within the page and against the climate page and reports."
+      }
+    },
+    {
+      "id": "SF07",
+      "observed_at": "2026-10-20",
+      "observed_in": "ground_truth_capture",
+      "theme": "entity_consistency",
+      "category": "conflicting_dates",
+      "summary": "The captured documents give different dates for the same targets. The 2025 annual report dates the TRIF 2.2 target to the end of 2025 and the Diversity & Inclusion top-10% target to the end of 2025; the January-June 2026 half-year report dates them to the end of 2026, as does the sustainability page for Diversity & Inclusion.",
+      "implication": "Different documents give different dates for the same target, which is why assistants differ: in this run different ChatGPT answers matched different versions (TRIF 2.2 by end-2026 in K06, end-2025 in K07).",
+      "evidence": [
+        {
+          "source_id": "S17",
+          "detail": "Annual report 2025 p.23: TRIF 2.2 by the end of 2025; p.56 and p.23: D&I top 10% by the end of 2025."
+        },
+        {
+          "source_id": "S22",
+          "detail": "Half-year report Jan-Jun 2026 p.12: TRIF target 2.2 by the end of 2026; D&I top 10% by the end of 2026."
+        },
+        {
+          "source_id": "S11",
+          "url": "https://www.kemira.com/sustainability-initiatives/",
+          "detail": "D&I top 10% by the end of 2026."
+        }
+      ],
+      "scope_note": "An observation about what the captured documents contain, not about the accuracy of Kemira's reporting. The later document may supersede the earlier; both remain published.",
+      "affects_sources": [
+        "S11",
+        "S17",
+        "S22"
+      ],
+      "affects_questions": [
+        "K06",
+        "K07"
+      ],
+      "page_gap": null
     }
   ]
 }
