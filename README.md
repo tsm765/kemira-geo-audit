@@ -116,8 +116,11 @@ These are stated because a reader should know what the numbers do and don't cove
 3. **Logged-out is not neutral.** See Collection.
 4. **Ground truth is only as complete as the sources scraped.** The `unverified` bucket is partly a measure of this tool's reach, not only of Kemira's content gaps.
 5. **Claim extraction involves judgment.** Where an answer is vague, deciding what counts as one discrete factual claim is a call, and a different reasonable person would split some of them differently.
-6. **English only, Finland-routed.**
+6. **English only, Finland-routed.** During collection the Gemini interface rendered in Finnish, confirming that these sessions were routed to a Finland locale. This is an observation about these sessions, not a claim about how routing works generally.
 7. **Manual collection means a small sample.** Breadth was traded for fidelity to the actual consumer experience.
+8. **Model identity is not exposed to anonymous users.** None of the three surfaces shows logged-out users which model produced an answer, so the models table records what each interface displayed rather than an inferred version. This is itself a constraint on GEO reproducibility: an auditor cannot pin which system produced a given answer.
+9. **No citation data could be captured for Gemini.** During collection, Gemini displayed retrieval indicators on every answer, but the interface's copy function did not carry resolvable source URLs into the copied text. This describes what the copy function returned in these sessions, not how Gemini handles citations generally.
+10. **ChatGPT citations are inline links.** ChatGPT’s citation markers did not resolve to URLs in the copied text; the URLs captured for ChatGPT are inline links within the answer body, which may not match the sources the interface displayed.
 
 ---
 

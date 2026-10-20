@@ -12,7 +12,7 @@
 # as unstable rather than reported as findings.
 
 battery_version: 1
-locked: false          # set true at first collection; changes after that require an upstream decision
+locked: true           # frozen at S3 (2026-10-20); changes after this require an upstream decision
 passes_per_question: 2
 
 questions:

@@ -1,0 +1,45 @@
+# collection.yaml — who is asked, in what order
+#
+# Order is the order cells are worked through in the collection sheet.
+# `id` is used in raw file names: data/raw/<question_id>_<id>_p<pass>.md
+#
+# model_hint says where the interface shows its model, if it shows one.
+# If no model is shown, record `unknown`. Never infer it.
+#
+# default_model (optional) is filled in by `fill` when model is left empty,
+# and the file records model_source: default so it is never mistaken for a
+# value read off the interface during that cell.
+
+assistants:
+  - id: perplexity
+    name: Perplexity
+    url: https://www.perplexity.ai
+    model_hint: Model or search mode shown near the input box or under the answer, if shown. Logged-out sessions may not name a model; then record unknown. Perplexity searches the web by default, so browsing is normally on.
+    # No model version is displayed to anonymous users (observed 2026-10-20).
+    default_model: unknown
+    cell_reminder: >
+      Watch for any sign that this search ran deeper or used a Pro model
+      (the free tier reportedly routes a small daily allowance through
+      stronger models before falling back). If there is such a sign, add
+      it to notes. If there is no indication either way, add that to notes too.
+
+  - id: chatgpt
+    name: ChatGPT
+    url: https://chatgpt.com
+    model_hint: Model name at the top left of the chat, if shown. Logged-out sessions may show only "ChatGPT"; then record unknown.
+    # No model version is displayed to anonymous users (observed 2026-10-20).
+    default_model: unknown
+
+  - id: gemini
+    name: Gemini
+    url: https://gemini.google.com
+    model_hint: Model name in the model picker at the top of the chat or in the input bar, if shown.
+    # Used by fill when model is left empty; recorded as model_source: default.
+    # Source: the model picker showed 3.5 Flash-Lite as selected, with all
+    # other models gated behind sign-in for anonymous users (observed 2026-10-20).
+    # Recorded as the picker displayed it, with no vendor prefix added.
+    default_model: 3.5 Flash-Lite
+    cell_reminder: >
+      Check the model picker. If it shows 3.5 Flash-Lite you can leave model
+      empty and fill will default it (and say so). If it shows anything
+      else, type that in model before running fill.

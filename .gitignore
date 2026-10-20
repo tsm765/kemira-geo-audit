@@ -19,6 +19,9 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 
+# Collection working sheet (local, used during the session)
+collection_sheet.md
+
 # Scratch and local-only files
 scratch/
 *.local.*
