@@ -40,6 +40,6 @@ assistants:
     # Recorded as the picker displayed it, with no vendor prefix added.
     default_model: 3.5 Flash-Lite
     cell_reminder: >
-      Check the model picker. If it shows 3.5 Flash-Lite you can leave model
-      empty and fill will default it (and say so). If it shows anything
-      else, type that in model before running fill.
+      Check the model picker. If it shows 3.5 Flash-Lite, leave model empty
+      and fill will default it (and say so). If it shows anything else,
+      type that in model before running fill.

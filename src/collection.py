@@ -38,7 +38,17 @@ SHEET_FILE = config.ROOT / "collection_sheet.md"
 BODY_MARKER = "<!-- ANSWER BELOW THIS LINE: paste verbatim from the copy button. Never edit after saving. -->"
 FIELDS = ["question_id", "battery_version", "assistant", "pass", "incognito", "prompt_verbatim",
           "model", "model_raw", "model_source", "collected_at", "browsing", "citations", "notes"]
+# Fields added from a given pass onward. Earlier passes are frozen without them.
+FIELDS_FROM_PASS = {2: ["citations_displayed"]}
+# citations_displayed value for a cell whose source chips were not checked.
+# [] means the chips were checked and none were shown; this means nobody looked.
+NOT_CAPTURED = "not_captured"
 MODEL_SOURCES = {"typed", "default"}
+
+
+def fields_for(pass_no):
+    extra = [f for p, fs in FIELDS_FROM_PASS.items() if pass_no >= p for f in fs]
+    return FIELDS + extra
 BROWSING_VALUES = {"on", "off", "unknown"}
 FILE_PATTERN = re.compile(r"^(?P<qid>[A-Z]\d{2})_(?P<assistant>[a-z]+)_p(?P<pass>\d)\.md$")
 
@@ -49,9 +59,10 @@ TEMPLATE = """---
 # Never edit this file after saving it. If something looks wrong, add a
 # note in a new pass or report it; do not fix it here.
 #
-# After pasting, run: python -m src.collection fill {qid} {assistant}
-# Type model first. fill sets collected_at, citations and browsing, and
-# normalises model (your text is kept in model_raw). notes optional.
+# After pasting, run: python -m src.collection fill {qid} {assistant} --pass {pass_no}
+# fill sets collected_at, citations and browsing, and records model: what
+# you typed (kept in model_raw, normalised in model), or the assistant's
+# default if model is empty (printed as DEFAULTED). notes optional.
 question_id: {qid}
 battery_version: {battery_version}
 assistant: {assistant}
@@ -63,8 +74,8 @@ model_raw:      # set by fill: exactly what you typed in model
 model_source:   # set by fill: typed, or default if model was left empty
 collected_at:   # local time with offset, e.g. 2026-10-21T14:05:00+03:00
 browsing:       # on / off / unknown
-citations:      # list of URLs the assistant showed, or [] if none
-notes:          # anything odd about the session
+citations:      # set by fill: URLs present in the copied answer text, or [] if none
+{extra_fields}notes:          # anything odd about the session
 ---
 
 {marker}
@@ -97,9 +108,13 @@ def scaffold(cfg, assistants, pass_no):
         if path.exists():
             skipped.append(name)
             continue
+        extra = ""
+        if "citations_displayed" in fields_for(pass_no):
+            extra = ("citations_displayed:  # by hand, as a list below this line: URLs from clicking the source chips; "
+                     f"[] if none shown; {NOT_CAPTURED} if not checked. fill never touches this.\n")
         path.write_text(TEMPLATE.format(
             qid=q["id"], battery_version=cfg.questions["battery_version"], assistant=a["id"],
-            pass_no=pass_no, prompt=_yaml_string(q["text"]), marker=BODY_MARKER,
+            pass_no=pass_no, prompt=_yaml_string(q["text"]), marker=BODY_MARKER, extra_fields=extra,
         ), encoding="utf-8", newline="\n")
         created.append(name)
     print(f"Created {len(created)} file(s); {len(skipped)} already existed and were left untouched.")
@@ -118,25 +133,50 @@ def _ticked():
 
 def write_sheet(cfg, assistants, pass_no):
     ticked = _ticked()
+    chips = "citations_displayed" in fields_for(pass_no)
+    interim = cfg.sources["interim_report_published"]
     order = ", ".join(f"{i}. {a['name']}" for i, a in enumerate(assistants, start=1))
     lines = [
         f"# Collection sheet: pass {pass_no}",
         "",
         "Local working sheet. Not published.",
         "",
+        f"> ## ⚠ Cutoff: finish every cell before {interim}",
+        f"> Kemira's interim report publishes on {interim}. Ground truth was captured before it, so any cell "
+        "collected on or after that date fails validation and cannot be compared.",
+        "",
+    ]
+    if chips:
+        lines += [
+            "> **New in this pass: source chip capture.** Pass 1 recorded only the URLs inside the copied text. "
+            "This pass also records the URLs behind the interface's source chips, in `citations_displayed`, by hand.",
+            "",
+        ]
+    lines += [
         f"**Assistants, in order:** {order}",
         "",
         "**Every cell:**",
         "1. Open a **fresh private/incognito window**, logged out. One cell per session: close it before the next cell.",
         "2. Paste the prompt below **exactly**. No greeting, no edits.",
         "3. Copy the answer with the **interface's copy button** (markdown source), not by selecting text.",
-        "4. **Paste answer:** open the file, paste below the marker line.",
-        "5. **Type model:** write in `model` exactly what the interface shows, or `unknown`. Add `notes` if anything was odd. Save.",
-        "6. **Run fill** (command in each cell). It stamps `collected_at`, extracts `citations`, sets `browsing`, "
-        "moves what you typed in `model` to `model_raw` and writes the normalised form to `model` "
-        "(lowercase, no spaces or hyphens), and prints all of it. Compare the printed citations with the sources "
-        "the interface showed; if they differ, correct `citations` by hand (re-running fill will not overwrite "
-        "your correction). If you forgot the model, type it and run fill again.",
+        "4. **Paste answer:** open the file, paste below the marker line. Save.",
+    ]
+    n = 5
+    if chips:
+        lines.append(
+            f"{n}. **Record source chips:** click through each source chip the interface shows and add its URL to "
+            "`citations_displayed` as a list, one `  - \"url\"` line each **below** the field, in the order shown. "
+            "Do not type URLs on the field's own line or after the `#`: YAML ignores everything after `#`. "
+            f"If the interface showed no chips, write `citations_displayed: []`; if you did not check, write "
+            f"`citations_displayed: {NOT_CAPTURED}`. Save. (fill never touches this field.)")
+        n += 1
+    lines += [
+        f"{n}. **Run fill** (command in each cell). It stamps `collected_at`, extracts `citations` from the "
+        "pasted text, sets `browsing`, records the model (defaulting it if empty, and saying DEFAULTED), and prints "
+        "all of it. If the printed `citations` miss something in the text, correct them by hand; re-running fill "
+        "will not overwrite your correction.",
+        f"{n + 1}. **Check model:** if the interface showed a different model from the one fill recorded, type it "
+        "in `model` and run fill again with `--force`. Add `notes` if anything was odd.",
         "",
         "Run commands from the project folder. Do not edit the answer body after saving.",
         "",
@@ -147,9 +187,6 @@ def write_sheet(cfg, assistants, pass_no):
     lines += [
         "",
         "`collected_at` example: `2026-10-21T14:05:00+03:00` (Finland is UTC+3 until 25 October).",
-        "",
-        f"**Deadline for collection:** before {cfg.sources['interim_report_published']} "
-        "(interim report publication; ground truth was captured before it).",
         "",
         "## Checklist",
         "",
@@ -171,7 +208,8 @@ def write_sheet(cfg, assistants, pass_no):
             q["text"],
             "```",
             "",
-            "Then: paste answer → type model → run fill",
+            ("Then: paste answer → record source chip URLs → run fill → check model" if chips
+             else "Then: paste answer → run fill → check model"),
             "",
         ]
         if a.get("cell_reminder"):
@@ -292,7 +330,7 @@ def check(cfg, assistants, pass_no, require_complete):
         def err(msg):
             errors.append(f"{name}: {msg}")
 
-        missing = [f for f in FIELDS if f not in front]
+        missing = [f for f in fields_for(pass_no) if f not in front]
         if missing:
             err(f"frontmatter fields missing: {', '.join(missing)}")
         if front.get("question_id") != q["id"]:
@@ -340,6 +378,13 @@ def check(cfg, assistants, pass_no, require_complete):
         citations = front.get("citations")
         if not isinstance(citations, list) or not all(isinstance(c, str) and c.strip() for c in citations):
             err("citations must be a list of URLs, or [] if none")
+        if "citations_displayed" in fields_for(pass_no):
+            shown = front.get("citations_displayed")
+            if shown == NOT_CAPTURED:
+                pass  # chips were not checked for this cell; distinct from [] (checked, none shown)
+            elif not isinstance(shown, list) or not all(isinstance(u, str) and u.strip() for u in shown):
+                err(f"citations_displayed must be a list of the source chip URLs, [] if the interface showed none, "
+                    f"or {NOT_CAPTURED} if the chips were not checked (entered by hand)")
         if name not in manifest:
             unfrozen.append(name)
 
@@ -547,15 +592,22 @@ def fill(qid, assistant_id, pass_no, citations_only, force):
 
     if not citations_only:
         final = urls if (current is None or force) else current
+        # citations_displayed is read here, never written: chips are evidence of retrieval too.
+        displayed = front.get("citations_displayed") if isinstance(front.get("citations_displayed"), list) else []
+        basis = f"{len(final)} citation(s)"
+        if front.get("citations_displayed") == NOT_CAPTURED:
+            basis += ", displayed not captured"
+        elif "citations_displayed" in front:
+            basis += f", {len(displayed)} displayed"
         if front.get("browsing"):
             report.append(f"  browsing:     {front['browsing']}  (already set, kept)")
-            expected = "on" if final else "off"
+            expected = "on" if (final or displayed) else "off"
             if front["browsing"] != expected and front["browsing"] != "unknown":
                 warnings.append(f"browsing is '{front['browsing']}' but citations suggest '{expected}'. Kept yours.")
         else:
-            value = "on" if final else "off"
+            value = "on" if (final or displayed) else "off"
             head = _set_scalar(head, "browsing", value)
-            report.append(f"  browsing:     {value}  (set: {len(final)} citation(s))")
+            report.append(f"  browsing:     {value}  (set: {basis})")
 
     if not citations_only:
         default = next((a.get("default_model") for a in load_assistants() if a["id"] == assistant_id), None)

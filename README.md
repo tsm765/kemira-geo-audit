@@ -30,6 +30,8 @@ All sessions were run **logged out, in a private browsing window**, to remove pe
 
 Each question was asked **twice, in separate sessions**. A single pass cannot distinguish a stable model belief from one answer's variance. Claims that appeared in only one of the two passes are flagged as unstable rather than reported as findings.
 
+**Citation capture.** For each answer, `citations` holds the URLs present in the copied answer text, extracted automatically. In pass 2, `citations_displayed` also records, by hand, the URLs behind the interface's source chips, or `not_captured` where the chips were not checked. On a small number of ChatGPT and Perplexity cells, chip sources were checked against the inline URLs the extractor captured and matched exactly; this was not verified systematically.
+
 ### Models and run date
 
 | Assistant | Model / surface | Browsing | Date collected |

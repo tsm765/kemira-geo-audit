@@ -4,121 +4,241 @@
       "hash": "sha256:184207663ac333fa588da019400f5993b3b550126f47d9cef69f86879b92475d",
       "frozen_at": "2026-10-20T20:02:26+03:00"
     },
+    "K01_chatgpt_p2.md": {
+      "hash": "sha256:0bde594f76ff2c6e74975ffdff31845fcfe6554b8004ab624f4050d5a3a62c30",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
+    },
     "K01_gemini_p1.md": {
       "hash": "sha256:0e4b242d5add178216a2c4f66505e8c1f0419ac8c140d4fa3cb2576ecda7fc84",
       "frozen_at": "2026-10-20T20:02:26+03:00"
+    },
+    "K01_gemini_p2.md": {
+      "hash": "sha256:f2e8ccb158607cf123c202ea24bb52e1ba69b02f88292b5f7962efd46a3a4824",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
     },
     "K01_perplexity_p1.md": {
       "hash": "sha256:366236e1cb34d5a2d53d6c74082a9a195d9aaf50a9ea087c896b3c549211e06d",
       "frozen_at": "2026-10-20T20:02:26+03:00"
     },
+    "K01_perplexity_p2.md": {
+      "hash": "sha256:a4b52ccbc39a68ba7e9f8d2ae771a9c36a4fe426bde2b5258b3f88bf84b2397d",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
+    },
     "K02_chatgpt_p1.md": {
       "hash": "sha256:10d75e23931c2315a240669bdde0c23a4c4903b822d0f196185c0d7126b3a30b",
       "frozen_at": "2026-10-20T20:02:26+03:00"
+    },
+    "K02_chatgpt_p2.md": {
+      "hash": "sha256:4c54208db68dc4eeb0ce291c7ee4c55e442212a7fba78e3517dadd996c0f35b4",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
     },
     "K02_gemini_p1.md": {
       "hash": "sha256:b5290ced8b80d2495f1909813fd98c7ef002c4df5a59e8e65b7ce7dcd0ff9e56",
       "frozen_at": "2026-10-20T20:02:26+03:00"
     },
+    "K02_gemini_p2.md": {
+      "hash": "sha256:dc827c288fbc8afd147b77634de9fa0908321b632ad3e95be7d310b7c4e010c9",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
+    },
     "K02_perplexity_p1.md": {
       "hash": "sha256:cbc6ac188e7d0a954f76c39325cc73a888fd72b38a42ac4955c8c77b6823a6ec",
       "frozen_at": "2026-10-20T20:02:26+03:00"
+    },
+    "K02_perplexity_p2.md": {
+      "hash": "sha256:7d4f889c2b721d64f9fd8374dab54a6d0e755c24ba5cb32ab66c1d9d41aea332",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
     },
     "K03_chatgpt_p1.md": {
       "hash": "sha256:dc62d13381ba855c1425b05f739938440af31f92fb1082c39d06e8b9b4e17814",
       "frozen_at": "2026-10-20T20:02:26+03:00"
     },
+    "K03_chatgpt_p2.md": {
+      "hash": "sha256:63f76160f595df87a2554b2334419db0a549f70892ab62955efe73c1c06c36e5",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
+    },
     "K03_gemini_p1.md": {
       "hash": "sha256:135062111b62b89c4b6654c095ac666aecba24a91cde31e3fd7c7130123de8ed",
       "frozen_at": "2026-10-20T20:02:26+03:00"
+    },
+    "K03_gemini_p2.md": {
+      "hash": "sha256:c58a99fd96020934ab5df8e25a16f3441cb1dd30ac590f4cd9abb6c5779ab96f",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
     },
     "K03_perplexity_p1.md": {
       "hash": "sha256:81cf30ab99fbe9138067ce05ac02b41f0eeed8b354a98ccb54e823ec235cd717",
       "frozen_at": "2026-10-20T20:02:26+03:00"
     },
+    "K03_perplexity_p2.md": {
+      "hash": "sha256:3fd8cab6d4e92f845ec54a2465bee3bb050aa1c342a25bb58e99405aef770be8",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
+    },
     "K04_chatgpt_p1.md": {
       "hash": "sha256:a2e449ff242e23d7a690b8ce8885eba8c724cd98e5f698ecd6b9e85b71d81af2",
       "frozen_at": "2026-10-20T20:02:26+03:00"
+    },
+    "K04_chatgpt_p2.md": {
+      "hash": "sha256:61ef2c1efbb20cf96869d30b8bc886fb8508218592e59c9fb1e9efdfccb680a2",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
     },
     "K04_gemini_p1.md": {
       "hash": "sha256:2c8135be831489b1f1b1d8485305e46920a229ed7d32d41827dc145a9fb60fcf",
       "frozen_at": "2026-10-20T20:02:26+03:00"
     },
+    "K04_gemini_p2.md": {
+      "hash": "sha256:1cabae4a717c761b54ccbade484af40f5e4755b859d21c4fd331d7885cd2ead0",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
+    },
     "K04_perplexity_p1.md": {
       "hash": "sha256:130b82d215e8ffef70df747921c3291f0c1f97e60356893a45953b46dce84b71",
       "frozen_at": "2026-10-20T20:02:26+03:00"
+    },
+    "K04_perplexity_p2.md": {
+      "hash": "sha256:410f2e984074082e629c4ed306adf0cf2ac147ed7e494e7488f3a4ffb27934cb",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
     },
     "K05_chatgpt_p1.md": {
       "hash": "sha256:b8f476a3527c4fb2a4801b3f4fa9607f3d23609e418ff86bde9685ea635b57e3",
       "frozen_at": "2026-10-20T20:02:26+03:00"
     },
+    "K05_chatgpt_p2.md": {
+      "hash": "sha256:5c83b6028c346834b762afbd6eef4fcbb1f69774fc8b30f670dc571dbf57f025",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
+    },
     "K05_gemini_p1.md": {
       "hash": "sha256:33c2aa9919e563b482eb9dba6be75fb67e06fd9f3406ba57117e7ff74b18d89e",
       "frozen_at": "2026-10-20T20:02:26+03:00"
+    },
+    "K05_gemini_p2.md": {
+      "hash": "sha256:3ca5a792374ae056efd59927839eec1fe84ac349731f4927606c9d20f12bf8a2",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
     },
     "K05_perplexity_p1.md": {
       "hash": "sha256:c10804acfda9ca32eae3be1fc7aa1996cc1dc22a1a99d3416752049240cac3e1",
       "frozen_at": "2026-10-20T20:02:26+03:00"
     },
+    "K05_perplexity_p2.md": {
+      "hash": "sha256:4703abf2fa498aae10bdc1ac14aab3e2e33cd76f78d3f3b0d2f1df767e49b0c8",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
+    },
     "K06_chatgpt_p1.md": {
       "hash": "sha256:dd4a1790be30eae734d703f9017db1baff80ce56daf73b08c2d48839f2316413",
       "frozen_at": "2026-10-20T20:02:26+03:00"
+    },
+    "K06_chatgpt_p2.md": {
+      "hash": "sha256:11637eab7e0f1ce63a5df945b177aa6867a0b79a1df4d342466176702e0ed17b",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
     },
     "K06_gemini_p1.md": {
       "hash": "sha256:05381623558b0530a05f7e9f6fbe5e3ee4538aa4009dfd951102c7d5e6f37e21",
       "frozen_at": "2026-10-20T20:02:26+03:00"
     },
+    "K06_gemini_p2.md": {
+      "hash": "sha256:66aa0eb996684bb4cfd1e4ede205382a70ec7458259737f1d7e9120623cde435",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
+    },
     "K06_perplexity_p1.md": {
       "hash": "sha256:6af85e861b3021045011186f4b7a3f6c02bc5b4888743c1d4c350bf0e0db4e6f",
       "frozen_at": "2026-10-20T20:02:26+03:00"
+    },
+    "K06_perplexity_p2.md": {
+      "hash": "sha256:04e7f8e42e6b0be99384cb01f985fb58a7c21ba92fffd729258295ab851a013a",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
     },
     "K07_chatgpt_p1.md": {
       "hash": "sha256:db2fc94579cf284a826eff9105a6e4a1d107e8e845d7f9c7ffc0e034e6ad7391",
       "frozen_at": "2026-10-20T20:02:26+03:00"
     },
+    "K07_chatgpt_p2.md": {
+      "hash": "sha256:3f1c53ecb0ce061a81246de3127f3c4fc3884c52f3e24667824f8a8c9e0afa11",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
+    },
     "K07_gemini_p1.md": {
       "hash": "sha256:8c6e872582121b025389e30069766dce4a11cde1823815cc2412041811bc76ae",
       "frozen_at": "2026-10-20T20:02:26+03:00"
+    },
+    "K07_gemini_p2.md": {
+      "hash": "sha256:c8f39e6eec1c20f217353e1bf4630b0729b85b192a869da28f0cbc7590470cb8",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
     },
     "K07_perplexity_p1.md": {
       "hash": "sha256:5419625f267ef06293dc9bfacf0e26a98a6893354ffbe318e61ed46716e1dbef",
       "frozen_at": "2026-10-20T20:02:26+03:00"
     },
+    "K07_perplexity_p2.md": {
+      "hash": "sha256:c743722660ba1e652375ff143f227998173901ac5fc64107e291c699423f949f",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
+    },
     "O01_chatgpt_p1.md": {
       "hash": "sha256:fd9f6057f2cb8c7500c43863cc3bc720bd1a1514f872032b28e6758d3123d1cf",
       "frozen_at": "2026-10-20T20:02:26+03:00"
+    },
+    "O01_chatgpt_p2.md": {
+      "hash": "sha256:d52a23ae733c1afd8e1d80e665925e083813c191b6ba73a9dd4c790c7adae585",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
     },
     "O01_gemini_p1.md": {
       "hash": "sha256:17c12db33f061ecc5837d0898d4a81d714c03329d435edcbacf62b2f53f9f52e",
       "frozen_at": "2026-10-20T20:02:26+03:00"
     },
+    "O01_gemini_p2.md": {
+      "hash": "sha256:5c2b738700535b361ee85a3d40433ccc71822ad327431490f886d36d116c4527",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
+    },
     "O01_perplexity_p1.md": {
       "hash": "sha256:691fe72f6526e78ddd480992b6897cb8fc5bddc93a0270dc4d92bb23cf5470c9",
       "frozen_at": "2026-10-20T20:02:26+03:00"
+    },
+    "O01_perplexity_p2.md": {
+      "hash": "sha256:18e29020434389db2c62a9425e5b8004a087e52d6751804dda4bd39cc976b08f",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
     },
     "O02_chatgpt_p1.md": {
       "hash": "sha256:c313ba7c13590d80938e01f88c2abce8103005f92905c555041bd30835e083ec",
       "frozen_at": "2026-10-20T20:02:26+03:00"
     },
+    "O02_chatgpt_p2.md": {
+      "hash": "sha256:bdb7a17bbf0f78264e374e0372682f91114733ac82686f1663e30171e1cfab91",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
+    },
     "O02_gemini_p1.md": {
       "hash": "sha256:962aaf001ab5af7a58ccc8ae4b353971fc30f3c40bc15af3eee6f02fb5eff86d",
       "frozen_at": "2026-10-20T20:02:26+03:00"
+    },
+    "O02_gemini_p2.md": {
+      "hash": "sha256:59d9414446a25a23dde90d8c9cceb81e2df3e218299e0ff34663ac28e444e1e2",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
     },
     "O02_perplexity_p1.md": {
       "hash": "sha256:902ee27c984dd604d5e82b62a26287e6343b0d5d9d394fb4c9f2c39a10da64ba",
       "frozen_at": "2026-10-20T20:02:26+03:00"
     },
+    "O02_perplexity_p2.md": {
+      "hash": "sha256:39852bfa869c0ecef28fed9b5678d4e3c17a20d8b334d83d3f866ad8eb5383f4",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
+    },
     "O03_chatgpt_p1.md": {
       "hash": "sha256:edf353c2c3c9b201b9edd216ed484d1d1eb5a89d334cb4008af3214e04bcf0ed",
       "frozen_at": "2026-10-20T20:02:27+03:00"
+    },
+    "O03_chatgpt_p2.md": {
+      "hash": "sha256:d79a856184ef8d58a8c6a580e533e9abeb1a650e3dac47099bdb5cc922772a6b",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
     },
     "O03_gemini_p1.md": {
       "hash": "sha256:c1923e231f7733d88de75f3d0610ae29f2cc61692b2663a367db1d1dce7e2f54",
       "frozen_at": "2026-10-20T20:02:27+03:00"
     },
+    "O03_gemini_p2.md": {
+      "hash": "sha256:b95df0cac34ecbd69c3b0dbd55cf4b58b5c641e997d6a963068c8b805641e2f3",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
+    },
     "O03_perplexity_p1.md": {
       "hash": "sha256:14e0acd79a9b4c5edcea13bb6c83d66ff718e7a7f47f67c50df6973f51a13360",
       "frozen_at": "2026-10-20T20:02:27+03:00"
+    },
+    "O03_perplexity_p2.md": {
+      "hash": "sha256:4e4eeabd57f4a4140115ea5729f4125a2773032273eaace6dc04cde153a20e1e",
+      "frozen_at": "2026-10-21T01:28:01+03:00"
     }
   }
 }
