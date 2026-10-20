@@ -1,0 +1,57 @@
+{
+  "id": "S16",
+  "url": "https://www.kemira.com/investors/financial-information/sustainability-key-indicators/",
+  "captured_at": "2026-10-20T14:04:22+00:00",
+  "captured_relative_to_interim_report": "before",
+  "robots_allowed": true,
+  "error": null,
+  "http_status": 200,
+  "final_url": "https://www.kemira.com/investors/financial-information/sustainability-key-indicators/",
+  "redirects": [],
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 148443,
+  "content_hash": "sha256:cd8f4fed758ee9011d3a7154c2ad7d84966b9bb136f903667cb4d106e47c457f",
+  "page_text_file": "text.md",
+  "main_content_from": "<main>",
+  "text_chars": 38,
+  "flags": [
+    "thin: 38 characters of main-content text"
+  ],
+  "schema_types": [
+    "BreadcrumbList",
+    "EntryPoint",
+    "ListItem",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+  ],
+  "schema_detail": {
+    "json_ld": [
+      "BreadcrumbList",
+      "EntryPoint",
+      "ListItem",
+      "PropertyValueSpecification",
+      "ReadAction",
+      "SearchAction",
+      "WebPage",
+      "WebSite"
+    ],
+    "microdata": [],
+    "rdfa": []
+  },
+  "headings": {
+    "count": 1,
+    "by_level": {
+      "h1": 0,
+      "h2": 1,
+      "h3": 0
+    },
+    "max_depth": 2
+  },
+  "faq_block": {
+    "present": false,
+    "detected_by": []
+  }
+}

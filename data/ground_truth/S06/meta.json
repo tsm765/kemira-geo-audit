@@ -1,0 +1,57 @@
+{
+  "id": "S06",
+  "url": "https://www.kemira.com/water/",
+  "captured_at": "2026-10-20T14:03:22+00:00",
+  "captured_relative_to_interim_report": "before",
+  "robots_allowed": true,
+  "error": null,
+  "http_status": 200,
+  "final_url": "https://www.kemira.com/water/",
+  "redirects": [],
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 187836,
+  "content_hash": "sha256:2d6afb383cf2c270547c9bb1c16f04a9aaf28a03ebdc0dcd0927e4055f5ab15b",
+  "page_text_file": "text.md",
+  "main_content_from": "<main>",
+  "text_chars": 5795,
+  "flags": [],
+  "schema_types": [
+    "BreadcrumbList",
+    "EntryPoint",
+    "ImageObject",
+    "ListItem",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+  ],
+  "schema_detail": {
+    "json_ld": [
+      "BreadcrumbList",
+      "EntryPoint",
+      "ImageObject",
+      "ListItem",
+      "PropertyValueSpecification",
+      "ReadAction",
+      "SearchAction",
+      "WebPage",
+      "WebSite"
+    ],
+    "microdata": [],
+    "rdfa": []
+  },
+  "headings": {
+    "count": 21,
+    "by_level": {
+      "h1": 0,
+      "h2": 18,
+      "h3": 3
+    },
+    "max_depth": 3
+  },
+  "faq_block": {
+    "present": false,
+    "detected_by": []
+  }
+}

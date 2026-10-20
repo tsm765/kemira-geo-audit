@@ -1,0 +1,57 @@
+{
+  "id": "S18",
+  "url": "https://www.kemira.com/investors/reports-and-presentations/",
+  "captured_at": "2026-10-20T14:05:23+00:00",
+  "captured_relative_to_interim_report": "before",
+  "robots_allowed": true,
+  "error": null,
+  "http_status": 200,
+  "final_url": "https://www.kemira.com/investors/reports-and-presentations/",
+  "redirects": [],
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 151904,
+  "content_hash": "sha256:90438dd6e6492798cfe5922dbbe68d61d63aac12588def2a72c7727670916f63",
+  "page_text_file": "text.md",
+  "main_content_from": "<main>",
+  "text_chars": 650,
+  "flags": [
+    "thin: 650 characters of main-content text"
+  ],
+  "schema_types": [
+    "BreadcrumbList",
+    "EntryPoint",
+    "ListItem",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+  ],
+  "schema_detail": {
+    "json_ld": [
+      "BreadcrumbList",
+      "EntryPoint",
+      "ListItem",
+      "PropertyValueSpecification",
+      "ReadAction",
+      "SearchAction",
+      "WebPage",
+      "WebSite"
+    ],
+    "microdata": [],
+    "rdfa": []
+  },
+  "headings": {
+    "count": 3,
+    "by_level": {
+      "h1": 0,
+      "h2": 1,
+      "h3": 2
+    },
+    "max_depth": 3
+  },
+  "faq_block": {
+    "present": false,
+    "detected_by": []
+  }
+}

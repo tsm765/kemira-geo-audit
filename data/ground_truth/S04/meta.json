@@ -1,0 +1,55 @@
+{
+  "id": "S04",
+  "url": "https://www.kemira.com/investors/kemira-as-an-investment/business-units-markets/",
+  "captured_at": "2026-10-20T14:03:10+00:00",
+  "captured_relative_to_interim_report": "before",
+  "robots_allowed": true,
+  "error": null,
+  "http_status": 200,
+  "final_url": "https://www.kemira.com/investors/kemira-as-an-investment/business-units-markets/",
+  "redirects": [],
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 183079,
+  "content_hash": "sha256:7dbdc9706f3f08fc392fb42e5f49d59bf0d66463a697d7c71ee6acbf244a91d9",
+  "page_text_file": "text.md",
+  "main_content_from": "<main>",
+  "text_chars": 5920,
+  "flags": [],
+  "schema_types": [
+    "BreadcrumbList",
+    "EntryPoint",
+    "ListItem",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+  ],
+  "schema_detail": {
+    "json_ld": [
+      "BreadcrumbList",
+      "EntryPoint",
+      "ListItem",
+      "PropertyValueSpecification",
+      "ReadAction",
+      "SearchAction",
+      "WebPage",
+      "WebSite"
+    ],
+    "microdata": [],
+    "rdfa": []
+  },
+  "headings": {
+    "count": 9,
+    "by_level": {
+      "h1": 0,
+      "h2": 5,
+      "h3": 4
+    },
+    "max_depth": 3
+  },
+  "faq_block": {
+    "present": false,
+    "detected_by": []
+  }
+}

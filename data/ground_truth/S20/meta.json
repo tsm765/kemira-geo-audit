@@ -1,0 +1,57 @@
+{
+  "id": "S20",
+  "url": "https://www.kemira.com/investors/share-information/",
+  "captured_at": "2026-10-20T14:02:53+00:00",
+  "captured_relative_to_interim_report": "before",
+  "robots_allowed": true,
+  "error": null,
+  "http_status": 200,
+  "final_url": "https://www.kemira.com/investors/share-information/",
+  "redirects": [],
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 149171,
+  "content_hash": "sha256:36ba168023c1802a478e30df7927c0460cc4c623684dbc6ab2f667a70834cd68",
+  "page_text_file": "text.md",
+  "main_content_from": "<main>",
+  "text_chars": 776,
+  "flags": [
+    "thin: 776 characters of main-content text"
+  ],
+  "schema_types": [
+    "BreadcrumbList",
+    "EntryPoint",
+    "ListItem",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+  ],
+  "schema_detail": {
+    "json_ld": [
+      "BreadcrumbList",
+      "EntryPoint",
+      "ListItem",
+      "PropertyValueSpecification",
+      "ReadAction",
+      "SearchAction",
+      "WebPage",
+      "WebSite"
+    ],
+    "microdata": [],
+    "rdfa": []
+  },
+  "headings": {
+    "count": 1,
+    "by_level": {
+      "h1": 0,
+      "h2": 1,
+      "h3": 0
+    },
+    "max_depth": 2
+  },
+  "faq_block": {
+    "present": false,
+    "detected_by": []
+  }
+}

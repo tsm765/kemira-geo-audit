@@ -1,0 +1,59 @@
+{
+  "id": "S19",
+  "url": "https://www.kemira.com/investors/kemira-as-an-investment/frequently-asked-questions/",
+  "captured_at": "2026-10-20T14:05:29+00:00",
+  "captured_relative_to_interim_report": "before",
+  "robots_allowed": true,
+  "error": null,
+  "http_status": 200,
+  "final_url": "https://www.kemira.com/investors/kemira-as-an-investment/frequently-asked-questions/",
+  "redirects": [],
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 180600,
+  "content_hash": "sha256:1f75305c33d7453174e0b81aeb18942f20865ec49d6102b36be2053952f0f803",
+  "page_text_file": "text.md",
+  "main_content_from": "<main>",
+  "text_chars": 11644,
+  "flags": [],
+  "schema_types": [
+    "BreadcrumbList",
+    "EntryPoint",
+    "ImageObject",
+    "ListItem",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+  ],
+  "schema_detail": {
+    "json_ld": [
+      "BreadcrumbList",
+      "EntryPoint",
+      "ImageObject",
+      "ListItem",
+      "PropertyValueSpecification",
+      "ReadAction",
+      "SearchAction",
+      "WebPage",
+      "WebSite"
+    ],
+    "microdata": [],
+    "rdfa": []
+  },
+  "headings": {
+    "count": 1,
+    "by_level": {
+      "h1": 0,
+      "h2": 1,
+      "h3": 0
+    },
+    "max_depth": 2
+  },
+  "faq_block": {
+    "present": true,
+    "detected_by": [
+      "heading"
+    ]
+  }
+}

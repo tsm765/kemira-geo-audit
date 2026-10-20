@@ -1,0 +1,55 @@
+{
+  "id": "S15",
+  "url": "https://www.kemira.com/sustainability-initiatives/environment/water-stewardship/",
+  "captured_at": "2026-10-20T14:04:17+00:00",
+  "captured_relative_to_interim_report": "before",
+  "robots_allowed": true,
+  "error": null,
+  "http_status": 200,
+  "final_url": "https://www.kemira.com/sustainability-initiatives/environment/water-stewardship/",
+  "redirects": [],
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 155063,
+  "content_hash": "sha256:30d4d52456af560d48078928b4edc1089888c77e3b488154e06aadb8148e96a9",
+  "page_text_file": "text.md",
+  "main_content_from": "<main>",
+  "text_chars": 1593,
+  "flags": [],
+  "schema_types": [
+    "BreadcrumbList",
+    "EntryPoint",
+    "ListItem",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+  ],
+  "schema_detail": {
+    "json_ld": [
+      "BreadcrumbList",
+      "EntryPoint",
+      "ListItem",
+      "PropertyValueSpecification",
+      "ReadAction",
+      "SearchAction",
+      "WebPage",
+      "WebSite"
+    ],
+    "microdata": [],
+    "rdfa": []
+  },
+  "headings": {
+    "count": 2,
+    "by_level": {
+      "h1": 0,
+      "h2": 1,
+      "h3": 1
+    },
+    "max_depth": 3
+  },
+  "faq_block": {
+    "present": false,
+    "detected_by": []
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "S05",
+  "url": "https://www.kemira.com/investors/financial-information/outlook-and-financial-targets-and-definition-of-key-figures/",
+  "captured_at": "2026-10-20T14:03:16+00:00",
+  "captured_relative_to_interim_report": "before",
+  "robots_allowed": true,
+  "error": null,
+  "http_status": 200,
+  "final_url": "https://www.kemira.com/investors/financial-information/outlook-and-financial-targets-and-definition-of-key-figures/",
+  "redirects": [],
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 160950,
+  "content_hash": "sha256:3c7bf188b74d2c24f255f25a413e42b7f097ae2ecdcd57f33c488de417e61bfa",
+  "page_text_file": "text.md",
+  "main_content_from": "<main>",
+  "text_chars": 4985,
+  "flags": [],
+  "schema_types": [
+    "BreadcrumbList",
+    "EntryPoint",
+    "ListItem",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+  ],
+  "schema_detail": {
+    "json_ld": [
+      "BreadcrumbList",
+      "EntryPoint",
+      "ListItem",
+      "PropertyValueSpecification",
+      "ReadAction",
+      "SearchAction",
+      "WebPage",
+      "WebSite"
+    ],
+    "microdata": [],
+    "rdfa": []
+  },
+  "headings": {
+    "count": 3,
+    "by_level": {
+      "h1": 0,
+      "h2": 3,
+      "h3": 0
+    },
+    "max_depth": 2
+  },
+  "faq_block": {
+    "present": false,
+    "detected_by": []
+  }
+}

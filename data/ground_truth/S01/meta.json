@@ -1,0 +1,55 @@
+{
+  "id": "S01",
+  "url": "https://www.kemira.com/company/",
+  "captured_at": "2026-10-20T14:02:42+00:00",
+  "captured_relative_to_interim_report": "before",
+  "robots_allowed": true,
+  "error": null,
+  "http_status": 200,
+  "final_url": "https://www.kemira.com/company/",
+  "redirects": [],
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 173992,
+  "content_hash": "sha256:a5e13845350f0447e8585fb5b32bb16bc04d00e159e31b87292c73d24231fdc7",
+  "page_text_file": "text.md",
+  "main_content_from": "<main>",
+  "text_chars": 6635,
+  "flags": [],
+  "schema_types": [
+    "BreadcrumbList",
+    "EntryPoint",
+    "ListItem",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+  ],
+  "schema_detail": {
+    "json_ld": [
+      "BreadcrumbList",
+      "EntryPoint",
+      "ListItem",
+      "PropertyValueSpecification",
+      "ReadAction",
+      "SearchAction",
+      "WebPage",
+      "WebSite"
+    ],
+    "microdata": [],
+    "rdfa": []
+  },
+  "headings": {
+    "count": 18,
+    "by_level": {
+      "h1": 0,
+      "h2": 9,
+      "h3": 9
+    },
+    "max_depth": 3
+  },
+  "faq_block": {
+    "present": false,
+    "detected_by": []
+  }
+}

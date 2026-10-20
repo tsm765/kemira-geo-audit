@@ -1,0 +1,57 @@
+{
+  "id": "S11",
+  "url": "https://www.kemira.com/sustainability-initiatives/",
+  "captured_at": "2026-10-20T14:03:52+00:00",
+  "captured_relative_to_interim_report": "before",
+  "robots_allowed": true,
+  "error": null,
+  "http_status": 200,
+  "final_url": "https://www.kemira.com/sustainability-initiatives/",
+  "redirects": [],
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 199031,
+  "content_hash": "sha256:edced0a46f4dbf2abbf1b64524b11372b01e388bcaaaf8aa971ec6baa9c65c1f",
+  "page_text_file": "text.md",
+  "main_content_from": "<main>",
+  "text_chars": 5728,
+  "flags": [],
+  "schema_types": [
+    "BreadcrumbList",
+    "EntryPoint",
+    "ImageObject",
+    "ListItem",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+  ],
+  "schema_detail": {
+    "json_ld": [
+      "BreadcrumbList",
+      "EntryPoint",
+      "ImageObject",
+      "ListItem",
+      "PropertyValueSpecification",
+      "ReadAction",
+      "SearchAction",
+      "WebPage",
+      "WebSite"
+    ],
+    "microdata": [],
+    "rdfa": []
+  },
+  "headings": {
+    "count": 25,
+    "by_level": {
+      "h1": 0,
+      "h2": 15,
+      "h3": 10
+    },
+    "max_depth": 3
+  },
+  "faq_block": {
+    "present": false,
+    "detected_by": []
+  }
+}

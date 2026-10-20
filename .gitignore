@@ -1,0 +1,25 @@
+# Local-only project notes
+context.md
+agents.md
+CLAUDE.md
+
+# Source PDFs (copyrighted; sources.yaml points at the public URLs)
+*.pdf
+
+# Ground truth content stays local: raw.html, text.md, page.md and the
+# full PDF text. Only meta.json is published. Short cited snippets with
+# page references are published separately, in verdicts.json.
+data/ground_truth/*/*
+!data/ground_truth/*/meta.json
+
+# Python virtualenv and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Scratch and local-only files
+scratch/
+*.local.*
+.claude/

@@ -1,0 +1,57 @@
+{
+  "id": "S07",
+  "url": "https://www.kemira.com/water/wastewater/",
+  "captured_at": "2026-10-20T14:03:28+00:00",
+  "captured_relative_to_interim_report": "before",
+  "robots_allowed": true,
+  "error": null,
+  "http_status": 200,
+  "final_url": "https://www.kemira.com/water/wastewater/",
+  "redirects": [],
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 160720,
+  "content_hash": "sha256:db5d3876a05765ebd46593af811ee76800b8b3123833691c2b198c974caf405c",
+  "page_text_file": "text.md",
+  "main_content_from": "<main>",
+  "text_chars": 3316,
+  "flags": [],
+  "schema_types": [
+    "BreadcrumbList",
+    "EntryPoint",
+    "ImageObject",
+    "ListItem",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+  ],
+  "schema_detail": {
+    "json_ld": [
+      "BreadcrumbList",
+      "EntryPoint",
+      "ImageObject",
+      "ListItem",
+      "PropertyValueSpecification",
+      "ReadAction",
+      "SearchAction",
+      "WebPage",
+      "WebSite"
+    ],
+    "microdata": [],
+    "rdfa": []
+  },
+  "headings": {
+    "count": 10,
+    "by_level": {
+      "h1": 1,
+      "h2": 9,
+      "h3": 0
+    },
+    "max_depth": 2
+  },
+  "faq_block": {
+    "present": false,
+    "detected_by": []
+  }
+}

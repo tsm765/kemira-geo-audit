@@ -1,0 +1,55 @@
+{
+  "id": "S13",
+  "url": "https://www.kemira.com/sustainability-initiatives/environment/climate-energy/",
+  "captured_at": "2026-10-20T14:04:05+00:00",
+  "captured_relative_to_interim_report": "before",
+  "robots_allowed": true,
+  "error": null,
+  "http_status": 200,
+  "final_url": "https://www.kemira.com/sustainability-initiatives/environment/climate-energy/",
+  "redirects": [],
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 177405,
+  "content_hash": "sha256:5f82ebb58477b8600f2861e00606c58a372f7b525dee29fe22cf912c11f13f85",
+  "page_text_file": "text.md",
+  "main_content_from": "<main>",
+  "text_chars": 5326,
+  "flags": [],
+  "schema_types": [
+    "BreadcrumbList",
+    "EntryPoint",
+    "ListItem",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+  ],
+  "schema_detail": {
+    "json_ld": [
+      "BreadcrumbList",
+      "EntryPoint",
+      "ListItem",
+      "PropertyValueSpecification",
+      "ReadAction",
+      "SearchAction",
+      "WebPage",
+      "WebSite"
+    ],
+    "microdata": [],
+    "rdfa": []
+  },
+  "headings": {
+    "count": 14,
+    "by_level": {
+      "h1": 0,
+      "h2": 10,
+      "h3": 4
+    },
+    "max_depth": 3
+  },
+  "faq_block": {
+    "present": false,
+    "detected_by": []
+  }
+}

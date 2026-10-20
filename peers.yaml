@@ -1,0 +1,81 @@
+# peers.yaml — comparator set for share of voice
+#
+# Peers were selected from Kemira's own segment structure, not by asking
+# an AI assistant. Asking an assistant to name Kemira's competitors and
+# then measuring whether assistants name Kemira would be circular.
+
+segment_scope: water_solutions
+
+comparators:
+  - name: Solenis
+    rationale: >
+      Direct competitor across both water treatment and fiber-based
+      materials. The broadest overlap with Kemira's portfolio of any
+      single company on this list.
+  - name: SNF
+    rationale: >
+      The dominant player in polyacrylamide polymers, which is core to
+      Kemira's water solutions offering.
+  - name: Ecolab
+    rationale: >
+      Large, globally recognised, and the most likely incumbent answer
+      in an open question about water treatment. Included partly as a
+      ceiling: if an assistant names only one company, it is likely
+      to be this one.
+
+# ---- Full competitive landscape -------------------------------------
+# Retained as the reasoning for why the three above were chosen, and
+# as a record of what this run does not cover.
+
+segments:
+  water_solutions_polymers:
+    in_scope: true
+    peers: [SNF, Solvay, Ecolab, Solenis]
+  water_solutions_coagulants:
+    in_scope: true
+    peers: [Feralco, USALCO, Chemtrade]
+    note: >
+      Coagulant peers are more regionally fragmented than polymer peers
+      and less likely to surface in an open European question. Not used
+      as comparators, but their appearance in answers is still counted.
+  packaging_and_hygiene:
+    in_scope: false
+    peers: [Solenis, SNF, Ecolab, Buckman]
+  fiber_essentials:
+    in_scope: false
+    peers: [Nouryon, Solvay, ERCO, Chemtrade]
+
+# ---- Selection reasoning --------------------------------------------
+#
+# Kemira competes against different sets in different segments. Running
+# all four would be four separate experiments with four baselines, and
+# would dilute rather than strengthen the finding.
+#
+# Water Solutions is Kemira's core segment and the one the role
+# description foregrounds ("our water solutions"). The three comparators
+# above span the realistic range: a direct portfolio overlap (Solenis),
+# a category specialist (SNF), and the most probable default answer
+# (Ecolab).
+#
+# Solvay and Chemtrade appear in multiple segments and are counted when
+# they surface in answers, but are not treated as primary comparators.
+
+# ---- Counting rules -------------------------------------------------
+#
+# Share of voice is measured only on `type: open` questions in
+# questions.yaml — questions that name no company at all.
+#
+# Count a company as named if the assistant names it as a supplier in
+# the category. Do not count:
+#   - mentions in a disclaimer or caveat
+#   - mentions as a parent, subsidiary or former name of another listed company
+#   - mentions outside the category being asked about
+#
+# Record position in the answer as well as presence. First-named and
+# fifth-named are different outcomes, and the distinction matters more
+# than the raw count.
+#
+# Any company named that does not appear in this file is recorded as
+# `unlisted` with its name. Unanticipated names are a finding in their
+# own right — they indicate who the models associate with the category,
+# which may not match who Kemira considers a competitor.

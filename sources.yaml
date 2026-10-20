@@ -1,0 +1,216 @@
+# sources.yaml — ground truth
+#
+# Scraped into data/ground_truth/ BEFORE any assistant answers are
+# collected, so the reference set cannot be shaped to fit what the
+# models happened to say.
+#
+# All URLs verified live on 2026-10-20. kemira.com runs on WordPress
+# (asset paths under /app/uploads/), so pages are server-rendered and
+# scrape cleanly; no headless browser expected to be necessary. Verify
+# per page rather than assuming.
+#
+# IMPORTANT TIMING NOTE
+# Kemira publishes its January–September 2026 interim report on
+# 2026-10-23, inside the collection window. Record for every ground
+# truth file whether it was captured before or after that date, and
+# state in the README which side of it the run falls on. A figure that
+# changes mid-run is a method problem if it goes unrecorded and a
+# finding if it is recorded.
+
+captured_at: 2026-10-20          # set at scrape time, ISO date
+interim_report_published: 2026-10-23
+
+sources:
+
+  # ---- Company identity and scale ----------------------------------
+
+  - id: S01
+    url: https://www.kemira.com/company/
+    topic: identity
+    covers: [what_kemira_is, purpose, positioning]
+    answers: [K01, K02]
+
+  - id: S02
+    url: https://www.kemira.com/
+    topic: identity
+    covers: [segment_overview, headline_positioning, employee_count]
+    answers: [K01, K02, K03]
+    note: >
+      Homepage states headcount in rounded form ("4,900 people") while
+      reporting uses an exact figure. Where a claim is checked against
+      headcount, prefer the annual report and note the discrepancy —
+      rounded-vs-exact is itself a consistency observation.
+
+  - id: S20
+    url: https://www.kemira.com/investors/share-information/
+    topic: identity
+    covers: [listing, share, exchange]
+    answers: [K03]
+
+  - id: S21
+    url: https://www.kemira.com/contacts/
+    topic: identity
+    covers: [hq, locations]
+    answers: [K03]
+
+  - id: S03
+    url: https://www.kemira.com/investors/kemira-as-an-investment/strategy-and-business-model/
+    topic: strategy
+    covers: [business_model, strategy, value_creation]
+    answers: [K02]
+
+  - id: S04
+    url: https://www.kemira.com/investors/kemira-as-an-investment/business-units-markets/
+    topic: segments
+    covers: [reporting_segments, markets]
+    answers: [K02, K04]
+    note: >
+      Primary source for reporting-segment vocabulary. Compare against
+      S02 and S06, which use the website's customer-facing segment names.
+      Divergence between these is an entity-consistency finding.
+
+  - id: S05
+    url: https://www.kemira.com/investors/financial-information/outlook-and-financial-targets-and-definition-of-key-figures/
+    topic: financials
+    covers: [financial_targets, key_figure_definitions]
+    answers: [K03]
+
+  # ---- Water solutions ---------------------------------------------
+
+  - id: S06
+    url: https://www.kemira.com/water/
+    topic: water
+    covers: [water_treatment_overview, segment_vocabulary]
+    answers: [K04, K05]
+
+  - id: S07
+    url: https://www.kemira.com/water/wastewater/
+    topic: water
+    covers: [wastewater_treatment]
+    answers: [K04, K05]
+
+  - id: S08
+    url: https://www.kemira.com/water/raw-water-drinking-water/
+    topic: water
+    covers: [drinking_water, raw_water]
+    answers: [K04, K05]
+
+  - id: S09
+    url: https://www.kemira.com/water/sludge/
+    topic: water
+    covers: [sludge_treatment]
+    answers: [K04, K05]
+    note: Directly relevant to the buyer-intent open question O03.
+
+  - id: S10
+    url: https://www.kemira.com/water/digital-services/
+    topic: water
+    covers: [digital_services, process_optimization]
+    answers: [K04]
+
+  # ---- Sustainability ----------------------------------------------
+
+  - id: S11
+    url: https://www.kemira.com/sustainability-initiatives/
+    topic: sustainability
+    covers: [sustainability_overview]
+    answers: [K06, K07]
+
+  - id: S12
+    url: https://www.kemira.com/sustainability-initiatives/our-approach/
+    topic: sustainability
+    covers: [approach, governance_of_sustainability]
+    answers: [K06]
+
+  - id: S13
+    url: https://www.kemira.com/sustainability-initiatives/environment/climate-energy/
+    topic: sustainability
+    covers: [climate_targets, emissions, energy]
+    answers: [K06]
+    note: >
+      Highest-precision source in the file. Targets carry baselines and
+      dates. Any contradiction involving a target must cite the exact
+      figure and baseline year from this page before being attributed
+      to an assistant.
+
+  - id: S14
+    url: https://www.kemira.com/sustainability-initiatives/environment/circularity/
+    topic: sustainability
+    covers: [circularity]
+    answers: [K06]
+
+  - id: S15
+    url: https://www.kemira.com/sustainability-initiatives/environment/water-stewardship/
+    topic: sustainability
+    covers: [water_stewardship]
+    answers: [K06]
+
+  - id: S16
+    url: https://www.kemira.com/investors/financial-information/sustainability-key-indicators/
+    topic: sustainability
+    covers: [sustainability_metrics, reported_indicators]
+    answers: [K06, K07]
+    note: Reported indicators. Preferred over narrative pages for any numeric claim.
+
+  # ---- Reports -----------------------------------------------------
+
+  - id: S17
+    url: https://www.kemira.com/annual-report-2025/
+    topic: reports
+    covers: [revenue, headcount, segments, targets, full_year_2025, listing, hq]
+    answers: [K01, K02, K03, K04, K06, K07]
+    note: >
+      Primary reference for any numeric claim about 2025. Locate and
+      store the PDF, not only the landing page.
+
+  - id: S18
+    url: https://www.kemira.com/investors/reports-and-presentations/
+    topic: reports
+    covers: [report_index, interim_reports]
+    answers: [K03]
+    note: >
+      Index page. Use to locate the Jan–Sep 2026 interim report after
+      2026-10-23 if the run falls on that side of publication.
+
+  - id: S22
+    url: https://mb.cision.com/Main/19578/4375563/4196741.pdf
+    canonical_host: mb.cision.com
+    topic: reports
+    covers: [revenue, segments, half_year_2026]
+    answers: [K03]
+    note: >
+      January–June 2026 Half-Year Financial Report. Hosted on the Cision
+      newswire, not on kemira.com (structural finding SF04). Verdicts
+      citing S22 are unaffected; the hosting is a discoverability finding,
+      not a finding about the document.
+
+  # ---- Existing FAQ (baseline for the FAQ-block check) -------------
+
+  - id: S19
+    url: https://www.kemira.com/investors/kemira-as-an-investment/frequently-asked-questions/
+    topic: faq
+    covers: [investor_faq]
+    answers: []
+    note: >
+      Not a claim source. Included because Kemira already has one FAQ
+      block, in the investor section. It is the baseline for the
+      page-gap check: the question is not whether they understand FAQ
+      structure, but why it exists here and not on the pages that
+      answer the questions assistants actually get asked.
+
+# ---- Scraping rules -------------------------------------------------
+#
+# Store: raw HTML, extracted text, URL, HTTP status, capture timestamp.
+# Also record, per page, whether it carries:
+#   - a direct answer in the first screen of content
+#   - an FAQ block
+#   - schema.org structured data (and which types)
+# These three are the page-gap check in stage 9 and are cheapest to
+# capture during the same pass that fetches the page.
+#
+# Do not follow links beyond those listed here. The ground truth set is
+# fixed so the unverified bucket means something: it measures what
+# Kemira's own stated material does not cover, within a defined set.
+#
+# If a claim cannot be checked because the relevant page is not in this
+# file, that is `unverified`, not `contradicted`, and the gap is noted.

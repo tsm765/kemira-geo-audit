@@ -1,0 +1,55 @@
+{
+  "id": "S14",
+  "url": "https://www.kemira.com/sustainability-initiatives/environment/circularity/",
+  "captured_at": "2026-10-20T14:04:11+00:00",
+  "captured_relative_to_interim_report": "before",
+  "robots_allowed": true,
+  "error": null,
+  "http_status": 200,
+  "final_url": "https://www.kemira.com/sustainability-initiatives/environment/circularity/",
+  "redirects": [],
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 182349,
+  "content_hash": "sha256:73adf69d60523fa5455f3c09f09a71edbce70d069f0ca282f7f1d3d2c408e751",
+  "page_text_file": "text.md",
+  "main_content_from": "<main>",
+  "text_chars": 5846,
+  "flags": [],
+  "schema_types": [
+    "BreadcrumbList",
+    "EntryPoint",
+    "ListItem",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+  ],
+  "schema_detail": {
+    "json_ld": [
+      "BreadcrumbList",
+      "EntryPoint",
+      "ListItem",
+      "PropertyValueSpecification",
+      "ReadAction",
+      "SearchAction",
+      "WebPage",
+      "WebSite"
+    ],
+    "microdata": [],
+    "rdfa": []
+  },
+  "headings": {
+    "count": 13,
+    "by_level": {
+      "h1": 0,
+      "h2": 13,
+      "h3": 0
+    },
+    "max_depth": 2
+  },
+  "faq_block": {
+    "present": false,
+    "detected_by": []
+  }
+}

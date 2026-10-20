@@ -1,0 +1,135 @@
+# questions.yaml — the question battery
+#
+# Fixed before collection. Do not change once collection has started:
+# a mid-run change invalidates comparability between passes and assistants.
+#
+# type:
+#   kemira  — names Kemira directly; measures accuracy and citation
+#   open    — names no company; measures share of voice in the category
+#
+# Each question is asked twice per assistant, in separate sessions,
+# logged out / incognito. Claims appearing in only one pass are flagged
+# as unstable rather than reported as findings.
+
+battery_version: 1
+locked: false          # set true at first collection; changes after that require an upstream decision
+passes_per_question: 2
+
+questions:
+
+  # ---- Core identity -------------------------------------------------
+
+  - id: K01
+    type: kemira
+    text: "What is Kemira?"
+    probes: [identity, industry, scale]
+    note: >
+      The baseline. Everything downstream is less interesting if the model
+      cannot place the company. Also the question most likely to surface
+      entity confusion with similarly named firms.
+
+  - id: K02
+    type: kemira
+    text: "What does Kemira do, and who are its customers?"
+    probes: [segments, customer_industries]
+    note: >
+      Tests whether the model reproduces Kemira's own segment vocabulary.
+      Kemira's website uses Water treatment / Fiber production /
+      Fiber-based materials / Industrial solutions; reporting segments use
+      different names. Which vocabulary the model returns — or whether it
+      invents a third — is a finding about entity consistency.
+
+  - id: K03
+    type: kemira
+    text: "How large is Kemira, in revenue and employees, and where is it listed?"
+    probes: [revenue, headcount, listing, hq]
+    note: >
+      The most checkable question in the battery. Hard numbers against the
+      annual report. Also the question most likely to return stale figures,
+      which is the clearest demonstration of why up-to-date facts matter.
+
+  # ---- Water solutions (the segment the posting foregrounds) ---------
+
+  - id: K04
+    type: kemira
+    text: "What water treatment solutions does Kemira offer?"
+    probes: [water_products, coagulants, polymers, municipal, industrial]
+
+  - id: K05
+    type: kemira
+    text: "How does Kemira help municipal water utilities?"
+    probes: [municipal, wastewater, sludge, drinking_water]
+    note: >
+      Phrased as a buyer would phrase it, not as the company describes
+      itself. Tests whether the model can connect a use case to Kemira's
+      material.
+
+  # ---- Sustainability (named explicitly in the posting) --------------
+
+  - id: K06
+    type: kemira
+    text: "What is Kemira's approach to sustainability, and what targets has it set?"
+    probes: [sustainability, climate_targets, circularity, water_stewardship]
+    note: >
+      Highest-risk question for accuracy. Targets, baselines and dates are
+      precise, dated, and easy for a model to approximate wrongly. Any
+      contradiction here must be checked carefully against the source
+      before it is attributed to the assistant.
+
+  - id: K07
+    type: kemira
+    text: "Is Kemira a sustainable company? What are the criticisms?"
+    probes: [sustainability, reputation, balance]
+    note: >
+      Deliberately invites a critical answer. Included because a comms
+      function needs to know what a model says when a stakeholder asks the
+      unflattering version, not only the flattering one. Findings here are
+      reported under the same framing discipline as everywhere else:
+      what the assistant said, with the source it drew on.
+
+      Expect a high `unverified` rate here, by construction. Ground truth
+      is Kemira's own published material, which does not address
+      criticisms, so a criticism claim cannot be supported by it. On K07,
+      `unverified` means "an assistant is telling stakeholders something
+      Kemira's own published material doesn't address" — a content gap
+      finding, not weak sourcing. The snapshot reports K07's unverified
+      rate separately and does not fold it into the overall figure.
+
+  # ---- Open category questions (share of voice) ----------------------
+  # No company named. Counts who comes back.
+
+  - id: O01
+    type: open
+    text: "Who are the main suppliers of water treatment chemicals in Europe?"
+    probes: [share_of_voice, europe]
+
+  - id: O02
+    type: open
+    text: "Which companies supply coagulants and polymers for municipal wastewater treatment?"
+    probes: [share_of_voice, coagulants, polymers, municipal]
+    note: >
+      Narrower than O01 and closer to an actual procurement question.
+      If Kemira appears in one of O01/O02 but not the other, that
+      difference is more useful than either result alone.
+
+  - id: O03
+    type: open
+    text: "I run a municipal wastewater treatment plant in Europe and need to reduce sludge volume. Which chemical suppliers should I look at?"
+    probes: [share_of_voice, buyer_intent, sludge]
+    note: >
+      Buyer-intent phrasing. The closest thing in this battery to how a
+      real prospect would ask, and therefore the share-of-voice number
+      that matters most commercially.
+
+# ---- Deliberately excluded ------------------------------------------
+#
+# Fiber production, fiber-based materials and industrial solutions
+# questions: out of scope for this run (see context.md). Kemira's full
+# competitive set differs by segment, and covering all of them would be
+# four experiments with four baselines.
+#
+# Non-English questions: Finnish and Dutch GEO is a real question and a
+# larger one than seven days allows.
+#
+# Questions about the January 2027 trainee role or careers pages: not
+# what the posting asks about, and would make the audit self-referential.

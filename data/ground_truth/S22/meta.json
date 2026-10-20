@@ -1,0 +1,18 @@
+{
+  "id": "S22",
+  "url": "https://mb.cision.com/Main/19578/4375563/4196741.pdf",
+  "captured_at": "2026-10-20T14:27:12+00:00",
+  "captured_relative_to_interim_report": "before",
+  "error": null,
+  "canonical_host": "mb.cision.com",
+  "fetch": "skipped: url is a PDF and a local copy exists; local copy extracted",
+  "pdf": {
+    "file": "S22_half_year_report_2026.pdf",
+    "source_url": "https://mb.cision.com/Main/19578/4375563/4196741.pdf",
+    "sha256": "sha256:342582ed0e1f4b27b0dea30f3e0cf2490be026662f3302d84b14e65628d267d7",
+    "pages": 42,
+    "pages_without_text": [],
+    "extracted_at": "2026-10-20T14:27:14+00:00",
+    "text_file": "text.md"
+  }
+}

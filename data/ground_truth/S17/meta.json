@@ -1,0 +1,66 @@
+{
+  "id": "S17",
+  "url": "https://www.kemira.com/annual-report-2025/",
+  "captured_at": "2026-10-20T14:04:28+00:00",
+  "captured_relative_to_interim_report": "before",
+  "robots_allowed": true,
+  "error": null,
+  "http_status": 200,
+  "final_url": "https://www.kemira.com/annual-report-2025/",
+  "redirects": [],
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 182642,
+  "content_hash": "sha256:66ce1523bf5dacd1d3a432fa6bbc2448c192816c543ca8d12fccfb0643025755",
+  "page_text_file": "page.md",
+  "main_content_from": "<main>",
+  "text_chars": 7846,
+  "flags": [],
+  "schema_types": [
+    "BreadcrumbList",
+    "EntryPoint",
+    "ImageObject",
+    "ListItem",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+  ],
+  "schema_detail": {
+    "json_ld": [
+      "BreadcrumbList",
+      "EntryPoint",
+      "ImageObject",
+      "ListItem",
+      "PropertyValueSpecification",
+      "ReadAction",
+      "SearchAction",
+      "WebPage",
+      "WebSite"
+    ],
+    "microdata": [],
+    "rdfa": []
+  },
+  "pdf": {
+    "file": "S17_annual_report_2025.pdf",
+    "source_url": "https://www.kemira.com/app/uploads/2026/02/kemira-full-annual-report-2025.pdf",
+    "sha256": "sha256:841df7504191c37d1d32cb8ac8026f23967bfc90043868954f8e3ff352c268a0",
+    "pages": 266,
+    "pages_without_text": [],
+    "extracted_at": "2026-10-20T14:15:00+00:00",
+    "text_file": "text.md"
+  },
+  "headings": {
+    "count": 18,
+    "by_level": {
+      "h1": 0,
+      "h2": 12,
+      "h3": 6
+    },
+    "max_depth": 3
+  },
+  "faq_block": {
+    "present": false,
+    "detected_by": []
+  }
+}

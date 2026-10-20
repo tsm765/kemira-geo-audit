@@ -1,0 +1,5 @@
+# S2 ground truth scrape: HTTP fetching, HTML parsing, PDF text extraction, YAML config
+requests==2.34.2
+beautifulsoup4==4.15.0
+pypdf==6.21.1
+PyYAML==6.0.3

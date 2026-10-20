@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "description": "Findings about how Kemira's published material is structured and hosted, observed directly during ground truth capture (S2). They do not come from any assistant answer. Each records what was observed on the captured pages, on the stated date, within the source set in sources.yaml. They are observations about page structure and discoverability, not claims about the content of Kemira's disclosures. They feed the S7 page-gap list alongside claim-derived gaps.",
+  "findings": [
+    {
+      "id": "SF01",
+      "observed_at": "2026-10-20",
+      "theme": "factual_material_off_domain",
+      "category": "off_domain_content",
+      "summary": "The sustainability key indicators page on kemira.com loads its figures from an embedded tool on tools.eurolandir.com. The indicators themselves are not in the kemira.com page's HTML, so a crawler restricted to kemira.com does not reach them.",
+      "evidence": [
+        {
+          "source_id": "S16",
+          "url": "https://www.kemira.com/investors/financial-information/sustainability-key-indicators/",
+          "detail": "Main content of the captured page is 38 characters (a date and the page heading). The page embeds an iframe from //tools.eurolandir.com/tools/ia/?companycode=sf-kra&v=sustainability&lang=en-gb."
+        }
+      ],
+      "affects_sources": ["S16"],
+      "affects_questions": ["K06", "K07"],
+      "page_gap": {
+        "url": "https://www.kemira.com/investors/financial-information/sustainability-key-indicators/",
+        "gap": "Reported indicators not present in the page's own HTML."
+      }
+    },
+    {
+      "id": "SF02",
+      "observed_at": "2026-10-20",
+      "theme": "structured_data",
+      "category": "schema_markup",
+      "summary": "None of the 21 captured kemira.com pages carries Organization, Corporation or FAQPage schema. Every page has the same default set (WebPage, WebSite, BreadcrumbList, ListItem, SearchAction, ReadAction, EntryPoint, PropertyValueSpecification; ImageObject on 8 pages). The one captured page with an FAQ block (S19, investor FAQ) has no FAQPage markup.",
+      "evidence": [
+        {
+          "source_id": "S01-S21",
+          "detail": "schema_types in data/ground_truth/<id>/meta.json for every captured HTML page."
+        },
+        {
+          "source_id": "S19",
+          "url": "https://www.kemira.com/investors/kemira-as-an-investment/frequently-asked-questions/",
+          "detail": "FAQ detected by its 'Frequently asked questions' heading; schema_types does not include FAQPage."
+        }
+      ],
+      "implication": "Without Organization schema, a model has no machine-readable assertion of Kemira's legal name, listing, headquarters or segment structure, and must infer entity facts from prose or from third parties.",
+      "scope_note": "Covers the pages in sources.yaml only, not the whole site.",
+      "affects_sources": ["S01", "S02", "S03", "S04", "S05", "S06", "S07", "S08", "S09", "S10", "S11", "S12", "S13", "S14", "S15", "S16", "S17", "S18", "S19", "S20", "S21"],
+      "affects_questions": ["K01", "K02", "K03", "K04", "K05", "K06", "K07"],
+      "page_gap": {
+        "url": null,
+        "gap": "No Organization/Corporation entity markup on any captured page; no FAQPage markup on the captured FAQ page."
+      }
+    },
+    {
+      "id": "SF03",
+      "observed_at": "2026-10-20",
+      "theme": "factual_material_off_domain",
+      "category": "report_discoverability",
+      "summary": "The reports and presentations index on kemira.com links no interim or half-year report PDF. Its only document links are the Q2 2026 'Equity story in brief' fact sheet (PDF) and a key financials spreadsheet (XLSX).",
+      "evidence": [
+        {
+          "source_id": "S18",
+          "url": "https://www.kemira.com/investors/reports-and-presentations/",
+          "detail": "Links in <main>: kemira-q2-2026-equity-story-in-brief.pdf, kemira-q2-2026-key-financials.xlsx, and a YouTube playlist. No other report links."
+        }
+      ],
+      "scope_note": "Based on the server-rendered HTML as captured. A report list loaded by client-side script after page load would not appear in this capture.",
+      "affects_sources": ["S18", "S22"],
+      "affects_questions": ["K03"],
+      "page_gap": {
+        "url": "https://www.kemira.com/investors/reports-and-presentations/",
+        "gap": "No link to the half-year or interim report documents."
+      }
+    },
+    {
+      "id": "SF04",
+      "observed_at": "2026-10-20",
+      "theme": "factual_material_off_domain",
+      "category": "off_domain_content",
+      "summary": "The January–June 2026 Half-Year Financial Report is hosted on the Cision newswire (mb.cision.com), not on kemira.com. A crawler restricted to kemira.com does not reach it.",
+      "evidence": [
+        {
+          "source_id": "S22",
+          "url": "https://mb.cision.com/Main/19578/4375563/4196741.pdf",
+          "detail": "Document URL is on mb.cision.com. Not linked from the captured reports index (S18; see SF03)."
+        }
+      ],
+      "scope_note": "No kemira.com copy was found on the captured pages. The site outside sources.yaml was not searched, so a copy elsewhere on kemira.com is not ruled out.",
+      "affects_sources": ["S22"],
+      "affects_questions": ["K03"],
+      "page_gap": {
+        "url": "https://www.kemira.com/investors/reports-and-presentations/",
+        "gap": "No kemira.com-hosted half-year report linked from the reports index."
+      }
+    }
+  ]
+}
