@@ -86,6 +86,18 @@ Sources: `data/tallies.json` (citations.kemira_pages, source_id field). Feeds S7
 
 Sources: `data/raw/*_gemini_p2.md` citations_displayed.
 
+### 6a. Cited captured pages sit higher in the site than uncited ones (hypothesis)
+
+**Hypothesis, not a finding.** Of the captured pages, those cited are mostly top-level hubs (homepage, `/company`, `/water`, `/sustainability-initiatives`, the annual report); those never cited are mostly deeper leaf pages (`/water/sludge`, `/water/digital-services`, the circularity and water-stewardship subpages, the investor subpages). Mean URL path depth is about 1.6 for the 10 cited HTML pages against about 2.5 for the 11 never-cited HTML pages. Counter-examples: `/water/wastewater` and `/water/raw-water-drinking-water` are cited at depth 2; `/contacts` is not cited at depth 1. n is small (21 HTML pages, one run).
+
+By contrast, the structural signals captured in S2 cannot explain citation at all, because they do not vary: every captured page carries the same default schema set and only S19 has an FAQ block (never cited). See SF02.
+
+Sources: `data/tallies.json` (kemira_pages); `data/ground_truth/*/meta.json`.
+
+### 6b. The `/stories/` hypothesis cannot be tested from captured data
+
+The suggestion that narrative and case-study pages are what assistants reach (observation 4) cannot be tested against page structure, because the `/stories/` pages were never captured: the ground truth set was fixed before collection. This is a limit of the audit, not a negative result.
+
 ---
 
 ## Share of voice (S6)

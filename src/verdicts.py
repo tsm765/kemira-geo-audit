@@ -32,7 +32,10 @@ CONTRADICTION_TYPES = {"assistant_wrong", "source_unclear"}
 #   outside_ground_truth: related material exists elsewhere on kemira.com but is
 #                         not in the captured set (a limit of this audit)
 #   not_addressed:        Kemira's published material does not cover it (a content gap)
-UNVERIFIED_REASONS = {"outside_ground_truth", "not_addressed"}
+#   cited_source_outside_set: the assistant named a kemira.com page outside the
+#                         captured set as its source for this claim (read from the
+#                         frozen raw answer; asserts nothing about what that page says)
+UNVERIFIED_REASONS = {"outside_ground_truth", "not_addressed", "cited_source_outside_set"}
 STATUSES = {"proposed", "confirmed", "revised"}
 
 

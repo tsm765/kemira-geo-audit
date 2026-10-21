@@ -957,7 +957,7 @@
       "statement": "Kemira has an MSCI ESG rating of AAA",
       "verdict": "unverified",
       "contradiction_type": null,
-      "unverified_reason": null,
+      "unverified_reason": "cited_source_outside_set",
       "evaluative": false,
       "evidence": {
         "source": "S12",
@@ -965,9 +965,9 @@
         "quote": "External parties like CDP, EcoVadis, MSCI and other investor platforms have recognized Kemira for bettering society and safeguarding the environment."
       },
       "conflicting_evidence": null,
-      "reason": "The ground truth names MSCI recognition but states no grade; AAA is not confirmed.",
+      "reason": "The ground truth names MSCI recognition but states no grade; AAA is not confirmed. Perplexity (K07, pass 2) cited https://www.kemira.com/news-and-stories/newsroom/news/kemira-achieves-a-gold-rating-in-the-ecovadis-sustainability-assessment/ for this claim, a kemira.com page outside sources.yaml; it was not read and is not evidence.",
       "see_also": [],
-      "status": "confirmed",
+      "status": "revised",
       "instance_ids": [
         "K06_chatgpt_p2#20",
         "K07_perplexity_p2#02",
@@ -1290,7 +1290,7 @@
       "evaluative": false,
       "evidence": null,
       "conflicting_evidence": null,
-      "reason": "The Superfloc brand does not appear anywhere in the ground truth set. Related material exists on a kemira.com product page that is not in sources.yaml (noted by the human from the live site, for the limitation record only; not used as evidence).",
+      "reason": "The Superfloc brand does not appear anywhere in the ground truth set. Related material exists on a kemira.com product page that is not in sources.yaml (noted by the human from the live site, for the limitation record only; not used as evidence). Perplexity (O03) cited https://www.kemira.com/stories/cities-slash-sludge-costs-and-co2/ for this claim (outside sources.yaml; not read).",
       "see_also": [],
       "status": "revised",
       "instance_ids": [
@@ -2062,13 +2062,13 @@
       "statement": "A collaboration with Joensuu, Finland increased the wastewater plant's biogas output by 17%",
       "verdict": "unverified",
       "contradiction_type": null,
-      "unverified_reason": null,
+      "unverified_reason": "cited_source_outside_set",
       "evaluative": false,
       "evidence": null,
       "conflicting_evidence": null,
-      "reason": "The Joensuu case is not in the ground truth set (Kemira's case-study stories are outside sources.yaml).",
+      "reason": "The Joensuu case is not in the ground truth set (Kemira's case-study stories are outside sources.yaml). Perplexity (K05, both passes) cited https://www.kemira.com/stories/data-driven-water-treatment-for-energy-gains/ for this claim, a kemira.com page outside sources.yaml; it was not read and is not evidence.",
       "see_also": [],
-      "status": "confirmed",
+      "status": "revised",
       "instance_ids": [
         "K05_perplexity_p1#08",
         "K05_perplexity_p2#09"
@@ -2080,13 +2080,13 @@
       "statement": "BIOFOS in Copenhagen reduced sludge-treatment energy use by nearly 4.4 GWh with Kemira (dewatering polymer and KemConnect SD)",
       "verdict": "unverified",
       "contradiction_type": null,
-      "unverified_reason": null,
+      "unverified_reason": "cited_source_outside_set",
       "evaluative": false,
       "evidence": null,
       "conflicting_evidence": null,
-      "reason": "The BIOFOS case is not in the ground truth set (Kemira's case-study stories are outside sources.yaml).",
+      "reason": "The BIOFOS case is not in the ground truth set (Kemira's case-study stories are outside sources.yaml). Perplexity (K05, both passes) cited https://www.kemira.com/stories/data-driven-water-treatment-for-energy-gains/ for this claim, a kemira.com page outside sources.yaml; it was not read and is not evidence.",
       "see_also": [],
-      "status": "confirmed",
+      "status": "revised",
       "instance_ids": [
         "K05_perplexity_p1#09",
         "K05_perplexity_p2#10"
@@ -2315,13 +2315,13 @@
       "statement": "Kemira's high-molecular-weight XD-5000 flocculant series raises cake dry solids (often by 2-5 percentage points) at lower polymer dose",
       "verdict": "unverified",
       "contradiction_type": null,
-      "unverified_reason": null,
+      "unverified_reason": "cited_source_outside_set",
       "evaluative": false,
       "evidence": null,
       "conflicting_evidence": null,
-      "reason": "The XD-5000 series is not mentioned anywhere in the ground truth set.",
+      "reason": "The XD-5000 series is not mentioned anywhere in the ground truth set. Perplexity (O03, both passes) cited https://www.kemira.com/stories/cities-slash-sludge-costs-and-co2/ for this claim, a kemira.com page outside sources.yaml; it was not read and is not evidence.",
       "see_also": [],
-      "status": "confirmed",
+      "status": "revised",
       "instance_ids": [
         "O03_perplexity_p1#05",
         "O03_perplexity_p2#05"
@@ -2555,13 +2555,13 @@
       "statement": "Veolia in Prague used KemConnect P to cut phosphorus-precipitation costs on one water line by almost 34%",
       "verdict": "unverified",
       "contradiction_type": null,
-      "unverified_reason": null,
+      "unverified_reason": "cited_source_outside_set",
       "evaluative": false,
       "evidence": null,
       "conflicting_evidence": null,
-      "reason": "The Prague (Veolia) KemConnect P case is not in the captured set.",
+      "reason": "The Prague (Veolia) KemConnect P case is not in the captured set. Perplexity (K05, pass 2) cited https://www.kemira.com/stories/data-driven-water-treatment-for-energy-gains/ for this claim, a kemira.com page outside sources.yaml; it was not read and is not evidence.",
       "see_also": [],
-      "status": "confirmed",
+      "status": "revised",
       "instance_ids": [
         "K05_perplexity_p2#11"
       ]
@@ -2732,9 +2732,9 @@
       "evaluative": false,
       "evidence": null,
       "conflicting_evidence": null,
-      "reason": "Perplexity stated on 2026-10-20 (K07, pass 1) that Kemira disclosed 10 significant spills in 2019. The captured set does not include reports for that year and does not settle it.",
+      "reason": "Perplexity stated on 2026-10-20 (K07, pass 1) that Kemira disclosed 10 significant spills in 2019. The captured set does not include reports for that year and does not settle it. Perplexity cited the full 2025 annual report PDF for this claim; that document is the captured S17 and does not state it.",
       "see_also": [],
-      "status": "confirmed",
+      "status": "revised",
       "instance_ids": [
         "K07_perplexity_p1#12"
       ]
@@ -2745,13 +2745,13 @@
       "statement": "In 2023 Kemira reported six EHS fines or penalties (four US, one Spain, one China) totalling about EUR 18,000, plus 15 further non-compliance incidents",
       "verdict": "unverified",
       "contradiction_type": null,
-      "unverified_reason": null,
+      "unverified_reason": "cited_source_outside_set",
       "evaluative": false,
       "evidence": null,
       "conflicting_evidence": null,
-      "reason": "Perplexity stated on 2026-10-20 (K07, pass 1) that Kemira reported six EHS fines in 2023. The captured set does not include the 2023 report and does not settle it.",
+      "reason": "Perplexity stated on 2026-10-20 (K07, pass 1) that Kemira reported six EHS fines in 2023. The captured set does not include the 2023 report and does not settle it. Perplexity (K07, pass 1) cited https://www.kemira.com/app/uploads/2024/02/kemira-ar-sustainability-report-2023.pdf for this claim, a kemira.com page outside sources.yaml; it was not read and is not evidence.",
       "see_also": [],
-      "status": "confirmed",
+      "status": "revised",
       "instance_ids": [
         "K07_perplexity_p1#13"
       ]
@@ -2784,15 +2784,15 @@
       "statement": "Kemira's investor materials note that PFAS chemicals have negative environmental and health impacts",
       "verdict": "unverified",
       "contradiction_type": null,
-      "unverified_reason": null,
+      "unverified_reason": "cited_source_outside_set",
       "evaluative": false,
       "evidence": null,
       "conflicting_evidence": null,
-      "reason": "Perplexity stated on 2026-10-20 (K07, pass 1) that Kemira's investor materials note PFAS harms. Investor presentations are not in the captured set; the annual report discusses PFAS as a removal opportunity rather than in these terms.",
+      "reason": "Perplexity stated on 2026-10-20 (K07, pass 1) that Kemira's investor materials note PFAS harms. Investor presentations are not in the captured set; the annual report discusses PFAS as a removal opportunity rather than in these terms. Perplexity (K07, pass 1) cited https://www.kemira.com/app/uploads/2026/04/kemira-oyj_-investor-presentation_april-2026.pdf for this claim, a kemira.com page outside sources.yaml; it was not read and is not evidence.",
       "see_also": [
         "S17 p.4-5: PFAS and micropollutant removal as a growth area"
       ],
-      "status": "confirmed",
+      "status": "revised",
       "instance_ids": [
         "K07_perplexity_p1#15"
       ]
@@ -2859,13 +2859,13 @@
       "statement": "Kemira reported five significant spills in 2022 (up from two in 2021), about 80 tonnes, plus a major hydrochloric-acid transport leak in EMEA",
       "verdict": "unverified",
       "contradiction_type": null,
-      "unverified_reason": null,
+      "unverified_reason": "cited_source_outside_set",
       "evaluative": false,
       "evidence": null,
       "conflicting_evidence": null,
-      "reason": "Perplexity stated on 2026-10-20 (K07, pass 2) that Kemira reported significant spills in 2021 and 2022. The captured set does not include reports for those years and does not settle it.",
+      "reason": "Perplexity stated on 2026-10-20 (K07, pass 2) that Kemira reported significant spills in 2021 and 2022. The captured set does not include reports for those years and does not settle it. Perplexity (K07, pass 2) cited https://www.kemira.com/app/uploads/2023/02/kemira-sustainability-report-2022.pdf for this claim, a kemira.com page outside sources.yaml; it was not read and is not evidence.",
       "see_also": [],
-      "status": "confirmed",
+      "status": "revised",
       "instance_ids": [
         "K07_perplexity_p2#13"
       ]
@@ -2924,9 +2924,9 @@
       "evaluative": false,
       "evidence": null,
       "conflicting_evidence": null,
-      "reason": "Perplexity stated on 2026-10-20 (K07, pass 2) that some observers accuse Kemira of greenwashing. The ground truth covers only Kemira's own published material and does not settle it.",
+      "reason": "Perplexity stated on 2026-10-20 (K07, pass 2) that some observers accuse Kemira of greenwashing. The ground truth covers only Kemira's own published material and does not settle it. Perplexity cited the full 2025 annual report PDF for this claim; that document is the captured S17 and does not state it.",
       "see_also": [],
-      "status": "confirmed",
+      "status": "revised",
       "instance_ids": [
         "K07_perplexity_p2#17"
       ]

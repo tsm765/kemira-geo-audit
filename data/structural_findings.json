@@ -280,6 +280,61 @@
         "K06"
       ],
       "page_gap": null
+    },
+    {
+      "id": "SF09",
+      "observed_at": "2026-10-20",
+      "observed_in": "ground_truth_capture",
+      "theme": "structured_data",
+      "category": "heading_hierarchy",
+      "summary": "19 of the 21 captured HTML pages contain no h1 element (counted in the raw HTML). The homepage contains four h1 elements, all carousel slides (the first: 'Introducing KemAlpha renewable polymers'); only /water/wastewater has a single page-title h1 ('Wastewater'). The absence is uniform across the captured site.",
+      "implication": "Together with SF02 (no Organization or FAQPage schema), the captured pages offer a model no structural signal about what each page is or what question it answers: neither structured data nor a heading hierarchy that names the page.",
+      "evidence": [
+        {
+          "source_id": "S01-S21",
+          "detail": "h1 elements counted in data/ground_truth/<id>/raw.html: 0 on 19 pages; 4 on S02 (carousel slides); 1 on S07."
+        }
+      ],
+      "scope_note": "An observation about the captured pages' markup, not about Kemira's content. Covers the 21 captured HTML pages only.",
+      "affects_sources": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20",
+        "S21"
+      ],
+      "affects_questions": [
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K07",
+        "O01",
+        "O02",
+        "O03"
+      ],
+      "page_gap": {
+        "url": null,
+        "gap": "No page-title h1 on 19 of 21 captured pages; the homepage's h1 elements are carousel slides."
+      }
     }
   ]
 }

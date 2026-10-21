@@ -1,0 +1,209 @@
+# page_gaps_input.yaml — S7, hand-made input for data/page_gaps.json
+#
+# Review sheet (direct-answer judgements, passage first): python -m src.page_gaps review
+# Build: python -m src.page_gaps build   (confirmed/revised entries only)
+#
+# S7 shape (CLAUDE.md): (1) a site-wide structural diagnosis stated once, because
+# the captured structural signals do not vary between pages; (2) a per-page
+# content-gap list ranked by claim instances fixed. The direct-answer signal is
+# the one page-level signal with real variation and carries weight per page.
+# Diagnosis only: nothing here proposes or writes content for Kemira.
+
+site_wide:
+  - id: schema
+    statement: No captured page carries Organization or Corporation schema. All 21 captured HTML pages carry the same default schema set (WebPage, WebSite, BreadcrumbList, ListItem, SearchAction, ReadAction, EntryPoint, PropertyValueSpecification; ImageObject on some).
+    structural_finding: SF02
+    status: confirmed
+  - id: faq
+    statement: Only one captured page (S19, the investor FAQ) has an FAQ block, and it carries no FAQPage markup. S19 is never cited by any assistant.
+    structural_finding: SF02
+    status: confirmed
+  - id: h1
+    statement: 19 of 21 captured HTML pages have no h1 element. The homepage has four, all carousel slides (the first is 'Introducing KemAlpha renewable polymers'); only /water/wastewater has a single page-title h1.
+    structural_finding: SF09
+    status: confirmed
+
+# Direct answer: does the first screen of main content answer the page's implied
+# question? Judged from the first three content blocks recorded in meta.local.json.
+# judgement: answers | partial | no ; opens_with: answer | framing | date | promo | heading
+direct_answer:
+  S01:
+    question: What is Kemira?
+    judgement: answers
+    opens_with: heading
+    reason: After a 'Company' label and 'About us' heading, the first paragraph answers directly ('Kemira is a global leader in sustainable chemistry for water-intensive industries...').
+    status: confirmed
+  S02:
+    question: What is Kemira?
+    judgement: partial
+    opens_with: promo
+    reason: Opens with a promotional carousel (KemAlpha launch, REPUR acquisition, interim report), then a generic line ('in the business of chemistry expertise'); the identity statement comes third.
+    status: confirmed
+  S03:
+    question: What is Kemira's strategy and business model?
+    judgement: "no"
+    opens_with: date
+    reason: Opens with a date (5/29/2026), then aspirational framing ('Clean water, sanitation, and the smart use of limited resources are key components of quality of life'); the strategy is not stated in the first blocks.
+    status: confirmed
+  S04:
+    question: What are Kemira's business units and markets?
+    judgement: partial
+    opens_with: date
+    reason: Opens with a date (5/29/2026); the first paragraph describes the focus areas in general terms but does not name the three business units.
+    status: confirmed
+  S05:
+    question: What is Kemira's outlook and what are its financial targets?
+    judgement: "no"
+    opens_with: date
+    reason: Opens with a date (7/17/2026) followed by two headings; no outlook or target is stated in the first blocks.
+    status: confirmed
+  S06:
+    question: What water treatment solutions does Kemira offer?
+    judgement: partial
+    opens_with: framing
+    reason: Opens with the customer's problem (tightening regulation, megatrends); the offering follows only generically ('a range of innovative solutions'), with no products named.
+    status: confirmed
+  S07:
+    question: What does Kemira offer for wastewater treatment?
+    judgement: "no"
+    opens_with: framing
+    reason: Opens with general statements about chemical treatment ('has been around for a long time... safe, reliable and cost-effective'); Kemira's own offering is not stated in the first blocks.
+    status: confirmed
+  S08:
+    question: What does Kemira offer for raw and drinking water?
+    judgement: "no"
+    opens_with: framing
+    reason: Opens with general freshwater facts ('Less than 3% of all water on earth is freshwater...'); Kemira's offering appears only in general terms in the third block.
+    status: confirmed
+  S09:
+    question: How does Kemira help with sludge treatment and dewatering?
+    judgement: partial
+    opens_with: framing
+    reason: Opens with the problem ('Sludge dewatering can be a tricky operation'), then a generic offering ('Our complete product portfolio and deep knowledge...'); no products, outcomes or figures in the first blocks.
+    status: confirmed
+  S10:
+    question: What digital services does Kemira offer for water treatment?
+    judgement: "no"
+    opens_with: heading
+    reason: Opens with a title, a product name (Kemira KemConnect) and a tagline ('The science of water treatment - the power of data'); what the services do is not stated in the first blocks.
+    status: confirmed
+  S11:
+    question: What is Kemira's approach to sustainability and what are its targets?
+    judgement: "no"
+    opens_with: framing
+    reason: Opens with purpose framing ('Chemistry plays a critical role...', 'This is why Kemira exists...'); the approach and targets appear further down the page.
+    status: confirmed
+  S12:
+    question: What is Kemira's sustainability approach?
+    judgement: "no"
+    opens_with: framing
+    reason: Opens with general statements ('Sustainability touches nearly all aspects of our business'); the approach is not stated concretely in the first blocks.
+    status: confirmed
+  S13:
+    question: What are Kemira's climate targets?
+    judgement: partial
+    opens_with: framing
+    reason: The first paragraph is framing (climate change, Paris Agreement); the second states the 2045 carbon-neutrality ambition (Scopes 1 and 2) and SBTi alignment. The specific near-term targets are not in the first blocks.
+    status: confirmed
+  S14:
+    question: What is Kemira doing on circularity?
+    judgement: "no"
+    opens_with: framing
+    reason: Opens with a general description of the circular economy and a commitment statement, then a 'Targets & KPIs' heading; no target or figure in the first blocks.
+    status: confirmed
+  S15:
+    question: What is Kemira's water stewardship approach?
+    judgement: "no"
+    opens_with: framing
+    reason: Opens with positioning ('Kemira is in the business of chemistry for water management...'); the stewardship approach is not stated in the first blocks.
+    status: confirmed
+  S16:
+    question: What are Kemira's sustainability key indicators?
+    judgement: "no"
+    opens_with: date
+    reason: Opens with a date (2/13/2025) and a heading; the indicators themselves are not in the page HTML (served from an embedded third-party tool, SF01).
+    status: confirmed
+  S17:
+    question: What does Kemira's 2025 annual report say?
+    judgement: partial
+    opens_with: heading
+    reason: The landing page opens with Kemira's identity statement and an invitation to explore the report; no headline figures for 2025 in the first blocks.
+    status: confirmed
+  S18:
+    question: Where are Kemira's reports and presentations?
+    judgement: partial
+    opens_with: date
+    reason: Opens with a date (7/17/2026), then the latest results headline; no report documents are linked from the first blocks (SF03).
+    status: confirmed
+  S19:
+    question: What are the answers to common questions about Kemira?
+    judgement: partial
+    opens_with: date
+    reason: Opens with a date (10/15/2026), then the FAQ heading and a section label ('About Kemira'); the question-and-answer content follows, but the page carries no FAQPage markup.
+    status: confirmed
+  S20:
+    question: Where is Kemira listed and what is its share information?
+    judgement: partial
+    opens_with: date
+    reason: Opens with a date (7/21/2026); the first paragraph gives share capital and share count, while the exchange and trading code come further down.
+    status: confirmed
+  S21:
+    question: Where is Kemira headquartered and how do I contact it?
+    judgement: answers
+    opens_with: heading
+    reason: The first paragraph states the headquarters ('Our company headquarters is located in Helsinki, Finland'), followed by the address.
+    status: confirmed
+
+# Each claim that is not `supported`, mapped to the captured page that should
+# settle it, or `unassigned` where no captured page is expected to answer it.
+# also_involved: other captured sources the verdict draws on (not ranked).
+claim_map:
+  # source_conflict: the web target pages are where the published figures meet a reader first
+  target_scope12_2030: {page: S11, also_involved: [S13, S17, S22], reason: The sustainability page states this target as both 50% and -52%; the reports state 51.23% (SF06).}
+  target_scope12_51_2: {page: S11, also_involved: [S13, S17, S22], reason: Mirror of target_scope12_2030 (SF06).}
+  target_scope3_2033: {page: S11, also_involved: [S13, S17, S22], reason: Web pages state 33%, reports 32.5% (SF06).}
+  target_scope3_32_5: {page: S11, also_involved: [S13, S17, S22], reason: Mirror of target_scope3_2033 (SF06).}
+  target_dei_2026: {page: S11, also_involved: [S17, S22], reason: The sustainability target table carries the D&I target; the annual report dates it end-2025 (SF07).}
+  target_trif_2026: {page: S11, also_involved: [S17, S22], reason: The sustainability target table states the 2030 TRIF target but not the 2.2 interim target or its date (SF07).}
+  target_trif_2025: {page: S11, also_involved: [S17, S22], reason: Mirror of target_trif_2026 (SF07).}
+  target_waste_2030: {page: S11, also_involved: [S14, S17, S22], reason: The target table lists no waste target; the annual report states one and the half-year report says it was removed (SF07).}
+  # contradicted
+  carbon_neutrality_overall: {page: S13, also_involved: [S17], reason: The climate page states the scope (Scopes 1 and 2); the unqualified statement is in the annual report p.161 (SF08).}
+  ecovadis_platinum: {page: S12, also_involved: [S22], reason: The approach page's recognition section names EcoVadis without stating the rating level; Gold appears only in the half-year report.}
+  pillars_strategy_mix: {page: S11, reason: The four focus areas appear only as section headings, not as a stated list.}
+  # unverified: the captured page whose topic covers the claim
+  water_chemical_portfolio: {page: S06, reason: The water hub page names no product categories.}
+  msci_aaa: {page: S12, reason: The recognition section names MSCI without a rating.}
+  superfloc_brand: {page: S09, reason: The sludge page refers to 'a full range of ... polymers' without naming product lines.}
+  xd5000_dry_solids: {page: S09, reason: As superfloc_brand; no product lines or outcomes stated.}
+  case_joensuu_biogas: {page: S09, reason: The sludge page mentions biogas and 'success cases' without naming any.}
+  case_biofos_energy: {page: S09, reason: As case_joensuu_biogas.}
+  copenhagen_performance_model: {page: S09, reason: As case_joensuu_biogas.}
+  case_prague_veolia: {page: S07, reason: The wastewater page describes phosphorus removal without cases.}
+  case_arnhem_zuid: {page: S10, reason: The digital services page describes KemConnect without cases.}
+  drinking_water_disinfection_conditioning: {page: S08, reason: The raw and drinking water page describes coagulation and flocculation but no disinfection or conditioning offering.}
+  oulu_site: {page: S21, reason: The contacts page states the headquarters but no other sites.}
+  customer_concentration: {page: S04, reason: The business units page describes customers by type without concentration figures.}
+  municipal_customer_cities: {page: S04, reason: The business units page says 'various cities' without naming any.}
+  progress_inclusion_index_25th: {page: S11, reason: The target table's D&I result is an unlabelled '25%'; the annual report reports an Inclusion Index of 77 against a benchmark of 81.}
+  zero_releases_objective: {page: S12, reason: The approach page does not state site-level EHS objectives; 'zero environmental harm' appears only on the contacts page.}
+  zero_releases_achieved: {page: S16, reason: Reported EHS indicators belong on the key indicators page, whose figures are not in its HTML (SF01).}
+  spills_2019: {page: S16, reason: As zero_releases_achieved.}
+  spills_2021_2022: {page: S16, reason: As zero_releases_achieved.}
+  ehs_fines_2023: {page: S16, reason: As zero_releases_achieved.}
+  waste_2025_recovery: {page: S14, reason: The circularity page has a 'Targets & KPIs' heading but no waste recovery figure.}
+  annual_report_feb_2026: {page: S18, reason: The reports page does not state publication dates of the reports (SF03).}
+  # unassigned: no captured page is expected to answer these
+  strong_in_nordics: {page: unassigned, reason: Evaluative claim; no page could settle it.}
+  european_top_five: {page: unassigned, reason: Attributes a ranking to third-party analyses.}
+  no_direct_consumer_sales: {page: unassigned, reason: Overreach (an absolute the material does not make); not a gap for a page to fill.}
+  netfloc_process_water: {page: unassigned, reason: Pulp and paper process water; Fiber segments are outside this audit's scope and no fiber page was captured.}
+  sodium_chlorate_line_finland: {page: unassigned, reason: Fiber Essentials news item; outside the captured scope.}
+  pfas_investor_materials: {page: unassigned, reason: A claim about what an investor presentation says; not a page-content gap.}
+  biodiversity_traceability_gap_2024: {page: unassigned, reason: A claim about a past report's content.}
+  ethifinance_intensity_rise: {page: unassigned, reason: Third-party assessment.}
+  riverkeeper_lawsuit_2021: {page: unassigned, reason: Third-party allegation (K07); no Kemira page is expected to answer it.}
+  mobile_alabama_petition_2019: {page: unassigned, reason: Third-party allegation (K07); no Kemira page is expected to answer it.}
+  epa_settlement_2013: {page: unassigned, reason: Regulatory record (K07); no Kemira page is expected to answer it.}
+  epa_cafo_2026: {page: unassigned, reason: Regulatory record (K07); no Kemira page is expected to answer it.}
+  greenwashing_accusations: {page: unassigned, reason: Third-party opinion (K07).}

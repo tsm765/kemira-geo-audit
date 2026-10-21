@@ -218,9 +218,10 @@ verdicts:
 
   msci_aaa:
     verdict: unverified
+    unverified_reason: cited_source_outside_set
     evidence: {source: S12, file: text.md, quote: "External parties like CDP, EcoVadis, MSCI and other investor platforms have recognized Kemira for bettering society and safeguarding the environment."}
-    reason: The ground truth names MSCI recognition but states no grade; AAA is not confirmed.
-    status: confirmed
+    reason: The ground truth names MSCI recognition but states no grade; AAA is not confirmed. Perplexity (K07, pass 2) cited https://www.kemira.com/news-and-stories/newsroom/news/kemira-achieves-a-gold-rating-in-the-ecovadis-sustainability-assessment/ for this claim, a kemira.com page outside sources.yaml; it was not read and is not evidence.
+    status: revised
 
   csrd_double_materiality:
     verdict: supported
@@ -302,7 +303,7 @@ verdicts:
   superfloc_brand:
     verdict: unverified
     unverified_reason: outside_ground_truth
-    reason: The Superfloc brand does not appear anywhere in the ground truth set. Related material exists on a kemira.com product page that is not in sources.yaml (noted by the human from the live site, for the limitation record only; not used as evidence).
+    reason: The Superfloc brand does not appear anywhere in the ground truth set. Related material exists on a kemira.com product page that is not in sources.yaml (noted by the human from the live site, for the limitation record only; not used as evidence). Perplexity (O03) cited https://www.kemira.com/stories/cities-slash-sludge-costs-and-co2/ for this claim (outside sources.yaml; not read).
     status: revised
 
   pulp_bleaching_chemicals:
@@ -512,13 +513,15 @@ verdicts:
 
   case_joensuu_biogas:
     verdict: unverified
-    reason: The Joensuu case is not in the ground truth set (Kemira's case-study stories are outside sources.yaml).
-    status: confirmed
+    unverified_reason: cited_source_outside_set
+    reason: The Joensuu case is not in the ground truth set (Kemira's case-study stories are outside sources.yaml). Perplexity (K05, both passes) cited https://www.kemira.com/stories/data-driven-water-treatment-for-energy-gains/ for this claim, a kemira.com page outside sources.yaml; it was not read and is not evidence.
+    status: revised
 
   case_biofos_energy:
     verdict: unverified
-    reason: The BIOFOS case is not in the ground truth set (Kemira's case-study stories are outside sources.yaml).
-    status: confirmed
+    unverified_reason: cited_source_outside_set
+    reason: The BIOFOS case is not in the ground truth set (Kemira's case-study stories are outside sources.yaml). Perplexity (K05, both passes) cited https://www.kemira.com/stories/data-driven-water-treatment-for-energy-gains/ for this claim, a kemira.com page outside sources.yaml; it was not read and is not evidence.
+    status: revised
 
   water_target_total_24_5:
     verdict: supported
@@ -583,8 +586,9 @@ verdicts:
 
   xd5000_dry_solids:
     verdict: unverified
-    reason: The XD-5000 series is not mentioned anywhere in the ground truth set.
-    status: confirmed
+    unverified_reason: cited_source_outside_set
+    reason: The XD-5000 series is not mentioned anywhere in the ground truth set. Perplexity (O03, both passes) cited https://www.kemira.com/stories/cities-slash-sludge-costs-and-co2/ for this claim, a kemira.com page outside sources.yaml; it was not read and is not evidence.
+    status: revised
 
   # ===== Split claims (2026-10-21): pooled instances of different strength
 
@@ -655,8 +659,9 @@ verdicts:
 
   case_prague_veolia:
     verdict: unverified
-    reason: The Prague (Veolia) KemConnect P case is not in the captured set.
-    status: confirmed
+    unverified_reason: cited_source_outside_set
+    reason: The Prague (Veolia) KemConnect P case is not in the captured set. Perplexity (K05, pass 2) cited https://www.kemira.com/stories/data-driven-water-treatment-for-energy-gains/ for this claim, a kemira.com page outside sources.yaml; it was not read and is not evidence.
+    status: revised
 
   case_arnhem_zuid:
     verdict: unverified
@@ -705,13 +710,14 @@ verdicts:
 
   spills_2019:
     verdict: unverified
-    reason: Perplexity stated on 2026-10-20 (K07, pass 1) that Kemira disclosed 10 significant spills in 2019. The captured set does not include reports for that year and does not settle it.
-    status: confirmed
+    reason: Perplexity stated on 2026-10-20 (K07, pass 1) that Kemira disclosed 10 significant spills in 2019. The captured set does not include reports for that year and does not settle it. Perplexity cited the full 2025 annual report PDF for this claim; that document is the captured S17 and does not state it.
+    status: revised
 
   ehs_fines_2023:
     verdict: unverified
-    reason: Perplexity stated on 2026-10-20 (K07, pass 1) that Kemira reported six EHS fines in 2023. The captured set does not include the 2023 report and does not settle it.
-    status: confirmed
+    unverified_reason: cited_source_outside_set
+    reason: Perplexity stated on 2026-10-20 (K07, pass 1) that Kemira reported six EHS fines in 2023. The captured set does not include the 2023 report and does not settle it. Perplexity (K07, pass 1) cited https://www.kemira.com/app/uploads/2024/02/kemira-ar-sustainability-report-2023.pdf for this claim, a kemira.com page outside sources.yaml; it was not read and is not evidence.
+    status: revised
 
   waste_2025_recovery:
     verdict: unverified
@@ -721,9 +727,10 @@ verdicts:
 
   pfas_investor_materials:
     verdict: unverified
-    reason: Perplexity stated on 2026-10-20 (K07, pass 1) that Kemira's investor materials note PFAS harms. Investor presentations are not in the captured set; the annual report discusses PFAS as a removal opportunity rather than in these terms.
+    unverified_reason: cited_source_outside_set
+    reason: Perplexity stated on 2026-10-20 (K07, pass 1) that Kemira's investor materials note PFAS harms. Investor presentations are not in the captured set; the annual report discusses PFAS as a removal opportunity rather than in these terms. Perplexity (K07, pass 1) cited https://www.kemira.com/app/uploads/2026/04/kemira-oyj_-investor-presentation_april-2026.pdf for this claim, a kemira.com page outside sources.yaml; it was not read and is not evidence.
     see_also: ["S17 p.4-5: PFAS and micropollutant removal as a growth area"]
-    status: confirmed
+    status: revised
 
   scope3_share_77:
     verdict: supported
@@ -743,8 +750,9 @@ verdicts:
 
   spills_2021_2022:
     verdict: unverified
-    reason: Perplexity stated on 2026-10-20 (K07, pass 2) that Kemira reported significant spills in 2021 and 2022. The captured set does not include reports for those years and does not settle it.
-    status: confirmed
+    unverified_reason: cited_source_outside_set
+    reason: Perplexity stated on 2026-10-20 (K07, pass 2) that Kemira reported significant spills in 2021 and 2022. The captured set does not include reports for those years and does not settle it. Perplexity (K07, pass 2) cited https://www.kemira.com/app/uploads/2023/02/kemira-sustainability-report-2022.pdf for this claim, a kemira.com page outside sources.yaml; it was not read and is not evidence.
+    status: revised
 
   recordable_injuries_2025:
     verdict: supported
@@ -760,8 +768,8 @@ verdicts:
 
   greenwashing_accusations:
     verdict: unverified
-    reason: Perplexity stated on 2026-10-20 (K07, pass 2) that some observers accuse Kemira of greenwashing. The ground truth covers only Kemira's own published material and does not settle it.
-    status: confirmed
+    reason: Perplexity stated on 2026-10-20 (K07, pass 2) that some observers accuse Kemira of greenwashing. The ground truth covers only Kemira's own published material and does not settle it. Perplexity cited the full 2025 annual report PDF for this claim; that document is the captured S17 and does not state it.
+    status: revised
 
   annual_report_feb_2026:
     verdict: unverified
