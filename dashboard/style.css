@@ -48,6 +48,19 @@ a { color: var(--accent); }
 .headline .unit { font-size: 0.45em; font-weight: 600; letter-spacing: 0; color: var(--ink-2); }
 .headline .line { display: block; color: var(--ink-2); font-size: 0.95rem; line-height: 1.45; }
 
+/* ---- the questions: same expander pattern as the recommendations -------- */
+.expander { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 14px 0; margin-top: 24px; }
+.expander summary { cursor: pointer; list-style: none; font-size: 1.05rem; line-height: 1.45; }
+.expander summary::-webkit-details-marker { display: none; }
+.expander summary .label { font-weight: 600; color: var(--accent); }
+.expander summary .more { display: block; font-size: 0.82rem; color: var(--ink-3); margin-top: 4px; }
+.expander[open] summary .more { display: none; }
+.expander .body { color: var(--ink-2); font-size: 0.95rem; max-width: 46rem; }
+.expander h3 { color: var(--ink); font-size: 0.95rem; margin: 16px 0 6px; }
+.expander ol { margin: 0; padding-left: 1.4em; }
+.expander li { margin-bottom: 4px; }
+.expander .why { margin: 14px 0 2px; color: var(--ink); }
+
 /* ---- tabs -------------------------------------------------------------- */
 .tabbar { background: var(--bg); border-bottom: 1px solid var(--rule); }
 @media (min-width: 720px) { .tabbar { position: sticky; top: 0; z-index: 2; } }

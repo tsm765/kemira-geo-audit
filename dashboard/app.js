@@ -64,6 +64,14 @@ function header(d) {
   }
 }
 
+function questions(Q) {
+  $("questions-label").textContent = Q.label;
+  $("questions-hint").textContent = Q.hint;
+  for (const g of Q.groups)
+    $("questions-body").append(el("h3", {}, g.heading), el("ol", {}, ...g.questions.map((q) => el("li", {}, q))));
+  $("questions-body").append(el("p", { className: "why" }, Q.why));
+}
+
 function links(L) {
   $("links-lede").append(el("strong", {}, `${L.kemira} of the ${L.total} links`),
     ` the assistants gave (${pct(L.kemira, L.total)}) went to kemira.com. Which share depends heavily on the assistant.`);
@@ -198,6 +206,7 @@ async function main() {
   tabs();
   const d = await (await fetch("data.json")).json();
   header(d);
+  questions(d.questions);
   links(d.links);
   claims(d.right_wrong);
   figures(d.figures);

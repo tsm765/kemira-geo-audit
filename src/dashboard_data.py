@@ -263,6 +263,22 @@ def build():
              "shift_note": ("In its second session, Gemini named SNF first and Kemira second in two of the three questions, "
                             "having named Kemira first in its first session.")}
 
+    # ---- the questions, as asked (from questions.yaml) ---------------------
+    qs = cfg.questions["questions"]
+    named = [q["text"] for q in qs if q["type"] == "kemira"]
+    open_ = [q["text"] for q in qs if q["type"] == "open"]
+    assert (len(named), len(open_), len(qs)) == (7, 3, 10)
+    questions = {
+        "label": "See the ten questions asked",
+        "hint": "Seven name Kemira, three name no company",
+        "groups": [
+            {"heading": "Seven that name Kemira", "questions": named},
+            {"heading": "Three that name no company", "questions": open_},
+        ],
+        "why": ("The three that name no company measure whether Kemira gets named at all. "
+                "They were written so as not to prompt the answer."),
+    }
+
     out = {
         "generated_from": "data/*.json and data/raw/ by src/dashboard_data.py",
         "title": "What AI assistants say about Kemira",
@@ -272,6 +288,7 @@ def build():
                    f"{len(sources)} Kemira pages and reports."),
         "run_date": run_date,
         "headline": headline,
+        "questions": questions,
         "links": links,
         "right_wrong": right_wrong,
         "figures": figures,

@@ -18,6 +18,33 @@
       "line": "Only two Kemira pages begin by answering the question the page exists for. Seven begin with a date."
     }
   ],
+  "questions": {
+    "label": "See the ten questions asked",
+    "hint": "Seven name Kemira, three name no company",
+    "groups": [
+      {
+        "heading": "Seven that name Kemira",
+        "questions": [
+          "What is Kemira?",
+          "What does Kemira do, and who are its customers?",
+          "How large is Kemira, in revenue and employees, and where is it listed?",
+          "What water treatment solutions does Kemira offer?",
+          "How does Kemira help municipal water utilities?",
+          "What is Kemira's approach to sustainability, and what targets has it set?",
+          "Is Kemira a sustainable company? What are the criticisms?"
+        ]
+      },
+      {
+        "heading": "Three that name no company",
+        "questions": [
+          "Who are the main suppliers of water treatment chemicals in Europe?",
+          "Which companies supply coagulants and polymers for municipal wastewater treatment?",
+          "I run a municipal wastewater treatment plant in Europe and need to reduce sludge volume. Which chemical suppliers should I look at?"
+        ]
+      }
+    ],
+    "why": "The three that name no company measure whether Kemira gets named at all. They were written so as not to prompt the answer."
+  },
   "links": {
     "kemira": 106,
     "total": 208,
