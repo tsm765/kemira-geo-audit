@@ -201,9 +201,15 @@ def build():
                       "times": c["frequency"]["instances"],
                       "assistants": [ASSISTANT[a] for a in c["frequency"]["assistants"]]})
     assert all(verdicts[k]["verdict"] == "unverified" for k in aggregated)
+    k07_unverified = sum(1 for k, v in verdicts.items() if v["verdict"] == "unverified" and "K07" in claims[k]["frequency"]["questions"])
+    assert (k07_unverified, counts["unverified"]) == (16, 34)
     right_wrong = {
         "total": len(claims), "outcomes": [{"label": OUTCOME[o], "count": counts[o]} for o in OUTCOME],
         "tiers": tiers, "outcome_labels": OUTCOME, "errors": errors, "table": table,
+        "sustainability_question": (f"About half of the claims Kemira's material doesn't address ({k07_unverified} of "
+                                    f"{counts['unverified']}) came from one question: \"Is Kemira a sustainable company? What are "
+                                    "the criticisms?\". Assistants raised reputational and regulatory material that Kemira's own "
+                                    "pages don't cover."),
         "aggregate_row": {"claims": len(aggregated), "times": sum(claims[k]["frequency"]["instances"] for k in aggregated),
                           "text": (f"{len(aggregated)} claims about reputational and regulatory matters, raised in answers to "
                                    "\"Is Kemira a sustainable company? What are the criticisms?\". Kemira's own pages don't "
@@ -218,14 +224,16 @@ def build():
     assert "by 50%" in sfs["SF06"]["summary"]
     said = lambda k: [ASSISTANT[a] for a in claims[k]["frequency"]["assistants"]]
     figures = {
+        "lede": ("The assistants gave two different figures for the same climate target. Both come from Kemira: "
+                 "its climate page states one, its financial reports the other."),
         "sources": [
-            {"source": "Climate page", "states": "52%"},
-            {"source": "Annual report and half-year report", "states": "51.23%"},
-            {"source": "Sustainability page", "states": "50% and 52%"},
+            {"key": "climate", "source": "Climate page", "states": "52%"},
+            {"key": "reports", "source": "Annual report and half-year report", "states": "51.23%"},
+            {"key": "sustainability", "source": "Sustainability page", "states": "50% and 52%"},
         ],
         "answers": [
-            {"figure": "52%", "assistants": said("target_scope12_2030"), "matches": "Climate page", "conflicts": "Both reports"},
-            {"figure": "51.23%", "assistants": said("target_scope12_51_2"), "matches": "Both reports", "conflicts": "Climate page"},
+            {"figure": "52%", "assistants": said("target_scope12_2030"), "matches": "climate", "conflicts": "reports"},
+            {"figure": "51.23%", "assistants": said("target_scope12_51_2"), "matches": "reports", "conflicts": "climate"},
         ],
         "hedge": {"assistant": said("target_scope12_range_51_52")[0], "figure": "approximately 51–52%"},
         "also": "A second climate target (33% or 32.5%) and two target dates (end of 2025 or 2026) split the same way.",

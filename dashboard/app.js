@@ -5,33 +5,41 @@ const $ = (id) => document.getElementById(id);
 const el = (tag, props = {}, ...kids) => {
   const n = document.createElement(tag);
   Object.assign(n, props);
-  for (const k of kids) n.append(k);
+  for (const k of kids) if (k !== null && k !== undefined && k !== "") n.append(k);
   return n;
 };
 const pct = (n, of) => `${Math.round((100 * n) / of)}%`;
 
-function stackedBar(parts, total, label) {
-  const bar = el("div", { className: "bar", role: "img" });
+// One stacked bar. Each segment carries its count (shown when there is room)
+// and a hover title; the text line under the bar names every part, so the
+// bar never relies on colour alone.
+function stackedBar(parts, total, label, thin = false) {
+  const bar = el("div", { className: thin ? "bar thin" : "bar", role: "img" });
   bar.setAttribute("aria-label", label);
   for (const p of parts) {
     if (!p.n) continue;
-    const s = el("span", { className: `seg-${p.key}`, title: `${p.label}: ${p.n}` }, `${p.n}`);
-    s.style.width = pct(p.n, total);
+    const s = el("span", { className: `seg-${p.key}`, title: `${p.label}: ${p.n} of ${total}` }, p.n / total > 0.06 ? `${p.n}` : "");
+    s.style.flex = `${p.n} 0 0`;
     bar.append(s);
   }
   return bar;
 }
+const barLabels = (parts) =>
+  el("div", { className: "barlabels" }, ...parts.flatMap((p, i) => [i ? " · " : "", el("b", {}, `${p.n}`), ` ${p.label}`]));
+const legend = (target, parts) => {
+  for (const p of parts) $(target).append(el("li", {}, el("span", { className: `swatch seg-${p.key}` }), p.label));
+};
 
 function tabs() {
   const list = [...document.querySelectorAll('[role="tab"]')];
-  const select = (t) => {
+  const select = (t, push = true) => {
     for (const o of list) {
       const on = o === t;
       o.setAttribute("aria-selected", on);
       o.tabIndex = on ? 0 : -1;
       $(o.getAttribute("aria-controls")).hidden = !on;
     }
-    history.replaceState(null, "", `#${t.id.slice(4)}`);
+    if (push) history.replaceState(null, "", `#${t.id.slice(4)}`);
   };
   list.forEach((t, i) => {
     t.addEventListener("click", () => select(t));
@@ -41,7 +49,7 @@ function tabs() {
     });
   });
   const start = list.find((t) => t.id === `tab-${location.hash.slice(1)}`);
-  if (start) select(start);
+  if (start) select(start, false);
 }
 
 function header(d) {
@@ -49,96 +57,124 @@ function header(d) {
   $("title").textContent = d.title;
   $("independence").textContent = d.independence;
   $("method").textContent = d.method;
-  for (const h of d.headline) $("headline").append(el("li", {}, el("strong", {}, h.figure), " ", h.line));
+  for (const h of d.headline) {
+    const [, num, unit] = h.figure.match(/^(\d+) ([a-z]+)$/) || [, h.figure, ""];
+    $("headline").append(el("li", {}, el("span", { className: "figure" }, num, unit ? el("span", { className: "unit" }, ` ${unit}`) : null),
+      el("span", { className: "line" }, h.line)));
+  }
 }
 
 function links(L) {
-  $("links-lede").textContent =
-    `${L.kemira} of the ${L.total} links the assistants gave (${pct(L.kemira, L.total)}) went to kemira.com.`;
+  $("links-lede").append(el("strong", {}, `${L.kemira} of the ${L.total} links`),
+    ` the assistants gave (${pct(L.kemira, L.total)}) went to kemira.com. Which share depends heavily on the assistant.`);
   const groups = [
-    ["kemira", "kemira.com"], ["suppliers", "other suppliers' sites"],
-    ["research", "market-research sites"], ["other", "other"],
+    { key: "kemira", label: "kemira.com" }, { key: "suppliers", label: "other suppliers' sites" },
+    { key: "research", label: "market-research sites" }, { key: "other", label: "other" },
   ];
-  const t = el("table");
-  t.append(el("thead", {}, el("tr", {}, el("th", {}, "Assistant"), ...groups.map(([, l]) => el("th", {}, l)), el("th", {}, "Links"))));
-  const body = el("tbody");
-  const charts = el("div");
+  legend("links-legend", groups);
   for (const a of L.by_assistant) {
-    const name = a.note ? `${a.assistant} (${a.note})` : a.assistant;
-    body.append(el("tr", {}, el("td", {}, name), ...groups.map(([k]) => el("td", {}, `${a[k]}`)), el("td", {}, `${a.total}`)));
-    charts.append(el("p", {}, name), stackedBar(groups.map(([k, l]) => ({ key: k, label: l, n: a[k] })), a.total,
-      `${name}: ` + groups.map(([k, l]) => `${a[k]} to ${l}`).join(", ")));
+    const parts = groups.map((g) => ({ ...g, n: a[g.key] }));
+    $("links-chart").append(el("div", { className: "barrow" },
+      el("div", { className: "barhead" },
+        el("span", { className: "name" }, a.assistant, a.note ? el("small", {}, ` (${a.note})`) : null),
+        el("span", { className: "total" }, `${a.total} links`)),
+      stackedBar(parts, a.total, `${a.assistant}: ` + parts.map((p) => `${p.n} to ${p.label}`).join(", ")),
+      barLabels(parts.filter((p) => p.n))));
   }
-  t.append(body);
-  $("links-chart").append(charts, el("div", { className: "table-wrap" }, t));
-  $("links-wiki").textContent = `Wikipedia: ${L.wikipedia} link of ${L.total}.`;
+  $("links-wiki").textContent = `Wikipedia appears once in all ${L.total} links.`;
   for (const p of L.most_cited)
-    $("links-most").append(el("li", {}, `${p.page}: ${p.citations}`, p.checked ? "" : " (not among the pages checked)"));
+    $("links-most").append(el("li", {}, `${p.page} `, el("span", { className: "n" }, `${p.citations}`),
+      p.checked ? null : el("span", { className: "outside" }, " · not among the pages checked")));
   $("links-outside").textContent =
-    `${L.outside_checked_set} of the Kemira pages linked to were outside the ${L.checked_total} pages and reports this audit checked.`;
+    `${L.outside_checked_set} of the Kemira pages the assistants linked to were outside the ${L.checked_total} pages and reports this audit checked.`;
   for (const p of L.never_cited)
     $("links-never").append(el("li", { className: p.highlight ? "highlight" : "" }, p.page,
-      p.highlight ? " (the page that answers the question about reducing sludge, which no assistant linked to when asked it)" : ""));
-  $("links-caveat").firstChild.textContent = L.caveat;
+      p.highlight ? el("small", {}, "Never linked, even when the assistants were asked how to reduce sludge") : null));
+  $("links-caveat").textContent = L.caveat;
 }
 
 function claims(C) {
   const keys = Object.keys(C.outcome_labels);
-  $("claims-lede").textContent = `The assistants made ${C.total} distinct claims about Kemira. Each was checked against Kemira's own material.`;
-  const o = el("ul");
-  C.outcomes.forEach((x, i) => o.append(el("li", {}, el("strong", {}, `${x.count}`), ` ${x.label}`)));
-  $("claims-outcomes").append(
-    stackedBar(C.outcomes.map((x, i) => ({ key: keys[i], label: x.label, n: x.count })), C.total, "All claims by outcome"), o);
-  const t = el("table");
-  t.append(el("thead", {}, el("tr", {}, el("th", {}, "How often"), el("th", {}, "Claims"), ...keys.map((k) => el("th", {}, C.outcome_labels[k])))));
-  const body = el("tbody");
+  const n = Object.fromEntries(keys.map((k, i) => [k, C.outcomes[i].count]));
+  $("claims-lede").append(`Of ${C.total} claims about Kemira, `, el("strong", {}, `${n.supported} checked out and ${n.contradicted} conflicted`),
+    ` with Kemira's material. The rest are things Kemira's material doesn't address (${n.unverified}) or where its own pages and reports disagree (${n.source_conflict}).`);
+  const parts = keys.map((k) => ({ key: k, label: C.outcome_labels[k], n: n[k] }));
+  legend("claims-legend", parts);
+  $("claims-outcomes").append(stackedBar(parts, C.total, "All claims by outcome: " + parts.map((p) => `${p.n} ${p.label}`).join(", ")),
+    el("div", { className: "outcomes" }, ...parts.map((p) =>
+      el("div", { className: `b-${p.key}` }, el("span", { className: "num" }, `${p.n}`), el("span", { className: "lbl" }, p.label)))));
   for (const r of C.tiers) {
-    body.append(el("tr", {}, el("td", {}, r.label, el("br"), stackedBar(keys.map((k) => ({ key: k, label: C.outcome_labels[k], n: r[k] })), r.claims, r.label)),
-      el("td", {}, `${r.claims}`), ...keys.map((k) => el("td", {}, `${r[k]}`))));
+    const tp = keys.map((k) => ({ key: k, label: C.outcome_labels[k], n: r[k] }));
+    const callout = r.contradicted === 0 ? el("div", { className: "callout" }, "None conflicted with Kemira's material.") : null;
+    $("claims-tiers").append(el("div", { className: "barrow" },
+      el("div", { className: "barhead" }, el("span", { className: "name" }, r.label), el("span", { className: "total" }, `${r.claims} claims`)),
+      stackedBar(tp, r.claims, `${r.label}: ` + tp.map((p) => `${p.n} ${p.label}`).join(", "), true),
+      barLabels(tp.filter((p) => p.n)), callout));
   }
-  t.append(body);
-  $("claims-tiers").append(el("div", { className: "table-wrap" }, t));
-  for (const e of C.errors) $("claims-errors").append(el("li", {}, `${e.assistant}: ${e.text}`));
+  for (const e of C.errors) $("claims-errors").append(el("li", {}, el("strong", {}, `${e.assistant}. `), e.text));
+  $("claims-errors").after(el("p", {}, C.sustainability_question));
   const tb = $("claims-table").tBodies[0];
   for (const r of C.table)
-    tb.append(el("tr", {}, el("td", {}, r.claim), el("td", {}, r.outcome), el("td", {}, `${r.times}`), el("td", {}, r.assistants.join(", "))));
+    tb.append(el("tr", {}, el("td", {}, r.claim), el("td", {}, r.outcome), el("td", { className: "num" }, `${r.times}`), el("td", {}, r.assistants.join(", "))));
   const a = C.aggregate_row;
-  tb.append(el("tr", {}, el("td", {}, a.text), el("td", {}, C.outcome_labels.unverified), el("td", {}, `${a.times}`), el("td", {}, "")));
+  tb.append(el("tr", { className: "aggregate" }, el("td", {}, a.text), el("td", {}, C.outcome_labels.unverified),
+    el("td", { className: "num" }, `${a.times}`), el("td", {}, "")));
 }
 
+// The source map: Kemira's sources across the top, what the assistants said
+// down the side, and in each cell whether that answer matches or conflicts
+// with that source. The diagonal is the finding: each figure matches one
+// Kemira source and conflicts with the other.
 function figures(F) {
-  for (const s of F.sources) $("figures-sources").append(el("li", {}, `${s.source}: `, el("strong", {}, s.states)));
-  const tb = $("figures-answers").tBodies[0];
-  for (const a of F.answers)
-    tb.append(el("tr", {}, el("td", {}, a.figure), el("td", {}, a.assistants.join(", ")), el("td", {}, a.matches), el("td", {}, a.conflicts)));
+  $("figures-lede").textContent = F.lede;
+  const src = Object.fromEntries(F.sources.map((s) => [s.key, s]));
+  const cols = ["climate", "reports"];
+  const m = $("figures-map");
+  m.append(el("div", { className: "corner" }, "Assistants said ↓  ·  Kemira says →"));
+  for (const c of cols)
+    m.append(el("div", { className: "src" }, el("span", { className: "who" }, src[c].source), el("span", { className: "val" }, src[c].states)));
+  for (const a of F.answers) {
+    m.append(el("div", { className: "ans" }, el("span", { className: "val" }, a.figure), el("span", { className: "who" }, a.assistants.join(", "))));
+    for (const c of cols) {
+      const match = a.matches === c;
+      m.append(el("div", { className: `cell ${match ? "match" : "conflict"}` },
+        el("span", { className: "mark", ariaHidden: "true" }, match ? "✓" : "✕"), match ? "Matches" : "Conflicts"));
+    }
+  }
+  const third = src.sustainability;
+  m.append(el("div", { className: "third" }, `The ${third.source.toLowerCase()} states `, el("strong", {}, third.states), ", on the same page."));
+  m.append(el("div", { className: "conclusion" }, F.conclusion));
   $("figures-hedge").textContent = `${F.hedge.assistant} once gave "${F.hedge.figure}", a range spanning both of Kemira's figures.`;
   $("figures-also").textContent = F.also;
-  $("figures-conclusion").textContent = F.conclusion;
 }
 
 function names(N) {
-  $("names-lede").textContent =
-    `Asked three open questions that name no company, the assistants named Kemira in all ${N.kemira.named_in} answers and first in ${N.kemira.first}. ` +
-    `SNF was also named in all ${N.snf.named_in}, and first in ${N.snf.first}.`;
+  $("names-lede").append(`Asked three questions that name no company, the assistants named `,
+    el("strong", {}, `Kemira in all ${N.kemira.named_in} answers, first in ${N.kemira.first}`),
+    `. SNF was also named in all ${N.snf.named_in}, and first in ${N.snf.first}.`);
   const cols = [];
   for (const a of ["Perplexity", "ChatGPT", "Gemini"]) for (const s of [1, 2]) cols.push([a, s]);
-  const qs = [...new Set(N.strip.map((r) => r.question))];
-  const t = $("names-strip");
-  t.append(el("thead", {}, el("tr", {}, el("th", {}, "Question"), ...cols.map(([a, s]) => el("th", {}, `${a}, session ${s}`)))));
-  const body = el("tbody");
-  for (const q of qs) {
-    const tr = el("tr", {}, el("td", {}, q));
+  const g = $("names-grid");
+  g.append(el("p", { className: "gridkey" },
+    "Each assistant was asked twice, in a 1st and a 2nd session. Large number: Kemira's place. Below it: SNF's place. Dashed: SNF named first."));
+  for (const q of [...new Set(N.strip.map((r) => r.question))]) {
+    const grid = el("div", { className: "grid6" });
+    for (const a of ["Perplexity", "ChatGPT", "Gemini"]) grid.append(el("div", { className: "colhead assistant" }, a));
+    for (const [, s] of cols) grid.append(el("div", { className: "colhead" }, s === 1 ? "1st" : "2nd"));
     for (const [a, s] of cols) {
       const r = N.strip.find((x) => x.question === q && x.assistant === a && x.session === s);
-      tr.append(el("td", { className: r.kemira !== 1 ? "marked" : "" },
-        `Kemira ${r.kemira}`, el("br"), r.snf ? `SNF ${r.snf}` : "SNF not named", el("br"), el("small", {}, `of ${r.named}`)));
+      const shift = r.kemira !== 1;
+      const cell = el("div", { className: shift ? "pos shift" : "pos",
+        title: `${a}, session ${s}: Kemira ${r.kemira} of ${r.named}; SNF ${r.snf ?? "not named"}` },
+        el("span", { className: "k" }, `${r.kemira}`), el("span", { className: "s" }, r.snf ? (shift && r.snf === 1 ? "SNF 1st" : `SNF ${r.snf}`) : "no SNF"));
+      grid.append(cell);
     }
-    body.append(tr);
+    g.append(el("div", { className: "qblock" }, el("p", { className: "qtext" }, q), grid));
   }
-  t.append(body);
   $("names-shift").textContent = N.shift_note;
   const pb = $("names-peers").tBodies[0];
-  for (const p of N.peers) pb.append(el("tr", {}, el("td", {}, p.company), el("td", {}, `${p.named_in} of ${N.answers}`), el("td", {}, `${p.first}`)));
+  for (const p of N.peers)
+    pb.append(el("tr", {}, el("td", {}, p.company), el("td", { className: "num" }, `${p.named_in} of ${N.answers}`), el("td", { className: "num" }, `${p.first}`)));
 }
 
 // Parses the generated recommendations file: '# title', italic header line,
@@ -149,11 +185,11 @@ function opinion(md) {
   $("opinion-title").textContent = lines.find((l) => l.startsWith("# ")).slice(2);
   $("opinion-header").textContent = inline(lines.find((l) => /^\*[^*]/.test(l)))
     .replace("Everything else in this repository", "Everything else on this page").replace("this file says", "this section says");
-  const sections = md.split(/^## /m).slice(1);
-  for (const s of sections) {
+  for (const s of md.split(/^## /m).slice(1)) {
     const paras = s.split(/\n\s*\n/).map((p) => p.trim()).filter((p) => p && p !== "---" && !p.startsWith("*Every"));
     const [num, statement, ...rest] = paras;
-    $("opinion-list").append(el("details", {}, el("summary", {}, el("strong", {}, `${num}. `), inline(statement)),
+    $("opinion-list").append(el("details", {},
+      el("summary", {}, el("span", { className: "n" }, num), el("span", {}, inline(statement), el("span", { className: "more" }, "Why, and what it involves"))),
       ...rest.map((p) => el("p", {}, p))));
   }
 }

@@ -5,99 +5,111 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>What AI assistants say about Kemira</title>
 <meta name="description" content="An independent audit of what three AI assistants say about Kemira, checked against Kemira's own pages. Not affiliated with Kemira.">
-<style>
-  /* Structure only. Styling comes in the next pass. */
-  [hidden] { display: none !important; }
-  .bar { display: flex; height: 1.4em; max-width: 40em; border: 1px solid; }
-  .bar > span { display: block; height: 100%; overflow: hidden; white-space: nowrap; font-size: 0.8em; }
-  .seg-kemira { background: #7aa; } .seg-suppliers { background: #aa7; } .seg-research { background: #a7a; } .seg-other { background: #ccc; }
-  .seg-supported { background: #7aa; } .seg-unverified { background: #ccc; } .seg-source_conflict { background: #aa7; } .seg-contradicted { background: #a77; }
-  .highlight { font-weight: bold; }
-  .marked { outline: 2px dashed; }
-  .opinion { border-left: 4px solid; padding-left: 1em; }
-  table { border-collapse: collapse; } td, th { border: 1px solid #999; padding: 0.2em 0.4em; text-align: left; vertical-align: top; }
-  .table-wrap { overflow-x: auto; }
-</style>
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <p id="independence"></p>
-  <h1 id="title"></h1>
-  <p id="method"></p>
-  <ul id="headline"></ul>
+<header class="masthead">
+  <div class="wrap">
+    <p class="independence" id="independence"></p>
+    <h1 id="title"></h1>
+    <p class="method" id="method"></p>
+    <ul class="headline" id="headline"></ul>
+  </div>
 </header>
 
-<nav>
-  <div role="tablist" aria-label="Sections" id="tabs">
+<nav class="tabbar">
+  <div class="wrap" role="tablist" aria-label="Sections" id="tabs">
     <button role="tab" id="tab-links" aria-controls="panel-links" aria-selected="true">Where the links go</button>
     <button role="tab" id="tab-claims" aria-controls="panel-claims" aria-selected="false" tabindex="-1">What they get right and wrong</button>
     <button role="tab" id="tab-figures" aria-controls="panel-figures" aria-selected="false" tabindex="-1">Why assistants give different figures</button>
     <button role="tab" id="tab-names" aria-controls="panel-names" aria-selected="false" tabindex="-1">Who the assistants name</button>
-    <button role="tab" id="tab-opinion" aria-controls="panel-opinion" aria-selected="false" tabindex="-1">What I'd do</button>
+    <button role="tab" id="tab-opinion" aria-controls="panel-opinion" aria-selected="false" tabindex="-1" class="tab-opinion">What I'd do</button>
   </div>
 </nav>
 
-<main>
+<main class="wrap">
   <section role="tabpanel" id="panel-links" aria-labelledby="tab-links">
     <h2>Where the links go</h2>
-    <p id="links-lede"></p>
-    <h3>Each assistant's links, by destination</h3>
-    <div id="links-chart"></div>
-    <p id="links-wiki"></p>
-    <h3>Kemira pages the assistants linked to most</h3>
-    <ol id="links-most"></ol>
-    <p id="links-outside"></p>
-    <h3>Kemira pages checked in this audit that no assistant linked to</h3>
-    <ul id="links-never"></ul>
-    <p id="links-caveat"><small></small></p>
+    <p class="lede" id="links-lede"></p>
+    <figure class="visual">
+      <figcaption>Each assistant's links, by where they lead</figcaption>
+      <ul class="legend" id="links-legend"></ul>
+      <div id="links-chart"></div>
+    </figure>
+    <div class="detail">
+      <p id="links-wiki"></p>
+      <h3>Kemira pages linked to most</h3>
+      <ol class="ranked" id="links-most"></ol>
+      <p id="links-outside"></p>
+      <h3>Checked pages no assistant linked to</h3>
+      <ul class="tags" id="links-never"></ul>
+      <p class="caveat" id="links-caveat"></p>
+    </div>
   </section>
 
   <section role="tabpanel" id="panel-claims" aria-labelledby="tab-claims" hidden>
     <h2>What they get right and wrong</h2>
-    <p id="claims-lede"></p>
-    <div id="claims-outcomes"></div>
-    <h3>The claims repeated most were the most reliable</h3>
-    <div id="claims-tiers"></div>
-    <h3>The three claims that conflicted with Kemira's material</h3>
-    <ul id="claims-errors"></ul>
-    <details id="claims-all">
-      <summary>Show all claims</summary>
-      <div class="table-wrap"><table id="claims-table"><thead><tr><th>Claim</th><th>Outcome</th><th>Times said</th><th>Said by</th></tr></thead><tbody></tbody></table></div>
-    </details>
+    <p class="lede" id="claims-lede"></p>
+    <figure class="visual">
+      <figcaption>All claims, by outcome</figcaption>
+      <ul class="legend" id="claims-legend"></ul>
+      <div id="claims-outcomes"></div>
+      <h3 class="subhead">The claims repeated most were the most reliable</h3>
+      <div id="claims-tiers"></div>
+    </figure>
+    <div class="detail">
+      <h3>The three claims that conflicted with Kemira's material</h3>
+      <ul class="errors" id="claims-errors"></ul>
+      <details class="all">
+        <summary>Show all claims</summary>
+        <div class="table-wrap"><table id="claims-table"><thead><tr><th>Claim</th><th>Outcome</th><th>Times said</th><th>Said by</th></tr></thead><tbody></tbody></table></div>
+      </details>
+    </div>
   </section>
 
   <section role="tabpanel" id="panel-figures" aria-labelledby="tab-figures" hidden>
     <h2>Why assistants give different figures</h2>
-    <p>Kemira's 2030 target for cutting emissions from its own operations and the energy it buys, as stated in each place.</p>
-    <h3>What Kemira's material says</h3>
-    <ul id="figures-sources"></ul>
-    <h3>What the assistants said</h3>
-    <div class="table-wrap"><table id="figures-answers"><thead><tr><th>Figure given</th><th>By</th><th>Matches</th><th>Conflicts with</th></tr></thead><tbody></tbody></table></div>
-    <p id="figures-hedge"></p>
-    <p id="figures-also"></p>
-    <p id="figures-conclusion"></p>
+    <p class="lede" id="figures-lede"></p>
+    <figure class="visual">
+      <figcaption>Kemira's 2030 target for cutting emissions from its own operations and the energy it buys</figcaption>
+      <div class="map" id="figures-map"></div>
+    </figure>
+    <div class="detail">
+      <p id="figures-hedge"></p>
+      <p id="figures-also"></p>
+    </div>
   </section>
 
   <section role="tabpanel" id="panel-names" aria-labelledby="tab-names" hidden>
     <h2>Who the assistants name</h2>
-    <p id="names-lede"></p>
-    <h3>Position of Kemira and SNF in each answer</h3>
-    <div class="table-wrap"><table id="names-strip"></table></div>
-    <p id="names-shift"></p>
-    <h3>Companies named in four or more of the answers</h3>
-    <div class="table-wrap"><table id="names-peers"><thead><tr><th>Company</th><th>Named in</th><th>Named first</th></tr></thead><tbody></tbody></table></div>
+    <p class="lede" id="names-lede"></p>
+    <figure class="visual">
+      <figcaption>Kemira's place in each answer's list of suppliers, with SNF's beneath</figcaption>
+      <div id="names-grid"></div>
+      <p class="note" id="names-shift"></p>
+    </figure>
+    <div class="detail">
+      <h3>Companies named in four or more of the answers</h3>
+      <div class="table-wrap"><table id="names-peers"><thead><tr><th>Company</th><th>Named in</th><th>Named first</th></tr></thead><tbody></tbody></table></div>
+    </div>
   </section>
 
   <section role="tabpanel" id="panel-opinion" aria-labelledby="tab-opinion" hidden>
     <div class="opinion">
+      <p class="opinion-label">Signed opinion</p>
       <h2 id="opinion-title"></h2>
-      <p id="opinion-header"></p>
+      <p class="opinion-header" id="opinion-header"></p>
       <div id="opinion-list"></div>
+      <p class="signature">Talha Malik</p>
     </div>
   </section>
 </main>
 
-<footer>
+<footer class="wrap">
   <p>Built by Talha Malik, October 2026. Independent work, not affiliated with, commissioned by, or endorsed by Kemira Oyj. The data, method and code are in the repository.</p>
 </footer>
 <script src="app.js"></script>

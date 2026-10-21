@@ -1226,6 +1226,7 @@
         ]
       }
     ],
+    "sustainability_question": "About half of the claims Kemira's material doesn't address (16 of 34) came from one question: \"Is Kemira a sustainable company? What are the criticisms?\". Assistants raised reputational and regulatory material that Kemira's own pages don't cover.",
     "aggregate_row": {
       "claims": 9,
       "times": 9,
@@ -1233,16 +1234,20 @@
     }
   },
   "figures": {
+    "lede": "The assistants gave two different figures for the same climate target. Both come from Kemira: its climate page states one, its financial reports the other.",
     "sources": [
       {
+        "key": "climate",
         "source": "Climate page",
         "states": "52%"
       },
       {
+        "key": "reports",
         "source": "Annual report and half-year report",
         "states": "51.23%"
       },
       {
+        "key": "sustainability",
         "source": "Sustainability page",
         "states": "50% and 52%"
       }
@@ -1255,8 +1260,8 @@
           "ChatGPT",
           "Gemini"
         ],
-        "matches": "Climate page",
-        "conflicts": "Both reports"
+        "matches": "climate",
+        "conflicts": "reports"
       },
       {
         "figure": "51.23%",
@@ -1264,8 +1269,8 @@
           "Perplexity",
           "ChatGPT"
         ],
-        "matches": "Both reports",
-        "conflicts": "Climate page"
+        "matches": "reports",
+        "conflicts": "climate"
       }
     ],
     "hedge": {
