@@ -361,7 +361,7 @@ verdicts:
     verdict: supported
     evidence: {source: S01, file: text.md, quote: "We operate globally and serve a wide range of customers including municipal and industrial water treatment companies and the fiber industry."}
     reason: "Supported as 'primarily business-to-business, not consumer-facing': Kemira's stated customers are utilities and industrial companies. After the split (2026-10-21) this claim holds only the 'primarily B2B' instance; the absolute 'does not sell directly to consumers' is now its own claim (no_direct_consumer_sales)."
-    status: proposed
+    status: confirmed
 
   water_reuse_desalination:
     verdict: supported
@@ -381,7 +381,7 @@ verdicts:
     evidence: {source: S11, file: text.md, quote: "Fostering inclusivity Reach top 10% cross-industry norm for Diversity & Inclusion by the end of 2026. 25% 10%"}
     reason: The 2025 result column shows 25%, matching the claim. The page does not label what the 25% measures. After the split (2026-10-21) this claim holds only Perplexity's '25% in 2025'; ChatGPT's Inclusion Index wording is its own claim (progress_inclusion_index_25th).
     see_also: ["S17 p.56: 'Slightly outside the top 25%'", "S17 p.24: Inclusion Index 77 vs top-10% benchmark 81"]
-    status: proposed
+    status: confirmed
 
   handprint_footprint:
     verdict: supported
@@ -527,9 +527,11 @@ verdicts:
     status: confirmed
 
   target_waste_2030:
-    verdict: supported
+    verdict: source_conflict
     evidence: {source: S17, file: text.md, page: 23, quote: "Reduce disposed production waste intensity by 15% by the end of 2030, from a 2019 baseline (4.4)."}
-    reason: -15% by 2030 from a 2019 baseline.
+    conflicting_evidence: {source: S22, file: text.md, page: 12, quote: "Kemira has updated its sustainability targets to better reflect the most critical issues for the company. A new target has been defined regarding water impact, the inclusion and safety targets have been extended until the end of 2026 and the target to reduce waste has been removed."}
+    reason: Reopened in batch 4 (was supported, confirmed in batch 3). The claim matches the annual report's waste target; the half-year report says that target has been removed. Both documents remain published, so the ground truth cannot settle whether the target exists.
+    see_also: ["S11: the sustainability page's target table lists no waste target", "SF07"]
     status: confirmed
 
   strategy_three_priorities:
@@ -590,24 +592,232 @@ verdicts:
     verdict: unverified
     evidence: {source: S01, file: text.md, quote: "We operate globally and serve a wide range of customers including municipal and industrial water treatment companies and the fiber industry."}
     reason: Overreach. Kemira's stated customers are utilities and industrial companies, which supports 'not consumer-facing', but the absolute 'does not sell directly to consumers' is a stronger claim the captured material does not make.
-    status: proposed
+    status: confirmed
 
   progress_inclusion_index_25th:
     verdict: unverified
     evidence: {source: S17, file: text.md, page: 24, quote: "The 2025 Inclusion Index remained stable compared to the previous year, at 77 (77) versus the top 10% cross-industry benchmark of 81 (80), based on the MyVoice 2025 results."}
     reason: Kemira reports its Inclusion Index (77) against the top-10% benchmark (81); it does not state a position relative to a 25th-percentile benchmark. The claim's percentile framing is a specific the captured material does not settle.
     see_also: ["S17 p.56: 'Slightly outside the top 25%'", "S11: unlabelled '25%' result"]
-    status: proposed
+    status: confirmed
 
   target_scope12_range_51_52:
     verdict: supported
     evidence: {source: S17, file: text.md, page: 23, quote: "Reduce GHG emissions from Scope 1 and 2 by 51.23% by the end of 2030, compared to base year 2018."}
     reason: The range 'approximately 51-52%' spans Kemira's two published figures (51.23% in the reports, -52% on the climate page), so it is consistent with both. Flag for the S8 cross-answer section - an assistant hedging across Kemira's own inconsistency rather than reproducing one source.
     see_also: ["S13: -52% by end-2030 vs 2018", "S11: target text 'by 50%' (outside the range)", "SF06"]
-    status: proposed
+    status: confirmed
 
   drinking_water_disinfection_conditioning:
     verdict: unverified
     reason: The captured set describes disinfection for wastewater (KemConnect DEX), not drinking-water disinfection or pH/alkalinity conditioning products. A different application, so the semantic test does not carry it over.
     see_also: ["S10: KemConnect DEX wastewater disinfection", "S08: raw water pH may fluctuate (context, not an offering)"]
-    status: proposed
+    status: confirmed
+
+  # ===== Batch 4: the 35 claims stated once (23 from K07)
+
+  sodium_chlorate_line_finland:
+    verdict: unverified
+    reason: A sodium chlorate line start-up in Finland (an image-card caption in the answer) is not mentioned in the captured set.
+    status: confirmed
+
+  cfo_makipeska:
+    verdict: supported
+    evidence: {source: S22, file: text.md, page: 21, quote: "Petri Castrén, Chief Financial Officer (until March 31, 2026) Tuomas Mäkipeska, Chief Financial Officer (from April 1, 2026)"}
+    reason: Tuomas Mäkipeska is CFO from April 1, 2026.
+    see_also: ["S17 p.42: Tuomas Mäkipeska as CFO (effective April 1, 2026)"]
+    status: confirmed
+
+  founded_1920:
+    verdict: supported
+    evidence: {source: S01, file: text.md, quote: "Kemira was founded in 1920 and at the time its main focus was to provide fertilizers to Finnish farmers."}
+    reason: Founded in 1920.
+    status: confirmed
+
+  listed_since_1994:
+    verdict: supported
+    evidence: {source: S20, file: text.md, quote: "Trading code: KEMIRA (OMX) ISIN Code: FI0009004824 Listing date: 10 November 1994"}
+    reason: Listed on 10 November 1994.
+    see_also: ["S17 p.264: listing date November 10, 1994"]
+    status: confirmed
+
+  only_full_portfolio_manufacturer:
+    verdict: supported
+    evidence: {source: S17, file: text.md, page: 111, quote: "Kemira is the only manufacturer to offer a full product portfolio of coagulants, polyacrylamide polymers, process chemicals, and other water treatment chemicals, along with smart digital technologies to provide solutions for wastewater, drinking water, raw water"}
+    reason: Matches Kemira's own statement. The claim reports Kemira's self-description; the ground truth cannot test the 'only' against competitors.
+    status: confirmed
+
+  cept_double_biogas:
+    verdict: supported
+    evidence: {source: S07, file: text.md, quote: "Using coagulants in addition to or instead of biological methods can save up to 50% of aeration energy in organic (BOD) removal, and can double biogas production."}
+    reason: Chemical treatment can double biogas production.
+    status: confirmed
+
+  case_prague_veolia:
+    verdict: unverified
+    reason: The Prague (Veolia) KemConnect P case is not in the captured set.
+    status: confirmed
+
+  case_arnhem_zuid:
+    verdict: unverified
+    reason: The Arnhem Zuid case is not in the captured set.
+    status: confirmed
+
+  progress_waste_2025:
+    verdict: supported
+    evidence: {source: S17, file: text.md, page: 56, quote: "CIRCULARITY kg/ tonnes of production 4.1 4.2Reduce waste intensity** by 15% by the end of 2030 from a 2019 baseline of 4.4"}
+    reason: Waste intensity 4.1 in 2025 against a 2019 baseline of 4.4.
+    status: confirmed
+
+  target_trif_2026:
+    verdict: source_conflict
+    evidence: {source: S22, file: text.md, page: 12, quote: "The target for the TRIF is 2.2 by the end of 2026."}
+    conflicting_evidence: {source: S17, file: text.md, page: 23, quote: "Reduce our Total Recordable Injury Frequency (TRIF) across our operations to 2.2 by the end of 2025, and 1.5 by the end of 2030."}
+    reason: The claim (end-2026) matches the half-year report and conflicts with the annual report (end-2025). The half-year report states the safety target was extended to the end of 2026; both documents remain published, so per the #24 ruling recency does not resolve it.
+    see_also: ["S22 p.12: 'the inclusion and safety targets have been extended until the end of 2026'", "SF07"]
+    status: confirmed
+
+  un_global_compact:
+    verdict: supported
+    evidence: {source: S17, file: text.md, page: 115, quote: "Kemira is a member of the CEO Water Mandate and the UN Global Compact Forward Faster initiative, which solidify company's commitment to world class water management."}
+    reason: CEO Water Mandate and UN Global Compact Forward Faster.
+    see_also: ["S12: signatory to the UN Global Compact since 2014"]
+    status: confirmed
+
+  pillars_strategy_mix:
+    verdict: contradicted
+    contradiction_type: assistant_wrong
+    evidence: {source: S11, file: text.md, quote: "approach to sustainability is based on four focus areas and our sustainability program is built based on these pillars."}
+    reason: Kemira's four sustainability pillars are People, Water, Circularity and Climate & Nature (the page's section headings). The claim's list mixes strategy priorities (expand in water, renewable solutions) with other labels; the material is clear and consistent, so the departure is the assistant's.
+    see_also: ["S11: section headings People, Water, Circularity, Climate & Nature", "S11: strategy - expand in water, build leading renewable solutions portfolio, unlock new growth platforms"]
+    status: confirmed
+
+  water_target_third_party_verified:
+    verdict: supported
+    evidence: {source: S22, file: text.md, page: 12, quote: "The target is verified by a third-party, to ensure the reliability of calculations and methodologies."}
+    reason: Perplexity stated on 2026-10-20 (K07, pass 1) that the water target is third-party verified; the half-year report says so.
+    status: confirmed
+
+  ethifinance_intensity_rise:
+    verdict: unverified
+    reason: Perplexity stated on 2026-10-20 (K07, pass 1) that Ethifinance reported rising energy and GHG intensities. The claim concerns a third-party assessment; the ground truth covers only Kemira's own published material.
+    status: confirmed
+
+  spills_2019:
+    verdict: unverified
+    reason: Perplexity stated on 2026-10-20 (K07, pass 1) that Kemira disclosed 10 significant spills in 2019. The captured set does not include reports for that year and does not settle it.
+    status: confirmed
+
+  ehs_fines_2023:
+    verdict: unverified
+    reason: Perplexity stated on 2026-10-20 (K07, pass 1) that Kemira reported six EHS fines in 2023. The captured set does not include the 2023 report and does not settle it.
+    status: confirmed
+
+  waste_2025_recovery:
+    verdict: unverified
+    evidence: {source: S17, file: text.md, page: 125, quote: "Kemira generated 73,917 tonnes of waste as a part of manufacturing processes in reporting year 2025."}
+    reason: Perplexity stated on 2026-10-20 (K07, pass 1) that waste was 73,917 t and the recovery rate fell to 42% from 71%. The tonnage is confirmed; the recovery-rate fall, which is the substance of the claim, is not stated in the captured set.
+    status: confirmed
+
+  pfas_investor_materials:
+    verdict: unverified
+    reason: Perplexity stated on 2026-10-20 (K07, pass 1) that Kemira's investor materials note PFAS harms. Investor presentations are not in the captured set; the annual report discusses PFAS as a removal opportunity rather than in these terms.
+    see_also: ["S17 p.4-5: PFAS and micropollutant removal as a growth area"]
+    status: confirmed
+
+  scope3_share_77:
+    verdict: supported
+    evidence: {source: S17, file: text.md, page: 98, quote: "In 2025, Scope 3 emissions accounted for approximately 77% of Kemira’s total GHG emissions."}
+    reason: Perplexity stated on 2026-10-20 (K07, pass 2) that Scope 3 was about 77% of total GHG emissions in 2025; the annual report says so.
+    status: confirmed
+
+  riverkeeper_lawsuit_2021:
+    verdict: unverified
+    reason: Perplexity stated on 2026-10-20 (K07, pass 2) that a 2021 lawsuit was filed. The ground truth covers only Kemira's own published material and does not settle it.
+    status: confirmed
+
+  mobile_alabama_petition_2019:
+    verdict: unverified
+    reason: Perplexity stated on 2026-10-20 (K07, pass 2) that a 2019 petition was filed. The ground truth covers only Kemira's own published material and does not settle it.
+    status: confirmed
+
+  spills_2021_2022:
+    verdict: unverified
+    reason: Perplexity stated on 2026-10-20 (K07, pass 2) that Kemira reported significant spills in 2021 and 2022. The captured set does not include reports for those years and does not settle it.
+    status: confirmed
+
+  recordable_injuries_2025:
+    verdict: supported
+    evidence: {source: S17, file: text.md, page: 55, quote: "The number of Total Recordable Injuries (TRI) in 2025 was 33 (43 in 2024) and TRIF* was 2.7 (3.2). Despite the improvement, the TRIF target (2.2) was not achieved."}
+    reason: Perplexity stated on 2026-10-20 (K07, pass 2) that there were 33 total recordable injuries in 2025; the annual report says so.
+    status: confirmed
+
+  target_trif_2_2_unspecified:
+    verdict: supported
+    evidence: {source: S17, file: text.md, page: 55, quote: "The number of Total Recordable Injuries (TRI) in 2025 was 33 (43 in 2024) and TRIF* was 2.7 (3.2). Despite the improvement, the TRIF target (2.2) was not achieved."}
+    reason: Perplexity stated on 2026-10-20 (K07, pass 2) that 2025's TRIF of 2.7 fell short of a 2.2 target; the annual report says so. No year is stated, so the claim avoids the end-2025 / end-2026 conflict.
+    status: confirmed
+
+  greenwashing_accusations:
+    verdict: unverified
+    reason: Perplexity stated on 2026-10-20 (K07, pass 2) that some observers accuse Kemira of greenwashing. The ground truth covers only Kemira's own published material and does not settle it.
+    status: confirmed
+
+  annual_report_feb_2026:
+    verdict: unverified
+    reason: ChatGPT stated on 2026-10-20 (K07, pass 1) that the 2025 Annual Report was published in February 2026. The captured set does not state a publication date; the auditor's report is dated 11 February 2026, which is consistent but is not a publication date.
+    see_also: ["S17 p.242: auditor's report dated 11 February 2026"]
+    status: confirmed
+
+  zero_releases_objective:
+    verdict: unverified
+    reason: ChatGPT stated on 2026-10-20 (K07, pass 1) that Kemira's sites aim for zero releases of hazardous chemicals and zero permit violations. The captured set states a 'zero environmental harm' principle but not these two specific objectives.
+    see_also: ["S21: guiding principles 'Zero environmental harm', 'Zero harm to people'"]
+    status: confirmed
+
+  epa_settlement_2013:
+    verdict: unverified
+    reason: ChatGPT stated on 2026-10-20 (K07, pass 1) that the US EPA announced a 2013 settlement. The ground truth covers only Kemira's own published material and does not settle it.
+    status: confirmed
+
+  epa_cafo_2026:
+    verdict: unverified
+    reason: ChatGPT stated on 2026-10-20 (K07, pass 1) that a US EPA enforcement page exists. The ground truth covers only Kemira's own published material and does not settle it.
+    status: confirmed
+
+  low_carbon_energy_78:
+    verdict: supported
+    evidence: {source: S11, file: text.md, quote: "78% of our global energy use is low-carbon"}
+    reason: ChatGPT stated on 2026-10-20 (K07, pass 1) that low-carbon energy is 78% of global energy use; the sustainability page says so.
+    status: confirmed
+
+  biodiversity_traceability_gap_2024:
+    verdict: unverified
+    reason: ChatGPT stated on 2026-10-20 (K07, pass 1) that Kemira's 2024 report acknowledged traceability gaps. The 2024 report is not in the captured set and the claim is not settled.
+    status: confirmed
+
+  zero_releases_achieved:
+    verdict: unverified
+    reason: ChatGPT stated on 2026-10-20 (K07, pass 2) that Kemira reports zero releases of hazardous chemicals and zero permit violations. The captured set does not state this.
+    see_also: ["S21: 'Zero environmental harm' as a guiding principle"]
+    status: confirmed
+
+  target_trif_2025:
+    verdict: source_conflict
+    evidence: {source: S17, file: text.md, page: 23, quote: "Reduce our Total Recordable Injury Frequency (TRIF) across our operations to 2.2 by the end of 2025, and 1.5 by the end of 2030."}
+    conflicting_evidence: {source: S22, file: text.md, page: 12, quote: "The target for the TRIF is 2.2 by the end of 2026."}
+    reason: ChatGPT stated on 2026-10-20 (K07, pass 2) a TRIF target of 2.2 for end-2025. That matches the annual report and conflicts with the half-year report (end-2026, extended). The mirror of target_trif_2026.
+    see_also: ["S22 p.12: safety target extended until the end of 2026", "SF07"]
+    status: confirmed
+
+  leading_polymer_producer:
+    verdict: supported
+    evidence: {source: S04, file: text.md, quote: "Market share ~25% in coagulants and ~25% in polymers in EMEA and ~20% in coagulants and ~20% in polymers in North America"}
+    reason: Semantic match. A ~25% polymer market share in EMEA and ~20% in North America makes Kemira one of the leading polymer producers.
+    see_also: ["S17 p.111: full portfolio including polyacrylamide polymers"]
+    status: confirmed
+
+  copenhagen_performance_model:
+    verdict: unverified
+    reason: A Copenhagen performance-based sludge model (an image-card caption in the answer) is not described in the captured set; Copenhagen appears only as the seat of a subsidiary.
+    status: confirmed

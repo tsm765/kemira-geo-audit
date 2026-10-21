@@ -216,9 +216,9 @@
       "observed_at": "2026-10-20",
       "observed_in": "ground_truth_capture",
       "theme": "entity_consistency",
-      "category": "conflicting_dates",
-      "summary": "The captured documents give different dates for the same targets. The 2025 annual report dates the TRIF 2.2 target to the end of 2025 and the Diversity & Inclusion top-10% target to the end of 2025; the January-June 2026 half-year report dates them to the end of 2026, as does the sustainability page for Diversity & Inclusion.",
-      "implication": "Different documents give different dates for the same target, which is why assistants differ: in this run different ChatGPT answers matched different versions (TRIF 2.2 by end-2026 in K06, end-2025 in K07).",
+      "category": "two_live_documents_disagree",
+      "summary": "Two current documents give different dates for the same targets. The 2025 annual report dates the TRIF 2.2 target and the Diversity & Inclusion top-10% target to the end of 2025, and states a waste-reduction target; the January-June 2026 half-year report dates both targets to the end of 2026 and states that the waste target has been removed. The change is documented and deliberate: the half-year report says Kemira has updated its sustainability targets. Both documents remain live on the site.",
+      "implication": "A model reading either document returns a different date, and neither is reading stale material: both are current publications. This is why different ChatGPT answers in this run matched different versions (TRIF 2.2 by end-2026 in K06, end-2025 in K07).",
       "evidence": [
         {
           "source_id": "S17",
@@ -232,9 +232,13 @@
           "source_id": "S11",
           "url": "https://www.kemira.com/sustainability-initiatives/",
           "detail": "D&I top 10% by the end of 2026."
+        },
+        {
+          "source_id": "S22",
+          "detail": "Half-year report Jan-Jun 2026 p.12: 'Kemira has updated its sustainability targets ... the inclusion and safety targets have been extended until the end of 2026 and the target to reduce waste has been removed.'"
         }
       ],
-      "scope_note": "An observation about what the captured documents contain, not about the accuracy of Kemira's reporting. The later document may supersede the earlier; both remain published.",
+      "scope_note": "An observation about two current documents disagreeing, not an inconsistency in Kemira's disclosure: the target change is explicitly documented in the later report. Not a statement about the accuracy of Kemira's reporting.",
       "affects_sources": [
         "S11",
         "S17",

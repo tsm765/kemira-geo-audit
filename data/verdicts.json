@@ -1506,6 +1506,27 @@
       ]
     },
     {
+      "claim_id": "C024",
+      "claim_key": "b2b_model",
+      "statement": "Kemira is primarily a business-to-business supplier (not consumer-facing)",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S01",
+        "file": "text.md",
+        "quote": "We operate globally and serve a wide range of customers including municipal and industrial water treatment companies and the fiber industry."
+      },
+      "conflicting_evidence": null,
+      "reason": "Supported as 'primarily business-to-business, not consumer-facing': Kemira's stated customers are utilities and industrial companies. After the split (2026-10-21) this claim holds only the 'primarily B2B' instance; the absolute 'does not sell directly to consumers' is now its own claim (no_direct_consumer_sales).",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K02_chatgpt_p1#03"
+      ]
+    },
+    {
       "claim_id": "C038",
       "claim_key": "water_reuse_desalination",
       "statement": "Kemira supports water reuse and desalination, including reverse-osmosis/membrane pretreatment",
@@ -1552,6 +1573,31 @@
         "K05_perplexity_p2#02",
         "K05_chatgpt_p1#06",
         "K05_chatgpt_p2#07"
+      ]
+    },
+    {
+      "claim_id": "C058",
+      "claim_key": "progress_dei_2025",
+      "statement": "Kemira's diversity & inclusion result was 25% in 2025",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "Fostering inclusivity Reach top 10% cross-industry norm for Diversity & Inclusion by the end of 2026. 25% 10%"
+      },
+      "conflicting_evidence": null,
+      "reason": "The 2025 result column shows 25%, matching the claim. The page does not label what the 25% measures. After the split (2026-10-21) this claim holds only Perplexity's '25% in 2025'; ChatGPT's Inclusion Index wording is its own claim (progress_inclusion_index_25th).",
+      "see_also": [
+        "S17 p.56: 'Slightly outside the top 25%'",
+        "S17 p.24: Inclusion Index 77 vs top-10% benchmark 81"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p1#07",
+        "K06_perplexity_p2#08"
       ]
     },
     {
@@ -2072,7 +2118,7 @@
       "claim_id": "C068",
       "claim_key": "target_waste_2030",
       "statement": "Waste target - reduce disposed production waste intensity 15% by 2030 from a 2019 baseline",
-      "verdict": "supported",
+      "verdict": "source_conflict",
       "contradiction_type": null,
       "unverified_reason": null,
       "evaluative": false,
@@ -2082,9 +2128,17 @@
         "page": 23,
         "quote": "Reduce disposed production waste intensity by 15% by the end of 2030, from a 2019 baseline (4.4)."
       },
-      "conflicting_evidence": null,
-      "reason": "-15% by 2030 from a 2019 baseline.",
-      "see_also": [],
+      "conflicting_evidence": {
+        "source": "S22",
+        "file": "text.md",
+        "page": 12,
+        "quote": "Kemira has updated its sustainability targets to better reflect the most critical issues for the company. A new target has been defined regarding water impact, the inclusion and safety targets have been extended until the end of 2026 and the target to reduce waste has been removed."
+      },
+      "reason": "Reopened in batch 4 (was supported, confirmed in batch 3). The claim matches the annual report's waste target; the half-year report says that target has been removed. Both documents remain published, so the ground truth cannot settle whether the target exists.",
+      "see_also": [
+        "S11: the sustainability page's target table lists no waste target",
+        "SF07"
+      ],
       "status": "confirmed",
       "instance_ids": [
         "K06_perplexity_p1#17",
@@ -2271,6 +2325,809 @@
       "instance_ids": [
         "O03_perplexity_p1#05",
         "O03_perplexity_p2#05"
+      ]
+    },
+    {
+      "claim_id": "C120",
+      "claim_key": "no_direct_consumer_sales",
+      "statement": "Kemira does not sell directly to consumers",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S01",
+        "file": "text.md",
+        "quote": "We operate globally and serve a wide range of customers including municipal and industrial water treatment companies and the fiber industry."
+      },
+      "conflicting_evidence": null,
+      "reason": "Overreach. Kemira's stated customers are utilities and industrial companies, which supports 'not consumer-facing', but the absolute 'does not sell directly to consumers' is a stronger claim the captured material does not make.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K02_perplexity_p1#11",
+        "K02_chatgpt_p2#02"
+      ]
+    },
+    {
+      "claim_id": "C123",
+      "claim_key": "progress_inclusion_index_25th",
+      "statement": "In 2025 Kemira's Inclusion Index was above the 25th-percentile benchmark",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 24,
+        "quote": "The 2025 Inclusion Index remained stable compared to the previous year, at 77 (77) versus the top 10% cross-industry benchmark of 81 (80), based on the MyVoice 2025 results."
+      },
+      "conflicting_evidence": null,
+      "reason": "Kemira reports its Inclusion Index (77) against the top-10% benchmark (81); it does not state a position relative to a 25th-percentile benchmark. The claim's percentile framing is a specific the captured material does not settle.",
+      "see_also": [
+        "S17 p.56: 'Slightly outside the top 25%'",
+        "S11: unlabelled '25%' result"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_chatgpt_p1#20"
+      ]
+    },
+    {
+      "claim_id": "C122",
+      "claim_key": "target_scope12_range_51_52",
+      "statement": "Climate target - cut Scope 1 and 2 GHG emissions by approximately 51-52% by 2030 from a 2018 baseline (a range)",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 23,
+        "quote": "Reduce GHG emissions from Scope 1 and 2 by 51.23% by the end of 2030, compared to base year 2018."
+      },
+      "conflicting_evidence": null,
+      "reason": "The range 'approximately 51-52%' spans Kemira's two published figures (51.23% in the reports, -52% on the climate page), so it is consistent with both. Flag for the S8 cross-answer section - an assistant hedging across Kemira's own inconsistency rather than reproducing one source.",
+      "see_also": [
+        "S13: -52% by end-2030 vs 2018",
+        "S11: target text 'by 50%' (outside the range)",
+        "SF06"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_chatgpt_p1#13"
+      ]
+    },
+    {
+      "claim_id": "C121",
+      "claim_key": "drinking_water_disinfection_conditioning",
+      "statement": "Kemira offers drinking-water disinfection and pH/alkalinity conditioning solutions",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "The captured set describes disinfection for wastewater (KemConnect DEX), not drinking-water disinfection or pH/alkalinity conditioning products. A different application, so the semantic test does not carry it over.",
+      "see_also": [
+        "S10: KemConnect DEX wastewater disinfection",
+        "S08: raw water pH may fluctuate (context, not an offering)"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K04_gemini_p1#04",
+        "K04_gemini_p2#03"
+      ]
+    },
+    {
+      "claim_id": "C013",
+      "claim_key": "sodium_chlorate_line_finland",
+      "statement": "Kemira announced the start-up of a sodium chlorate line in Finland",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "A sodium chlorate line start-up in Finland (an image-card caption in the answer) is not mentioned in the captured set.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K01_chatgpt_p1#05"
+      ]
+    },
+    {
+      "claim_id": "C015",
+      "claim_key": "cfo_makipeska",
+      "statement": "Kemira appointed Tuomas Mäkipeska as its new CFO",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S22",
+        "file": "text.md",
+        "page": 21,
+        "quote": "Petri Castrén, Chief Financial Officer (until March 31, 2026) Tuomas Mäkipeska, Chief Financial Officer (from April 1, 2026)"
+      },
+      "conflicting_evidence": null,
+      "reason": "Tuomas Mäkipeska is CFO from April 1, 2026.",
+      "see_also": [
+        "S17 p.42: Tuomas Mäkipeska as CFO (effective April 1, 2026)"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K01_chatgpt_p2#05"
+      ]
+    },
+    {
+      "claim_id": "C016",
+      "claim_key": "founded_1920",
+      "statement": "Kemira was founded in 1920",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S01",
+        "file": "text.md",
+        "quote": "Kemira was founded in 1920 and at the time its main focus was to provide fertilizers to Finnish farmers."
+      },
+      "conflicting_evidence": null,
+      "reason": "Founded in 1920.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K01_chatgpt_p2#06"
+      ]
+    },
+    {
+      "claim_id": "C029",
+      "claim_key": "listed_since_1994",
+      "statement": "Kemira has been listed on Nasdaq Helsinki since 1994",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S20",
+        "file": "text.md",
+        "quote": "Trading code: KEMIRA (OMX) ISIN Code: FI0009004824 Listing date: 10 November 1994"
+      },
+      "conflicting_evidence": null,
+      "reason": "Listed on 10 November 1994.",
+      "see_also": [
+        "S17 p.264: listing date November 10, 1994"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K03_perplexity_p1#07"
+      ]
+    },
+    {
+      "claim_id": "C040",
+      "claim_key": "only_full_portfolio_manufacturer",
+      "statement": "Kemira is the only manufacturer offering a full portfolio of coagulants, polyacrylamide polymers and other water treatment chemicals alongside digital technologies",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 111,
+        "quote": "Kemira is the only manufacturer to offer a full product portfolio of coagulants, polyacrylamide polymers, process chemicals, and other water treatment chemicals, along with smart digital technologies to provide solutions for wastewater, drinking water, raw water"
+      },
+      "conflicting_evidence": null,
+      "reason": "Matches Kemira's own statement. The claim reports Kemira's self-description; the ground truth cannot test the 'only' against competitors.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K04_perplexity_p2#07"
+      ]
+    },
+    {
+      "claim_id": "C042",
+      "claim_key": "cept_double_biogas",
+      "statement": "Kemira's chemical pre-treatment can double biogas production potential",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S07",
+        "file": "text.md",
+        "quote": "Using coagulants in addition to or instead of biological methods can save up to 50% of aeration energy in organic (BOD) removal, and can double biogas production."
+      },
+      "conflicting_evidence": null,
+      "reason": "Chemical treatment can double biogas production.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K04_gemini_p1#06"
+      ]
+    },
+    {
+      "claim_id": "C049",
+      "claim_key": "case_prague_veolia",
+      "statement": "Veolia in Prague used KemConnect P to cut phosphorus-precipitation costs on one water line by almost 34%",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "The Prague (Veolia) KemConnect P case is not in the captured set.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K05_perplexity_p2#11"
+      ]
+    },
+    {
+      "claim_id": "C050",
+      "claim_key": "case_arnhem_zuid",
+      "statement": "At the Arnhem Zuid plant (Netherlands), Kemira's digital optimisation cut polymer use about 45%, saved EUR 150,000 a year and 20 t CO2e",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "The Arnhem Zuid case is not in the captured set.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K05_chatgpt_p1#08"
+      ]
+    },
+    {
+      "claim_id": "C072",
+      "claim_key": "progress_waste_2025",
+      "statement": "Disposed production waste intensity was 4.1 in 2025 against a 4.4 baseline",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 56,
+        "quote": "CIRCULARITY kg/ tonnes of production 4.1 4.2Reduce waste intensity** by 15% by the end of 2030 from a 2019 baseline of 4.4"
+      },
+      "conflicting_evidence": null,
+      "reason": "Waste intensity 4.1 in 2025 against a 2019 baseline of 4.4.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p2#19"
+      ]
+    },
+    {
+      "claim_id": "C075",
+      "claim_key": "target_trif_2026",
+      "statement": "Safety interim target - reduce TRIF to 2.2 by end-2026",
+      "verdict": "source_conflict",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S22",
+        "file": "text.md",
+        "page": 12,
+        "quote": "The target for the TRIF is 2.2 by the end of 2026."
+      },
+      "conflicting_evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 23,
+        "quote": "Reduce our Total Recordable Injury Frequency (TRIF) across our operations to 2.2 by the end of 2025, and 1.5 by the end of 2030."
+      },
+      "reason": "The claim (end-2026) matches the half-year report and conflicts with the annual report (end-2025). The half-year report states the safety target was extended to the end of 2026; both documents remain published, so per the",
+      "see_also": [
+        "S22 p.12: 'the inclusion and safety targets have been extended until the end of 2026'",
+        "SF07"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_chatgpt_p1#09"
+      ]
+    },
+    {
+      "claim_id": "C080",
+      "claim_key": "un_global_compact",
+      "statement": "Kemira adheres to the UN Global Compact (including the CEO Water Mandate) and the UN Forward Faster initiative",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 115,
+        "quote": "Kemira is a member of the CEO Water Mandate and the UN Global Compact Forward Faster initiative, which solidify company's commitment to world class water management."
+      },
+      "conflicting_evidence": null,
+      "reason": "CEO Water Mandate and UN Global Compact Forward Faster.",
+      "see_also": [
+        "S12: signatory to the UN Global Compact since 2014"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_gemini_p1#05"
+      ]
+    },
+    {
+      "claim_id": "C082",
+      "claim_key": "pillars_strategy_mix",
+      "statement": "Kemira's sustainability pillars are Expanding in Water, Renewable Solutions Portfolio, Climate Action & Energy Efficiency, and Responsible Business & Safety",
+      "verdict": "contradicted",
+      "contradiction_type": "assistant_wrong",
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "approach to sustainability is based on four focus areas and our sustainability program is built based on these pillars."
+      },
+      "conflicting_evidence": null,
+      "reason": "Kemira's four sustainability pillars are People, Water, Circularity and Climate & Nature (the page's section headings). The claim's list mixes strategy priorities (expand in water, renewable solutions) with other labels; the material is clear and consistent, so the departure is the assistant's.",
+      "see_also": [
+        "S11: section headings People, Water, Circularity, Climate & Nature",
+        "S11: strategy - expand in water, build leading renewable solutions portfolio, unlock new growth platforms"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_gemini_p2#04"
+      ]
+    },
+    {
+      "claim_id": "C085",
+      "claim_key": "water_target_third_party_verified",
+      "statement": "Kemira's water treated, reused and recycled target is third-party verified",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S22",
+        "file": "text.md",
+        "page": 12,
+        "quote": "The target is verified by a third-party, to ensure the reliability of calculations and methodologies."
+      },
+      "conflicting_evidence": null,
+      "reason": "Perplexity stated on 2026-10-20 (K07, pass 1) that the water target is third-party verified; the half-year report says so.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_perplexity_p1#08"
+      ]
+    },
+    {
+      "claim_id": "C088",
+      "claim_key": "ethifinance_intensity_rise",
+      "statement": "Ethifinance reported that Kemira's energy and GHG intensities rose 11% and 20%, lowering its environmental score",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "Perplexity stated on 2026-10-20 (K07, pass 1) that Ethifinance reported rising energy and GHG intensities. The claim concerns a third-party assessment; the ground truth covers only Kemira's own published material.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_perplexity_p1#11"
+      ]
+    },
+    {
+      "claim_id": "C089",
+      "claim_key": "spills_2019",
+      "statement": "Kemira disclosed 10 significant spills in 2019",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "Perplexity stated on 2026-10-20 (K07, pass 1) that Kemira disclosed 10 significant spills in 2019. The captured set does not include reports for that year and does not settle it.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_perplexity_p1#12"
+      ]
+    },
+    {
+      "claim_id": "C090",
+      "claim_key": "ehs_fines_2023",
+      "statement": "In 2023 Kemira reported six EHS fines or penalties (four US, one Spain, one China) totalling about EUR 18,000, plus 15 further non-compliance incidents",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "Perplexity stated on 2026-10-20 (K07, pass 1) that Kemira reported six EHS fines in 2023. The captured set does not include the 2023 report and does not settle it.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_perplexity_p1#13"
+      ]
+    },
+    {
+      "claim_id": "C091",
+      "claim_key": "waste_2025_recovery",
+      "statement": "In 2025 Kemira generated 73,917 tonnes of manufacturing waste; its recovery rate fell to 42% from 71% in 2024",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 125,
+        "quote": "Kemira generated 73,917 tonnes of waste as a part of manufacturing processes in reporting year 2025."
+      },
+      "conflicting_evidence": null,
+      "reason": "Perplexity stated on 2026-10-20 (K07, pass 1) that waste was 73,917 t and the recovery rate fell to 42% from 71%. The tonnage is confirmed; the recovery-rate fall, which is the substance of the claim, is not stated in the captured set.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_perplexity_p1#14"
+      ]
+    },
+    {
+      "claim_id": "C092",
+      "claim_key": "pfas_investor_materials",
+      "statement": "Kemira's investor materials note that PFAS chemicals have negative environmental and health impacts",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "Perplexity stated on 2026-10-20 (K07, pass 1) that Kemira's investor materials note PFAS harms. Investor presentations are not in the captured set; the annual report discusses PFAS as a removal opportunity rather than in these terms.",
+      "see_also": [
+        "S17 p.4-5: PFAS and micropollutant removal as a growth area"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_perplexity_p1#15"
+      ]
+    },
+    {
+      "claim_id": "C093",
+      "claim_key": "scope3_share_77",
+      "statement": "Scope 3 accounted for about 77% of Kemira's total GHG emissions in 2025",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 98,
+        "quote": "In 2025, Scope 3 emissions accounted for approximately 77% of Kemira’s total GHG emissions."
+      },
+      "conflicting_evidence": null,
+      "reason": "Perplexity stated on 2026-10-20 (K07, pass 2) that Scope 3 was about 77% of total GHG emissions in 2025; the annual report says so.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_perplexity_p2#10"
+      ]
+    },
+    {
+      "claim_id": "C094",
+      "claim_key": "riverkeeper_lawsuit_2021",
+      "statement": "Columbia Riverkeeper sued Kemira Chemicals in 2021 over alleged Clean Water Act stormwater violations at Washougal, Washington (2015-2020)",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "Perplexity stated on 2026-10-20 (K07, pass 2) that a 2021 lawsuit was filed. The ground truth covers only Kemira's own published material and does not settle it.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_perplexity_p2#11"
+      ]
+    },
+    {
+      "claim_id": "C095",
+      "claim_key": "mobile_alabama_petition_2019",
+      "statement": "A 2019 community petition asked the US EPA to object to air permits for a bio-acrylamide unit at Kemira's Mobile, Alabama plant",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "Perplexity stated on 2026-10-20 (K07, pass 2) that a 2019 petition was filed. The ground truth covers only Kemira's own published material and does not settle it.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_perplexity_p2#12"
+      ]
+    },
+    {
+      "claim_id": "C096",
+      "claim_key": "spills_2021_2022",
+      "statement": "Kemira reported five significant spills in 2022 (up from two in 2021), about 80 tonnes, plus a major hydrochloric-acid transport leak in EMEA",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "Perplexity stated on 2026-10-20 (K07, pass 2) that Kemira reported significant spills in 2021 and 2022. The captured set does not include reports for those years and does not settle it.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_perplexity_p2#13"
+      ]
+    },
+    {
+      "claim_id": "C097",
+      "claim_key": "recordable_injuries_2025",
+      "statement": "Kemira recorded 33 total recordable injuries in 2025",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 55,
+        "quote": "The number of Total Recordable Injuries (TRI) in 2025 was 33 (43 in 2024) and TRIF* was 2.7 (3.2). Despite the improvement, the TRIF target (2.2) was not achieved."
+      },
+      "conflicting_evidence": null,
+      "reason": "Perplexity stated on 2026-10-20 (K07, pass 2) that there were 33 total recordable injuries in 2025; the annual report says so.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_perplexity_p2#14"
+      ]
+    },
+    {
+      "claim_id": "C098",
+      "claim_key": "target_trif_2_2_unspecified",
+      "statement": "Kemira had a TRIF target of 2.2 (no year stated) against which 2025's 2.7 fell short",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 55,
+        "quote": "The number of Total Recordable Injuries (TRI) in 2025 was 33 (43 in 2024) and TRIF* was 2.7 (3.2). Despite the improvement, the TRIF target (2.2) was not achieved."
+      },
+      "conflicting_evidence": null,
+      "reason": "Perplexity stated on 2026-10-20 (K07, pass 2) that 2025's TRIF of 2.7 fell short of a 2.2 target; the annual report says so. No year is stated, so the claim avoids the end-2025 / end-2026 conflict.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_perplexity_p2#16"
+      ]
+    },
+    {
+      "claim_id": "C099",
+      "claim_key": "greenwashing_accusations",
+      "statement": "Some observers accuse Kemira of greenwashing",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "Perplexity stated on 2026-10-20 (K07, pass 2) that some observers accuse Kemira of greenwashing. The ground truth covers only Kemira's own published material and does not settle it.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_perplexity_p2#17"
+      ]
+    },
+    {
+      "claim_id": "C100",
+      "claim_key": "annual_report_feb_2026",
+      "statement": "Kemira's 2025 Annual Report was published in February 2026",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "ChatGPT stated on 2026-10-20 (K07, pass 1) that the 2025 Annual Report was published in February 2026. The captured set does not state a publication date; the auditor's report is dated 11 February 2026, which is consistent but is not a publication date.",
+      "see_also": [
+        "S17 p.242: auditor's report dated 11 February 2026"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_chatgpt_p1#03"
+      ]
+    },
+    {
+      "claim_id": "C103",
+      "claim_key": "zero_releases_objective",
+      "statement": "Kemira's sites aim for zero releases of hazardous chemicals and zero environmental permit violations",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "ChatGPT stated on 2026-10-20 (K07, pass 1) that Kemira's sites aim for zero releases of hazardous chemicals and zero permit violations. The captured set states a 'zero environmental harm' principle but not these two specific objectives.",
+      "see_also": [
+        "S21: guiding principles 'Zero environmental harm', 'Zero harm to people'"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_chatgpt_p1#13"
+      ]
+    },
+    {
+      "claim_id": "C104",
+      "claim_key": "epa_settlement_2013",
+      "statement": "In 2013 the US EPA announced a settlement with two Kemira subsidiaries over chemical and pesticide law violations",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "ChatGPT stated on 2026-10-20 (K07, pass 1) that the US EPA announced a 2013 settlement. The ground truth covers only Kemira's own published material and does not settle it.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_chatgpt_p1#14"
+      ]
+    },
+    {
+      "claim_id": "C105",
+      "claim_key": "epa_cafo_2026",
+      "statement": "The US EPA has a Kemira Water Solutions enforcement page (consent agreement and final order) updated in July 2026",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "ChatGPT stated on 2026-10-20 (K07, pass 1) that a US EPA enforcement page exists. The ground truth covers only Kemira's own published material and does not settle it.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_chatgpt_p1#15"
+      ]
+    },
+    {
+      "claim_id": "C106",
+      "claim_key": "low_carbon_energy_78",
+      "statement": "Low-carbon energy is 78% of Kemira's global energy use",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "78% of our global energy use is low-carbon"
+      },
+      "conflicting_evidence": null,
+      "reason": "ChatGPT stated on 2026-10-20 (K07, pass 1) that low-carbon energy is 78% of global energy use; the sustainability page says so.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_chatgpt_p1#16"
+      ]
+    },
+    {
+      "claim_id": "C107",
+      "claim_key": "biodiversity_traceability_gap_2024",
+      "statement": "Kemira's 2024 report acknowledged gaps in value-chain traceability for materials with significant biodiversity impacts",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "ChatGPT stated on 2026-10-20 (K07, pass 1) that Kemira's 2024 report acknowledged traceability gaps. The 2024 report is not in the captured set and the claim is not settled.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_chatgpt_p1#20"
+      ]
+    },
+    {
+      "claim_id": "C108",
+      "claim_key": "zero_releases_achieved",
+      "statement": "Kemira reports its sites had zero releases of hazardous chemicals and zero permit violations or regulatory non-conformities",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "ChatGPT stated on 2026-10-20 (K07, pass 2) that Kemira reports zero releases of hazardous chemicals and zero permit violations. The captured set does not state this.",
+      "see_also": [
+        "S21: 'Zero environmental harm' as a guiding principle"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_chatgpt_p2#11"
+      ]
+    },
+    {
+      "claim_id": "C109",
+      "claim_key": "target_trif_2025",
+      "statement": "Safety target - TRIF of 2.2 for the end of 2025",
+      "verdict": "source_conflict",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 23,
+        "quote": "Reduce our Total Recordable Injury Frequency (TRIF) across our operations to 2.2 by the end of 2025, and 1.5 by the end of 2030."
+      },
+      "conflicting_evidence": {
+        "source": "S22",
+        "file": "text.md",
+        "page": 12,
+        "quote": "The target for the TRIF is 2.2 by the end of 2026."
+      },
+      "reason": "ChatGPT stated on 2026-10-20 (K07, pass 2) a TRIF target of 2.2 for end-2025. That matches the annual report and conflicts with the half-year report (end-2026, extended). The mirror of target_trif_2026.",
+      "see_also": [
+        "S22 p.12: safety target extended until the end of 2026",
+        "SF07"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_chatgpt_p2#15"
+      ]
+    },
+    {
+      "claim_id": "C115",
+      "claim_key": "leading_polymer_producer",
+      "statement": "Kemira is one of the leading producers of polyacrylamide flocculant polymers",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S04",
+        "file": "text.md",
+        "quote": "Market share ~25% in coagulants and ~25% in polymers in EMEA and ~20% in coagulants and ~20% in polymers in North America"
+      },
+      "conflicting_evidence": null,
+      "reason": "Semantic match. A ~25% polymer market share in EMEA and ~20% in North America makes Kemira one of the leading polymer producers.",
+      "see_also": [
+        "S17 p.111: full portfolio including polyacrylamide polymers"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "O02_perplexity_p2#05"
+      ]
+    },
+    {
+      "claim_id": "C116",
+      "claim_key": "copenhagen_performance_model",
+      "statement": "Copenhagen opted for a performance-based sludge treatment model with Kemira",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "A Copenhagen performance-based sludge model (an image-card caption in the answer) is not described in the captured set; Copenhagen appears only as the seat of a subsidiary.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "O02_chatgpt_p1#01"
       ]
     }
   ]
