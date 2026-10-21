@@ -1,0 +1,1532 @@
+{
+  "generated_from": "data/*.json and data/raw/ by src/dashboard_data.py",
+  "title": "What AI assistants say about Kemira",
+  "independence": "Independent audit, not affiliated with Kemira",
+  "method": "Three assistants (Perplexity, ChatGPT, Gemini) answered 10 questions, each asked twice on 20 October 2026, and every claim was checked against 22 Kemira pages and reports.",
+  "run_date": "2026-10-20",
+  "headline": [
+    {
+      "figure": "40 of 46",
+      "line": "Ask ChatGPT who supplies water treatment chemicals and 40 of the 46 links it offers go to other suppliers. Six go to Kemira."
+    },
+    {
+      "figure": "38 characters",
+      "line": "That is all the readable text on Kemira's sustainability figures page. The numbers come from an outside service, so an assistant reading the page finds almost nothing."
+    },
+    {
+      "figure": "2 of 21",
+      "line": "Only two Kemira pages begin by answering the question the page exists for. Seven begin with a date."
+    }
+  ],
+  "links": {
+    "kemira": 106,
+    "total": 208,
+    "wikipedia": 1,
+    "by_assistant": [
+      {
+        "assistant": "Perplexity",
+        "total": 101,
+        "kemira": 56,
+        "suppliers": 11,
+        "research": 28,
+        "other": 6,
+        "note": null
+      },
+      {
+        "assistant": "ChatGPT",
+        "total": 71,
+        "kemira": 30,
+        "suppliers": 40,
+        "research": 0,
+        "other": 1,
+        "note": null
+      },
+      {
+        "assistant": "Gemini",
+        "total": 36,
+        "kemira": 20,
+        "suppliers": 8,
+        "research": 3,
+        "other": 5,
+        "note": "second session only"
+      }
+    ],
+    "most_cited": [
+      {
+        "page": "Homepage",
+        "citations": 12,
+        "checked": true
+      },
+      {
+        "page": "Water",
+        "citations": 9,
+        "checked": true
+      },
+      {
+        "page": "Kemira as an investment",
+        "citations": 8,
+        "checked": false
+      },
+      {
+        "page": "Annual report 2025",
+        "citations": 7,
+        "checked": true
+      },
+      {
+        "page": "Company",
+        "citations": 6,
+        "checked": true
+      },
+      {
+        "page": "Business units and markets",
+        "citations": 6,
+        "checked": true
+      },
+      {
+        "page": "Growth drivers",
+        "citations": 6,
+        "checked": false
+      },
+      {
+        "page": "Sustainability",
+        "citations": 5,
+        "checked": true
+      }
+    ],
+    "outside_checked_set": 25,
+    "never_cited": [
+      {
+        "page": "Share information",
+        "highlight": false
+      },
+      {
+        "page": "Contacts",
+        "highlight": false
+      },
+      {
+        "page": "Strategy and business model",
+        "highlight": false
+      },
+      {
+        "page": "Outlook and financial targets",
+        "highlight": false
+      },
+      {
+        "page": "Sludge",
+        "highlight": true
+      },
+      {
+        "page": "Digital services",
+        "highlight": false
+      },
+      {
+        "page": "Circularity",
+        "highlight": false
+      },
+      {
+        "page": "Water stewardship",
+        "highlight": false
+      },
+      {
+        "page": "Sustainability key indicators",
+        "highlight": false
+      },
+      {
+        "page": "Reports and presentations",
+        "highlight": false
+      },
+      {
+        "page": "Half-year report (hosted on a press-release service)",
+        "highlight": false
+      },
+      {
+        "page": "Investor FAQ",
+        "highlight": false
+      }
+    ],
+    "checked_total": 22,
+    "caveat": "Not every answer's sources were captured: none for Gemini's first session, and only the links inside the answer text for ChatGPT and Perplexity in their second. ChatGPT's links are those inside its answer text, which may differ from the sources its interface showed."
+  },
+  "right_wrong": {
+    "total": 123,
+    "outcomes": [
+      {
+        "label": "Checked out",
+        "count": 78
+      },
+      {
+        "label": "Not addressed in the Kemira material checked",
+        "count": 34
+      },
+      {
+        "label": "Kemira's own pages and reports give different figures",
+        "count": 8
+      },
+      {
+        "label": "Conflicted with Kemira's material",
+        "count": 3
+      }
+    ],
+    "tiers": [
+      {
+        "label": "Said by all three assistants, in both sessions",
+        "claims": 30,
+        "supported": 26,
+        "unverified": 1,
+        "source_conflict": 3,
+        "contradicted": 0
+      },
+      {
+        "label": "Said by two assistants",
+        "claims": 31,
+        "supported": 25,
+        "unverified": 4,
+        "source_conflict": 2,
+        "contradicted": 0
+      },
+      {
+        "label": "Said by one assistant, more than once",
+        "claims": 22,
+        "supported": 11,
+        "unverified": 9,
+        "source_conflict": 1,
+        "contradicted": 1
+      },
+      {
+        "label": "Said once",
+        "claims": 40,
+        "supported": 16,
+        "unverified": 20,
+        "source_conflict": 2,
+        "contradicted": 2
+      }
+    ],
+    "outcome_labels": {
+      "supported": "Checked out",
+      "unverified": "Not addressed in the Kemira material checked",
+      "source_conflict": "Kemira's own pages and reports give different figures",
+      "contradicted": "Conflicted with Kemira's material"
+    },
+    "errors": [
+      {
+        "assistant": "Gemini",
+        "text": "Said Kemira aims for carbon neutrality \"overall\". Kemira's 2045 target covers its own operations and the energy it buys; its supply chain sits under a separate target."
+      },
+      {
+        "assistant": "Gemini",
+        "text": "Said, in both sessions, that Kemira holds an EcoVadis Platinum sustainability rating. Kemira reports Gold."
+      },
+      {
+        "assistant": "Gemini",
+        "text": "Gave a list of Kemira's sustainability priorities that mixes its strategy with its focus areas."
+      }
+    ],
+    "table": [
+      {
+        "claim": "Kemira's products include coagulants (iron- and aluminium-based), polymers/flocculants and process chemicals (and related digital technologies)",
+        "outcome": "Checked out",
+        "times": 35,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira serves municipal and industrial water treatment (drinking water and wastewater)",
+        "outcome": "Checked out",
+        "times": 29,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira is a global (international) chemicals company",
+        "outcome": "Checked out",
+        "times": 18,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira's polymers and chemicals dewater sludge to higher dry-solids content, reducing sludge volume and transport and disposal costs",
+        "outcome": "Checked out",
+        "times": 17,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira is a Finnish company, based in Finland",
+        "outcome": "Checked out",
+        "times": 16,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira is headquartered in Helsinki, Finland",
+        "outcome": "Checked out",
+        "times": 15,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira specialises in (sustainable) chemistry for water-intensive industries",
+        "outcome": "Checked out",
+        "times": 15,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira's KemConnect digital services monitor processes and optimise chemical dosing (e.g. KemConnect P for phosphorus, SD for sludge dewatering)",
+        "outcome": "Checked out",
+        "times": 15,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira offers phosphorus removal by chemical precipitation (and support for nitrogen/nutrient removal)",
+        "outcome": "Checked out",
+        "times": 14,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira is listed on Nasdaq Helsinki under the ticker KEMIRA",
+        "outcome": "Checked out",
+        "times": 13,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira serves the pulp, paper, packaging and hygiene industries",
+        "outcome": "Checked out",
+        "times": 13,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira has about 4,900 employees (4,911 at year-end 2025)",
+        "outcome": "Checked out",
+        "times": 12,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira is one of the world's leading suppliers of water treatment and pulp and paper chemicals",
+        "outcome": "Checked out",
+        "times": 12,
+        "assistants": [
+          "Perplexity",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira's 2025 revenue was about EUR 2.8 billion (EUR 2,754 million)",
+        "outcome": "Checked out",
+        "times": 12,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira's climate targets are validated by the Science Based Targets initiative",
+        "outcome": "Checked out",
+        "times": 12,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira also serves industries such as food, energy and mining",
+        "outcome": "Checked out",
+        "times": 9,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira is organised into three segments, Water Solutions, Fiber Essentials and Packaging & Hygiene Solutions (since January 2025)",
+        "outcome": "Checked out",
+        "times": 8,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Safety target - reduce TRIF to 1.5 by end-2030",
+        "outcome": "Checked out",
+        "times": 8,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Climate target - cut absolute Scope 3 GHG emissions 33% by 2033 from a 2021 baseline",
+        "outcome": "Kemira's own pages and reports give different figures",
+        "times": 7,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Renewable solutions target - more than EUR 500 million revenue by end-2030",
+        "outcome": "Checked out",
+        "times": 7,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "TRIF was 2.7 in 2025",
+        "outcome": "Checked out",
+        "times": 7,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "About 21 billion m3 (21.1) of water was treated, reused or recycled with Kemira's chemistry in 2025",
+        "outcome": "Checked out",
+        "times": 6,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Climate target - cut Scope 1 and 2 GHG emissions 52% by end-2030 from a 2018 baseline",
+        "outcome": "Kemira's own pages and reports give different figures",
+        "times": 6,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Diversity & inclusion target - reach the top 10% cross-industry norm by end-2026",
+        "outcome": "Kemira's own pages and reports give different figures",
+        "times": 6,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira aims to be carbon neutral in Scope 1 and 2 emissions by 2045",
+        "outcome": "Checked out",
+        "times": 6,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira develops solutions that help replace (single-use) plastic with fibre-based materials",
+        "outcome": "Checked out",
+        "times": 6,
+        "assistants": [
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira helps utilities meet tightening discharge and water-quality rules while reducing energy, labour and chemical costs",
+        "outcome": "Checked out",
+        "times": 6,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira is particularly strong in the Nordic countries (and in pulp and paper)",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 6,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Scope 1 and 2 emissions were 43.1% below the 2018 baseline in 2025",
+        "outcome": "Checked out",
+        "times": 6,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Scope 3 emissions were 26% below the 2021 baseline in 2025",
+        "outcome": "Checked out",
+        "times": 6,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Sustainability is integrated into Kemira's business strategy rather than a separate programme; its chemistry helps customers reduce water use, emissions, waste and fossil raw materials",
+        "outcome": "Checked out",
+        "times": 6,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Water target - enable an additional cumulative 3.5 billion m3 of water treated, reused or recycled through customers by 2030, versus a 2024 baseline",
+        "outcome": "Checked out",
+        "times": 6,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira has an MSCI ESG rating of AAA",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 5,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira helps customers use water, energy and raw materials more efficiently",
+        "outcome": "Checked out",
+        "times": 5,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira helps utilities increase biogas production from sludge and recover resources such as phosphorus",
+        "outcome": "Checked out",
+        "times": 5,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira provides industrial water services and programmes for boilers, cooling towers, closed loops, pretreatment and wastewater (including testing, feed equipment and Legionella management)",
+        "outcome": "Checked out",
+        "times": 5,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira sells flocculants under the Superfloc brand (cationic, anionic and non-ionic; powder and emulsion)",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 5,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira's water treatment portfolio includes antiscalants, dispersants, biocides, disinfection products and defoamers",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 5,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Renewable solutions revenue was EUR 240 million in 2025",
+        "outcome": "Checked out",
+        "times": 5,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "KemConnect DEX is a chlorine-free, performic-acid-based wastewater disinfection solution",
+        "outcome": "Checked out",
+        "times": 4,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "Kemira conducts double-materiality assessments and reports under the EU CSRD/ESRS",
+        "outcome": "Checked out",
+        "times": 4,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira has CDP ratings of A- for climate and water security",
+        "outcome": "Checked out",
+        "times": 4,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira has an EcoVadis Gold rating (score 83/100 where stated)",
+        "outcome": "Checked out",
+        "times": 4,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira prioritises UN SDGs 6, 8, 12 and 13",
+        "outcome": "Checked out",
+        "times": 4,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira sells in more than 100 countries (with operations on six continents)",
+        "outcome": "Checked out",
+        "times": 4,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira supplies pulp bleaching and processing chemicals, including sodium chlorate and hydrogen peroxide",
+        "outcome": "Checked out",
+        "times": 4,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira's chemicals improve the strength, water resistance and recyclability of paper, board, tissue and packaging",
+        "outcome": "Checked out",
+        "times": 4,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira's sustainability work is organised in four focus areas, People, Water, Circularity and Climate & Nature",
+        "outcome": "Checked out",
+        "times": 4,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "About 55% (over half) of Kemira's raw materials are renewable or recycled",
+        "outcome": "Checked out",
+        "times": 3,
+        "assistants": [
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira frames its approach as growing its handprint (positive impact of its products on customers) and reducing its footprint (own operations and supply chain)",
+        "outcome": "Checked out",
+        "times": 3,
+        "assistants": [
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira has a strong European municipal footprint and pan-European supply",
+        "outcome": "Checked out",
+        "times": 3,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira is a leading supplier in the European water treatment chemicals market",
+        "outcome": "Checked out",
+        "times": 3,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira offers odour, corrosion, scale and foam control for wastewater and sewer networks",
+        "outcome": "Checked out",
+        "times": 3,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira provides utilities with technical expertise (process reviews, troubleshooting) and reliable chemical supply",
+        "outcome": "Checked out",
+        "times": 3,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira supports water reuse and desalination, including reverse-osmosis/membrane pretreatment",
+        "outcome": "Checked out",
+        "times": 3,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira was founded in 1920, originally to supply fertilisers to Finnish farmers",
+        "outcome": "Checked out",
+        "times": 3,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira's chemical pre-treatment ahead of biological treatment speeds up treatment and cuts energy use (e.g. aeration energy)",
+        "outcome": "Checked out",
+        "times": 3,
+        "assistants": [
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira's own reporting identifies material negative impacts and risks including energy-intensive manufacturing, high water consumption and wastewater discharges, spills and chemical releases, fossil raw-material dependence and substances of concern",
+        "outcome": "Checked out",
+        "times": 3,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "64% of Kemira's product portfolio improves customers' resource efficiency",
+        "outcome": "Checked out",
+        "times": 2,
+        "assistants": [
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "A collaboration with Joensuu, Finland increased the wastewater plant's biogas output by 17%",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 2,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "BIOFOS in Copenhagen reduced sludge-treatment energy use by nearly 4.4 GWh with Kemira (dewatering polymer and KemConnect SD)",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 2,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "Climate target - cut Scope 1 and 2 emissions 51.2% (51.23%) by 2030 from 2018",
+        "outcome": "Kemira's own pages and reports give different figures",
+        "times": 2,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Climate target - cut Scope 3 emissions 32.5% by 2033 from 2021",
+        "outcome": "Kemira's own pages and reports give different figures",
+        "times": 2,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "In 2025, 52% of Kemira's material input mass came from recycled/secondary sources and 2.6% was renewable biological material",
+        "outcome": "Checked out",
+        "times": 2,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "Industry analyses place Kemira among the top five in the European water treatment chemicals market",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 2,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "Kemira does not sell directly to consumers",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 2,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira focuses on water quality and quantity management",
+        "outcome": "Checked out",
+        "times": 2,
+        "assistants": [
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira has a major production plant, research centre and water technology competence centre in Oulu, Finland",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 2,
+        "assistants": [
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira has an EcoVadis Platinum rating",
+        "outcome": "Conflicted with Kemira's material",
+        "times": 2,
+        "assistants": [
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira has operations in 37 countries and 58 manufacturing sites",
+        "outcome": "Checked out",
+        "times": 2,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "Kemira has several thousand customers; the top 10 account for about 25% of revenue and the top 50 for about 50%",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 2,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "Kemira offers drinking-water disinfection and pH/alkalinity conditioning solutions",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 2,
+        "assistants": [
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira's 2025 revenue split about EMEA EUR 1.49 bn (54%), Americas EUR 1.01 bn (37%), APAC EUR 247 m (9%)",
+        "outcome": "Checked out",
+        "times": 2,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "Kemira's NetFloc treats and recycles internal process water in pulp and paper mills",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 2,
+        "assistants": [
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira's diversity & inclusion result was 25% in 2025",
+        "outcome": "Checked out",
+        "times": 2,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "Kemira's high-molecular-weight XD-5000 flocculant series raises cake dry solids (often by 2-5 percentage points) at lower polymer dose",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 2,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "Kemira's municipal customers include cities such as Berlin, New York, Paris and Hamburg",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 2,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "Kemira's sales split roughly Water Solutions 45%, Packaging & Hygiene Solutions 35%, Fiber Essentials 20%",
+        "outcome": "Checked out",
+        "times": 2,
+        "assistants": [
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira's strategy is to expand in water, build a renewable solutions portfolio and develop new growth platforms",
+        "outcome": "Checked out",
+        "times": 2,
+        "assistants": [
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira's strategy responds to climate change, water scarcity and the responsible use of limited resources",
+        "outcome": "Checked out",
+        "times": 2,
+        "assistants": [
+          "ChatGPT",
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira's water treatment portfolio includes activated carbon",
+        "outcome": "Checked out",
+        "times": 2,
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "The water target corresponds to a total of 24.5 billion m3",
+        "outcome": "Checked out",
+        "times": 2,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "Waste target - reduce disposed production waste intensity 15% by 2030 from a 2019 baseline",
+        "outcome": "Kemira's own pages and reports give different figures",
+        "times": 2,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "At the Arnhem Zuid plant (Netherlands), Kemira's digital optimisation cut polymer use about 45%, saved EUR 150,000 a year and 20 t CO2e",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 1,
+        "assistants": [
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Climate target - cut Scope 1 and 2 GHG emissions by approximately 51-52% by 2030 from a 2018 baseline (a range)",
+        "outcome": "Checked out",
+        "times": 1,
+        "assistants": [
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Copenhagen opted for a performance-based sludge treatment model with Kemira",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 1,
+        "assistants": [
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Disposed production waste intensity was 4.1 in 2025 against a 4.4 baseline",
+        "outcome": "Checked out",
+        "times": 1,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "In 2025 Kemira generated 73,917 tonnes of manufacturing waste; its recovery rate fell to 42% from 71% in 2024",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 1,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "In 2025 Kemira's Inclusion Index was above the 25th-percentile benchmark",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 1,
+        "assistants": [
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira adheres to the UN Global Compact (including the CEO Water Mandate) and the UN Forward Faster initiative",
+        "outcome": "Checked out",
+        "times": 1,
+        "assistants": [
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira aims for carbon neutrality / net zero (no scope or year stated)",
+        "outcome": "Checked out",
+        "times": 1,
+        "assistants": [
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira aims for carbon neutrality overall (all scopes, no year stated)",
+        "outcome": "Conflicted with Kemira's material",
+        "times": 1,
+        "assistants": [
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira announced the start-up of a sodium chlorate line in Finland",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 1,
+        "assistants": [
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira appointed Tuomas Mäkipeska as its new CFO",
+        "outcome": "Checked out",
+        "times": 1,
+        "assistants": [
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira had a TRIF target of 2.2 (no year stated) against which 2025's 2.7 fell short",
+        "outcome": "Checked out",
+        "times": 1,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "Kemira has been listed on Nasdaq Helsinki since 1994",
+        "outcome": "Checked out",
+        "times": 1,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "Kemira is one of the leading producers of polyacrylamide flocculant polymers",
+        "outcome": "Checked out",
+        "times": 1,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "Kemira is primarily a business-to-business supplier (not consumer-facing)",
+        "outcome": "Checked out",
+        "times": 1,
+        "assistants": [
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira is the only manufacturer offering a full portfolio of coagulants, polyacrylamide polymers and other water treatment chemicals alongside digital technologies",
+        "outcome": "Checked out",
+        "times": 1,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "Kemira recorded 33 total recordable injuries in 2025",
+        "outcome": "Checked out",
+        "times": 1,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "Kemira reports its sites had zero releases of hazardous chemicals and zero permit violations or regulatory non-conformities",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 1,
+        "assistants": [
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira was founded in 1920",
+        "outcome": "Checked out",
+        "times": 1,
+        "assistants": [
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira's 2024 report acknowledged gaps in value-chain traceability for materials with significant biodiversity impacts",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 1,
+        "assistants": [
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira's 2025 Annual Report was published in February 2026",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 1,
+        "assistants": [
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira's chemical pre-treatment can double biogas production potential",
+        "outcome": "Checked out",
+        "times": 1,
+        "assistants": [
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira's investor materials note that PFAS chemicals have negative environmental and health impacts",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 1,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "Kemira's sites aim for zero releases of hazardous chemicals and zero environmental permit violations",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 1,
+        "assistants": [
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Kemira's sustainability pillars are Expanding in Water, Renewable Solutions Portfolio, Climate Action & Energy Efficiency, and Responsible Business & Safety",
+        "outcome": "Conflicted with Kemira's material",
+        "times": 1,
+        "assistants": [
+          "Gemini"
+        ]
+      },
+      {
+        "claim": "Kemira's water treated, reused and recycled target is third-party verified",
+        "outcome": "Checked out",
+        "times": 1,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "Low-carbon energy is 78% of Kemira's global energy use",
+        "outcome": "Checked out",
+        "times": 1,
+        "assistants": [
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Safety interim target - reduce TRIF to 2.2 by end-2026",
+        "outcome": "Kemira's own pages and reports give different figures",
+        "times": 1,
+        "assistants": [
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Safety target - TRIF of 2.2 for the end of 2025",
+        "outcome": "Kemira's own pages and reports give different figures",
+        "times": 1,
+        "assistants": [
+          "ChatGPT"
+        ]
+      },
+      {
+        "claim": "Scope 3 accounted for about 77% of Kemira's total GHG emissions in 2025",
+        "outcome": "Checked out",
+        "times": 1,
+        "assistants": [
+          "Perplexity"
+        ]
+      },
+      {
+        "claim": "Veolia in Prague used KemConnect P to cut phosphorus-precipitation costs on one water line by almost 34%",
+        "outcome": "Not addressed in the Kemira material checked",
+        "times": 1,
+        "assistants": [
+          "Perplexity"
+        ]
+      }
+    ],
+    "aggregate_row": {
+      "claims": 9,
+      "times": 9,
+      "text": "9 claims about reputational and regulatory matters, raised in answers to \"Is Kemira a sustainable company? What are the criticisms?\". Kemira's own pages don't address them. The full records are in the repository."
+    }
+  },
+  "figures": {
+    "sources": [
+      {
+        "source": "Climate page",
+        "states": "52%"
+      },
+      {
+        "source": "Annual report and half-year report",
+        "states": "51.23%"
+      },
+      {
+        "source": "Sustainability page",
+        "states": "50% and 52%"
+      }
+    ],
+    "answers": [
+      {
+        "figure": "52%",
+        "assistants": [
+          "Perplexity",
+          "ChatGPT",
+          "Gemini"
+        ],
+        "matches": "Climate page",
+        "conflicts": "Both reports"
+      },
+      {
+        "figure": "51.23%",
+        "assistants": [
+          "Perplexity",
+          "ChatGPT"
+        ],
+        "matches": "Both reports",
+        "conflicts": "Climate page"
+      }
+    ],
+    "hedge": {
+      "assistant": "ChatGPT",
+      "figure": "approximately 51–52%"
+    },
+    "also": "A second climate target (33% or 32.5%) and two target dates (end of 2025 or 2026) split the same way.",
+    "conclusion": "Whichever figure an assistant gave, it matched one Kemira source and contradicted another."
+  },
+  "names": {
+    "answers": 18,
+    "kemira": {
+      "named_in": 18,
+      "first": 16
+    },
+    "snf": {
+      "named_in": 18,
+      "first": 2
+    },
+    "strip": [
+      {
+        "question": "Who are the main suppliers of water treatment chemicals in Europe?",
+        "assistant": "Perplexity",
+        "session": 1,
+        "named": 12,
+        "kemira": 1,
+        "snf": 6,
+        "first": "Kemira"
+      },
+      {
+        "question": "Who are the main suppliers of water treatment chemicals in Europe?",
+        "assistant": "Perplexity",
+        "session": 2,
+        "named": 18,
+        "kemira": 1,
+        "snf": 7,
+        "first": "Kemira"
+      },
+      {
+        "question": "Who are the main suppliers of water treatment chemicals in Europe?",
+        "assistant": "ChatGPT",
+        "session": 1,
+        "named": 12,
+        "kemira": 1,
+        "snf": 2,
+        "first": "Kemira"
+      },
+      {
+        "question": "Who are the main suppliers of water treatment chemicals in Europe?",
+        "assistant": "ChatGPT",
+        "session": 2,
+        "named": 12,
+        "kemira": 1,
+        "snf": 4,
+        "first": "Kemira"
+      },
+      {
+        "question": "Who are the main suppliers of water treatment chemicals in Europe?",
+        "assistant": "Gemini",
+        "session": 1,
+        "named": 7,
+        "kemira": 1,
+        "snf": 6,
+        "first": "Kemira"
+      },
+      {
+        "question": "Who are the main suppliers of water treatment chemicals in Europe?",
+        "assistant": "Gemini",
+        "session": 2,
+        "named": 8,
+        "kemira": 1,
+        "snf": 6,
+        "first": "Kemira"
+      },
+      {
+        "question": "Which companies supply coagulants and polymers for municipal wastewater treatment?",
+        "assistant": "Perplexity",
+        "session": 1,
+        "named": 19,
+        "kemira": 1,
+        "snf": 2,
+        "first": "Kemira"
+      },
+      {
+        "question": "Which companies supply coagulants and polymers for municipal wastewater treatment?",
+        "assistant": "Perplexity",
+        "session": 2,
+        "named": 14,
+        "kemira": 1,
+        "snf": 2,
+        "first": "Kemira"
+      },
+      {
+        "question": "Which companies supply coagulants and polymers for municipal wastewater treatment?",
+        "assistant": "ChatGPT",
+        "session": 1,
+        "named": 10,
+        "kemira": 1,
+        "snf": 2,
+        "first": "Kemira"
+      },
+      {
+        "question": "Which companies supply coagulants and polymers for municipal wastewater treatment?",
+        "assistant": "ChatGPT",
+        "session": 2,
+        "named": 10,
+        "kemira": 1,
+        "snf": 2,
+        "first": "Kemira"
+      },
+      {
+        "question": "Which companies supply coagulants and polymers for municipal wastewater treatment?",
+        "assistant": "Gemini",
+        "session": 1,
+        "named": 7,
+        "kemira": 1,
+        "snf": 3,
+        "first": "Kemira"
+      },
+      {
+        "question": "Which companies supply coagulants and polymers for municipal wastewater treatment?",
+        "assistant": "Gemini",
+        "session": 2,
+        "named": 10,
+        "kemira": 2,
+        "snf": 1,
+        "first": "SNF"
+      },
+      {
+        "question": "I run a municipal wastewater treatment plant in Europe and need to reduce sludge volume. Which chemical suppliers should I look at?",
+        "assistant": "Perplexity",
+        "session": 1,
+        "named": 6,
+        "kemira": 1,
+        "snf": 2,
+        "first": "Kemira"
+      },
+      {
+        "question": "I run a municipal wastewater treatment plant in Europe and need to reduce sludge volume. Which chemical suppliers should I look at?",
+        "assistant": "Perplexity",
+        "session": 2,
+        "named": 7,
+        "kemira": 1,
+        "snf": 2,
+        "first": "Kemira"
+      },
+      {
+        "question": "I run a municipal wastewater treatment plant in Europe and need to reduce sludge volume. Which chemical suppliers should I look at?",
+        "assistant": "ChatGPT",
+        "session": 1,
+        "named": 5,
+        "kemira": 1,
+        "snf": 2,
+        "first": "Kemira"
+      },
+      {
+        "question": "I run a municipal wastewater treatment plant in Europe and need to reduce sludge volume. Which chemical suppliers should I look at?",
+        "assistant": "ChatGPT",
+        "session": 2,
+        "named": 5,
+        "kemira": 1,
+        "snf": 2,
+        "first": "Kemira"
+      },
+      {
+        "question": "I run a municipal wastewater treatment plant in Europe and need to reduce sludge volume. Which chemical suppliers should I look at?",
+        "assistant": "Gemini",
+        "session": 1,
+        "named": 7,
+        "kemira": 1,
+        "snf": 2,
+        "first": "Kemira"
+      },
+      {
+        "question": "I run a municipal wastewater treatment plant in Europe and need to reduce sludge volume. Which chemical suppliers should I look at?",
+        "assistant": "Gemini",
+        "session": 2,
+        "named": 6,
+        "kemira": 2,
+        "snf": 1,
+        "first": "SNF"
+      }
+    ],
+    "peers": [
+      {
+        "company": "Kemira",
+        "named_in": 18,
+        "first": 16
+      },
+      {
+        "company": "SNF",
+        "named_in": 18,
+        "first": 2
+      },
+      {
+        "company": "Solenis",
+        "named_in": 16,
+        "first": 0
+      },
+      {
+        "company": "Ecolab",
+        "named_in": 13,
+        "first": 0
+      },
+      {
+        "company": "Veolia",
+        "named_in": 13,
+        "first": 0
+      },
+      {
+        "company": "BASF",
+        "named_in": 12,
+        "first": 0
+      },
+      {
+        "company": "Kurita",
+        "named_in": 10,
+        "first": 0
+      },
+      {
+        "company": "Feralco",
+        "named_in": 8,
+        "first": 0
+      },
+      {
+        "company": "Separ Chemie",
+        "named_in": 5,
+        "first": 0
+      },
+      {
+        "company": "Univar Solutions",
+        "named_in": 5,
+        "first": 0
+      },
+      {
+        "company": "SUEZ",
+        "named_in": 4,
+        "first": 0
+      },
+      {
+        "company": "Solvay",
+        "named_in": 4,
+        "first": 0
+      },
+      {
+        "company": "USALCO",
+        "named_in": 4,
+        "first": 0
+      },
+      {
+        "company": "Brenntag",
+        "named_in": 4,
+        "first": 0
+      },
+      {
+        "company": "Buckman",
+        "named_in": 4,
+        "first": 0
+      }
+    ],
+    "shift_note": "In its second session, Gemini named SNF first and Kemira second in two of the three questions, having named Kemira first in its first session."
+  },
+  "recommendations_source": "../reports/recommendations.md"
+}
