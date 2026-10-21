@@ -1,0 +1,108 @@
+# sov_input.yaml — share of voice, hand-counted under the peers.yaml counting rules (S6)
+#
+# For each open answer: every company named as a supplier in the category, in
+# order of first mention. Built into data/tallies.json by: python -m src.tallies
+#
+# Counting rules (peers.yaml): count a company if the assistant names it as a
+# supplier in the category. Do not count mentions in a disclaimer or caveat;
+# mentions as the parent, subsidiary or former owner/name of another listed
+# company; or mentions outside the category. Additional conventions:
+# - Ecolab and its Nalco Water division are one supplier (Ecolab).
+# - Image-card captions copied with ChatGPT answers are not counted; position
+#   is taken from the answer body.
+# - A company named only as the former owner of assets another supplier now
+#   holds (e.g. BASF behind Solenis) is not counted.
+# - Distributors named as suppliers of the chemicals (Brenntag, Univar) are counted.
+#
+# `aliases` maps the canonical name to strings searched for in the answer text,
+# so every count can be checked against the raw file.
+
+aliases:
+  Kemira: [Kemira]
+  SNF: [SNF]
+  Solenis: [Solenis]
+  Ecolab: [Ecolab, Nalco]
+  Veolia: [Veolia]
+  SUEZ: [SUEZ]
+  BASF: [BASF]
+  Nouryon: [Nouryon]
+  Solvay: [Solvay]
+  Kurita: [Kurita]
+  Italmatch: [Italmatch]
+  Buckman: [Buckman]
+  Feralco: [Feralco]
+  Kuhlmann Europe: [Kuhlmann]
+  Venator: [Venator]
+  Brenntag: [Brenntag]
+  Univar Solutions: [Univar]
+  LANXESS: [LANXESS]
+  Arkema: [Arkema]
+  Dow: [Dow]
+  Aqualia: [Aqualia]
+  USALCO: [USALCO]
+  Chemtrade: [Chemtrade]
+  GEO Specialty Chemicals: [GEO Specialty]
+  Aries Chemical: [Aries]
+  Hawkins: [Hawkins]
+  IXOM: [IXOM]
+  Accepta: [Accepta]
+  Gulbrandsen: [Gulbrandsen]
+  Separ Chemie: [Separ]
+  Kronos: [Kronos]
+  Chemifloc: [Chemifloc]
+  Derypol: [Derypol]
+  ACAT: [ACAT]
+  Enva: [Enva]
+  Alumichem: [Alumichem]
+  Nijhuis Saur Industries: [Nijhuis]
+  EnviroChemie: [EnviroChemie]
+  Orege: [Orege]
+
+answers:
+  O01_perplexity_p1:
+    suppliers: [Kemira, Ecolab, Solenis, Veolia, SUEZ, SNF, BASF, Nouryon, Solvay, Kurita, Italmatch, Buckman]
+  O01_chatgpt_p1:
+    suppliers: [Kemira, SNF, Feralco, Solenis, Ecolab, Kurita, Veolia, Kuhlmann Europe, BASF, Venator, Brenntag, Univar Solutions]
+    notes: Image captions (e.g. 'Amrize - CCMPA') not counted.
+  O01_gemini_p1:
+    suppliers: [Kemira, Ecolab, Solenis, Kurita, Veolia, SNF, Univar Solutions]
+    excluded: {BASF: "named only as the former owner of portfolios Solenis absorbed"}
+  O01_perplexity_p2:
+    suppliers: [Kemira, Ecolab, Solenis, Veolia, SUEZ, BASF, SNF, Kurita, Nouryon, Solvay, Brenntag, LANXESS, Italmatch, Arkema, Dow, Buckman, Feralco, Aqualia]
+  O01_chatgpt_p2:
+    suppliers: [Kemira, Solenis, Ecolab, SNF, Kurita, Veolia, Feralco, Brenntag, Nouryon, BASF, Buckman, Solvay]
+  O01_gemini_p2:
+    suppliers: [Kemira, Ecolab, Solenis, Kurita, Veolia, SNF, Kuhlmann Europe, Univar Solutions]
+    excluded: {BASF: "named only as the source of assets Solenis acquired"}
+
+  O02_perplexity_p1:
+    suppliers: [Kemira, SNF, Solenis, Ecolab, BASF, SUEZ, Veolia, Kurita, USALCO, Feralco, Chemtrade, GEO Specialty Chemicals, Aries Chemical, Hawkins, Buckman, IXOM, Accepta, Gulbrandsen, Separ Chemie]
+  O02_chatgpt_p1:
+    suppliers: [Kemira, SNF, Solenis, Feralco, Ecolab, USALCO, Kronos, Chemtrade, Kurita, BASF]
+    notes: "BASF first appears in an image caption ('BASF, CD&R sell Solenis ...'), not counted; counted from the 'Other suppliers' table. Kemira's first mention is also a caption; body position is 1."
+  O02_gemini_p1:
+    suppliers: [Kemira, Solenis, SNF, Veolia, Ecolab, Univar Solutions, Brenntag]
+    excluded: {SUEZ: "named as a legacy portfolio within Veolia's heading (former name)"}
+  O02_perplexity_p2:
+    suppliers: [Kemira, SNF, Solenis, BASF, Ecolab, SUEZ, Veolia, Kurita, Feralco, USALCO, Chemtrade, GEO Specialty Chemicals, Aries Chemical, Hawkins]
+  O02_chatgpt_p2:
+    suppliers: [Kemira, SNF, Feralco, Solenis, Ecolab, Veolia, Kurita, BASF, USALCO, Chemifloc]
+  O02_gemini_p2:
+    suppliers: [SNF, Kemira, Solenis, Ecolab, BASF, Derypol, ACAT, Enva, Alumichem, Univar Solutions]
+
+  O03_perplexity_p1:
+    suppliers: [Kemira, SNF, Solenis, BASF, Veolia, Separ Chemie]
+  O03_chatgpt_p1:
+    suppliers: [Kemira, SNF, Veolia, Chemifloc, Separ Chemie]
+    notes: Image captions (product images for Kemira and SNF) not counted.
+  O03_gemini_p1:
+    suppliers: [Kemira, SNF, Solvay, Solenis, Derypol, Separ Chemie, Nijhuis Saur Industries]
+    excluded: {BASF: "'BASF / Solenis' entry describes Solenis building on legacy BASF water solutions (former owner)"}
+    notes: "'Solvay / Syensqo' counted once, as Solvay."
+  O03_perplexity_p2:
+    suppliers: [Kemira, SNF, Veolia, BASF, Solenis, Separ Chemie, EnviroChemie]
+  O03_chatgpt_p2:
+    suppliers: [Kemira, SNF, Ecolab, Solenis, Feralco]
+  O03_gemini_p2:
+    suppliers: [SNF, Kemira, BASF, Derypol, Orege, Nijhuis Saur Industries]
+    notes: "'SNF Floerger / local subsidiaries' is a second SNF entry, counted once."

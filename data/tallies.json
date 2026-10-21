@@ -1,0 +1,3484 @@
+{
+  "schema_version": 1,
+  "citations": {
+    "rules": "utm_* parameters and #fragments (incl. #:~:text=) stripped; domains reduced to the registrable domain (www./subdomains folded, e.g. pages.kemira.com -> kemira.com); unit = one URL in one answer's de-duplicated citation list.",
+    "measurement_caveat": "Not comparable across assistants or passes as if measured the same way. Perplexity and ChatGPT: inline URLs in the copied answer text, both passes (pass-2 source chips not captured). Gemini: pass 1 retrieval shown but sources not capturable; pass 2 source-chip URLs entered by hand. ChatGPT URLs are inline links within the answer body, which may not match the sources the interface displayed (README limit 10).",
+    "aggregate_all_captured": {
+      "citations": 208,
+      "kemira_com": 106,
+      "kemira_com_share": 0.5096,
+      "distinct_domains": 50,
+      "domains": [
+        {
+          "domain": "kemira.com",
+          "count": 106,
+          "share": 0.5096
+        },
+        {
+          "domain": "snf.com",
+          "count": 7,
+          "share": 0.0337
+        },
+        {
+          "domain": "marketscreener.com",
+          "count": 6,
+          "share": 0.0288
+        },
+        {
+          "domain": "solenis.com",
+          "count": 6,
+          "share": 0.0288
+        },
+        {
+          "domain": "ecolab.com",
+          "count": 5,
+          "share": 0.024
+        },
+        {
+          "domain": "mordorintelligence.com",
+          "count": 4,
+          "share": 0.0192
+        },
+        {
+          "domain": "veoliawatertechnologies.com",
+          "count": 4,
+          "share": 0.0192
+        },
+        {
+          "domain": "nexdigm.com",
+          "count": 4,
+          "share": 0.0192
+        },
+        {
+          "domain": "chemicalresearchinsight.com",
+          "count": 4,
+          "share": 0.0192
+        },
+        {
+          "domain": "feralco.eu",
+          "count": 3,
+          "share": 0.0144
+        },
+        {
+          "domain": "watertechnologies.com",
+          "count": 3,
+          "share": 0.0144
+        },
+        {
+          "domain": "basf.com",
+          "count": 3,
+          "share": 0.0144
+        },
+        {
+          "domain": "separ-chemie.de",
+          "count": 3,
+          "share": 0.0144
+        },
+        {
+          "domain": "vuosikertomukset.net",
+          "count": 2,
+          "share": 0.0096
+        },
+        {
+          "domain": "epa.gov",
+          "count": 2,
+          "share": 0.0096
+        },
+        {
+          "domain": "bwdstrategic.com",
+          "count": 2,
+          "share": 0.0096
+        },
+        {
+          "domain": "kurita.eu",
+          "count": 2,
+          "share": 0.0096
+        },
+        {
+          "domain": "kuhlmann-europe.com",
+          "count": 2,
+          "share": 0.0096
+        },
+        {
+          "domain": "6wresearch.com",
+          "count": 2,
+          "share": 0.0096
+        },
+        {
+          "domain": "marketdataforecast.com",
+          "count": 2,
+          "share": 0.0096
+        },
+        {
+          "domain": "usdanalytics.com",
+          "count": 2,
+          "share": 0.0096
+        },
+        {
+          "domain": "marketsandmarkets.com",
+          "count": 2,
+          "share": 0.0096
+        },
+        {
+          "domain": "feralco.com",
+          "count": 2,
+          "share": 0.0096
+        },
+        {
+          "domain": "usalco.com",
+          "count": 2,
+          "share": 0.0096
+        },
+        {
+          "domain": "hawkinsinc.com",
+          "count": 2,
+          "share": 0.0096
+        },
+        {
+          "domain": "orege.com",
+          "count": 2,
+          "share": 0.0096
+        },
+        {
+          "domain": "forbes.com",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "bccresearch.com",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "wikipedia.org",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "impaktly.com",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "cision.com",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "un.org",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "ethifinance.com",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "bloomberglaw.com",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "venatorcorp.com",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "brenntag.com",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "univarsolutions.com",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "foundrymax.com",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "morganreedinsights.com",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "kurita-water.com",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "chemifloc.ie",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "univarsolutions.fi",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "enva.com",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "acat.com",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "arieschem.com",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "chemifloc.com",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "nijhuissaurindustries.com",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "derypol.com",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "pmarketresearch.com",
+          "count": 1,
+          "share": 0.0048
+        },
+        {
+          "domain": "envirochemie.com",
+          "count": 1,
+          "share": 0.0048
+        }
+      ]
+    },
+    "by_assistant": {
+      "perplexity": {
+        "citations": 101,
+        "kemira_com": 56,
+        "kemira_com_share": 0.5545,
+        "distinct_domains": 26,
+        "domains": [
+          {
+            "domain": "kemira.com",
+            "count": 56,
+            "share": 0.5545
+          },
+          {
+            "domain": "marketscreener.com",
+            "count": 6,
+            "share": 0.0594
+          },
+          {
+            "domain": "nexdigm.com",
+            "count": 4,
+            "share": 0.0396
+          },
+          {
+            "domain": "chemicalresearchinsight.com",
+            "count": 4,
+            "share": 0.0396
+          },
+          {
+            "domain": "mordorintelligence.com",
+            "count": 3,
+            "share": 0.0297
+          },
+          {
+            "domain": "vuosikertomukset.net",
+            "count": 2,
+            "share": 0.0198
+          },
+          {
+            "domain": "bwdstrategic.com",
+            "count": 2,
+            "share": 0.0198
+          },
+          {
+            "domain": "6wresearch.com",
+            "count": 2,
+            "share": 0.0198
+          },
+          {
+            "domain": "marketdataforecast.com",
+            "count": 2,
+            "share": 0.0198
+          },
+          {
+            "domain": "usdanalytics.com",
+            "count": 2,
+            "share": 0.0198
+          },
+          {
+            "domain": "hawkinsinc.com",
+            "count": 2,
+            "share": 0.0198
+          },
+          {
+            "domain": "separ-chemie.de",
+            "count": 2,
+            "share": 0.0198
+          },
+          {
+            "domain": "un.org",
+            "count": 1,
+            "share": 0.0099
+          },
+          {
+            "domain": "ethifinance.com",
+            "count": 1,
+            "share": 0.0099
+          },
+          {
+            "domain": "bloomberglaw.com",
+            "count": 1,
+            "share": 0.0099
+          },
+          {
+            "domain": "epa.gov",
+            "count": 1,
+            "share": 0.0099
+          },
+          {
+            "domain": "morganreedinsights.com",
+            "count": 1,
+            "share": 0.0099
+          },
+          {
+            "domain": "marketsandmarkets.com",
+            "count": 1,
+            "share": 0.0099
+          },
+          {
+            "domain": "arieschem.com",
+            "count": 1,
+            "share": 0.0099
+          },
+          {
+            "domain": "snf.com",
+            "count": 1,
+            "share": 0.0099
+          },
+          {
+            "domain": "solenis.com",
+            "count": 1,
+            "share": 0.0099
+          },
+          {
+            "domain": "basf.com",
+            "count": 1,
+            "share": 0.0099
+          },
+          {
+            "domain": "veoliawatertechnologies.com",
+            "count": 1,
+            "share": 0.0099
+          },
+          {
+            "domain": "pmarketresearch.com",
+            "count": 1,
+            "share": 0.0099
+          },
+          {
+            "domain": "watertechnologies.com",
+            "count": 1,
+            "share": 0.0099
+          },
+          {
+            "domain": "envirochemie.com",
+            "count": 1,
+            "share": 0.0099
+          }
+        ]
+      },
+      "chatgpt": {
+        "citations": 71,
+        "kemira_com": 30,
+        "kemira_com_share": 0.4225,
+        "distinct_domains": 20,
+        "domains": [
+          {
+            "domain": "kemira.com",
+            "count": 30,
+            "share": 0.4225
+          },
+          {
+            "domain": "snf.com",
+            "count": 6,
+            "share": 0.0845
+          },
+          {
+            "domain": "solenis.com",
+            "count": 5,
+            "share": 0.0704
+          },
+          {
+            "domain": "ecolab.com",
+            "count": 5,
+            "share": 0.0704
+          },
+          {
+            "domain": "feralco.eu",
+            "count": 3,
+            "share": 0.0423
+          },
+          {
+            "domain": "veoliawatertechnologies.com",
+            "count": 3,
+            "share": 0.0423
+          },
+          {
+            "domain": "kurita.eu",
+            "count": 2,
+            "share": 0.0282
+          },
+          {
+            "domain": "watertechnologies.com",
+            "count": 2,
+            "share": 0.0282
+          },
+          {
+            "domain": "basf.com",
+            "count": 2,
+            "share": 0.0282
+          },
+          {
+            "domain": "feralco.com",
+            "count": 2,
+            "share": 0.0282
+          },
+          {
+            "domain": "usalco.com",
+            "count": 2,
+            "share": 0.0282
+          },
+          {
+            "domain": "epa.gov",
+            "count": 1,
+            "share": 0.0141
+          },
+          {
+            "domain": "kuhlmann-europe.com",
+            "count": 1,
+            "share": 0.0141
+          },
+          {
+            "domain": "venatorcorp.com",
+            "count": 1,
+            "share": 0.0141
+          },
+          {
+            "domain": "brenntag.com",
+            "count": 1,
+            "share": 0.0141
+          },
+          {
+            "domain": "univarsolutions.com",
+            "count": 1,
+            "share": 0.0141
+          },
+          {
+            "domain": "kurita-water.com",
+            "count": 1,
+            "share": 0.0141
+          },
+          {
+            "domain": "chemifloc.ie",
+            "count": 1,
+            "share": 0.0141
+          },
+          {
+            "domain": "chemifloc.com",
+            "count": 1,
+            "share": 0.0141
+          },
+          {
+            "domain": "separ-chemie.de",
+            "count": 1,
+            "share": 0.0141
+          }
+        ]
+      },
+      "gemini": {
+        "citations": 36,
+        "kemira_com": 20,
+        "kemira_com_share": 0.5556,
+        "distinct_domains": 16,
+        "domains": [
+          {
+            "domain": "kemira.com",
+            "count": 20,
+            "share": 0.5556
+          },
+          {
+            "domain": "orege.com",
+            "count": 2,
+            "share": 0.0556
+          },
+          {
+            "domain": "forbes.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "bccresearch.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "wikipedia.org",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "impaktly.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "cision.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "kuhlmann-europe.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "foundrymax.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "mordorintelligence.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "univarsolutions.fi",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "enva.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "acat.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "marketsandmarkets.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "nijhuissaurindustries.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "derypol.com",
+            "count": 1,
+            "share": 0.0278
+          }
+        ]
+      }
+    },
+    "by_assistant_pass_measure": {
+      "perplexity_p1_inline": {
+        "citations": 51,
+        "kemira_com": 29,
+        "kemira_com_share": 0.5686,
+        "distinct_domains": 19,
+        "domains": [
+          {
+            "domain": "kemira.com",
+            "count": 29,
+            "share": 0.5686
+          },
+          {
+            "domain": "marketscreener.com",
+            "count": 2,
+            "share": 0.0392
+          },
+          {
+            "domain": "vuosikertomukset.net",
+            "count": 2,
+            "share": 0.0392
+          },
+          {
+            "domain": "nexdigm.com",
+            "count": 2,
+            "share": 0.0392
+          },
+          {
+            "domain": "chemicalresearchinsight.com",
+            "count": 2,
+            "share": 0.0392
+          },
+          {
+            "domain": "un.org",
+            "count": 1,
+            "share": 0.0196
+          },
+          {
+            "domain": "bwdstrategic.com",
+            "count": 1,
+            "share": 0.0196
+          },
+          {
+            "domain": "ethifinance.com",
+            "count": 1,
+            "share": 0.0196
+          },
+          {
+            "domain": "mordorintelligence.com",
+            "count": 1,
+            "share": 0.0196
+          },
+          {
+            "domain": "6wresearch.com",
+            "count": 1,
+            "share": 0.0196
+          },
+          {
+            "domain": "marketdataforecast.com",
+            "count": 1,
+            "share": 0.0196
+          },
+          {
+            "domain": "usdanalytics.com",
+            "count": 1,
+            "share": 0.0196
+          },
+          {
+            "domain": "arieschem.com",
+            "count": 1,
+            "share": 0.0196
+          },
+          {
+            "domain": "hawkinsinc.com",
+            "count": 1,
+            "share": 0.0196
+          },
+          {
+            "domain": "snf.com",
+            "count": 1,
+            "share": 0.0196
+          },
+          {
+            "domain": "solenis.com",
+            "count": 1,
+            "share": 0.0196
+          },
+          {
+            "domain": "basf.com",
+            "count": 1,
+            "share": 0.0196
+          },
+          {
+            "domain": "veoliawatertechnologies.com",
+            "count": 1,
+            "share": 0.0196
+          },
+          {
+            "domain": "separ-chemie.de",
+            "count": 1,
+            "share": 0.0196
+          }
+        ]
+      },
+      "perplexity_p2_inline": {
+        "citations": 50,
+        "kemira_com": 27,
+        "kemira_com_share": 0.54,
+        "distinct_domains": 18,
+        "domains": [
+          {
+            "domain": "kemira.com",
+            "count": 27,
+            "share": 0.54
+          },
+          {
+            "domain": "marketscreener.com",
+            "count": 4,
+            "share": 0.08
+          },
+          {
+            "domain": "mordorintelligence.com",
+            "count": 2,
+            "share": 0.04
+          },
+          {
+            "domain": "nexdigm.com",
+            "count": 2,
+            "share": 0.04
+          },
+          {
+            "domain": "chemicalresearchinsight.com",
+            "count": 2,
+            "share": 0.04
+          },
+          {
+            "domain": "bwdstrategic.com",
+            "count": 1,
+            "share": 0.02
+          },
+          {
+            "domain": "bloomberglaw.com",
+            "count": 1,
+            "share": 0.02
+          },
+          {
+            "domain": "epa.gov",
+            "count": 1,
+            "share": 0.02
+          },
+          {
+            "domain": "6wresearch.com",
+            "count": 1,
+            "share": 0.02
+          },
+          {
+            "domain": "morganreedinsights.com",
+            "count": 1,
+            "share": 0.02
+          },
+          {
+            "domain": "marketdataforecast.com",
+            "count": 1,
+            "share": 0.02
+          },
+          {
+            "domain": "marketsandmarkets.com",
+            "count": 1,
+            "share": 0.02
+          },
+          {
+            "domain": "usdanalytics.com",
+            "count": 1,
+            "share": 0.02
+          },
+          {
+            "domain": "hawkinsinc.com",
+            "count": 1,
+            "share": 0.02
+          },
+          {
+            "domain": "pmarketresearch.com",
+            "count": 1,
+            "share": 0.02
+          },
+          {
+            "domain": "watertechnologies.com",
+            "count": 1,
+            "share": 0.02
+          },
+          {
+            "domain": "separ-chemie.de",
+            "count": 1,
+            "share": 0.02
+          },
+          {
+            "domain": "envirochemie.com",
+            "count": 1,
+            "share": 0.02
+          }
+        ]
+      },
+      "perplexity_p2_displayed": {
+        "status": "not_captured",
+        "cells": 10
+      },
+      "chatgpt_p1_inline": {
+        "citations": 37,
+        "kemira_com": 15,
+        "kemira_com_share": 0.4054,
+        "distinct_domains": 18,
+        "domains": [
+          {
+            "domain": "kemira.com",
+            "count": 15,
+            "share": 0.4054
+          },
+          {
+            "domain": "snf.com",
+            "count": 3,
+            "share": 0.0811
+          },
+          {
+            "domain": "solenis.com",
+            "count": 2,
+            "share": 0.0541
+          },
+          {
+            "domain": "ecolab.com",
+            "count": 2,
+            "share": 0.0541
+          },
+          {
+            "domain": "veoliawatertechnologies.com",
+            "count": 2,
+            "share": 0.0541
+          },
+          {
+            "domain": "epa.gov",
+            "count": 1,
+            "share": 0.027
+          },
+          {
+            "domain": "feralco.eu",
+            "count": 1,
+            "share": 0.027
+          },
+          {
+            "domain": "kurita.eu",
+            "count": 1,
+            "share": 0.027
+          },
+          {
+            "domain": "watertechnologies.com",
+            "count": 1,
+            "share": 0.027
+          },
+          {
+            "domain": "kuhlmann-europe.com",
+            "count": 1,
+            "share": 0.027
+          },
+          {
+            "domain": "basf.com",
+            "count": 1,
+            "share": 0.027
+          },
+          {
+            "domain": "venatorcorp.com",
+            "count": 1,
+            "share": 0.027
+          },
+          {
+            "domain": "brenntag.com",
+            "count": 1,
+            "share": 0.027
+          },
+          {
+            "domain": "univarsolutions.com",
+            "count": 1,
+            "share": 0.027
+          },
+          {
+            "domain": "feralco.com",
+            "count": 1,
+            "share": 0.027
+          },
+          {
+            "domain": "usalco.com",
+            "count": 1,
+            "share": 0.027
+          },
+          {
+            "domain": "chemifloc.com",
+            "count": 1,
+            "share": 0.027
+          },
+          {
+            "domain": "separ-chemie.de",
+            "count": 1,
+            "share": 0.027
+          }
+        ]
+      },
+      "chatgpt_p2_inline": {
+        "citations": 34,
+        "kemira_com": 15,
+        "kemira_com_share": 0.4412,
+        "distinct_domains": 13,
+        "domains": [
+          {
+            "domain": "kemira.com",
+            "count": 15,
+            "share": 0.4412
+          },
+          {
+            "domain": "solenis.com",
+            "count": 3,
+            "share": 0.0882
+          },
+          {
+            "domain": "ecolab.com",
+            "count": 3,
+            "share": 0.0882
+          },
+          {
+            "domain": "snf.com",
+            "count": 3,
+            "share": 0.0882
+          },
+          {
+            "domain": "feralco.eu",
+            "count": 2,
+            "share": 0.0588
+          },
+          {
+            "domain": "kurita.eu",
+            "count": 1,
+            "share": 0.0294
+          },
+          {
+            "domain": "watertechnologies.com",
+            "count": 1,
+            "share": 0.0294
+          },
+          {
+            "domain": "veoliawatertechnologies.com",
+            "count": 1,
+            "share": 0.0294
+          },
+          {
+            "domain": "kurita-water.com",
+            "count": 1,
+            "share": 0.0294
+          },
+          {
+            "domain": "basf.com",
+            "count": 1,
+            "share": 0.0294
+          },
+          {
+            "domain": "usalco.com",
+            "count": 1,
+            "share": 0.0294
+          },
+          {
+            "domain": "chemifloc.ie",
+            "count": 1,
+            "share": 0.0294
+          },
+          {
+            "domain": "feralco.com",
+            "count": 1,
+            "share": 0.0294
+          }
+        ]
+      },
+      "chatgpt_p2_displayed": {
+        "status": "not_captured",
+        "cells": 10
+      },
+      "gemini_p1_inline": {
+        "status": "retrieval shown, sources not capturable (README limit 9)"
+      },
+      "gemini_p1_displayed": {
+        "status": "retrieval shown, sources not capturable (README limit 9)"
+      },
+      "gemini_p2_displayed": {
+        "citations": 36,
+        "kemira_com": 20,
+        "kemira_com_share": 0.5556,
+        "distinct_domains": 16,
+        "domains": [
+          {
+            "domain": "kemira.com",
+            "count": 20,
+            "share": 0.5556
+          },
+          {
+            "domain": "orege.com",
+            "count": 2,
+            "share": 0.0556
+          },
+          {
+            "domain": "forbes.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "bccresearch.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "wikipedia.org",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "impaktly.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "cision.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "kuhlmann-europe.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "foundrymax.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "mordorintelligence.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "univarsolutions.fi",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "enva.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "acat.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "marketsandmarkets.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "nijhuissaurindustries.com",
+            "count": 1,
+            "share": 0.0278
+          },
+          {
+            "domain": "derypol.com",
+            "count": 1,
+            "share": 0.0278
+          }
+        ]
+      }
+    },
+    "kemira_pages": [
+      {
+        "url": "https://www.kemira.com/",
+        "count": 12,
+        "assistants": {
+          "chatgpt": 7,
+          "perplexity": 5
+        },
+        "questions": [
+          "K01",
+          "K02",
+          "K05",
+          "O01",
+          "O02",
+          "O03"
+        ],
+        "measures": {
+          "inline_p1": 7,
+          "inline_p2": 5
+        },
+        "source_id": "S02"
+      },
+      {
+        "url": "https://www.kemira.com/water",
+        "count": 9,
+        "assistants": {
+          "chatgpt": 4,
+          "perplexity": 4,
+          "gemini": 1
+        },
+        "questions": [
+          "K04",
+          "K05"
+        ],
+        "measures": {
+          "inline_p1": 4,
+          "inline_p2": 4,
+          "displayed_p2": 1
+        },
+        "source_id": "S06"
+      },
+      {
+        "url": "https://www.kemira.com/investors/kemira-as-an-investment",
+        "count": 8,
+        "assistants": {
+          "perplexity": 6,
+          "gemini": 2
+        },
+        "questions": [
+          "K01",
+          "K02",
+          "K03",
+          "K07"
+        ],
+        "measures": {
+          "inline_p1": 3,
+          "inline_p2": 3,
+          "displayed_p2": 2
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/annual-report-2025",
+        "count": 7,
+        "assistants": {
+          "gemini": 2,
+          "chatgpt": 5
+        },
+        "questions": [
+          "K01",
+          "K03",
+          "K06",
+          "K07"
+        ],
+        "measures": {
+          "displayed_p2": 2,
+          "inline_p2": 3,
+          "inline_p1": 2
+        },
+        "source_id": "S17"
+      },
+      {
+        "url": "https://www.kemira.com/company",
+        "count": 6,
+        "assistants": {
+          "perplexity": 5,
+          "gemini": 1
+        },
+        "questions": [
+          "K01",
+          "K02",
+          "K03"
+        ],
+        "measures": {
+          "inline_p1": 3,
+          "inline_p2": 2,
+          "displayed_p2": 1
+        },
+        "source_id": "S01"
+      },
+      {
+        "url": "https://www.kemira.com/investors/kemira-as-an-investment/business-units-markets",
+        "count": 6,
+        "assistants": {
+          "chatgpt": 1,
+          "gemini": 1,
+          "perplexity": 4
+        },
+        "questions": [
+          "K02",
+          "K05"
+        ],
+        "measures": {
+          "inline_p2": 3,
+          "displayed_p2": 1,
+          "inline_p1": 2
+        },
+        "source_id": "S04"
+      },
+      {
+        "url": "https://www.kemira.com/investors/kemira-as-an-investment/growth-drivers",
+        "count": 6,
+        "assistants": {
+          "perplexity": 4,
+          "gemini": 2
+        },
+        "questions": [
+          "K01",
+          "K04",
+          "K05"
+        ],
+        "measures": {
+          "inline_p1": 2,
+          "inline_p2": 2,
+          "displayed_p2": 2
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/sustainability-initiatives",
+        "count": 5,
+        "assistants": {
+          "chatgpt": 2,
+          "gemini": 1,
+          "perplexity": 2
+        },
+        "questions": [
+          "K06"
+        ],
+        "measures": {
+          "inline_p1": 2,
+          "inline_p2": 2,
+          "displayed_p2": 1
+        },
+        "source_id": "S11"
+      },
+      {
+        "url": "https://www.kemira.com/products-services/industrial-water-services",
+        "count": 4,
+        "assistants": {
+          "chatgpt": 2,
+          "perplexity": 2
+        },
+        "questions": [
+          "K04"
+        ],
+        "measures": {
+          "inline_p1": 2,
+          "inline_p2": 2
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/app/uploads/2026/02/kemira-full-annual-report-2025.pdf",
+        "count": 3,
+        "assistants": {
+          "chatgpt": 1,
+          "perplexity": 2
+        },
+        "questions": [
+          "K03",
+          "K07"
+        ],
+        "measures": {
+          "inline_p1": 2,
+          "inline_p2": 1
+        },
+        "source_id": "S17"
+      },
+      {
+        "url": "https://www.kemira.com/sustainability-initiatives/environment/climate-energy",
+        "count": 3,
+        "assistants": {
+          "chatgpt": 1,
+          "perplexity": 2
+        },
+        "questions": [
+          "K06"
+        ],
+        "measures": {
+          "inline_p2": 2,
+          "inline_p1": 1
+        },
+        "source_id": "S13"
+      },
+      {
+        "url": "https://pages.kemira.com/rs/784-UGU-140/images/kemira-water-handbook-about-water-treatment-2020.pdf",
+        "count": 2,
+        "assistants": {
+          "gemini": 2
+        },
+        "questions": [
+          "K04"
+        ],
+        "measures": {
+          "displayed_p2": 2
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/app/uploads/2024/02/kemira-sustainability-report-2023.pdf",
+        "count": 2,
+        "assistants": {
+          "perplexity": 1,
+          "gemini": 1
+        },
+        "questions": [
+          "K06",
+          "K07"
+        ],
+        "measures": {
+          "inline_p1": 1,
+          "displayed_p2": 1
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/app/uploads/2026/02/kemira-annual-review-2025.pdf",
+        "count": 2,
+        "assistants": {
+          "perplexity": 2
+        },
+        "questions": [
+          "K03"
+        ],
+        "measures": {
+          "inline_p1": 1,
+          "inline_p2": 1
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/fi/tuotteet-palvelut",
+        "count": 2,
+        "assistants": {
+          "gemini": 2
+        },
+        "questions": [
+          "K04"
+        ],
+        "measures": {
+          "displayed_p2": 2
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/stories/cities-slash-sludge-costs-and-co2",
+        "count": 2,
+        "assistants": {
+          "perplexity": 2
+        },
+        "questions": [
+          "O03"
+        ],
+        "measures": {
+          "inline_p1": 1,
+          "inline_p2": 1
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/stories/data-driven-water-treatment-for-energy-gains",
+        "count": 2,
+        "assistants": {
+          "perplexity": 2
+        },
+        "questions": [
+          "K05"
+        ],
+        "measures": {
+          "inline_p1": 1,
+          "inline_p2": 1
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/stories/digital-solutions-for-resource-efficiency-in-water-treatment",
+        "count": 2,
+        "assistants": {
+          "gemini": 1,
+          "perplexity": 1
+        },
+        "questions": [
+          "K04"
+        ],
+        "measures": {
+          "displayed_p2": 1,
+          "inline_p1": 1
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/stories/future-proofing-water-treatment-with-digital-technologies",
+        "count": 2,
+        "assistants": {
+          "perplexity": 2
+        },
+        "questions": [
+          "K05"
+        ],
+        "measures": {
+          "inline_p1": 1,
+          "inline_p2": 1
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/stories/sludge-treatment-great-opportunities-for-improvement",
+        "count": 2,
+        "assistants": {
+          "perplexity": 2
+        },
+        "questions": [
+          "O03"
+        ],
+        "measures": {
+          "inline_p1": 1,
+          "inline_p2": 1
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/sustainability-initiatives/our-approach",
+        "count": 2,
+        "assistants": {
+          "gemini": 1,
+          "perplexity": 1
+        },
+        "questions": [
+          "K06"
+        ],
+        "measures": {
+          "displayed_p2": 1,
+          "inline_p2": 1
+        },
+        "source_id": "S12"
+      },
+      {
+        "url": "https://www.kemira.com/water/raw-water-drinking-water",
+        "count": 2,
+        "assistants": {
+          "chatgpt": 2
+        },
+        "questions": [
+          "K04"
+        ],
+        "measures": {
+          "inline_p1": 1,
+          "inline_p2": 1
+        },
+        "source_id": "S08"
+      },
+      {
+        "url": "https://www.kemira.com/water/wastewater",
+        "count": 2,
+        "assistants": {
+          "chatgpt": 2
+        },
+        "questions": [
+          "K04"
+        ],
+        "measures": {
+          "inline_p1": 1,
+          "inline_p2": 1
+        },
+        "source_id": "S07"
+      },
+      {
+        "url": "https://www.kemira.com/app/uploads/2023/02/kemira-sustainability-report-2022.pdf",
+        "count": 1,
+        "assistants": {
+          "perplexity": 1
+        },
+        "questions": [
+          "K07"
+        ],
+        "measures": {
+          "inline_p2": 1
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/app/uploads/2024/02/kemira-ar-sustainability-report-2023.pdf",
+        "count": 1,
+        "assistants": {
+          "perplexity": 1
+        },
+        "questions": [
+          "K07"
+        ],
+        "measures": {
+          "inline_p1": 1
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/app/uploads/2026/04/kemira-oyj_-investor-presentation_april-2026.pdf",
+        "count": 1,
+        "assistants": {
+          "perplexity": 1
+        },
+        "questions": [
+          "K07"
+        ],
+        "measures": {
+          "inline_p1": 1
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/fi",
+        "count": 1,
+        "assistants": {
+          "gemini": 1
+        },
+        "questions": [
+          "K02"
+        ],
+        "measures": {
+          "displayed_p2": 1
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/fi/konserni",
+        "count": 1,
+        "assistants": {
+          "gemini": 1
+        },
+        "questions": [
+          "K02"
+        ],
+        "measures": {
+          "displayed_p2": 1
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/industrial-solutions",
+        "count": 1,
+        "assistants": {
+          "perplexity": 1
+        },
+        "questions": [
+          "K04"
+        ],
+        "measures": {
+          "inline_p2": 1
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/investors",
+        "count": 1,
+        "assistants": {
+          "perplexity": 1
+        },
+        "questions": [
+          "K01"
+        ],
+        "measures": {
+          "inline_p1": 1
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/investors/financial-information",
+        "count": 1,
+        "assistants": {
+          "chatgpt": 1
+        },
+        "questions": [
+          "K03"
+        ],
+        "measures": {
+          "inline_p1": 1
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/news-and-stories/newsroom/news/kemira-achieves-a-gold-rating-in-the-ecovadis-sustainability-assessment",
+        "count": 1,
+        "assistants": {
+          "perplexity": 1
+        },
+        "questions": [
+          "K07"
+        ],
+        "measures": {
+          "inline_p2": 1
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/stories/ensuring-uninterrupted-water-treatment-is-paramount",
+        "count": 1,
+        "assistants": {
+          "gemini": 1
+        },
+        "questions": [
+          "K05"
+        ],
+        "measures": {
+          "displayed_p2": 1
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/sustainability-initiatives/environment",
+        "count": 1,
+        "assistants": {
+          "chatgpt": 1
+        },
+        "questions": [
+          "K07"
+        ],
+        "measures": {
+          "inline_p1": 1
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/sustainability-initiatives/resources-certificates-faq",
+        "count": 1,
+        "assistants": {
+          "perplexity": 1
+        },
+        "questions": [
+          "K07"
+        ],
+        "measures": {
+          "inline_p2": 1
+        },
+        "source_id": null
+      },
+      {
+        "url": "https://www.kemira.com/water/digital-services/sludge-dewatering",
+        "count": 1,
+        "assistants": {
+          "chatgpt": 1
+        },
+        "questions": [
+          "O03"
+        ],
+        "measures": {
+          "inline_p2": 1
+        },
+        "source_id": null
+      }
+    ],
+    "kemira_pages_in_sources_yaml": 11,
+    "kemira_pages_outside_sources_yaml": 25
+  },
+  "share_of_voice": {
+    "rules": "peers.yaml counting rules plus the conventions in data/sov_input.yaml; position is order of first mention in the answer body.",
+    "kemira_summary": {
+      "named_in": 18,
+      "of_answers": 18,
+      "named_first": 16,
+      "not_first": [
+        {
+          "answer": "O02_gemini_p2",
+          "position": 2,
+          "first_named": "SNF"
+        },
+        {
+          "answer": "O03_gemini_p2",
+          "position": 2,
+          "first_named": "SNF"
+        }
+      ]
+    },
+    "kemira_presence": [
+      {
+        "question_id": "O01",
+        "assistant": "perplexity",
+        "pass_1": {
+          "named": true,
+          "position": 1,
+          "of": 12,
+          "first_named": "Kemira"
+        },
+        "pass_2": {
+          "named": true,
+          "position": 1,
+          "of": 18,
+          "first_named": "Kemira"
+        },
+        "position_stability": "same"
+      },
+      {
+        "question_id": "O01",
+        "assistant": "chatgpt",
+        "pass_1": {
+          "named": true,
+          "position": 1,
+          "of": 12,
+          "first_named": "Kemira"
+        },
+        "pass_2": {
+          "named": true,
+          "position": 1,
+          "of": 12,
+          "first_named": "Kemira"
+        },
+        "position_stability": "same"
+      },
+      {
+        "question_id": "O01",
+        "assistant": "gemini",
+        "pass_1": {
+          "named": true,
+          "position": 1,
+          "of": 7,
+          "first_named": "Kemira"
+        },
+        "pass_2": {
+          "named": true,
+          "position": 1,
+          "of": 8,
+          "first_named": "Kemira"
+        },
+        "position_stability": "same"
+      },
+      {
+        "question_id": "O02",
+        "assistant": "perplexity",
+        "pass_1": {
+          "named": true,
+          "position": 1,
+          "of": 19,
+          "first_named": "Kemira"
+        },
+        "pass_2": {
+          "named": true,
+          "position": 1,
+          "of": 14,
+          "first_named": "Kemira"
+        },
+        "position_stability": "same"
+      },
+      {
+        "question_id": "O02",
+        "assistant": "chatgpt",
+        "pass_1": {
+          "named": true,
+          "position": 1,
+          "of": 10,
+          "first_named": "Kemira"
+        },
+        "pass_2": {
+          "named": true,
+          "position": 1,
+          "of": 10,
+          "first_named": "Kemira"
+        },
+        "position_stability": "same"
+      },
+      {
+        "question_id": "O02",
+        "assistant": "gemini",
+        "pass_1": {
+          "named": true,
+          "position": 1,
+          "of": 7,
+          "first_named": "Kemira"
+        },
+        "pass_2": {
+          "named": true,
+          "position": 2,
+          "of": 10,
+          "first_named": "SNF"
+        },
+        "position_stability": "changed 1->2"
+      },
+      {
+        "question_id": "O03",
+        "assistant": "perplexity",
+        "pass_1": {
+          "named": true,
+          "position": 1,
+          "of": 6,
+          "first_named": "Kemira"
+        },
+        "pass_2": {
+          "named": true,
+          "position": 1,
+          "of": 7,
+          "first_named": "Kemira"
+        },
+        "position_stability": "same"
+      },
+      {
+        "question_id": "O03",
+        "assistant": "chatgpt",
+        "pass_1": {
+          "named": true,
+          "position": 1,
+          "of": 5,
+          "first_named": "Kemira"
+        },
+        "pass_2": {
+          "named": true,
+          "position": 1,
+          "of": 5,
+          "first_named": "Kemira"
+        },
+        "position_stability": "same"
+      },
+      {
+        "question_id": "O03",
+        "assistant": "gemini",
+        "pass_1": {
+          "named": true,
+          "position": 1,
+          "of": 7,
+          "first_named": "Kemira"
+        },
+        "pass_2": {
+          "named": true,
+          "position": 2,
+          "of": 6,
+          "first_named": "SNF"
+        },
+        "position_stability": "changed 1->2"
+      }
+    ],
+    "comparators": [
+      {
+        "company": "Kemira",
+        "answers_named": 18,
+        "of_answers": 18,
+        "named_first": 16,
+        "mean_position": 1.11,
+        "by_assistant": {
+          "perplexity": 6,
+          "chatgpt": 6,
+          "gemini": 6
+        },
+        "by_question": {
+          "O01": 6,
+          "O02": 6,
+          "O03": 6
+        },
+        "status": "kemira"
+      },
+      {
+        "company": "SNF",
+        "answers_named": 18,
+        "of_answers": 18,
+        "named_first": 2,
+        "mean_position": 3.0,
+        "by_assistant": {
+          "perplexity": 6,
+          "chatgpt": 6,
+          "gemini": 6
+        },
+        "by_question": {
+          "O01": 6,
+          "O02": 6,
+          "O03": 6
+        },
+        "status": "comparator"
+      },
+      {
+        "company": "Solenis",
+        "answers_named": 16,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 3.25,
+        "by_assistant": {
+          "perplexity": 6,
+          "chatgpt": 5,
+          "gemini": 5
+        },
+        "by_question": {
+          "O01": 6,
+          "O02": 6,
+          "O03": 4
+        },
+        "status": "comparator"
+      },
+      {
+        "company": "Ecolab",
+        "answers_named": 13,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 3.62,
+        "by_assistant": {
+          "perplexity": 4,
+          "chatgpt": 5,
+          "gemini": 4
+        },
+        "by_question": {
+          "O01": 6,
+          "O02": 6,
+          "O03": 1
+        },
+        "status": "comparator"
+      }
+    ],
+    "companies": [
+      {
+        "company": "Kemira",
+        "answers_named": 18,
+        "of_answers": 18,
+        "named_first": 16,
+        "mean_position": 1.11,
+        "by_assistant": {
+          "perplexity": 6,
+          "chatgpt": 6,
+          "gemini": 6
+        },
+        "by_question": {
+          "O01": 6,
+          "O02": 6,
+          "O03": 6
+        },
+        "status": "kemira"
+      },
+      {
+        "company": "SNF",
+        "answers_named": 18,
+        "of_answers": 18,
+        "named_first": 2,
+        "mean_position": 3.0,
+        "by_assistant": {
+          "perplexity": 6,
+          "chatgpt": 6,
+          "gemini": 6
+        },
+        "by_question": {
+          "O01": 6,
+          "O02": 6,
+          "O03": 6
+        },
+        "status": "comparator"
+      },
+      {
+        "company": "Solenis",
+        "answers_named": 16,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 3.25,
+        "by_assistant": {
+          "perplexity": 6,
+          "chatgpt": 5,
+          "gemini": 5
+        },
+        "by_question": {
+          "O01": 6,
+          "O02": 6,
+          "O03": 4
+        },
+        "status": "comparator"
+      },
+      {
+        "company": "Ecolab",
+        "answers_named": 13,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 3.62,
+        "by_assistant": {
+          "perplexity": 4,
+          "chatgpt": 5,
+          "gemini": 4
+        },
+        "by_question": {
+          "O01": 6,
+          "O02": 6,
+          "O03": 1
+        },
+        "status": "comparator"
+      },
+      {
+        "company": "Veolia",
+        "answers_named": 13,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 5.08,
+        "by_assistant": {
+          "perplexity": 6,
+          "chatgpt": 4,
+          "gemini": 3
+        },
+        "by_question": {
+          "O01": 6,
+          "O02": 4,
+          "O03": 3
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "BASF",
+        "answers_named": 12,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 6.25,
+        "by_assistant": {
+          "perplexity": 6,
+          "chatgpt": 4,
+          "gemini": 2
+        },
+        "by_question": {
+          "O01": 4,
+          "O02": 5,
+          "O03": 3
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Kurita",
+        "answers_named": 10,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 6.9,
+        "by_assistant": {
+          "perplexity": 4,
+          "chatgpt": 4,
+          "gemini": 2
+        },
+        "by_question": {
+          "O01": 6,
+          "O02": 4
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Feralco",
+        "answers_named": 8,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 7.25,
+        "by_assistant": {
+          "perplexity": 3,
+          "chatgpt": 5
+        },
+        "by_question": {
+          "O01": 3,
+          "O02": 4,
+          "O03": 1
+        },
+        "status": "listed"
+      },
+      {
+        "company": "Separ Chemie",
+        "answers_named": 5,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 8.4,
+        "by_assistant": {
+          "perplexity": 3,
+          "chatgpt": 1,
+          "gemini": 1
+        },
+        "by_question": {
+          "O02": 1,
+          "O03": 4
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Univar Solutions",
+        "answers_named": 5,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 8.6,
+        "by_assistant": {
+          "chatgpt": 1,
+          "gemini": 4
+        },
+        "by_question": {
+          "O01": 3,
+          "O02": 2
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "SUEZ",
+        "answers_named": 4,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 5.5,
+        "by_assistant": {
+          "perplexity": 4
+        },
+        "by_question": {
+          "O01": 2,
+          "O02": 2
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Solvay",
+        "answers_named": 4,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 8.5,
+        "by_assistant": {
+          "perplexity": 2,
+          "chatgpt": 1,
+          "gemini": 1
+        },
+        "by_question": {
+          "O01": 3,
+          "O03": 1
+        },
+        "status": "listed"
+      },
+      {
+        "company": "USALCO",
+        "answers_named": 4,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 8.5,
+        "by_assistant": {
+          "perplexity": 2,
+          "chatgpt": 2
+        },
+        "by_question": {
+          "O02": 4
+        },
+        "status": "listed"
+      },
+      {
+        "company": "Brenntag",
+        "answers_named": 4,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 9.25,
+        "by_assistant": {
+          "perplexity": 1,
+          "chatgpt": 2,
+          "gemini": 1
+        },
+        "by_question": {
+          "O01": 3,
+          "O02": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Buckman",
+        "answers_named": 4,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 13.5,
+        "by_assistant": {
+          "perplexity": 3,
+          "chatgpt": 1
+        },
+        "by_question": {
+          "O01": 3,
+          "O02": 1
+        },
+        "status": "listed"
+      },
+      {
+        "company": "Derypol",
+        "answers_named": 3,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 5.0,
+        "by_assistant": {
+          "gemini": 3
+        },
+        "by_question": {
+          "O02": 1,
+          "O03": 2
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Nouryon",
+        "answers_named": 3,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 8.67,
+        "by_assistant": {
+          "perplexity": 2,
+          "chatgpt": 1
+        },
+        "by_question": {
+          "O01": 3
+        },
+        "status": "listed"
+      },
+      {
+        "company": "Chemtrade",
+        "answers_named": 3,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 10.0,
+        "by_assistant": {
+          "perplexity": 2,
+          "chatgpt": 1
+        },
+        "by_question": {
+          "O02": 3
+        },
+        "status": "listed"
+      },
+      {
+        "company": "Nijhuis Saur Industries",
+        "answers_named": 2,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 6.5,
+        "by_assistant": {
+          "gemini": 2
+        },
+        "by_question": {
+          "O03": 2
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Chemifloc",
+        "answers_named": 2,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 7.0,
+        "by_assistant": {
+          "chatgpt": 2
+        },
+        "by_question": {
+          "O02": 1,
+          "O03": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Kuhlmann Europe",
+        "answers_named": 2,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 7.5,
+        "by_assistant": {
+          "chatgpt": 1,
+          "gemini": 1
+        },
+        "by_question": {
+          "O01": 2
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Italmatch",
+        "answers_named": 2,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 12.0,
+        "by_assistant": {
+          "perplexity": 2
+        },
+        "by_question": {
+          "O01": 2
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "GEO Specialty Chemicals",
+        "answers_named": 2,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 12.0,
+        "by_assistant": {
+          "perplexity": 2
+        },
+        "by_question": {
+          "O02": 2
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Aries Chemical",
+        "answers_named": 2,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 13.0,
+        "by_assistant": {
+          "perplexity": 2
+        },
+        "by_question": {
+          "O02": 2
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Hawkins",
+        "answers_named": 2,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 14.0,
+        "by_assistant": {
+          "perplexity": 2
+        },
+        "by_question": {
+          "O02": 2
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Orege",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 5.0,
+        "by_assistant": {
+          "gemini": 1
+        },
+        "by_question": {
+          "O03": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Kronos",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 7.0,
+        "by_assistant": {
+          "chatgpt": 1
+        },
+        "by_question": {
+          "O02": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "ACAT",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 7.0,
+        "by_assistant": {
+          "gemini": 1
+        },
+        "by_question": {
+          "O02": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "EnviroChemie",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 7.0,
+        "by_assistant": {
+          "perplexity": 1
+        },
+        "by_question": {
+          "O03": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Enva",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 8.0,
+        "by_assistant": {
+          "gemini": 1
+        },
+        "by_question": {
+          "O02": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Alumichem",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 9.0,
+        "by_assistant": {
+          "gemini": 1
+        },
+        "by_question": {
+          "O02": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Venator",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 10.0,
+        "by_assistant": {
+          "chatgpt": 1
+        },
+        "by_question": {
+          "O01": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "LANXESS",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 12.0,
+        "by_assistant": {
+          "perplexity": 1
+        },
+        "by_question": {
+          "O01": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Arkema",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 14.0,
+        "by_assistant": {
+          "perplexity": 1
+        },
+        "by_question": {
+          "O01": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Dow",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 15.0,
+        "by_assistant": {
+          "perplexity": 1
+        },
+        "by_question": {
+          "O01": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "IXOM",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 16.0,
+        "by_assistant": {
+          "perplexity": 1
+        },
+        "by_question": {
+          "O02": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Accepta",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 17.0,
+        "by_assistant": {
+          "perplexity": 1
+        },
+        "by_question": {
+          "O02": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Aqualia",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 18.0,
+        "by_assistant": {
+          "perplexity": 1
+        },
+        "by_question": {
+          "O01": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Gulbrandsen",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 18.0,
+        "by_assistant": {
+          "perplexity": 1
+        },
+        "by_question": {
+          "O02": 1
+        },
+        "status": "unlisted"
+      }
+    ],
+    "unlisted": [
+      {
+        "company": "Veolia",
+        "answers_named": 13,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 5.08,
+        "by_assistant": {
+          "perplexity": 6,
+          "chatgpt": 4,
+          "gemini": 3
+        },
+        "by_question": {
+          "O01": 6,
+          "O02": 4,
+          "O03": 3
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "BASF",
+        "answers_named": 12,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 6.25,
+        "by_assistant": {
+          "perplexity": 6,
+          "chatgpt": 4,
+          "gemini": 2
+        },
+        "by_question": {
+          "O01": 4,
+          "O02": 5,
+          "O03": 3
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Kurita",
+        "answers_named": 10,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 6.9,
+        "by_assistant": {
+          "perplexity": 4,
+          "chatgpt": 4,
+          "gemini": 2
+        },
+        "by_question": {
+          "O01": 6,
+          "O02": 4
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Separ Chemie",
+        "answers_named": 5,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 8.4,
+        "by_assistant": {
+          "perplexity": 3,
+          "chatgpt": 1,
+          "gemini": 1
+        },
+        "by_question": {
+          "O02": 1,
+          "O03": 4
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Univar Solutions",
+        "answers_named": 5,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 8.6,
+        "by_assistant": {
+          "chatgpt": 1,
+          "gemini": 4
+        },
+        "by_question": {
+          "O01": 3,
+          "O02": 2
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "SUEZ",
+        "answers_named": 4,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 5.5,
+        "by_assistant": {
+          "perplexity": 4
+        },
+        "by_question": {
+          "O01": 2,
+          "O02": 2
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Brenntag",
+        "answers_named": 4,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 9.25,
+        "by_assistant": {
+          "perplexity": 1,
+          "chatgpt": 2,
+          "gemini": 1
+        },
+        "by_question": {
+          "O01": 3,
+          "O02": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Derypol",
+        "answers_named": 3,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 5.0,
+        "by_assistant": {
+          "gemini": 3
+        },
+        "by_question": {
+          "O02": 1,
+          "O03": 2
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Nijhuis Saur Industries",
+        "answers_named": 2,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 6.5,
+        "by_assistant": {
+          "gemini": 2
+        },
+        "by_question": {
+          "O03": 2
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Chemifloc",
+        "answers_named": 2,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 7.0,
+        "by_assistant": {
+          "chatgpt": 2
+        },
+        "by_question": {
+          "O02": 1,
+          "O03": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Kuhlmann Europe",
+        "answers_named": 2,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 7.5,
+        "by_assistant": {
+          "chatgpt": 1,
+          "gemini": 1
+        },
+        "by_question": {
+          "O01": 2
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Italmatch",
+        "answers_named": 2,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 12.0,
+        "by_assistant": {
+          "perplexity": 2
+        },
+        "by_question": {
+          "O01": 2
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "GEO Specialty Chemicals",
+        "answers_named": 2,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 12.0,
+        "by_assistant": {
+          "perplexity": 2
+        },
+        "by_question": {
+          "O02": 2
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Aries Chemical",
+        "answers_named": 2,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 13.0,
+        "by_assistant": {
+          "perplexity": 2
+        },
+        "by_question": {
+          "O02": 2
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Hawkins",
+        "answers_named": 2,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 14.0,
+        "by_assistant": {
+          "perplexity": 2
+        },
+        "by_question": {
+          "O02": 2
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Orege",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 5.0,
+        "by_assistant": {
+          "gemini": 1
+        },
+        "by_question": {
+          "O03": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Kronos",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 7.0,
+        "by_assistant": {
+          "chatgpt": 1
+        },
+        "by_question": {
+          "O02": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "ACAT",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 7.0,
+        "by_assistant": {
+          "gemini": 1
+        },
+        "by_question": {
+          "O02": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "EnviroChemie",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 7.0,
+        "by_assistant": {
+          "perplexity": 1
+        },
+        "by_question": {
+          "O03": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Enva",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 8.0,
+        "by_assistant": {
+          "gemini": 1
+        },
+        "by_question": {
+          "O02": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Alumichem",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 9.0,
+        "by_assistant": {
+          "gemini": 1
+        },
+        "by_question": {
+          "O02": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Venator",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 10.0,
+        "by_assistant": {
+          "chatgpt": 1
+        },
+        "by_question": {
+          "O01": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "LANXESS",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 12.0,
+        "by_assistant": {
+          "perplexity": 1
+        },
+        "by_question": {
+          "O01": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Arkema",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 14.0,
+        "by_assistant": {
+          "perplexity": 1
+        },
+        "by_question": {
+          "O01": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Dow",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 15.0,
+        "by_assistant": {
+          "perplexity": 1
+        },
+        "by_question": {
+          "O01": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "IXOM",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 16.0,
+        "by_assistant": {
+          "perplexity": 1
+        },
+        "by_question": {
+          "O02": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Accepta",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 17.0,
+        "by_assistant": {
+          "perplexity": 1
+        },
+        "by_question": {
+          "O02": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Aqualia",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 18.0,
+        "by_assistant": {
+          "perplexity": 1
+        },
+        "by_question": {
+          "O01": 1
+        },
+        "status": "unlisted"
+      },
+      {
+        "company": "Gulbrandsen",
+        "answers_named": 1,
+        "of_answers": 18,
+        "named_first": 0,
+        "mean_position": 18.0,
+        "by_assistant": {
+          "perplexity": 1
+        },
+        "by_question": {
+          "O02": 1
+        },
+        "status": "unlisted"
+      }
+    ],
+    "answers": [
+      {
+        "answer": "O01_perplexity_p1",
+        "question_id": "O01",
+        "assistant": "perplexity",
+        "pass": 1,
+        "suppliers": [
+          "Kemira",
+          "Ecolab",
+          "Solenis",
+          "Veolia",
+          "SUEZ",
+          "SNF",
+          "BASF",
+          "Nouryon",
+          "Solvay",
+          "Kurita",
+          "Italmatch",
+          "Buckman"
+        ],
+        "of": 12,
+        "kemira": {
+          "named": true,
+          "position": 1
+        },
+        "first_named": "Kemira",
+        "excluded": {},
+        "notes": null
+      },
+      {
+        "answer": "O01_perplexity_p2",
+        "question_id": "O01",
+        "assistant": "perplexity",
+        "pass": 2,
+        "suppliers": [
+          "Kemira",
+          "Ecolab",
+          "Solenis",
+          "Veolia",
+          "SUEZ",
+          "BASF",
+          "SNF",
+          "Kurita",
+          "Nouryon",
+          "Solvay",
+          "Brenntag",
+          "LANXESS",
+          "Italmatch",
+          "Arkema",
+          "Dow",
+          "Buckman",
+          "Feralco",
+          "Aqualia"
+        ],
+        "of": 18,
+        "kemira": {
+          "named": true,
+          "position": 1
+        },
+        "first_named": "Kemira",
+        "excluded": {},
+        "notes": null
+      },
+      {
+        "answer": "O01_chatgpt_p1",
+        "question_id": "O01",
+        "assistant": "chatgpt",
+        "pass": 1,
+        "suppliers": [
+          "Kemira",
+          "SNF",
+          "Feralco",
+          "Solenis",
+          "Ecolab",
+          "Kurita",
+          "Veolia",
+          "Kuhlmann Europe",
+          "BASF",
+          "Venator",
+          "Brenntag",
+          "Univar Solutions"
+        ],
+        "of": 12,
+        "kemira": {
+          "named": true,
+          "position": 1
+        },
+        "first_named": "Kemira",
+        "excluded": {},
+        "notes": "Image captions (e.g. 'Amrize - CCMPA') not counted."
+      },
+      {
+        "answer": "O01_chatgpt_p2",
+        "question_id": "O01",
+        "assistant": "chatgpt",
+        "pass": 2,
+        "suppliers": [
+          "Kemira",
+          "Solenis",
+          "Ecolab",
+          "SNF",
+          "Kurita",
+          "Veolia",
+          "Feralco",
+          "Brenntag",
+          "Nouryon",
+          "BASF",
+          "Buckman",
+          "Solvay"
+        ],
+        "of": 12,
+        "kemira": {
+          "named": true,
+          "position": 1
+        },
+        "first_named": "Kemira",
+        "excluded": {},
+        "notes": null
+      },
+      {
+        "answer": "O01_gemini_p1",
+        "question_id": "O01",
+        "assistant": "gemini",
+        "pass": 1,
+        "suppliers": [
+          "Kemira",
+          "Ecolab",
+          "Solenis",
+          "Kurita",
+          "Veolia",
+          "SNF",
+          "Univar Solutions"
+        ],
+        "of": 7,
+        "kemira": {
+          "named": true,
+          "position": 1
+        },
+        "first_named": "Kemira",
+        "excluded": {
+          "BASF": "named only as the former owner of portfolios Solenis absorbed"
+        },
+        "notes": null
+      },
+      {
+        "answer": "O01_gemini_p2",
+        "question_id": "O01",
+        "assistant": "gemini",
+        "pass": 2,
+        "suppliers": [
+          "Kemira",
+          "Ecolab",
+          "Solenis",
+          "Kurita",
+          "Veolia",
+          "SNF",
+          "Kuhlmann Europe",
+          "Univar Solutions"
+        ],
+        "of": 8,
+        "kemira": {
+          "named": true,
+          "position": 1
+        },
+        "first_named": "Kemira",
+        "excluded": {
+          "BASF": "named only as the source of assets Solenis acquired"
+        },
+        "notes": null
+      },
+      {
+        "answer": "O02_perplexity_p1",
+        "question_id": "O02",
+        "assistant": "perplexity",
+        "pass": 1,
+        "suppliers": [
+          "Kemira",
+          "SNF",
+          "Solenis",
+          "Ecolab",
+          "BASF",
+          "SUEZ",
+          "Veolia",
+          "Kurita",
+          "USALCO",
+          "Feralco",
+          "Chemtrade",
+          "GEO Specialty Chemicals",
+          "Aries Chemical",
+          "Hawkins",
+          "Buckman",
+          "IXOM",
+          "Accepta",
+          "Gulbrandsen",
+          "Separ Chemie"
+        ],
+        "of": 19,
+        "kemira": {
+          "named": true,
+          "position": 1
+        },
+        "first_named": "Kemira",
+        "excluded": {},
+        "notes": null
+      },
+      {
+        "answer": "O02_perplexity_p2",
+        "question_id": "O02",
+        "assistant": "perplexity",
+        "pass": 2,
+        "suppliers": [
+          "Kemira",
+          "SNF",
+          "Solenis",
+          "BASF",
+          "Ecolab",
+          "SUEZ",
+          "Veolia",
+          "Kurita",
+          "Feralco",
+          "USALCO",
+          "Chemtrade",
+          "GEO Specialty Chemicals",
+          "Aries Chemical",
+          "Hawkins"
+        ],
+        "of": 14,
+        "kemira": {
+          "named": true,
+          "position": 1
+        },
+        "first_named": "Kemira",
+        "excluded": {},
+        "notes": null
+      },
+      {
+        "answer": "O02_chatgpt_p1",
+        "question_id": "O02",
+        "assistant": "chatgpt",
+        "pass": 1,
+        "suppliers": [
+          "Kemira",
+          "SNF",
+          "Solenis",
+          "Feralco",
+          "Ecolab",
+          "USALCO",
+          "Kronos",
+          "Chemtrade",
+          "Kurita",
+          "BASF"
+        ],
+        "of": 10,
+        "kemira": {
+          "named": true,
+          "position": 1
+        },
+        "first_named": "Kemira",
+        "excluded": {},
+        "notes": "BASF first appears in an image caption ('BASF, CD&R sell Solenis ...'), not counted; counted from the 'Other suppliers' table. Kemira's first mention is also a caption; body position is 1."
+      },
+      {
+        "answer": "O02_chatgpt_p2",
+        "question_id": "O02",
+        "assistant": "chatgpt",
+        "pass": 2,
+        "suppliers": [
+          "Kemira",
+          "SNF",
+          "Feralco",
+          "Solenis",
+          "Ecolab",
+          "Veolia",
+          "Kurita",
+          "BASF",
+          "USALCO",
+          "Chemifloc"
+        ],
+        "of": 10,
+        "kemira": {
+          "named": true,
+          "position": 1
+        },
+        "first_named": "Kemira",
+        "excluded": {},
+        "notes": null
+      },
+      {
+        "answer": "O02_gemini_p1",
+        "question_id": "O02",
+        "assistant": "gemini",
+        "pass": 1,
+        "suppliers": [
+          "Kemira",
+          "Solenis",
+          "SNF",
+          "Veolia",
+          "Ecolab",
+          "Univar Solutions",
+          "Brenntag"
+        ],
+        "of": 7,
+        "kemira": {
+          "named": true,
+          "position": 1
+        },
+        "first_named": "Kemira",
+        "excluded": {
+          "SUEZ": "named as a legacy portfolio within Veolia's heading (former name)"
+        },
+        "notes": null
+      },
+      {
+        "answer": "O02_gemini_p2",
+        "question_id": "O02",
+        "assistant": "gemini",
+        "pass": 2,
+        "suppliers": [
+          "SNF",
+          "Kemira",
+          "Solenis",
+          "Ecolab",
+          "BASF",
+          "Derypol",
+          "ACAT",
+          "Enva",
+          "Alumichem",
+          "Univar Solutions"
+        ],
+        "of": 10,
+        "kemira": {
+          "named": true,
+          "position": 2
+        },
+        "first_named": "SNF",
+        "excluded": {},
+        "notes": null
+      },
+      {
+        "answer": "O03_perplexity_p1",
+        "question_id": "O03",
+        "assistant": "perplexity",
+        "pass": 1,
+        "suppliers": [
+          "Kemira",
+          "SNF",
+          "Solenis",
+          "BASF",
+          "Veolia",
+          "Separ Chemie"
+        ],
+        "of": 6,
+        "kemira": {
+          "named": true,
+          "position": 1
+        },
+        "first_named": "Kemira",
+        "excluded": {},
+        "notes": null
+      },
+      {
+        "answer": "O03_perplexity_p2",
+        "question_id": "O03",
+        "assistant": "perplexity",
+        "pass": 2,
+        "suppliers": [
+          "Kemira",
+          "SNF",
+          "Veolia",
+          "BASF",
+          "Solenis",
+          "Separ Chemie",
+          "EnviroChemie"
+        ],
+        "of": 7,
+        "kemira": {
+          "named": true,
+          "position": 1
+        },
+        "first_named": "Kemira",
+        "excluded": {},
+        "notes": null
+      },
+      {
+        "answer": "O03_chatgpt_p1",
+        "question_id": "O03",
+        "assistant": "chatgpt",
+        "pass": 1,
+        "suppliers": [
+          "Kemira",
+          "SNF",
+          "Veolia",
+          "Chemifloc",
+          "Separ Chemie"
+        ],
+        "of": 5,
+        "kemira": {
+          "named": true,
+          "position": 1
+        },
+        "first_named": "Kemira",
+        "excluded": {},
+        "notes": "Image captions (product images for Kemira and SNF) not counted."
+      },
+      {
+        "answer": "O03_chatgpt_p2",
+        "question_id": "O03",
+        "assistant": "chatgpt",
+        "pass": 2,
+        "suppliers": [
+          "Kemira",
+          "SNF",
+          "Ecolab",
+          "Solenis",
+          "Feralco"
+        ],
+        "of": 5,
+        "kemira": {
+          "named": true,
+          "position": 1
+        },
+        "first_named": "Kemira",
+        "excluded": {},
+        "notes": null
+      },
+      {
+        "answer": "O03_gemini_p1",
+        "question_id": "O03",
+        "assistant": "gemini",
+        "pass": 1,
+        "suppliers": [
+          "Kemira",
+          "SNF",
+          "Solvay",
+          "Solenis",
+          "Derypol",
+          "Separ Chemie",
+          "Nijhuis Saur Industries"
+        ],
+        "of": 7,
+        "kemira": {
+          "named": true,
+          "position": 1
+        },
+        "first_named": "Kemira",
+        "excluded": {
+          "BASF": "'BASF / Solenis' entry describes Solenis building on legacy BASF water solutions (former owner)"
+        },
+        "notes": "'Solvay / Syensqo' counted once, as Solvay."
+      },
+      {
+        "answer": "O03_gemini_p2",
+        "question_id": "O03",
+        "assistant": "gemini",
+        "pass": 2,
+        "suppliers": [
+          "SNF",
+          "Kemira",
+          "BASF",
+          "Derypol",
+          "Orege",
+          "Nijhuis Saur Industries"
+        ],
+        "of": 6,
+        "kemira": {
+          "named": true,
+          "position": 2
+        },
+        "first_named": "SNF",
+        "excluded": {},
+        "notes": "'SNF Floerger / local subsidiaries' is a second SNF entry, counted once."
+      }
+    ]
+  },
+  "verdicts_by_frequency": {
+    "tiers": {
+      "1_all_three_both_passes": {
+        "claims": 30,
+        "instances": 332,
+        "verdicts": {
+          "supported": 26,
+          "source_conflict": 3,
+          "unverified": 1
+        },
+        "supported_share": 0.867,
+        "verdicts_by_instance": {
+          "supported": 308,
+          "source_conflict": 19,
+          "unverified": 5
+        }
+      },
+      "2_two_or_three_assistants": {
+        "claims": 31,
+        "instances": 132,
+        "verdicts": {
+          "supported": 25,
+          "unverified": 4,
+          "source_conflict": 2
+        },
+        "supported_share": 0.806,
+        "verdicts_by_instance": {
+          "supported": 110,
+          "unverified": 18,
+          "source_conflict": 4
+        }
+      },
+      "3_one_assistant_repeated": {
+        "claims": 22,
+        "instances": 47,
+        "verdicts": {
+          "supported": 11,
+          "unverified": 9,
+          "source_conflict": 1,
+          "contradicted/assistant_wrong": 1
+        },
+        "supported_share": 0.5,
+        "verdicts_by_instance": {
+          "supported": 25,
+          "unverified": 18,
+          "source_conflict": 2,
+          "contradicted/assistant_wrong": 2
+        }
+      },
+      "4_singleton": {
+        "claims": 40,
+        "instances": 40,
+        "verdicts": {
+          "unverified": 20,
+          "supported": 16,
+          "source_conflict": 2,
+          "contradicted/assistant_wrong": 1,
+          "contradicted/source_unclear": 1
+        },
+        "supported_share": 0.4,
+        "verdicts_by_instance": {
+          "unverified": 20,
+          "supported": 16,
+          "source_conflict": 2,
+          "contradicted/assistant_wrong": 1,
+          "contradicted/source_unclear": 1
+        }
+      }
+    },
+    "all_claims": {
+      "supported": 78,
+      "unverified": 34,
+      "source_conflict": 8,
+      "contradicted/assistant_wrong": 2,
+      "contradicted/source_unclear": 1
+    },
+    "all_instances": {
+      "supported": 459,
+      "unverified": 61,
+      "source_conflict": 27,
+      "contradicted/assistant_wrong": 3,
+      "contradicted/source_unclear": 1
+    }
+  }
+}
