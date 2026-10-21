@@ -13,6 +13,13 @@ CLAUDE.md
 data/ground_truth/*/*
 !data/ground_truth/*/meta.json
 
+# Rendered snapshot files: derived from reports/geo_snapshot.md by
+# src/render_snapshot.py (PDF) and src/render_snapshot_docx.js (Word);
+# they go stale as soon as the snapshot regenerates, so are never committed.
+reports/geo_snapshot.pdf
+reports/geo_snapshot.docx
+reports/geo_snapshot.html
+
 # Python virtualenv and caches
 .venv/
 venv/

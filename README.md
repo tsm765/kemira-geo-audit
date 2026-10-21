@@ -145,7 +145,9 @@ data/verdicts.json        adjudication with evidence snippets
 data/tallies.json         cited domains, share-of-voice counts
 data/page_gaps.json       ranked page list
 
-reports/geo_snapshot.md   one-page summary
+reports/geo_snapshot.md   one-page summary, generated from the JSON by src/snapshot.py;
+                          renders to PDF (src/render_snapshot.py) and Word
+                          (src/render_snapshot_docx.js); neither rendered file is committed
 ```
 
 Every stage writes a committed file and can be rebuilt from the stage before it. The raw logs are never edited after commit — if the logs are sound, every downstream step is checkable independently of this code.
