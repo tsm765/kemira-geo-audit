@@ -133,12 +133,26 @@ def build():
             presence_rows.append(row)
     named_in = {(r["question_id"], r["assistant"], p): r[f"pass_{p}"]["named"] for r in presence_rows for p in PASSES}
 
-    # Order claims by first appearance, then number them.
+    # Order claims by first appearance. IDs are stable once published: a claim
+    # keeps the ID it had in the existing claims.json; a renamed claim inherits
+    # its old ID via `formerly: <old key>`; a new claim takes the next free number.
     order = []
     for inst in instances:
         if inst["claim_key"] not in order:
             order.append(inst["claim_key"])
-    ids = {key: f"C{n:03d}" for n, key in enumerate(order, start=1)}
+    previous = {}
+    if OUTPUT_FILE.exists():
+        previous = {c["claim_key"]: c["claim_id"] for c in json.loads(OUTPUT_FILE.read_text(encoding="utf-8"))["claims"]}
+    ids = {}
+    for key in order:
+        old = previous.get(key) or previous.get(claim_defs[key].get("formerly", ""))
+        if old and old not in ids.values():
+            ids[key] = old
+    next_n = max([int(i[1:]) for i in list(previous.values()) + list(ids.values())] or [0]) + 1
+    for key in order:
+        if key not in ids:
+            ids[key] = f"C{next_n:03d}"
+            next_n += 1
 
     claims = []
     for key in order:

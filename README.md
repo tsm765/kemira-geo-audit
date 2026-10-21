@@ -57,6 +57,9 @@ Each extracted claim is marked:
 | `supported` | Matches Kemira's published material |
 | `contradicted` | Conflicts with Kemira's published material |
 | `unverified` | Neither confirmed nor contradicted by available ground truth |
+| `source_conflict` | The claim matches part of Kemira’s published material and conflicts with another part of it. The ground truth cannot settle it because the sources disagree with each other. |
+
+`source_conflict` is the only verdict that cites two passages. The disagreement between them is the evidence, so both are quoted in full.
 
 **No model grades another model.** Verdicts are made against the ground truth store, and every verdict carries the evidence snippet it rests on, so a reader who doesn't trust this code can check the judgment directly.
 
@@ -66,7 +69,9 @@ Contradictions carry a second field distinguishing **`assistant_wrong`** (the pu
 
 _[N]_ of _[N]_ claims (_[N]%_) resolved to `unverified`.
 
-This bucket is reported rather than minimised. A large unverified share is itself informative: it means assistants are asserting things about Kemira that Kemira's own published material does not address, which is a content gap before it is an accuracy problem.
+`unverified` means the claim was not settled by the 22 captured sources. It is not a finding that the claim is wrong, and it is not a statement about anything Kemira publishes elsewhere. Two sub-reasons qualify it further where they can be told: `outside_ground_truth` (related material exists elsewhere on kemira.com but is not in the captured set, a limit of this audit) and `not_addressed` (Kemira's published material does not cover it, a content gap). Where neither can be told without looking beyond the captured set, the sub-reason is left unset.
+
+This bucket is reported rather than minimised. The ground truth set is fixed rather than extended when a claim does not resolve, for two reasons: a fixed set is what makes the unverified count meaningful, and a fact that lives only outside the captured set is itself a GEO-relevant observation about discoverability.
 
 ---
 

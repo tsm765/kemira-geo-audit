@@ -245,6 +245,37 @@
         "K07"
       ],
       "page_gap": null
+    },
+    {
+      "id": "SF08",
+      "observed_at": "2026-10-20",
+      "observed_in": "ground_truth_capture",
+      "theme": "entity_consistency",
+      "category": "inconsistent_qualification",
+      "summary": "The 2025 annual report states the carbon-neutrality ambition with its scope in some places and without it in another: pp.94 and 96 give carbon neutrality by 2045 for Scope 1 and 2 emissions, while p.161 states 'Kemira's ambition is to be carbon neutral by 2045' with no scope. Chart labels on pp.22 and 94 that pair 'Scope 1, 2 and 3' with 'carbon neutrality' are in the PDF text layer, but as labels rather than a sentence.",
+      "implication": "The same document gives a reader the ambition both with and without its scope qualifier. Gemini's 'carbon neutrality overall' (K06, pass 2) is consistent with a reading of the unqualified sentence; this is a possibility the data is consistent with, not an established mechanism.",
+      "evidence": [
+        {
+          "source_id": "S17",
+          "detail": "Annual report 2025 p.94 and p.96: carbon neutrality by 2045 for combined Scope 1 and 2 emissions."
+        },
+        {
+          "source_id": "S17",
+          "detail": "Annual report 2025 p.161: 'Kemira's ambition is to be carbon neutral by 2045.' (no scope)."
+        },
+        {
+          "source_id": "S17",
+          "detail": "Annual report 2025 p.22 and p.94: chart labels in the text layer pairing 'Scope 1, 2 and 3' with 'Carbon neutrality'."
+        }
+      ],
+      "scope_note": "An observation about statement structure in the captured document, not about the accuracy of Kemira's reporting. The content is not image-locked: the chart labels are machine-readable text, but they carry no sentence linking scope to target.",
+      "affects_sources": [
+        "S17"
+      ],
+      "affects_questions": [
+        "K06"
+      ],
+      "page_gap": null
     }
   ]
 }

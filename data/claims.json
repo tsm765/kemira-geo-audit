@@ -4,7 +4,7 @@
   "source": "data/claims_input.yaml",
   "counts": {
     "instances": 551,
-    "claims": 118
+    "claims": 123
   },
   "instances": [
     {
@@ -867,8 +867,9 @@
       "quote": [
         "Kemira is largely a **business-to-business chemicals and solutions provider**: it does not sell directly to consumers"
       ],
-      "claim_key": "b2b_model",
-      "claim_id": "C024"
+      "claim_key": "no_direct_consumer_sales",
+      "note": "Split from b2b_model (2026-10-21): asserts the absolute 'does not sell directly to consumers'.",
+      "claim_id": "C120"
     },
     {
       "instance_id": "K02_perplexity_p2#01",
@@ -1259,8 +1260,9 @@
       "quote": [
         "Its customers are primarily other businesses, industrial facilities and municipal water utilities—not consumers buying products directly."
       ],
-      "claim_key": "b2b_model",
-      "claim_id": "C024"
+      "claim_key": "no_direct_consumer_sales",
+      "note": "Split from b2b_model (2026-10-21): asserts 'not consumers buying products directly'.",
+      "claim_id": "C120"
     },
     {
       "instance_id": "K02_chatgpt_p2#03",
@@ -2709,9 +2711,9 @@
       "quote": [
         "**Disinfection and pH Adjustment:**"
       ],
-      "claim_key": "water_chemical_portfolio",
-      "note": "Drinking-water disinfection and pH/alkalinity products folded into the portfolio claim.",
-      "claim_id": "C032"
+      "claim_key": "drinking_water_disinfection_conditioning",
+      "note": "Split from water_chemical_portfolio (2026-10-21): asserts only drinking-water disinfection and pH adjustment, not the full portfolio list.",
+      "claim_id": "C121"
     },
     {
       "instance_id": "K04_gemini_p1#05",
@@ -2831,9 +2833,9 @@
       "quote": [
         "**Disinfection and Conditioning:**"
       ],
-      "claim_key": "water_chemical_portfolio",
-      "note": "Drinking-water disinfection and conditioning folded into the portfolio claim.",
-      "claim_id": "C032"
+      "claim_key": "drinking_water_disinfection_conditioning",
+      "note": "Split from water_chemical_portfolio (2026-10-21): asserts only drinking-water disinfection and conditioning, not the full portfolio list.",
+      "claim_id": "C121"
     },
     {
       "instance_id": "K04_gemini_p2#04",
@@ -4157,9 +4159,9 @@
       "quote": [
         "Reduce greenhouse gas emissions by approximately 51–52% by 2030, against a 2018 baseline"
       ],
-      "claim_key": "target_scope12_2030",
-      "note": "States '51–52%' rather than 52%.",
-      "claim_id": "C062"
+      "claim_key": "target_scope12_range_51_52",
+      "note": "Split from target_scope12_2030 (2026-10-21): a range spanning Kemira's own conflicting published figures (51.23% and 52%), not either figure.",
+      "claim_id": "C122"
     },
     {
       "instance_id": "K06_chatgpt_p1#14",
@@ -4242,9 +4244,9 @@
       "quote": [
         "Inclusion Index above 25th percentile benchmark measure, as reported by Kemira"
       ],
-      "claim_key": "progress_dei_2025",
-      "note": "Different formulation from Perplexity's '25% in 2025'; grouped as the same 2025 D&I progress claim. S5 should check whether the two readings agree with the source.",
-      "claim_id": "C058"
+      "claim_key": "progress_inclusion_index_25th",
+      "note": "Split from progress_dei_2025 (2026-10-21): a different assertion (an Inclusion Index percentile position), not the bare '25%' figure.",
+      "claim_id": "C123"
     },
     {
       "instance_id": "K06_chatgpt_p1#21",
@@ -4645,7 +4647,7 @@
       "quote": [
         "**Net-Zero Ambition:** Target to achieve carbon neutrality/net-zero."
       ],
-      "claim_key": "carbon_neutrality_ambition_overall",
+      "claim_key": "carbon_neutrality_ambition",
       "claim_id": "C081"
     },
     {
@@ -4794,8 +4796,9 @@
       "quote": [
         "**Net Zero Ambition:** Aiming to achieve carbon neutrality overall."
       ],
-      "claim_key": "carbon_neutrality_ambition_overall",
-      "claim_id": "C081"
+      "claim_key": "carbon_neutrality_overall",
+      "note": "Split from the vague p1 instance (2026-10-21): 'overall' asserts more than 'carbon neutrality/net-zero', so the two are separate claims.",
+      "claim_id": "C119"
     },
     {
       "instance_id": "K06_gemini_p2#09",
@@ -7698,18 +7701,17 @@
       "instability_cause": {}
     },
     {
-      "claim_id": "C024",
-      "claim_key": "b2b_model",
-      "statement": "Kemira is a business-to-business supplier; it does not sell directly to consumers",
+      "claim_id": "C120",
+      "claim_key": "no_direct_consumer_sales",
+      "statement": "Kemira does not sell directly to consumers",
       "topic": "business_model",
       "self_contradictory": null,
       "instance_ids": [
         "K02_perplexity_p1#11",
-        "K02_chatgpt_p1#03",
         "K02_chatgpt_p2#02"
       ],
       "frequency": {
-        "instances": 3,
+        "instances": 2,
         "assistants": [
           "perplexity",
           "chatgpt"
@@ -7724,11 +7726,42 @@
       },
       "stability": {
         "perplexity": "pass1_only",
-        "chatgpt": "both_passes",
+        "chatgpt": "pass2_only",
         "gemini": "absent"
       },
       "instability_cause": {
-        "perplexity": "claim"
+        "perplexity": "claim",
+        "chatgpt": "claim"
+      }
+    },
+    {
+      "claim_id": "C024",
+      "claim_key": "b2b_model",
+      "statement": "Kemira is primarily a business-to-business supplier (not consumer-facing)",
+      "topic": "business_model",
+      "self_contradictory": null,
+      "instance_ids": [
+        "K02_chatgpt_p1#03"
+      ],
+      "frequency": {
+        "instances": 1,
+        "assistants": [
+          "chatgpt"
+        ],
+        "passes": [
+          1
+        ],
+        "questions": [
+          "K02"
+        ]
+      },
+      "stability": {
+        "perplexity": "absent",
+        "chatgpt": "pass1_only",
+        "gemini": "absent"
+      },
+      "instability_cause": {
+        "chatgpt": "claim"
       }
     },
     {
@@ -7981,16 +8014,13 @@
         "K04_perplexity_p2#05",
         "K04_chatgpt_p1#12",
         "K04_chatgpt_p2#07",
-        "K04_gemini_p1#04",
-        "K04_gemini_p2#03",
         "O01_chatgpt_p2#04"
       ],
       "frequency": {
-        "instances": 7,
+        "instances": 5,
         "assistants": [
           "perplexity",
-          "chatgpt",
-          "gemini"
+          "chatgpt"
         ],
         "passes": [
           1,
@@ -8004,7 +8034,7 @@
       "stability": {
         "perplexity": "both_passes",
         "chatgpt": "both_passes",
-        "gemini": "both_passes"
+        "gemini": "absent"
       },
       "instability_cause": {}
     },
@@ -8308,6 +8338,36 @@
       "instability_cause": {
         "perplexity": "claim"
       }
+    },
+    {
+      "claim_id": "C121",
+      "claim_key": "drinking_water_disinfection_conditioning",
+      "statement": "Kemira offers drinking-water disinfection and pH/alkalinity conditioning solutions",
+      "topic": "water_products",
+      "self_contradictory": null,
+      "instance_ids": [
+        "K04_gemini_p1#04",
+        "K04_gemini_p2#03"
+      ],
+      "frequency": {
+        "instances": 2,
+        "assistants": [
+          "gemini"
+        ],
+        "passes": [
+          1,
+          2
+        ],
+        "questions": [
+          "K04"
+        ]
+      },
+      "stability": {
+        "perplexity": "absent",
+        "chatgpt": "absent",
+        "gemini": "both_passes"
+      },
+      "instability_cause": {}
     },
     {
       "claim_id": "C041",
@@ -8898,19 +8958,17 @@
     {
       "claim_id": "C058",
       "claim_key": "progress_dei_2025",
-      "statement": "Kemira's diversity & inclusion measure stood at about 25% (25th percentile) in 2025",
+      "statement": "Kemira's diversity & inclusion result was 25% in 2025",
       "topic": "target_progress",
       "self_contradictory": null,
       "instance_ids": [
         "K06_perplexity_p1#07",
-        "K06_perplexity_p2#08",
-        "K06_chatgpt_p1#20"
+        "K06_perplexity_p2#08"
       ],
       "frequency": {
-        "instances": 3,
+        "instances": 2,
         "assistants": [
-          "perplexity",
-          "chatgpt"
+          "perplexity"
         ],
         "passes": [
           1,
@@ -8922,12 +8980,10 @@
       },
       "stability": {
         "perplexity": "both_passes",
-        "chatgpt": "pass1_only",
+        "chatgpt": "absent",
         "gemini": "absent"
       },
-      "instability_cause": {
-        "chatgpt": "claim"
-      }
+      "instability_cause": {}
     },
     {
       "claim_id": "C059",
@@ -9040,14 +9096,13 @@
       "instance_ids": [
         "K06_perplexity_p1#11",
         "K06_perplexity_p2#12",
-        "K06_chatgpt_p1#13",
         "K06_chatgpt_p2#06",
         "K06_gemini_p1#08",
         "K06_gemini_p2#06",
         "K07_perplexity_p2#04"
       ],
       "frequency": {
-        "instances": 7,
+        "instances": 6,
         "assistants": [
           "perplexity",
           "chatgpt",
@@ -9064,10 +9119,12 @@
       },
       "stability": {
         "perplexity": "both_passes",
-        "chatgpt": "both_passes",
+        "chatgpt": "pass2_only",
         "gemini": "both_passes"
       },
-      "instability_cause": {}
+      "instability_cause": {
+        "chatgpt": "claim"
+      }
     },
     {
       "claim_id": "C063",
@@ -9528,6 +9585,66 @@
       }
     },
     {
+      "claim_id": "C122",
+      "claim_key": "target_scope12_range_51_52",
+      "statement": "Climate target - cut Scope 1 and 2 GHG emissions by approximately 51-52% by 2030 from a 2018 baseline (a range)",
+      "topic": "targets",
+      "self_contradictory": null,
+      "instance_ids": [
+        "K06_chatgpt_p1#13"
+      ],
+      "frequency": {
+        "instances": 1,
+        "assistants": [
+          "chatgpt"
+        ],
+        "passes": [
+          1
+        ],
+        "questions": [
+          "K06"
+        ]
+      },
+      "stability": {
+        "perplexity": "absent",
+        "chatgpt": "pass1_only",
+        "gemini": "absent"
+      },
+      "instability_cause": {
+        "chatgpt": "claim"
+      }
+    },
+    {
+      "claim_id": "C123",
+      "claim_key": "progress_inclusion_index_25th",
+      "statement": "In 2025 Kemira's Inclusion Index was above the 25th-percentile benchmark",
+      "topic": "target_progress",
+      "self_contradictory": null,
+      "instance_ids": [
+        "K06_chatgpt_p1#20"
+      ],
+      "frequency": {
+        "instances": 1,
+        "assistants": [
+          "chatgpt"
+        ],
+        "passes": [
+          1
+        ],
+        "questions": [
+          "K06"
+        ]
+      },
+      "stability": {
+        "perplexity": "absent",
+        "chatgpt": "pass1_only",
+        "gemini": "absent"
+      },
+      "instability_cause": {
+        "chatgpt": "claim"
+      }
+    },
+    {
       "claim_id": "C076",
       "claim_key": "strategy_three_priorities",
       "statement": "Kemira's strategy is to expand in water, build a renewable solutions portfolio and develop new growth platforms",
@@ -9695,22 +9812,20 @@
     },
     {
       "claim_id": "C081",
-      "claim_key": "carbon_neutrality_ambition_overall",
+      "claim_key": "carbon_neutrality_ambition",
       "statement": "Kemira aims for carbon neutrality / net zero (no scope or year stated)",
       "topic": "targets",
       "self_contradictory": null,
       "instance_ids": [
-        "K06_gemini_p1#10",
-        "K06_gemini_p2#08"
+        "K06_gemini_p1#10"
       ],
       "frequency": {
-        "instances": 2,
+        "instances": 1,
         "assistants": [
           "gemini"
         ],
         "passes": [
-          1,
-          2
+          1
         ],
         "questions": [
           "K06"
@@ -9719,9 +9834,11 @@
       "stability": {
         "perplexity": "absent",
         "chatgpt": "absent",
-        "gemini": "both_passes"
+        "gemini": "pass1_only"
       },
-      "instability_cause": {}
+      "instability_cause": {
+        "gemini": "claim"
+      }
     },
     {
       "claim_id": "C082",
@@ -9731,6 +9848,36 @@
       "self_contradictory": null,
       "instance_ids": [
         "K06_gemini_p2#04"
+      ],
+      "frequency": {
+        "instances": 1,
+        "assistants": [
+          "gemini"
+        ],
+        "passes": [
+          2
+        ],
+        "questions": [
+          "K06"
+        ]
+      },
+      "stability": {
+        "perplexity": "absent",
+        "chatgpt": "absent",
+        "gemini": "pass2_only"
+      },
+      "instability_cause": {
+        "gemini": "claim"
+      }
+    },
+    {
+      "claim_id": "C119",
+      "claim_key": "carbon_neutrality_overall",
+      "statement": "Kemira aims for carbon neutrality overall (all scopes, no year stated)",
+      "topic": "targets",
+      "self_contradictory": null,
+      "instance_ids": [
+        "K06_gemini_p2#08"
       ],
       "frequency": {
         "instances": 1,

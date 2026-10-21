@@ -652,8 +652,6 @@
         "K04_perplexity_p2#05",
         "K04_chatgpt_p1#12",
         "K04_chatgpt_p2#07",
-        "K04_gemini_p1#04",
-        "K04_gemini_p2#03",
         "O01_chatgpt_p2#04"
       ]
     },
@@ -686,7 +684,6 @@
       "instance_ids": [
         "K06_perplexity_p1#11",
         "K06_perplexity_p2#12",
-        "K06_chatgpt_p1#13",
         "K06_chatgpt_p2#06",
         "K06_gemini_p1#08",
         "K06_gemini_p2#06",
@@ -1509,29 +1506,6 @@
       ]
     },
     {
-      "claim_id": "C024",
-      "claim_key": "b2b_model",
-      "statement": "Kemira is a business-to-business supplier; it does not sell directly to consumers",
-      "verdict": "supported",
-      "contradiction_type": null,
-      "unverified_reason": null,
-      "evaluative": false,
-      "evidence": {
-        "source": "S01",
-        "file": "text.md",
-        "quote": "We operate globally and serve a wide range of customers including municipal and industrial water treatment companies and the fiber industry."
-      },
-      "conflicting_evidence": null,
-      "reason": "Supported as 'not consumer-facing': Kemira's stated customers are utilities and industrial companies. Overreach: the absolute 'does not sell directly to consumers' (strictly B2B) is a stronger claim than Kemira's material makes; the ground truth does not state it.",
-      "see_also": [],
-      "status": "revised",
-      "instance_ids": [
-        "K02_perplexity_p1#11",
-        "K02_chatgpt_p1#03",
-        "K02_chatgpt_p2#02"
-      ]
-    },
-    {
       "claim_id": "C038",
       "claim_key": "water_reuse_desalination",
       "statement": "Kemira supports water reuse and desalination, including reverse-osmosis/membrane pretreatment",
@@ -1578,31 +1552,6 @@
         "K05_perplexity_p2#02",
         "K05_chatgpt_p1#06",
         "K05_chatgpt_p2#07"
-      ]
-    },
-    {
-      "claim_id": "C058",
-      "claim_key": "progress_dei_2025",
-      "statement": "Kemira's diversity & inclusion measure stood at about 25% (25th percentile) in 2025",
-      "verdict": "supported",
-      "contradiction_type": null,
-      "unverified_reason": null,
-      "evaluative": false,
-      "evidence": {
-        "source": "S11",
-        "file": "text.md",
-        "quote": "Fostering inclusivity Reach top 10% cross-industry norm for Diversity & Inclusion by the end of 2026. 25% 10%"
-      },
-      "conflicting_evidence": null,
-      "reason": "The 2025 result column shows 25%. The page does not label what the 25% measures; the annual report puts it as 'slightly outside the top 25%'. ChatGPT's 'above 25th percentile' wording is an interpretation, not Kemira's phrasing.",
-      "see_also": [
-        "S17 p.56: 'Slightly outside the top 25%'"
-      ],
-      "status": "confirmed",
-      "instance_ids": [
-        "K06_perplexity_p1#07",
-        "K06_perplexity_p2#08",
-        "K06_chatgpt_p1#20"
       ]
     },
     {
@@ -1835,6 +1784,493 @@
       "instance_ids": [
         "K07_perplexity_p1#06",
         "K07_chatgpt_p2#10"
+      ]
+    },
+    {
+      "claim_id": "C033",
+      "claim_key": "kemconnect_dex_performic",
+      "statement": "KemConnect DEX is a chlorine-free, performic-acid-based wastewater disinfection solution",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 13,
+        "quote": "Kemira’s KemConnect® DEX is a chlorine-free, performic acid-based antimicrobial solution that combines sustainability and smart technology to deliver rapid, wastewater disinfection, earning recognition from the 2024 Paris Olympics and expanding to Europe and the U.S. for safe, efficient water treatment."
+      },
+      "conflicting_evidence": null,
+      "reason": "Chlorine-free, performic-acid-based wastewater disinfection.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K04_perplexity_p1#05",
+        "K04_perplexity_p2#09",
+        "K05_perplexity_p1#06",
+        "K05_perplexity_p2#08"
+      ]
+    },
+    {
+      "claim_id": "C041",
+      "claim_key": "chemical_pretreatment_energy",
+      "statement": "Kemira's chemical pre-treatment ahead of biological treatment speeds up treatment and cuts energy use (e.g. aeration energy)",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S07",
+        "file": "text.md",
+        "quote": "Chemicals can bring substantial energy-savings in the wastewater treatment process. Using coagulants in addition to or instead of biological methods can save up to 50% of aeration energy in organic (BOD) removal, and can double biogas production."
+      },
+      "conflicting_evidence": null,
+      "reason": "Chemical treatment alongside biological treatment saves aeration energy.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K04_gemini_p1#05",
+        "K05_gemini_p1#05",
+        "K05_gemini_p2#05"
+      ]
+    },
+    {
+      "claim_id": "C017",
+      "claim_key": "water_quality_quantity",
+      "statement": "Kemira focuses on water quality and quantity management",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S01",
+        "file": "text.md",
+        "quote": "Our solutions and services help secure clean water for millions of people every day and support our customers in advancing circularity and responsible resource use throughout their value chains."
+      },
+      "conflicting_evidence": null,
+      "reason": "Semantic match. The exact phrase does not appear, but the passage carries the same idea - securing clean water (quality) and responsible use of resources including water (quantity). A reader of the passage would recognise the claim as being about the same thing.",
+      "see_also": [
+        "S06: wastewater treatment and reuse; S08: desalination and water reuse where supply cannot meet demand"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K01_gemini_p1#03",
+        "K01_gemini_p2#04"
+      ]
+    },
+    {
+      "claim_id": "C018",
+      "claim_key": "oulu_site",
+      "statement": "Kemira has a major production plant, research centre and water technology competence centre in Oulu, Finland",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "Oulu is not mentioned anywhere in the ground truth set.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K01_gemini_p1#09",
+        "K01_gemini_p2#09"
+      ]
+    },
+    {
+      "claim_id": "C022",
+      "claim_key": "customer_concentration",
+      "statement": "Kemira has several thousand customers; the top 10 account for about 25% of revenue and the top 50 for about 50%",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "Customer count and concentration (top 10 / top 50 shares of revenue) are not stated in the ground truth set.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K02_perplexity_p1#08",
+        "K02_perplexity_p2#09"
+      ]
+    },
+    {
+      "claim_id": "C023",
+      "claim_key": "municipal_customer_cities",
+      "statement": "Kemira's municipal customers include cities such as Berlin, New York, Paris and Hamburg",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": "outside_ground_truth",
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 13,
+        "quote": "Berliner Wasserbetriebe, Germany’s largest water and wastewater utility, uses the solution to disinfect effluent before discharge into the River Spree."
+      },
+      "conflicting_evidence": null,
+      "reason": "Berlin is confirmed as a customer (and Paris appears through the 2024 Olympics DEX deployment), but New York and Hamburg are not mentioned in the captured set. Half of the named examples is material to the claim, so it stays unverified. Limitation note (human, from Kemira's February 2026 investor presentation, not in sources.yaml and not used as evidence) - that presentation lists Berlin, New York City, Paris and Hamburg among its urban water-treatment customer examples.",
+      "see_also": [
+        "S17 p.13: DEX used for the Seine during the 2024 Paris Olympics"
+      ],
+      "status": "revised",
+      "instance_ids": [
+        "K02_perplexity_p1#09",
+        "K02_perplexity_p2#10"
+      ]
+    },
+    {
+      "claim_id": "C025",
+      "claim_key": "segment_sales_split",
+      "statement": "Kemira's sales split roughly Water Solutions 45%, Packaging & Hygiene Solutions 35%, Fiber Essentials 20%",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 9,
+        "quote": "BUSINESS OPERATIONS WATER SOLUTIONS 45% PACKAGING & HYGIENE SOLUTIONS 35% FIBER ESSENTIALS 20%"
+      },
+      "conflicting_evidence": null,
+      "reason": "Split of 45% / 35% / 20%.",
+      "see_also": [
+        "S04 and S17 p.57: Water Solutions roughly 45% of revenue"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K02_chatgpt_p1#05",
+        "K02_chatgpt_p2#08"
+      ]
+    },
+    {
+      "claim_id": "C028",
+      "claim_key": "footprint_37_countries_58_sites",
+      "statement": "Kemira has operations in 37 countries and 58 manufacturing sites",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 7,
+        "quote": "58 manufacturing sites Operating in 37 countries Shipping to 113 countries"
+      },
+      "conflicting_evidence": null,
+      "reason": "58 manufacturing sites, operations in 37 countries.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K03_perplexity_p1#06",
+        "K03_perplexity_p2#06"
+      ]
+    },
+    {
+      "claim_id": "C030",
+      "claim_key": "regional_revenue_split",
+      "statement": "Kemira's 2025 revenue split about EMEA EUR 1.49 bn (54%), Americas EUR 1.01 bn (37%), APAC EUR 247 m (9%)",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 53,
+        "quote": "Geographically, the revenue split was as follows: EMEA (Europe, Middle East, Africa) 54% (52%), the Americas 37% (38%) and Asia Pacific 9% (10%)."
+      },
+      "conflicting_evidence": null,
+      "reason": "54% / 37% / 9%.",
+      "see_also": [
+        "S17 p.7: EMEA EUR 1,493.1 m, Americas EUR 1,013.1 m, APAC EUR 247.4 m"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K03_perplexity_p1#08",
+        "K03_perplexity_p2#08"
+      ]
+    },
+    {
+      "claim_id": "C043",
+      "claim_key": "netfloc_process_water",
+      "statement": "Kemira's NetFloc treats and recycles internal process water in pulp and paper mills",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "NetFloc is not mentioned anywhere in the ground truth set.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K04_gemini_p1#11",
+        "K04_gemini_p2#08"
+      ]
+    },
+    {
+      "claim_id": "C046",
+      "claim_key": "case_joensuu_biogas",
+      "statement": "A collaboration with Joensuu, Finland increased the wastewater plant's biogas output by 17%",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "The Joensuu case is not in the ground truth set (Kemira's case-study stories are outside sources.yaml).",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K05_perplexity_p1#08",
+        "K05_perplexity_p2#09"
+      ]
+    },
+    {
+      "claim_id": "C047",
+      "claim_key": "case_biofos_energy",
+      "statement": "BIOFOS in Copenhagen reduced sludge-treatment energy use by nearly 4.4 GWh with Kemira (dewatering polymer and KemConnect SD)",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "The BIOFOS case is not in the ground truth set (Kemira's case-study stories are outside sources.yaml).",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K05_perplexity_p1#09",
+        "K05_perplexity_p2#10"
+      ]
+    },
+    {
+      "claim_id": "C061",
+      "claim_key": "water_target_total_24_5",
+      "statement": "The water target corresponds to a total of 24.5 billion m3",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "Growing positive water impact By, 2030, enabling the treatment, reuse and recycling of an additional cumulative 3.5 billion m³ of water through our customers’ operations, compared to a 2024 baseline. 21 billion m 3 24.5 billion m 3"
+      },
+      "conflicting_evidence": null,
+      "reason": "The target column shows 24.5 billion m3.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p1#10",
+        "K06_perplexity_p2#11"
+      ]
+    },
+    {
+      "claim_id": "C068",
+      "claim_key": "target_waste_2030",
+      "statement": "Waste target - reduce disposed production waste intensity 15% by 2030 from a 2019 baseline",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 23,
+        "quote": "Reduce disposed production waste intensity by 15% by the end of 2030, from a 2019 baseline (4.4)."
+      },
+      "conflicting_evidence": null,
+      "reason": "-15% by 2030 from a 2019 baseline.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_perplexity_p1#17",
+        "K06_perplexity_p2#18"
+      ]
+    },
+    {
+      "claim_id": "C076",
+      "claim_key": "strategy_three_priorities",
+      "statement": "Kemira's strategy is to expand in water, build a renewable solutions portfolio and develop new growth platforms",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "Sustainable transformation will drive profitable growth. - Expand in water - Build leading renewable solutions portfolio - Unlock new growth platforms"
+      },
+      "conflicting_evidence": null,
+      "reason": "The three strategic priorities match.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_chatgpt_p1#22",
+        "K06_chatgpt_p2#03"
+      ]
+    },
+    {
+      "claim_id": "C081",
+      "claim_key": "carbon_neutrality_ambition",
+      "statement": "Kemira aims for carbon neutrality / net zero (no scope or year stated)",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 161,
+        "quote": "Kemira's ambition is to be carbon neutral by 2045."
+      },
+      "conflicting_evidence": null,
+      "reason": "Kemira states a carbon neutrality ambition; the claim states no scope or year and asserts no more than the source. 'Net-zero' alongside 'carbon neutrality' is incidental.",
+      "see_also": [
+        "S13: carbon neutral by 2045 (Scopes 1 and 2)"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_gemini_p1#10"
+      ]
+    },
+    {
+      "claim_id": "C119",
+      "claim_key": "carbon_neutrality_overall",
+      "statement": "Kemira aims for carbon neutrality overall (all scopes, no year stated)",
+      "verdict": "contradicted",
+      "contradiction_type": "source_unclear",
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 96,
+        "quote": "Kemira's long-term ambition is to achieve carbon neutrality by 2045 for combined Scope 1 and 2 market-based GHG emissions and it will continuously evaluate this goal in response to global legislation, own strategy and advances in climate science."
+      },
+      "conflicting_evidence": null,
+      "reason": "Kemira's body text scopes the ambition to Scopes 1 and 2; 'carbon neutrality overall' asserts more. Classed source_unclear rather than assistant_wrong because the same report also states the ambition with no scope (p.161), so a reader of that sentence alone could take it as overall.",
+      "see_also": [
+        "S17 p.161: 'Kemira's ambition is to be carbon neutral by 2045' (no scope)",
+        "S13: Scopes 1 and 2",
+        "S17 p.22 and p.94: chart labels pairing 'Scope 1, 2 and 3' with 'Carbon neutrality' (in the text layer, but as labels, not a statement)"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K06_gemini_p2#08"
+      ]
+    },
+    {
+      "claim_id": "C086",
+      "claim_key": "input_mass_52_recycled",
+      "statement": "In 2025, 52% of Kemira's material input mass came from recycled/secondary sources and 2.6% was renewable biological material",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S17",
+        "file": "text.md",
+        "page": 9,
+        "quote": "Out of the total 2.57 million tons of used raw materials, 52% consists of recycled materials, while 3% is derived from renewable sources"
+      },
+      "conflicting_evidence": null,
+      "reason": "52% recycled. The claim's 2.6% renewable is more precise than the ground truth's 3% and consistent with it after rounding.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_perplexity_p1#09",
+        "K07_perplexity_p2#08"
+      ]
+    },
+    {
+      "claim_id": "C102",
+      "claim_key": "portfolio_64_resource_efficiency",
+      "statement": "64% of Kemira's product portfolio improves customers' resource efficiency",
+      "verdict": "supported",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S11",
+        "file": "text.md",
+        "quote": "64% of our product portfolio improves resource efficiency"
+      },
+      "conflicting_evidence": null,
+      "reason": "64%.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_chatgpt_p1#09",
+        "K07_chatgpt_p2#04"
+      ]
+    },
+    {
+      "claim_id": "C110",
+      "claim_key": "ecovadis_platinum",
+      "statement": "Kemira has an EcoVadis Platinum rating",
+      "verdict": "contradicted",
+      "contradiction_type": "assistant_wrong",
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S22",
+        "file": "text.md",
+        "page": 12,
+        "quote": "In June, Kemira retained a Gold-level rating by EcoVadis, the leading global sustainability assessment platform, with a score of 83/100."
+      },
+      "conflicting_evidence": null,
+      "reason": "Kemira's material states a Gold-level rating, clearly and consistently; Platinum is not stated anywhere.",
+      "see_also": [
+        "S12: among the top 5% of companies evaluated by EcoVadis in the chemical industry (2024)"
+      ],
+      "status": "confirmed",
+      "instance_ids": [
+        "K07_gemini_p1#02",
+        "K07_gemini_p2#05"
+      ]
+    },
+    {
+      "claim_id": "C112",
+      "claim_key": "european_top_five",
+      "statement": "Industry analyses place Kemira among the top five in the European water treatment chemicals market",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": {
+        "source": "S04",
+        "file": "text.md",
+        "quote": "We are a leader globally in our niche areas of chemical solutions: #1-3 in water treatment and #2 in the pulp and paper business globally."
+      },
+      "conflicting_evidence": null,
+      "reason": "The claim attributes a top-five European ranking to industry analyses; the ground truth is Kemira's own material and cannot confirm what third-party analyses say. Kemira's own ranking is consistent with it. Limitation note (human, from third-party sources outside the ground truth by design, not used as evidence) - Mordor Intelligence lists Kemira among five major players in the European market, 'sorted in no particular order'; 6Wresearch lists it among its 'Top 5 Leading Players'. Neither sub-reason applies, since the material is not on kemira.com.",
+      "see_also": [],
+      "status": "revised",
+      "instance_ids": [
+        "O01_perplexity_p1#04",
+        "O01_perplexity_p2#01"
+      ]
+    },
+    {
+      "claim_id": "C118",
+      "claim_key": "xd5000_dry_solids",
+      "statement": "Kemira's high-molecular-weight XD-5000 flocculant series raises cake dry solids (often by 2-5 percentage points) at lower polymer dose",
+      "verdict": "unverified",
+      "contradiction_type": null,
+      "unverified_reason": null,
+      "evaluative": false,
+      "evidence": null,
+      "conflicting_evidence": null,
+      "reason": "The XD-5000 series is not mentioned anywhere in the ground truth set.",
+      "see_also": [],
+      "status": "confirmed",
+      "instance_ids": [
+        "O03_perplexity_p1#05",
+        "O03_perplexity_p2#05"
       ]
     }
   ]

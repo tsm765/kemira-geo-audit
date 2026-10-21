@@ -84,7 +84,10 @@ claims:
     statement: Kemira has a major production plant, research centre and water technology competence centre in Oulu, Finland
     topic: footprint
   b2b_model:
-    statement: Kemira is a business-to-business supplier; it does not sell directly to consumers
+    statement: Kemira is primarily a business-to-business supplier (not consumer-facing)
+    topic: business_model
+  no_direct_consumer_sales:
+    statement: Kemira does not sell directly to consumers
     topic: business_model
   pulp_bleaching_chemicals:
     statement: Kemira supplies pulp bleaching and processing chemicals, including sodium chlorate and hydrogen peroxide
@@ -122,6 +125,9 @@ claims:
     topic: water_products
   water_chemical_portfolio:
     statement: Kemira's water treatment portfolio includes antiscalants, dispersants, biocides, disinfection products and defoamers
+    topic: water_products
+  drinking_water_disinfection_conditioning:
+    statement: Kemira offers drinking-water disinfection and pH/alkalinity conditioning solutions
     topic: water_products
   activated_carbon:
     statement: Kemira's water treatment portfolio includes activated carbon
@@ -223,8 +229,12 @@ claims:
   carbon_neutral_2045:
     statement: Kemira aims to be carbon neutral in Scope 1 and 2 emissions by 2045
     topic: targets
-  carbon_neutrality_ambition_overall:
+  carbon_neutrality_ambition:
     statement: Kemira aims for carbon neutrality / net zero (no scope or year stated)
+    topic: targets
+    formerly: carbon_neutrality_ambition_overall
+  carbon_neutrality_overall:
+    statement: Kemira aims for carbon neutrality overall (all scopes, no year stated)
     topic: targets
   # ---- targets (target only; reported progress is a separate claim) -----------
   target_trif_2030:
@@ -242,6 +252,9 @@ claims:
   target_scope12_2030:
     statement: Climate target - cut Scope 1 and 2 GHG emissions 52% by end-2030 from a 2018 baseline
     topic: targets
+  target_scope12_range_51_52:
+    statement: Climate target - cut Scope 1 and 2 GHG emissions by approximately 51-52% by 2030 from a 2018 baseline (a range)
+    topic: targets
   target_scope3_2033:
     statement: Climate target - cut absolute Scope 3 GHG emissions 33% by 2033 from a 2021 baseline
     topic: targets
@@ -256,7 +269,10 @@ claims:
     statement: TRIF was 2.7 in 2025
     topic: target_progress
   progress_dei_2025:
-    statement: Kemira's diversity & inclusion measure stood at about 25% (25th percentile) in 2025
+    statement: Kemira's diversity & inclusion result was 25% in 2025
+    topic: target_progress
+  progress_inclusion_index_25th:
+    statement: In 2025 Kemira's Inclusion Index was above the 25th-percentile benchmark
     topic: target_progress
   progress_water_2025:
     statement: About 21 billion m3 (21.1) of water was treated, reused or recycled with Kemira's chemistry in 2025
@@ -476,7 +492,7 @@ files:
       - {c: customer_concentration, q: ["Kemira serves several thousand customers worldwide; its top 10 customers account for about 25% of revenue, and its top 50 for about 50%."]}
       - {c: municipal_customer_cities, q: ["examples include cities such as Berlin, New York, Paris, and Hamburg"]}
       - {c: products_coagulants_polymers, q: ["Coagulants, polymers, and treatment solutions for drinking water and sewage"]}
-      - {c: b2b_model, q: ["Kemira is largely a **business-to-business chemicals and solutions provider**: it does not sell directly to consumers"]}
+      - {c: no_direct_consumer_sales, q: ["Kemira is largely a **business-to-business chemicals and solutions provider**: it does not sell directly to consumers"], n: "Split from b2b_model (2026-10-21): asserts the absolute 'does not sell directly to consumers'."}
   K02_chatgpt_p1:
     instances:
       - {c: global_chemicals_company, q: ["Kemira is a Finnish global chemicals company"]}
@@ -524,7 +540,7 @@ files:
   K02_chatgpt_p2:
     instances:
       - {c: global_chemicals_company, q: ["Kemira is a Finnish global chemicals company"]}
-      - {c: b2b_model, q: ["Its customers are primarily other businesses, industrial facilities and municipal water utilities—not consumers buying products directly."]}
+      - {c: no_direct_consumer_sales, q: ["Its customers are primarily other businesses, industrial facilities and municipal water utilities—not consumers buying products directly."], n: "Split from b2b_model (2026-10-21): asserts 'not consumers buying products directly'."}
       - {c: hq_helsinki, q: ["Kemira is headquartered in Helsinki"]}
       - {c: listing_nasdaq_helsinki, q: ["listed on Nasdaq Helsinki"], n: "Exchange only; no ticker stated."}
       - {c: revenue_2025, q: ["In 2025, it reported revenue of approximately €2.8 billion"]}
@@ -634,7 +650,7 @@ files:
       - {c: serves_water_treatment, q: ["water treatment solutions, technologies, and chemical applications designed for municipal water utilities and water-intensive industries"]}
       - {c: serves_other_industries, q: ["(such as pulp and paper, oil and gas, and mining)"]}
       - {c: products_coagulants_polymers, q: ["Providing coagulants and flocculants (such as aluminum- and iron-based products) to remove turbidity, color, organic matter, and suspended solids"]}
-      - {c: water_chemical_portfolio, q: ["**Disinfection and pH Adjustment:**"], n: "Drinking-water disinfection and pH/alkalinity products folded into the portfolio claim."}
+      - {c: drinking_water_disinfection_conditioning, q: ["**Disinfection and pH Adjustment:**"], n: "Split from water_chemical_portfolio (2026-10-21): asserts only drinking-water disinfection and pH adjustment, not the full portfolio list."}
       - {c: chemical_pretreatment_energy, q: ["Using specialized chemistries ahead of biological treatment stages to speed up pollutant breakdown, reduce plant energy consumption (e.g., cutting aeration energy)"]}
       - {c: cept_double_biogas, q: ["double biogas production potential"]}
       - {c: phosphorus_removal, q: ["Advanced chemical precipitation products and control methods to strip phosphorus and manage nitrogen levels"]}
@@ -669,7 +685,7 @@ files:
     instances:
       - {c: serves_water_treatment, q: ["Kemira provides a wide range of chemical and digital solutions designed for municipal and industrial water treatment."]}
       - {c: products_coagulants_polymers, q: ["Supplying specialized chemical coagulants (such as aluminum and iron-based products) and flocculants to remove turbidity, color, organic matter, and suspended solids"]}
-      - {c: water_chemical_portfolio, q: ["**Disinfection and Conditioning:**"], n: "Drinking-water disinfection and conditioning folded into the portfolio claim."}
+      - {c: drinking_water_disinfection_conditioning, q: ["**Disinfection and Conditioning:**"], n: "Split from water_chemical_portfolio (2026-10-21): asserts only drinking-water disinfection and conditioning, not the full portfolio list."}
       - {c: phosphorus_removal, q: ["Advanced chemical precipitation products and automated control systems (such as *KemConnect™ P*) to precisely remove phosphorus"]}
       - {c: odor_corrosion_control, q: ["Solutions to manage hydrogen sulfide ($H_2S$) and prevent corrosion in sewer networks and treatment plants."]}
       - {c: sludge_dewatering, q: ["High-performance polymers and coagulants that optimize the dewatering process.", "minimizing hauling weights, disposal costs, and incineration energy requirements"]}
@@ -773,14 +789,14 @@ files:
       - {c: progress_trif_2025, q: ["| Safety | Reduce total recordable injury frequency (TRIF) to 2.2 by end-2026 and 1.5 by end-2030 | 2.7 |"]}
       - {c: target_water_2030, q: ["Enable an additional 3.5 billion m³ of cumulative water treatment, reuse, and recycling by 2030, against a 2024 baseline"]}
       - {c: progress_water_2025, q: ["Kemira reported approximately 21.1 billion m³ of total water treated, reused, or recycled with the help of its chemistry in 2025."]}
-      - {c: target_scope12_2030, q: ["Reduce greenhouse gas emissions by approximately 51–52% by 2030, against a 2018 baseline"], n: "States '51–52%' rather than 52%."}
+      - {c: target_scope12_range_51_52, q: ["Reduce greenhouse gas emissions by approximately 51–52% by 2030, against a 2018 baseline"], n: "Split from target_scope12_2030 (2026-10-21): a range spanning Kemira's own conflicting published figures (51.23% and 52%), not either figure."}
       - {c: progress_scope12_2025, q: ["Down 43.1%"]}
       - {c: target_scope3_2033, q: ["Reduce absolute greenhouse gas emissions by approximately 33% by 2033, against a 2021 baseline"]}
       - {c: progress_scope3_2025, q: ["Down 26.0%"]}
       - {c: target_renewable_revenue_2030, q: ["Generate more than €500 million in revenue from renewable solutions by 2030"]}
       - {c: progress_renewable_2025, q: ["| €240 million |"]}
       - {c: target_dei_2026, q: ["Reach the top 10% of the cross-industry benchmark by end-2026"]}
-      - {c: progress_dei_2025, q: ["Inclusion Index above 25th percentile benchmark measure, as reported by Kemira"], n: "Different formulation from Perplexity's '25% in 2025'; grouped as the same 2025 D&I progress claim. S5 should check whether the two readings agree with the source."}
+      - {c: progress_inclusion_index_25th, q: ["Inclusion Index above 25th percentile benchmark measure, as reported by Kemira"], n: "Split from progress_dei_2025 (2026-10-21): a different assertion (an Inclusion Index percentile position), not the bare '25%' figure."}
       - {c: carbon_neutral_2045, q: ["Kemira has stated an ambition to achieve carbon neutrality for Scope 1 and 2 emissions by 2045"]}
       - {c: strategy_three_priorities, q: ["Expand in water:", "Build a renewable solutions portfolio:", "Develop new growth platforms:"]}
   K06_gemini_p1:
@@ -794,7 +810,7 @@ files:
       - {c: sbti_validated, q: ["Kemira has established validated, science-backed targets"]}
       - {c: target_scope12_2030, q: ["Reduce combined Scope 1 and Scope 2 greenhouse gas (GHG) emissions by **52% by the end of 2030** (from a 2018 baseline)."]}
       - {c: target_scope3_2033, q: ["Reduce absolute Scope 3 GHG emissions across the value chain by **33% by the end of 2033** (from a 2021 baseline)."]}
-      - {c: carbon_neutrality_ambition_overall, q: ["**Net-Zero Ambition:** Target to achieve carbon neutrality/net-zero."]}
+      - {c: carbon_neutrality_ambition, q: ["**Net-Zero Ambition:** Target to achieve carbon neutrality/net-zero."]}
       - {c: target_renewable_revenue_2030, q: ["Target over **EUR 500 million in revenue from renewable solutions by the end of 2030**"]}
       - {c: target_water_2030, q: ["Enable the treatment, reuse, and recycling of an additional cumulative **3.5 billion $m^3$ of water** through customer operations by 2030 (compared to a 2024 baseline)."]}
       - {c: target_trif_2030, q: ["Reduce the Total Recordable Injury Frequency (TRIF) rate across all sites to **1.5 by the end of 2030**."]}
@@ -854,7 +870,7 @@ files:
       - {c: sbti_validated, q: ["aligned with international frameworks like the Science Based Targets initiative (SBTi)"], n: "Says 'aligned with', not 'validated by'."}
       - {c: target_scope12_2030, q: ["Reduce combined Scope 1 and Scope 2 greenhouse gas emissions by **52% by the end of 2030** (from a 2018 baseline)."]}
       - {c: target_scope3_2033, q: ["Reduce absolute Scope 3 greenhouse gas emissions across the value chain by **33% by the end of 2033** (from a 2021 baseline)."]}
-      - {c: carbon_neutrality_ambition_overall, q: ["**Net Zero Ambition:** Aiming to achieve carbon neutrality overall."]}
+      - {c: carbon_neutrality_overall, q: ["**Net Zero Ambition:** Aiming to achieve carbon neutrality overall."], n: "Split from the vague p1 instance (2026-10-21): 'overall' asserts more than 'carbon neutrality/net-zero', so the two are separate claims."}
       - {c: target_renewable_revenue_2030, q: ["Derive **over EUR 500 million in revenue from renewable solutions by the end of 2030**."]}
       - {c: target_water_2030, q: ["Enable the treatment, reuse, and recycling of an **additional cumulative 3.5 billion $m^3$ of water** through customer operations by 2030 (compared to a 2024 baseline)."]}
       - {c: target_trif_2030, q: ["Reduce the **Total Recordable Injury Frequency (TRIF)** rate across its sites to **1.5 by the end of 2030**."]}
