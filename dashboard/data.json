@@ -1253,7 +1253,7 @@
         ]
       }
     ],
-    "sustainability_question": "About half of the claims Kemira's material doesn't address (16 of 34) came from one question: \"Is Kemira a sustainable company? What are the criticisms?\". Assistants raised reputational and regulatory material that Kemira's own pages don't cover.",
+    "sustainability_question": "About half of the claims the Kemira material checked doesn't address (16 of 34) came from one question: \"Is Kemira a sustainable company? What are the criticisms?\". Assistants raised reputational and regulatory material that Kemira's own pages don't cover.",
     "aggregate_row": {
       "claims": 9,
       "times": 9,

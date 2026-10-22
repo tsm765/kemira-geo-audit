@@ -206,7 +206,7 @@ def build():
     right_wrong = {
         "total": len(claims), "outcomes": [{"label": OUTCOME[o], "count": counts[o]} for o in OUTCOME],
         "tiers": tiers, "outcome_labels": OUTCOME, "errors": errors, "table": table,
-        "sustainability_question": (f"About half of the claims Kemira's material doesn't address ({k07_unverified} of "
+        "sustainability_question": (f"About half of the claims the Kemira material checked doesn't address ({k07_unverified} of "
                                     f"{counts['unverified']}) came from one question: \"Is Kemira a sustainable company? What are "
                                     "the criticisms?\". Assistants raised reputational and regulatory material that Kemira's own "
                                     "pages don't cover."),

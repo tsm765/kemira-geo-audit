@@ -6,6 +6,8 @@ This tool runs a fixed battery of questions about Kemira through three consumer 
 
 Kemira is a Nasdaq Helsinki-listed company in sustainable chemistry for water-intensive industries. This is an independent audit, not affiliated with or endorsed by Kemira.
 
+**Results:** [Dashboard](https://tsm765.github.io/kemira-geo-audit/dashboard/) · [One-page snapshot](reports/geo_snapshot.md) · [What I would do (signed opinion)](reports/recommendations.md)
+
 ---
 
 ## Why generative engine optimization
@@ -36,11 +38,13 @@ Each question was asked **twice, in separate sessions**. A single pass cannot di
 
 | Assistant | Model / surface | Browsing | Date collected |
 |---|---|---|---|
-| _[assistant 1]_ | _[model version as reported by the surface]_ | _[on / off]_ | _[date]_ |
-| _[assistant 2]_ | _[model version]_ | _[on / off]_ | _[date]_ |
-| _[assistant 3]_ | _[model version]_ | _[on / off]_ | _[date]_ |
+| Perplexity | unknown (not displayed to logged-out users) | on | 20 October 2026 |
+| ChatGPT | unknown (not displayed to logged-out users) | on | 20 October 2026 |
+| Gemini | 3.5 Flash-Lite (as selected in the model picker; other models required sign-in) | on | 20 October 2026 |
 
-Model versions served to anonymous users are not always disclosed; where the surface did not state one, this is recorded as unknown rather than inferred.
+Model versions served to anonymous users are not always disclosed; where the surface did not state one, this is recorded as unknown rather than inferred. Both sessions ran on the same day, several hours apart.
+
+The ten second-session Gemini files in `data/raw/` record `browsing: off`. That is a recording error: Gemini returned web sources on every answer in both sessions. The raw files are frozen and were not edited; this note is the correction.
 
 **Findings are a snapshot of a specific date.** These systems change without notice. An answer collected in October 2026 is not evidence about January 2027.
 
@@ -67,9 +71,18 @@ Contradictions carry a second field distinguishing **`assistant_wrong`** (the pu
 
 ### The unverified bucket
 
-_[N]_ of _[N]_ claims (_[N]%_) resolved to `unverified`.
+34 of 123 claims (28%) resolved to `unverified`.
 
-`unverified` means the claim was not settled by the 22 captured sources. It is not a finding that the claim is wrong, and it is not a statement about anything Kemira publishes elsewhere. Two sub-reasons qualify it further where they can be told: `outside_ground_truth` (related material exists elsewhere on kemira.com but is not in the captured set, a limit of this audit) and `not_addressed` (Kemira's published material does not cover it, a content gap). Where neither can be told without looking beyond the captured set, the sub-reason is left unset.
+`unverified` means the claim was not settled by the 22 captured sources. It is not a finding that the claim is wrong, and it is not a statement about anything Kemira publishes elsewhere. Three sub-reasons qualify it further where they can be told:
+
+| Sub-reason | Meaning | Claims |
+|---|---|---|
+| `cited_source_outside_set` | the assistant named a kemira.com page outside the captured set as its source for that claim; nothing is asserted about what that page says | 8 |
+| `outside_ground_truth` | related material exists elsewhere on kemira.com but is not in the captured set, a limit of this audit | 2 |
+| `not_addressed` | Kemira's published material does not cover it, a content gap | 0 |
+| unset | cannot be told without looking beyond the captured set | 24 |
+
+No claim is marked `not_addressed`, because establishing that Kemira publishes nothing on a point would require looking beyond the captured set. This audit therefore reports no count of content gaps in Kemira's material, only claims its captured material does not settle.
 
 This bucket is reported rather than minimised. The ground truth set is fixed rather than extended when a claim does not resolve, for two reasons: a fixed set is what makes the unverified count meaningful, and a fact that lives only outside the captured set is itself a GEO-relevant observation about discoverability.
 
@@ -94,7 +107,7 @@ Share of voice is measured on open questions that name no company at all — e.g
 
 ## Findings
 
-_[Generated from the run. See `reports/geo_snapshot.md` for the one-page version and the dashboard for the full claim table, share-of-voice counts and ranked page list.]_
+The [one-page snapshot](reports/geo_snapshot.md) states the findings; the [dashboard](https://tsm765.github.io/kemira-geo-audit/dashboard/) shows them with the full claim table and share-of-voice counts. The ranked page list is in `data/page_gaps.json`. In short: of 123 distinct claims, 78 checked out and 3 conflicted with Kemira's material; 34 were not settled by the captured material and 8 matched one Kemira source while conflicting with another. None of the 30 claims made by all three assistants in both sessions conflicted with Kemira's material.
 
 **All findings in this repository are findings about assistant behaviour.** They take the form *"assistant X stated Y on date Z; Kemira's published material states W"*. Nothing here is a claim about Kemira's disclosures, and no finding should be read as one.
 
@@ -165,7 +178,14 @@ Every stage writes a committed file and can be rebuilt from the stage before it.
 
 ## Running it
 
-_[Install and run instructions.]_
+Python 3 with the packages in `requirements.txt`:
+
+```
+python -m venv .venv
+.venv/Scripts/pip install -r requirements.txt      (Windows; .venv/bin/pip elsewhere)
+```
+
+Each stage is a module run from the repository root, for example `python -m src.tallies`, `python -m src.snapshot`, `python -m src.recommendations`. Each rebuilds its output from the committed files of the stage before and fails rather than writing a figure its assertions do not confirm. The captured ground-truth text and source PDFs are not in the repository (only each source's `meta.json` is committed, and short quoted passages appear in `verdicts.json`), so stages that quote them need a fresh capture to rerun from scratch.
 
 The dashboard reads from committed JSON. It makes no live calls to any assistant and will render identically whenever it is opened.
 
