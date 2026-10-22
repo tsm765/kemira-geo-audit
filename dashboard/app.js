@@ -97,7 +97,8 @@ function links(L) {
     `${L.outside_checked_set} of the Kemira pages the assistants linked to were outside the ${L.checked_total} pages and reports this audit checked.`;
   for (const p of L.never_cited)
     $("links-never").append(el("li", { className: p.highlight ? "highlight" : "" }, p.page,
-      p.highlight ? el("small", {}, "Never linked, even when the assistants were asked how to reduce sludge") : null));
+      p.highlight ? el("small", {}, "Never linked. Asked how to reduce sludge, the assistants did link Kemira sludge material: a "
+        + "sludge-dewatering page in the digital services section and two case studies. The page built for the question was not among them.") : null));
   $("links-caveat").textContent = L.caveat;
 }
 
@@ -105,7 +106,7 @@ function claims(C) {
   const keys = Object.keys(C.outcome_labels);
   const n = Object.fromEntries(keys.map((k, i) => [k, C.outcomes[i].count]));
   $("claims-lede").append(`Of ${C.total} claims about Kemira, `, el("strong", {}, `${n.supported} checked out and ${n.contradicted} conflicted`),
-    ` with Kemira's material. The rest are things Kemira's material doesn't address (${n.unverified}) or where its own pages and reports disagree (${n.source_conflict}).`);
+    ` with Kemira's material. The rest are things the Kemira material checked doesn't address (${n.unverified}) or where its own pages and reports disagree (${n.source_conflict}).`);
   const parts = keys.map((k) => ({ key: k, label: C.outcome_labels[k], n: n[k] }));
   legend("claims-legend", parts);
   $("claims-outcomes").append(stackedBar(parts, C.total, "All claims by outcome: " + parts.map((p) => `${p.n} ${p.label}`).join(", ")),

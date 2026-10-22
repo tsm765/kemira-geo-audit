@@ -70,10 +70,14 @@ def build():
     assert not any(k.startswith("contradicted") for k in top["verdicts"]), "top tier now has a contradiction; rewrite the headline"
     assert low_contra == len(contradicted)
 
-    # Facts that all three assistants stated in both passes and that checked out.
+    # Facts that every assistant stated in both of its passes and that checked out.
+    instances = {i["instance_id"]: i for i in _load("claims.json")["instances"]}
+
     def ok(key):
-        c, x = claims[key], verdicts[key]
-        return x["verdict"] == "supported" and len(c["frequency"]["assistants"]) == 3 and c["frequency"]["passes"] == [1, 2]
+        seen = {}
+        for iid in claims[key]["instance_ids"]:
+            seen.setdefault(instances[iid]["assistant"], set()).add(instances[iid]["pass"])
+        return verdicts[key]["verdict"] == "supported" and len(seen) == 3 and all(p == {1, 2} for p in seen.values())
     for key in ("hq_helsinki", "listing_nasdaq_helsinki", "revenue_2025", "employees_4900", "segments_three"):
         assert ok(key), key
 
@@ -147,6 +151,14 @@ def build():
     # 'None of the errors appeared in a claim more than one assistant made.'
     assert all(len(claims[k]["frequency"]["assistants"]) == 1 for k in contradicted)
 
+    tv = top["verdicts"]
+    mix = [f"{tv['supported']} checked out"]
+    if tv.get("source_conflict"):
+        mix.append(f"{w(tv['source_conflict'])} {'was a figure' if tv['source_conflict'] == 1 else 'were figures'} Kemira itself states differently in different places")
+    if tv.get("unverified"):
+        mix.append(f"{w(tv['unverified'])} {'was' if tv['unverified'] == 1 else 'were'} not settled by the material we captured")
+    top_mix = mix[0] if len(mix) == 1 else ", ".join(mix[:-1]) + " and " + mix[-1]
+
     names = ", ".join(assistants[:-1]) + " and " + assistants[-1]
     answers_n = da["judgement"]["answers"]
     date_n = len(da["opens_with_date"])
@@ -170,12 +182,11 @@ def build():
         "",
         f"The assistants made **{total} distinct claims** about Kemira. **{v['supported']} checked out and {w(len(contradicted))} conflicted with Kemira's material.** "
         f"The rest fall into two groups: {v['unverified']} that the Kemira material we checked doesn't address, and {w(v['source_conflict'])} where "
-        "Kemira's own pages and reports give different figures. The assistants are rarely wrong about Kemira. The gaps are in what the pages "
-        "don't cover and in figures the pages disagree on.",
+        "Kemira's own pages and reports give different figures. The assistants are rarely wrong about Kemira. The gaps are in what the "
+        "pages and reports we captured don't settle and in figures they disagree on.",
         "",
-        f"The more often a claim was repeated, the safer it was. Of the {top['claims']} claims all three assistants made in both sessions, **none was wrong**: "
-        f"{top['verdicts']['supported']} checked out, {w(top['verdicts']['source_conflict'])} were figures Kemira itself states differently in different places, "
-        f"and {w(top['verdicts']['unverified'])} wasn't addressed. None of the errors appeared in a claim more than one assistant made.",
+        f"The more often a claim was repeated, the safer it was. Of the {top['claims']} claims every assistant made in both of its sessions, "
+        f"**none was wrong**: {top_mix}. None of the errors appeared in a claim more than one assistant made.",
         "",
         "## What they get right",
         "",
@@ -204,16 +215,17 @@ def build():
         "",
         f"For {v['unverified']} claims, the Kemira material we checked has nothing to confirm or contradict them. "
         f"{len(k07)} of the {v['unverified']} came from one question, \"Is Kemira a sustainable company? What are the criticisms?\", "
-        "where assistants raised reputational and regulatory material that Kemira's pages don't discuss.",
+        "where assistants raised reputational and regulatory material that the Kemira pages and reports we captured don't discuss.",
         "",
         "## Where the assistants look, and what they find",
         "",
         f"**{agg['kemira_com']} of the {agg['citations']} links the assistants gave point to kemira.com**, so Kemira's own site is their main source. "
         f"But they reach different pages from the ones built to answer the question: they cited {outside_pages} Kemira pages outside our set, "
-        f"while {len(never)} of the {len(captured)} we checked were never cited. **The sludge page was never cited, even in answers about reducing sludge.**",
+        f"while {len(never)} of the {len(captured)} we checked were never cited. **Asked how to reduce sludge, the assistants found Kemira's sludge material but never its sludge page:** "
+        "they linked a sludge-dewatering page and two case studies instead.",
         "",
-        f"**{w(date_n).capitalize()} of {n_html} pages open with a date rather than an answer, and those {w(date_n)} are the whole investor section.** No page carries the hidden label that tells software it describes a company, "
-        f"and {no_h1} of {n_html} have no title heading in their code. Every page lacks the same things. "
+        f"**{w(date_n).capitalize()} of {n_html} pages open with a date rather than an answer, and those {w(date_n)} are all the investor pages we captured.** None of the {n_html} carries the hidden label that tells software it describes a company, "
+        f"and {no_h1} of {n_html} have no title heading in their code. Every captured page lacks the same things. "
         f"Of the unresolved claims we could trace to a page, most belong to two: {PAGE_NAMES[first['source_id']]} ({first['claims_settled']} claims, "
         f"made {first['instances_settled']} times across the answers) and {PAGE_NAMES[second['source_id']]} "
         f"({second['claims_settled']} claims, made {second['instances_settled']} times).",

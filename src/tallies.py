@@ -220,12 +220,22 @@ def verdicts_by_frequency():
     if missing:
         raise SystemExit(f"{len(missing)} claims have no confirmed verdict; finish S5 first")
 
+    instances = {i["instance_id"]: i for i in json.loads((config.ROOT / "data" / "claims.json").read_text(encoding="utf-8"))["instances"]}
+
     def label(v):
         return v["verdict"] + (f"/{v['contradiction_type']}" if v.get("contradiction_type") else "")
 
+    def every_assistant_both_passes(c):
+        # Strict: each of the three assistants made the claim in both of its passes.
+        # (All three assistants overall plus both passes overall is weaker and is not this tier.)
+        seen = defaultdict(set)
+        for iid in c["instance_ids"]:
+            seen[instances[iid]["assistant"]].add(instances[iid]["pass"])
+        return len(seen) == 3 and all(p == {1, 2} for p in seen.values())
+
     def tier(c):
         f = c["frequency"]
-        if len(f["assistants"]) == 3 and f["passes"] == [1, 2]:
+        if every_assistant_both_passes(c):
             return "1_all_three_both_passes"
         if len(f["assistants"]) >= 2:
             return "2_two_or_three_assistants"

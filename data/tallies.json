@@ -3400,33 +3400,31 @@
   "verdicts_by_frequency": {
     "tiers": {
       "1_all_three_both_passes": {
-        "claims": 30,
-        "instances": 332,
+        "claims": 22,
+        "instances": 283,
         "verdicts": {
-          "supported": 26,
-          "source_conflict": 3,
-          "unverified": 1
+          "supported": 20,
+          "source_conflict": 2
         },
-        "supported_share": 0.867,
+        "supported_share": 0.909,
         "verdicts_by_instance": {
-          "supported": 308,
-          "source_conflict": 19,
-          "unverified": 5
+          "supported": 270,
+          "source_conflict": 13
         }
       },
       "2_two_or_three_assistants": {
-        "claims": 31,
-        "instances": 132,
+        "claims": 39,
+        "instances": 181,
         "verdicts": {
-          "supported": 25,
-          "unverified": 4,
-          "source_conflict": 2
+          "supported": 31,
+          "unverified": 5,
+          "source_conflict": 3
         },
-        "supported_share": 0.806,
+        "supported_share": 0.795,
         "verdicts_by_instance": {
-          "supported": 110,
-          "unverified": 18,
-          "source_conflict": 4
+          "supported": 148,
+          "unverified": 23,
+          "source_conflict": 10
         }
       },
       "3_one_assistant_repeated": {

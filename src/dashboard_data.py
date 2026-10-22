@@ -32,8 +32,8 @@ OUTCOME = {
     "contradicted": "Conflicted with Kemira's material",
 }
 TIER = {
-    "1_all_three_both_passes": "Said by all three assistants, in both sessions",
-    "2_two_or_three_assistants": "Said by two assistants",
+    "1_all_three_both_passes": "Said by every assistant, in both of its sessions",
+    "2_two_or_three_assistants": "Said by two or three assistants",
     "3_one_assistant_repeated": "Said by one assistant, more than once",
     "4_singleton": "Said once",
 }
@@ -125,7 +125,7 @@ def build():
          "line": f"That is all the readable text on Kemira's sustainability figures page. The numbers come from an outside "
                  f"service, so an assistant reading the page finds almost nothing."},
         {"figure": f"{da['judgement']['answers']} of {da['pages']}",
-         "line": f"Only {['no','one','two','three'][da['judgement']['answers']]} Kemira pages begin by answering the question "
+         "line": f"Only {['no','one','two','three'][da['judgement']['answers']]} of the {da['pages']} Kemira pages checked begin by answering the question "
                  f"the page exists for. {len(da['opens_with_date'])} begin with a date."},
     ]
     headline[2]["line"] = headline[2]["line"].replace(" 7 begin", " Seven begin")
@@ -208,12 +208,12 @@ def build():
         "tiers": tiers, "outcome_labels": OUTCOME, "errors": errors, "table": table,
         "sustainability_question": (f"About half of the claims the Kemira material checked doesn't address ({k07_unverified} of "
                                     f"{counts['unverified']}) came from one question: \"Is Kemira a sustainable company? What are "
-                                    "the criticisms?\". Assistants raised reputational and regulatory material that Kemira's own "
-                                    "pages don't cover."),
+                                    "the criticisms?\". Assistants raised reputational and regulatory material that the Kemira "
+                                    "pages and reports captured don't cover."),
         "aggregate_row": {"claims": len(aggregated), "times": sum(claims[k]["frequency"]["instances"] for k in aggregated),
                           "text": (f"{len(aggregated)} claims about reputational and regulatory matters, raised in answers to "
-                                   "\"Is Kemira a sustainable company? What are the criticisms?\". Kemira's own pages don't "
-                                   "address them. The full records are in the repository.")},
+                                   "\"Is Kemira a sustainable company? What are the criticisms?\". The Kemira pages and reports "
+                                   "captured don't address them. The full records are in the repository.")},
     }
 
     # ---- tab 3: why assistants give different figures ----------------------

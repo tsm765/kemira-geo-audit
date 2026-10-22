@@ -15,7 +15,7 @@
     },
     {
       "figure": "2 of 21",
-      "line": "Only two Kemira pages begin by answering the question the page exists for. Seven begin with a date."
+      "line": "Only two of the 21 Kemira pages checked begin by answering the question the page exists for. Seven begin with a date."
     }
   ],
   "questions": {
@@ -196,19 +196,19 @@
     ],
     "tiers": [
       {
-        "label": "Said by all three assistants, in both sessions",
-        "claims": 30,
-        "supported": 26,
-        "unverified": 1,
-        "source_conflict": 3,
+        "label": "Said by every assistant, in both of its sessions",
+        "claims": 22,
+        "supported": 20,
+        "unverified": 0,
+        "source_conflict": 2,
         "contradicted": 0
       },
       {
-        "label": "Said by two assistants",
-        "claims": 31,
-        "supported": 25,
-        "unverified": 4,
-        "source_conflict": 2,
+        "label": "Said by two or three assistants",
+        "claims": 39,
+        "supported": 31,
+        "unverified": 5,
+        "source_conflict": 3,
         "contradicted": 0
       },
       {
@@ -1253,11 +1253,11 @@
         ]
       }
     ],
-    "sustainability_question": "About half of the claims the Kemira material checked doesn't address (16 of 34) came from one question: \"Is Kemira a sustainable company? What are the criticisms?\". Assistants raised reputational and regulatory material that Kemira's own pages don't cover.",
+    "sustainability_question": "About half of the claims the Kemira material checked doesn't address (16 of 34) came from one question: \"Is Kemira a sustainable company? What are the criticisms?\". Assistants raised reputational and regulatory material that the Kemira pages and reports captured don't cover.",
     "aggregate_row": {
       "claims": 9,
       "times": 9,
-      "text": "9 claims about reputational and regulatory matters, raised in answers to \"Is Kemira a sustainable company? What are the criticisms?\". Kemira's own pages don't address them. The full records are in the repository."
+      "text": "9 claims about reputational and regulatory matters, raised in answers to \"Is Kemira a sustainable company? What are the criticisms?\". The Kemira pages and reports captured don't address them. The full records are in the repository."
     }
   },
   "figures": {

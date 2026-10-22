@@ -142,12 +142,12 @@ Sources: `data/verdicts.json`; `data/tallies.json` (verdicts_by_frequency).
 
 | Tier | Claims | Supported | Other verdicts |
 |---|---|---|---|
-| Stated by all three assistants in both passes | 30 | 26 (87%) | 3 source_conflict, 1 unverified, 0 contradicted |
-| Stated by two assistants | 31 | 25 (81%) | 4 unverified, 2 source_conflict |
+| Stated by every assistant in both of its passes | 22 | 20 (91%) | 2 source_conflict, 0 unverified, 0 contradicted |
+| Stated by two or three assistants | 39 | 31 (79%) | 5 unverified, 3 source_conflict |
 | One assistant, repeated | 22 | 11 (50%) | 9 unverified, 1 source_conflict, 1 contradicted |
 | Stated once | 40 | 16 (40%) | 20 unverified, 2 source_conflict, 2 contradicted |
 
-Tiers are computed from the final claim set; they differ slightly from the S5 review batches because four strength splits (C120-C123) moved instances into new claims. Every contradiction is in the two low-frequency tiers. The top tier's only problems are three `source_conflict` verdicts and one `unverified`: the claims assistants agree on most are either supported or reproduce a disagreement between Kemira's own published figures.
+Tiers are computed from the final claim set; they differ slightly from the S5 review batches because four strength splits (C120-C123) moved instances into new claims. The top tier is strict: each of the three assistants made the claim in both of its passes (22 claims). An earlier version counted any claim made by all three assistants and in both passes overall (30 claims), which let in claims some assistant made in only one pass; the eight it added now sit in the second tier. Every contradiction is in the two low-frequency tiers. The top tier's only problems are two `source_conflict` verdicts: the claims assistants agree on most are either supported or reproduce a disagreement between Kemira's own published figures.
 
 Sources: `data/tallies.json` (verdicts_by_frequency).
 

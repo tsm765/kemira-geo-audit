@@ -10,9 +10,9 @@
 
 ## The short answer
 
-The assistants made **123 distinct claims** about Kemira. **78 checked out and three conflicted with Kemira's material.** The rest fall into two groups: 34 that the Kemira material we checked doesn't address, and eight where Kemira's own pages and reports give different figures. The assistants are rarely wrong about Kemira. The gaps are in what the pages don't cover and in figures the pages disagree on.
+The assistants made **123 distinct claims** about Kemira. **78 checked out and three conflicted with Kemira's material.** The rest fall into two groups: 34 that the Kemira material we checked doesn't address, and eight where Kemira's own pages and reports give different figures. The assistants are rarely wrong about Kemira. The gaps are in what the pages and reports we captured don't settle and in figures they disagree on.
 
-The more often a claim was repeated, the safer it was. Of the 30 claims all three assistants made in both sessions, **none was wrong**: 26 checked out, three were figures Kemira itself states differently in different places, and one wasn't addressed. None of the errors appeared in a claim more than one assistant made.
+The more often a claim was repeated, the safer it was. Of the 22 claims every assistant made in both of its sessions, **none was wrong**: 20 checked out and two were figures Kemira itself states differently in different places. None of the errors appeared in a claim more than one assistant made.
 
 ## What they get right
 
@@ -30,13 +30,13 @@ Assistants gave Kemira's main climate target as either a 52% emissions cut by 20
 
 ## What is missing
 
-For 34 claims, the Kemira material we checked has nothing to confirm or contradict them. 16 of the 34 came from one question, "Is Kemira a sustainable company? What are the criticisms?", where assistants raised reputational and regulatory material that Kemira's pages don't discuss.
+For 34 claims, the Kemira material we checked has nothing to confirm or contradict them. 16 of the 34 came from one question, "Is Kemira a sustainable company? What are the criticisms?", where assistants raised reputational and regulatory material that the Kemira pages and reports we captured don't discuss.
 
 ## Where the assistants look, and what they find
 
-**106 of the 208 links the assistants gave point to kemira.com**, so Kemira's own site is their main source. But they reach different pages from the ones built to answer the question: they cited 25 Kemira pages outside our set, while 12 of the 22 we checked were never cited. **The sludge page was never cited, even in answers about reducing sludge.**
+**106 of the 208 links the assistants gave point to kemira.com**, so Kemira's own site is their main source. But they reach different pages from the ones built to answer the question: they cited 25 Kemira pages outside our set, while 12 of the 22 we checked were never cited. **Asked how to reduce sludge, the assistants found Kemira's sludge material but never its sludge page:** they linked a sludge-dewatering page and two case studies instead.
 
-**Seven of 21 pages open with a date rather than an answer, and those seven are the whole investor section.** No page carries the hidden label that tells software it describes a company, and 19 of 21 have no title heading in their code. Every page lacks the same things. Of the unresolved claims we could trace to a page, most belong to two: the sustainability page (10 claims, made 29 times across the answers) and the sludge page (5 claims, made 12 times).
+**Seven of 21 pages open with a date rather than an answer, and those seven are all the investor pages we captured.** None of the 21 carries the hidden label that tells software it describes a company, and 19 of 21 have no title heading in their code. Every captured page lacks the same things. Of the unresolved claims we could trace to a page, most belong to two: the sustainability page (10 claims, made 29 times across the answers) and the sludge page (5 claims, made 12 times).
 
 ---
 
